@@ -1,0 +1,7 @@
+mixin card(type, amount)
+	div.certificate-card(class='-certificate-card-#{type}-')
+		img.certificate-card--logo(src='#{srcPath}img/logo-mini.png')
+		span.certificate-card--name
+			| Сертификат на <strong>#{amount} &#8381;</strong>
+		span.certificate-card--sign ООО &laquo;Клиника совершенных технологий &laquo;САДКО&raquo;
+

@@ -1,0 +1,240 @@
+//Фильтр программ
+div.filter-wrapper.clear
+		//Сам фильтр
+		div.page-filter.clear
+			//Список
+			span.filter-block-wrapper
+				span.filter-open-button Подобрать программу
+				//Список тем
+				div.filter-block
+					div.closed Закрыть
+					//Список в одну колонку
+					div.filter-list-wrapper
+						div.filter-list
+							ul
+								li
+									a(href="#") Автозаводский район
+								li
+									a(href="#") Сормовский район
+								li
+									a(href="#") Канавинский район
+								li
+									a(href="#") Советский район
+								li
+									a(href="#") Ленинский район
+								li
+									a(href="#") Московский район
+								li
+									a(href="#") Приокский район
+
+		a(href="#").delete-filter Все программы
+		a(href="#").delete-filter Скоро будут
+		a(href="#").delete-filter Прошедшие
+
+//Блоки программ
+div.row-flex.education-program-wrapper
+	div.col-3
+		//Программа
+		div.education-program
+			img.program-image(src='#{srcPath}img/bg/program.jpg' alt="")
+			//Описание программы
+			div.about-program
+				//Открытый блок
+				div.about-show-block
+					//Заголовок и дата
+					div.about-program-top
+						div.program-name Что такое ожирение?
+						div.program-date 17 сентября 2015 г.
+					//Время работы
+					div.about-program-info
+						div.time с 17
+							sup 00 
+							|  до 20
+							sup 00
+						div.price бесплатно
+				//Скрытый блок
+				div.about-hide-block
+					p
+						a(href="#") Школа сахарного диабета
+					p
+						a(href="#") Ул. Бекетова, 13
+					div.-text-center-
+						//Здесь особый класс - course-toggle, он вызывает форму записи на курс
+						button.btn.course-toggle(data-book-info="Записаться на лекцию «Что такое ожирение?»" data-book-about="17 сентября с 17<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-course-id="1" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+	div.col-3
+		//Программа
+		div.education-program
+			img.program-image(src='#{srcPath}img/bg/program.jpg' alt="")
+			//Описание программы (фиолетовый блок)
+			div.about-program.-violet-
+				//Открытый блок
+				div.about-show-block
+					//Заголовок и дата
+					div.about-program-top
+						div.program-name Стресс. Профилактика эмоционального выгорания
+						div.program-date 15 ноября 2015 г.
+					//Время работы
+					div.about-program-info
+						div.time с 18
+							sup 00 
+							|  до 20
+							sup 00
+						div.price бесплатно
+				//Скрытый блок
+				div.about-hide-block
+					p
+						a(href="#") Школа сахарного диабета
+					p
+						a(href="#") Ул. Бекетова, 13
+					div.-text-center-
+						button.btn.course-toggle(data-book-info="Записаться на лекцию «Стресс. Профилактика эмоционального выгорания»" data-book-about="15 ноября с 18<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+	div.col-3
+		//Программа
+		div.education-program
+			img.program-image(src='#{srcPath}img/bg/program.jpg' alt="")
+			//Описание программы (синий блок)
+			div.about-program.-blue-
+				//Открытый блок
+				div.about-show-block
+					//Заголовок и дата
+					div.about-program-top
+						div.program-name Психологические причины избыточного набора веса
+						div.program-date 23 октября 2015 г.
+					//Время работы
+					div.about-program-info
+						div.time с 17
+							sup 00 
+							|  до 20
+							sup 00
+						div.price бесплатно
+				//Скрытый блок
+				div.about-hide-block
+					p
+						a(href="#") Школа сахарного диабета
+					p
+						a(href="#") Ул. Бекетова, 13
+					div.-text-center-
+						button.btn.course-toggle(data-book-info="Записаться на лекцию «Психологические причины избыточного набора веса»" data-book-about="23 октября с 17<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+	div.col-3
+		//Программа
+		div.education-program
+			img.program-image(src='#{srcPath}img/bg/program.jpg' alt="")
+			//Описание программы
+			div.about-program
+				//Открытый блок
+				div.about-show-block
+					//Заголовок и дата
+					div.about-program-top
+						div.program-name Что такое диабет?
+						div.program-date 17 августа 2015 г.
+					//Время работы
+					div.about-program-info
+						div.time 
+							a(href="#") Смотреть отчёт
+						div.price
+//Блоки программ
+div.row-flex.education-program-wrapper
+	div.col-3
+		//Программа
+		div.education-program
+			img.program-image(src='#{srcPath}img/bg/program.jpg' alt="")
+			//Описание программы
+			div.about-program
+				//Открытый блок
+				div.about-show-block
+					//Заголовок и дата
+					div.about-program-top
+						div.program-name Что такое ожирение?
+						div.program-date 17 сентября 2015 г.
+					//Время работы
+					div.about-program-info
+						div.time с 17
+							sup 00 
+							|  до 20
+							sup 00
+						div.price бесплатно
+				//Скрытый блок
+				div.about-hide-block
+					p
+						a(href="#") Школа сахарного диабета
+					p
+						a(href="#") Ул. Бекетова, 13
+					div.-text-center-
+						//Здесь особый класс - course-toggle, он вызывает форму записи на курс
+						button.btn.course-toggle(data-book-info="Записаться на лекцию «Что такое ожирение?»" data-book-about="17 сентября с 17<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+	div.col-3
+		//Программа
+		div.education-program
+			img.program-image(src='#{srcPath}img/bg/program.jpg' alt="")
+			//Описание программы (фиолетовый блок)
+			div.about-program.-violet-
+				//Открытый блок
+				div.about-show-block
+					//Заголовок и дата
+					div.about-program-top
+						div.program-name Стресс. Профилактика эмоционального выгорания
+						div.program-date 15 ноября 2015 г.
+					//Время работы
+					div.about-program-info
+						div.time с 18
+							sup 00 
+							|  до 20
+							sup 00
+						div.price бесплатно
+				//Скрытый блок
+				div.about-hide-block
+					p
+						a(href="#") Школа сахарного диабета
+					p
+						a(href="#") Ул. Бекетова, 13
+					div.-text-center-
+						button.btn.course-toggle(data-book-info="Записаться на лекцию «Стресс. Профилактика эмоционального выгорания»" data-book-about="15 ноября с 18<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+	div.col-3
+		//Программа
+		div.education-program
+			img.program-image(src='#{srcPath}img/bg/program.jpg' alt="")
+			//Описание программы (синий блок)
+			div.about-program.-blue-
+				//Открытый блок
+				div.about-show-block
+					//Заголовок и дата
+					div.about-program-top
+						div.program-name Психологические причины избыточного набора веса
+						div.program-date 23 октября 2015 г.
+					//Время работы
+					div.about-program-info
+						div.time с 17
+							sup 00 
+							|  до 20
+							sup 00
+						div.price бесплатно
+				//Скрытый блок
+				div.about-hide-block
+					p
+						a(href="#") Школа сахарного диабета
+					p
+						a(href="#") Ул. Бекетова, 13
+					div.-text-center-
+						button.btn.course-toggle(data-book-info="Записаться на лекцию «Психологические причины избыточного набора веса»" data-book-about="23 октября с 17<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+	div.col-3
+		//Программа
+		div.education-program
+			img.program-image(src='#{srcPath}img/bg/program.jpg' alt="")
+			//Описание программы
+			div.about-program
+				//Открытый блок
+				div.about-show-block
+					//Заголовок и дата
+					div.about-program-top
+						div.program-name Что такое диабет?
+						div.program-date 17 августа 2015 г.
+					//Время работы
+					div.about-program-info
+						div.time 
+							a(href="#") Смотреть отчёт
+						div.price
+
+//Кнопка "Загрузить ещё" - загрузка вероятно должна реализовываться при помощи аякс-запросов
+div.clinic-tiles--hide-toggle.more-courses
+	a.-pseudo-.-link-wrap-(href='#')
+		span.spoiler-toggle Загрузить ещё курсы	

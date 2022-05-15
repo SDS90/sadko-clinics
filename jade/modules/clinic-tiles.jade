@@ -1,0 +1,55 @@
+include ../mixins/clinic-tile
+include ../mixins/clinic-tile-empty
+
+div.clinic-tiles
+	div.clinic-tiles--list.semi-spoiler#clinic-tiles
+		+clinic-tile-empty()(class='-clinic-tile-main-', id='clinic-tile-gradient')
+			span.clinic-tile-main-header Мы работаем в интересах Вашего здоровья.
+			p Наша задача &mdash; превзойти Ваши ожидания.<br/>Мы открыты к общению.
+		+clinic-tile(1, 'Поликлиника', 'Лечебно-диагностический центр &laquo;САДКО&raquo; &mdash; это 5 клиник в разных частях Нижнего Новгорода')
+		+clinic-tile(2, 'Центр женского здоровья', 'Создать семью, построить гармоничные отношения, стать мамой, быть здоровой, красивой и довольной собой в любом')(class='-double-height-')
+		+clinic-tile(3, 'Стоматология', 'Специалисты высокого уровня с опытом лечения за рубежом')
+		+clinic-tile(4, 'Детская клиника и стоматология  «здоровенок»', 'Хорошие эмоции, веселый смех — источники жизненной энергии и силы')
+		+clinic-tile(5, 'Диагностическая лаборатория', 'Специалисты выполняют полный спектр лабораторных анализов')
+		+clinic-tile(6, 'Детская стоматология «динозубрик»', 'Первая в Нижнем Новгороде специализированная детская стоматология')(class='-double-height-')
+		+clinic-tile(7, 'ЦЕНТР маммологии', 'Ранняя диагностика молочной железы')
+		+clinic-tile(8, 'ЦЕНТР имплантации', 'От простых операций до проведения эксклюзивных процедур любой сложности')
+		+clinic-tile(9, 'ЦЕНТР ортодонтии «джем»', 'Клиника полного цикла. Все этапы ортодонтического лечения')
+		+clinic-tile-empty()(class='clinic-tile-gallery -double-width-')
+			div.gallery#tile-gallery(data-flickity-options='{ "prevNextButtons": false }')
+				a(href="#").gallery--item
+					div.clinic-tile-gallery--content
+						span.clinic-tile-gallery--title
+							| Подарочные <strong>сертификаты &laquo;САДКО&raquo;</strong>
+						p.clinic-tile-gallery--text С возможностью выбора номинала и стоимости услуг
+					div.clinic-tile-gallery--img
+						img(src='#{srcPath}img/content/certificate.png' alt="")
+				a(href="#").gallery--item
+					div.clinic-tile-gallery--content
+						span.clinic-tile-gallery--title
+							| Подарочные <strong>сертификаты &laquo;САДКО&raquo;</strong>
+						p.clinic-tile-gallery--text С возможностью выбора номинала и стоимости услуг
+					div.clinic-tile-gallery--img
+						img(src='#{srcPath}img/content/certificate.png' alt="")
+				a(href="#").gallery--item
+					div.clinic-tile-gallery--content
+						span.clinic-tile-gallery--title
+							| Подарочные <strong>сертификаты &laquo;САДКО&raquo;</strong>
+						p.clinic-tile-gallery--text С возможностью выбора номинала и стоимости услуг
+					div.clinic-tile-gallery--img
+						img(src='#{srcPath}img/content/certificate.png' alt="")
+		div.clinic-tiles--hidden
+			+clinic-tile(10, 'ЦЕНТР Инновационного образования', 'В сотрудничестве с медицинской академией Нижнего Новгорода. Интернов и ординаторов обучают практикующие врачи клиники')(class='-double-height-')
+			+clinic-tile(11, 'Зуботехническая лаборатория', 'Качественные зубные протезы из металлокерамики и безметалловой керамики используются для ')
+			+clinic-tile(12, 'ЦЕНТР неврологии', 'Курс лечения и реабилитации, с применением бальнеолеченияи физеопроцедур')
+			+clinic-tile(13, 'центр мужского здоровья', 'В здоровом теле — здоровый дух!')
+			+clinic-tile-empty()(class='clinic-tile-coming-soon')
+				span.clinic-tile-coming-soon--title Центр психологической помощи
+				div.clinic-tile-coming-soon--date.-justify-content-
+					span открытие 12.08.2015
+					button.btn-white Узнать подробности
+
+	div.clinic-tiles--hide-toggle
+		a.-pseudo-.-link-wrap-(href='#')
+			span.spoiler-toggle(data-target='#clinic-tiles', data-semi-spoiler='true', data-default-height='1250', data-active-text='Скрыть часть центров') Показать все центры
+

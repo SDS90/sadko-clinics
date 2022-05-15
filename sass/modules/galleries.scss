@@ -1,0 +1,206 @@
+@import "../base";
+
+/* -------------------------------------------------
+    Equipment gallery
+   ------------------------------------------------- */
+$itemHeight: 683px;
+$duration: .5s;
+$timingFunction: $ease-in-out-quad;
+
+
+.equipment-gallery {
+  margin-bottom: $sectionMargin;
+
+  .gallery--item {
+    height: $itemHeight;
+    width: 100%;
+    position: relative;
+
+    .dot-note {
+      @include transform(scale(.7));
+      opacity: 0;
+      transition: all $duration $timingFunction;
+      z-index: 3;
+    }
+
+    &.is-selected {
+      .dot-note {
+        @include transform(scale(1) translateY(0px));
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#equipment-gallery{
+  height: $itemHeight;
+  overflow: hidden;
+}
+
+.equipment-gallery--img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.equipment-gallery--tip {
+  background: rgba(255, 255, 255, .9);
+  padding: 51px 53px 59px;
+  width: 600px;
+  position: absolute;
+  top: 112px;
+  right: 56px;
+  z-index: 1;
+
+  opacity: 0;
+  transition: all $duration $timingFunction;
+  @include transform(translateX(48px));
+
+  .is-selected & {
+    opacity: 1;
+    @include transform(translateX(0));
+  }
+}
+
+.equipment-gallery--tip--title,
+.inner-page .equipment-gallery--tip--title {
+  color: #44727e;
+  font-family: 'Proxima-Nova', $bFontFamily;
+  font-size: 48px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  line-height: 1;
+  max-width: none;
+  padding: 0px;
+}
+
+.equipment-gallery--tip--content {
+  color: #787878;
+  margin-bottom: 46px;
+}
+
+.equipment-gallery--nav,
+.countries-gallery--nav {
+  margin-top: 34px;
+  height: 75px;
+  overflow: hidden;
+
+  white-space: nowrap \9;
+
+  .flickity-slider {
+    @include display(flex);
+  }
+
+}
+
+.equipment-gallery--nav{
+  margin-top: 34px;
+}
+
+.countries-gallery--nav{
+  margin-top: 20px;
+}
+
+.equipment-gallery--nav--item,
+.countries-gallery--nav--item  {
+  @include flex(1 0 150px);
+
+  width: 150px;
+
+  display: inline-block \9;
+  white-space: normal \9;
+  vertical-align: top \9;
+
+  color: #787878;
+  font-size: 16px;
+  cursor: pointer;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 4px;
+  padding-right: 20px;
+  height: 100%;
+  position: relative !important;
+  left: auto !important;
+  transition: border-color .3s;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 1);
+    transition: opacity .3s;
+  }
+
+  &:hover {
+    color: #333;
+    border-top-color: transparent;
+    &:after {
+      opacity: .2;
+    }
+  }
+
+  &.is-nav-selected {
+    color: #000;
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+//  Nav
+// -------------------------------------------------
+
+.equipment-gallery--nav,
+.countries-gallery--nav{
+
+  &:after, &:before {
+    display: none;
+    content: '';
+    background: linear-gradient(to left, #fff, transparent);
+    position: absolute;
+    right: -100px;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 1;
+
+    transition: left .3s, right .3s;
+  }
+
+  &:before {
+    background: linear-gradient(to right, #fff, transparent);
+    left: -100px;
+    right: auto;
+  }
+
+  &.-left- {
+    &:before {
+      display: block;
+      left: 0;
+    }
+  }
+
+  &.-right- {
+    &:after {
+      display: block;
+      right: 0;
+    }
+  }
+
+}
+
+.equipment-gallery--nav--item{
+  @include flex(1 0 200px);
+  width: 200px;
+}
+
+.countries-gallery--nav--item{
+  @include flex(1 0 100px);
+  width: 100px;
+}
+

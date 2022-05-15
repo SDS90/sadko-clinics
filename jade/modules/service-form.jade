@@ -1,0 +1,140 @@
+//Форма записи на услугу
+
+div.service-form-wrapper
+	//Стартовый блок (показываем при загрузке)
+	div.service-form-start-block
+		h3 Стоимость
+		//Кнопки
+		div.service-cost-buttons
+			//Активная кнопка всегда выделена.Дата-атрибуты совпадают с классами списков
+			button.cost-button.clock(data-dl="clock-list" data-cost-type="Горящие часы")
+			button.cost-button.normal.active(data-dl="normal-list" data-cost-type="Визит к врачу")
+			button.cost-button.premium(data-dl="premium-list" data-cost-type="Визит к ведущему специалисту")
+
+		//Список-содержание (горящие часы)
+		dl.cost-dl.clock-list
+			dt
+				span Консультация
+			dd
+				span 
+					span.cost 550
+					span.rouble a
+
+
+		//Список-содержание (визит к врачу)
+		dl.cost-dl.normal-list
+			dt
+				span Консультация
+			dd
+				span 
+					span.cost 700
+					span.rouble a
+
+
+		//Список-содержание (визит к ведущему врачу)
+		dl.cost-dl.premium-list
+			dt
+				span Консультация
+			dd
+				span 
+					span.cost 900
+					span.rouble a
+			dt
+				span Консультация ведущего специалиста
+			dd
+				span 
+					span.cost 2300
+					span.rouble a
+			dt
+				span Создание DSD-фотопроекта
+			dd
+				span 
+					span.cost 4600
+					span.rouble a
+			dt
+				span Изготовление восковой модели, 1 зуб
+			dd
+				span 
+					span.cost 1300
+					span.rouble a
+
+		//Текстовый блок
+		div.textblock Каким именно образом образом реализовать цифровой дизайн-проект вы сможете решить совместно с лечащим врачом. Вам могут подойти виниры, люминиры, протезы, коронки и т.д.
+		div.-justify-content-
+			a.btn.service-book.btn-reverse-colors Записаться на приём
+			a.btn.question-book.btn-reverse-colors Задать вопрос
+
+		div.-text-center-.fast-phone
+			a(href="#") +7 (831) 421-01-01
+			| - быстрая запись на приём
+
+	//Форма записи
+	form.book-form.start-form
+		div.closed Закрыть 
+		//Куда записываемся
+		div.form-header Записаться на цифровой дизайн улыбки
+		//Тип цены
+		div.cost-type Стандартная цена
+		p На прием будет записан пациент, чьи данные указаны в анкете ниже. Заполните пожалуйста все поля, иначе, мы не сможем вас узнать и записаться не получится.
+
+		//Это не пустой блок - сюда выводится текст ошибки
+		div.error-text
+		div.book-form--section
+			div.book-form--row
+				label Имя
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон
+				input.book-form--row--content.phone-field(type='text')
+			div.book-form--row
+				label E-mail
+				input.book-form--row--content.email-field(type='text')
+
+		div.book-form--section.textarea-wrapper
+			h2 Примечания
+			textarea
+
+		
+		div.-text-center-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+			button.btn.book-btn.submit-btn Записаться на прием
+	//Вопрос
+	form.book-form.question-form
+		div.closed Закрыть 
+		//Подзаголовок
+		div.form-header Спросить совета
+
+		textarea.textarea-scrollbar.scrollbar-outer.question-text
+
+		div.book-form--section
+			//Это не пустой блок - сюда выводится текст ошибки
+			div.error-text
+			div.book-form--row
+				label Имя
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон
+				input.book-form--row--content.phone-field(type='text')
+			div.book-form--row
+				label E-mail
+				input.book-form--row--content.email-field(type='text')
+		
+		div.-text-center-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+			button.btn.book-btn.submit-btn Задать вопрос
+
+	//Ответ - спасибо
+	div.question-answer-form.-text-center-
+		div.big-header Спасибо за вопрос!
+		p Все вопросы мы передаем специалистам. В течение 24 часов у врачей обычно находится время, чтобы ответить. Если ваш вопрос не терпит отлагательств, пожалуйста, позвоните!
+		button.answer-btn.btn.book-btn Продолжить
+
+	//Ответ - спасибо
+	div.answer-form.-text-center-
+		div.big-header Спасибо!
+		p Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.
+		button.answer-btn.btn.book-btn Продолжить

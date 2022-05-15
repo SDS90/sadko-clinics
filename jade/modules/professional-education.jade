@@ -1,0 +1,412 @@
+//Система профессионального роста врачей
+
+div.page-tags-wrapper
+	a(href="#abroadEducation").tab-link.active Обучение за рубежом
+	a(href="#sadkoEducation").tab-link Учебный центр «САДКО»
+	a(href="#sadkoTeachers").tab-link Преподаватели учебного центра
+	a(href="#youngDoctors").tab-link Молодые таланты
+ 
+//Обучение
+div.tab-block(data-tab="#abroadEducation")
+	include  ../modules/branches-map
+
+//Учебный центр Садко
+div.tab-block(data-tab="#sadkoEducation")
+	div.textblock
+		p Центр инновационного образования и развития уже 10 лет занимается организацией учебных программ в рамках деятельности крупнейшего в регионе медицинского холдинга САДКО.
+
+		p Лекторы центра — опытные клиницисты, постоянно развивающие свое профессиональное мастерство в России и за рубежом. Программы курсов составлены с учетом последних достижений мировой медицины. Особое внимание уделяется практической части — для этого каждое рабочее место укомплектовывается необходимым оборудованием и материалами в зависимости от курса.
+
+		p Сайт учебного центра: <a href="http://nn.sadkomed.ru/">http://nn.sadkomed.ru/</a>
+
+	//Белый блок с информацией
+	div.white-info-block
+		div.row-flex.education-program-wrapper
+			div.col-3
+				//Программа
+				div.education-program
+					img.program-image(src='#{srcPath}img/content/course2.jpg' alt="")
+					//Описание программы
+					div.about-program.-violet-
+						//Открытый блок
+						div.about-show-block
+							//Заголовок и дата
+							div.about-program-top
+								div.program-name Курс Дмитрия Компаниеца «Сочетанное протезирование»
+								div.program-date 23 сентября 2015 г.
+							//Время работы
+							div.about-program-info
+								div.time с 18
+									sup 00 
+									|  до 20
+									sup 00
+								div.price 9000 <span class="rouble">a</span>
+						//Скрытый блок
+						//div.about-hide-block
+							p
+								a(href="#") Школа сахарного диабета
+							p
+								a(href="#") Ул. Бекетова, 13
+							div.-text-center-
+								//Здесь особый класс - course-toggle, он вызывает форму записи на курс
+								button.btn.course-toggle(data-book-info="Записаться на лекцию «Что такое ожирение?»" data-book-about="17 сентября с 17<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+			div.col-3
+				//Программа
+				div.education-program
+					img.program-image(src='#{srcPath}img/content/course2.jpg' alt="")
+					//Описание программы (фиолетовый блок)
+					div.about-program.-blue-
+						//Открытый блок
+						div.about-show-block
+							//Заголовок и дата
+							div.about-program-top
+								div.program-name Курс «Неотложные состояния в стоматологиии». Валентин Николаевич Ивашов
+								div.program-date 15 ноября 2015 г.
+							//Время работы
+							div.about-program-info
+								div.time с 13
+									sup 00 
+									|  до 18
+									sup 00
+								div.price 1500 <span class="rouble">a</span>
+						//Скрытый блок
+						//div.about-hide-block
+							p
+								a(href="#") Школа сахарного диабета
+							p
+								a(href="#") Ул. Бекетова, 13
+							div.-text-center-
+								button.btn.course-toggle(data-book-info="Записаться на лекцию «Стресс. Профилактика эмоционального выгорания»" data-book-about="15 ноября с 18<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+			div.col-3
+				//Программа
+				div.education-program
+					img.program-image(src='#{srcPath}img/content/course2.jpg' alt="")
+					//Описание программы (синий блок)
+					div.about-program.-green-
+						//Открытый блок
+						div.about-show-block
+							//Заголовок и дата
+							div.about-program-top
+								div.program-name Курс «Применение коффердама в практике стоматолога-ортопеда»
+								div.program-date 23 октября 2015 г.
+							//Время работы
+							div.about-program-info
+								div.time с 09
+									sup 00 
+									|  до 17
+									sup 00
+								div.price 5000 <span class="rouble">a</span>
+						//Скрытый блок
+						//div.about-hide-block
+							p
+								a(href="#") Школа сахарного диабета
+							p
+								a(href="#") Ул. Бекетова, 13
+							div.-text-center-
+								button.btn.course-toggle(data-book-info="Записаться на лекцию «Психологические причины избыточного набора веса»" data-book-about="23 октября с 17<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+			div.col-3
+				//Программа
+				div.education-program
+					img.program-image(src='#{srcPath}img/content/course2.jpg' alt="")
+					//Описание программы
+					div.about-program.-light-violet-
+						//Открытый блок
+						div.about-show-block
+							//Заголовок и дата
+							div.about-program-top
+								div.program-name Курс «Микрохирургия пародонта». Пужак Андрей Вадимович
+								div.program-date 28 ноября 2015 г.
+							//Время работы
+							div.about-program-info
+								div.time с 13
+									sup 00 
+									|  до 18
+									sup 00
+								div.price 9000 <span class="rouble">a</span>
+
+	//Кнопка "Показать ещё" 
+	div.clinic-tiles--hide-toggle.more-doctors
+		a.-pseudo-.-link-wrap-.open-hidden-doctors(href='#')
+			span.spoiler-toggle Загрузить ещё
+
+//Преподаватели учебного центра
+div.tab-block(data-tab="#sadkoTeachers")
+
+	div.textblock Мы часто говорим про качество образования, но не задумываемся о том, что оно зависит от профессионализма преподавателей. В учебном центре «САДКО» мы собрали лучший педагогический состав, чтобы готовить для нашей клиники лучших специалистов. Профессора и доценты преподают в рамках стандартов международного образования и строжайше контролируют успеваемость.
+	
+	//Белый блок с информацией
+	div.white-info-block.doctor-wrappers-visible
+		//Строка на 4 преподавателя
+		div.row-flex.doctors-wrapper.teachers-small-wrapper
+			//Блок одного преподавателя
+			div.col-3
+				div.doctor-block.teacher-small-block
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/teacher.jpg', alt='Буяло Евгения Владимировна')
+					//Блок с описанием
+					div.about-doctor-wrapper
+						//О докторе
+						div.about-doctor
+							//Имя
+							div.doctor-name
+								span.top-button
+								a(href="#") Иван Жмак
+							//Должности преподавателя
+							div.doctor-scroll-wrapper
+								ul.teacher-info.textblock
+									li Ректор 
+										a(href="#") Академии отцовства и материнства
+									li Член гильдии акушеров
+									li Ректор 
+										a(href="#") Академии отцовства и материнства
+									li Член гильдии акушеров
+									li Ректор 
+										a(href="#") Академии отцовства и материнства
+									li Член гильдии акушеров
+									li Ректор 
+										a(href="#") Академии отцовства и материнства
+									li Член гильдии акушеров
+									li Ректор 
+										a(href="#") Академии отцовства и материнства
+									li Член гильдии акушеров
+									li Ректор 
+										a(href="#") Академии отцовства и материнства
+									li Член гильдии акушеров
+
+			//Блок одного преподавателя
+			div.col-3
+				div.doctor-block.teacher-small-block
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/teacher.jpg', alt='Буяло Евгения Владимировна')
+					//Блок с описанием
+					div.about-doctor-wrapper
+						//О докторе
+						div.about-doctor
+							//Имя
+							div.doctor-name
+								span.top-button
+								a(href="#") Харлашов Дмитрий Олегович
+							//Должности преподавателя
+							ul.doctor-scroll-wrapper.teacher-info.textblock
+								li Ректор 
+									a(href="#") Академии отцовства и материнства
+								li Ректор 
+									a(href="#") Академии отцовства и материнства
+
+			//Блок одного преподавателя
+			div.col-3
+				div.doctor-block.teacher-small-block
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/teacher.jpg', alt='Буяло Евгения Владимировна')
+					//Блок с описанием
+					div.about-doctor-wrapper
+						//О докторе
+						div.about-doctor
+							//Имя
+							div.doctor-name
+								span.top-button
+								a(href="#") Пужак Андрей Вадимович
+							//Должности преподавателя
+							ul.doctor-scroll-wrapper.teacher-info.textblock
+								li Ректор 
+									a(href="#") Академии отцовства и материнства
+								li Ректор 
+									a(href="#") Академии отцовства и материнства
+
+
+			//Блок одного преподавателя
+			div.col-3
+				div.doctor-block.teacher-small-block
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/teacher.jpg', alt='Буяло Евгения Владимировна')
+					//Блок с описанием
+					div.about-doctor-wrapper
+						//О докторе
+						div.about-doctor
+							//Имя
+							div.doctor-name
+								span.top-button
+								a(href="#") Святненко Борис Игоревич
+							//Должности преподавателя
+							ul.doctor-scroll-wrapper.teacher-info.textblock
+								li Ректор 
+									a(href="#") Академии отцовства и материнства
+								li Ректор 
+									a(href="#") Академии отцовства и материнства
+
+
+	//Кнопка "Показать ещё" 
+	div.clinic-tiles--hide-toggle.more-doctors
+		a.-pseudo-.-link-wrap-.open-hidden-doctors(href='#')
+			span.spoiler-toggle Загрузить ещё
+
+
+//Молодые таланты
+div.tab-block(data-tab="#youngDoctors")
+	div.textblock В современной медицине зачастую получается так, что молодой специалист гораздо подкованнее тех, кто закончил свое обучение 10-15 лет назад. Опыта конечно никто не отнимет и он, в большинстве случаев, определяющий фактор, но свежий взгляд и нестандартный подход — это те качества, благодаря которым, молодые специалисты удачно вписываются в наш врачебный коллектив.
+
+	a.more-link.-link-wrap-(href='#') <span>Все врачи клиники</span> &rarr;
+
+	//Эти блоки показываем
+	div.white-info-block.doctor-wrappers-visible
+		//Строка на 4 блока молодых докторов
+		div.row-flex.doctors-wrapper
+			//Блок одного молодого доктора
+			div.col-3
+				div.doctor-block.young-doctor-block
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+					//Блок с описанием
+					div.about-doctor-wrapper
+						//Кнопки
+						div.button-wrapper
+							a.button.open-video(href='http://vimeo.com/9532951')
+								div.button-block.video
+									i.icon
+							a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+								div.button-block.book
+									i.icon
+									span.book-text Записаться
+						//О докторе
+						div.about-doctor
+							//Обёртка для скролла
+							div.doctor-scroll-wrapper
+								//Имя
+								div.doctor-name
+									a(href="#") Покровский Михаил Юрьевич
+								//Кнопки
+								div.button-wrapper.-dn-
+									a.button.open-video(href='http://vimeo.com/9532951')
+										div.button-block.video
+											i.icon
+									a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+										div.button-block.book
+											i.icon
+											span.book-text Записаться
+								//Список специализаций
+								ul.doctor-special-list
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+
+
+			//Блок одного молодого доктора
+			div.col-3
+				div.doctor-block.young-doctor-block
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+					//Блок с описанием
+					div.about-doctor-wrapper
+						//Кнопки
+						div.button-wrapper
+							a.button.open-video(href='http://vimeo.com/9532951')
+								div.button-block.video
+									i.icon
+							a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+								div.button-block.book
+									i.icon
+									span.book-text Записаться
+						//О докторе
+						div.about-doctor
+							//Обёртка для скролла
+							div.doctor-scroll-wrapper
+								//Имя
+								div.doctor-name
+									a(href="#") Иван Жмак
+								//Кнопки
+								div.button-wrapper.-dn-
+									a.button.open-video(href='http://vimeo.com/9532951')
+										div.button-block.video
+											i.icon
+									a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+										div.button-block.book
+											i.icon
+											span.book-text Записаться
+								//Список специализаций
+								div.doctor-special-list-wrapper
+									ul.doctor-special-list
+										li Стоматолог-ортопед
+										li Акушер-терапевт
+
+			//Блок одного молодого доктора
+			div.col-3
+				div.doctor-block.young-doctor-block
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+					//Блок с описанием
+					div.about-doctor-wrapper
+						//Кнопки
+						div.button-wrapper
+							a.button.open-video(href='http://vimeo.com/9532951')
+								div.button-block.video
+									i.icon
+							a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло.") 
+								div.button-block.book
+									i.icon
+									span.book-text Записаться
+						//О докторе
+						div.about-doctor
+							//Обёртка для скролла
+							div.doctor-scroll-wrapper
+								//Имя
+								div.doctor-name
+									a(href="#") Покровский Михаил Юрьевич
+								//Кнопки
+								div.button-wrapper.-dn-
+									a.button.open-video(href='http://vimeo.com/9532951')
+										div.button-block.video
+											i.icon
+									a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+										div.button-block.book
+											i.icon
+											span.book-text Записаться
+								//Список специализаций
+								ul.doctor-special-list
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+
+			//Блок одного молодого доктора
+			div.col-3
+				div.doctor-block.young-doctor-block
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+					//Блок с описанием
+					div.about-doctor-wrapper
+						//Кнопки
+						div.button-wrapper
+							a.button.open-video(href='http://vimeo.com/9532951')
+								div.button-block.video
+									i.icon
+							a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+								div.button-block.book
+									i.icon
+									span.book-text Записаться
+						//О докторе
+						div.about-doctor
+							//Обёртка для скролла
+							div.doctor-scroll-wrapper
+								//Имя
+								div.doctor-name
+									a(href="#") Константинопольский Константин Константинович
+								//Кнопки
+								div.button-wrapper.-dn-
+									a.button.open-video(href='http://vimeo.com/9532951')
+										div.button-block.video
+											i.icon
+									a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+										div.button-block.book
+											i.icon
+											span.book-text Записаться
+								//Список специализаций
+								div.doctor-special-list-wrapper
+									ul.doctor-special-list
+										li Стоматолог-ортопед
+										li Акушер-терапевт
+
+	//Кнопка "Показать ещё" 
+	div.clinic-tiles--hide-toggle.more-doctors
+		a.-pseudo-.-link-wrap-.open-hidden-doctors(href='#')
+			span.spoiler-toggle Загрузить ещё

@@ -1,0 +1,111 @@
+
+
+//Рейтинг врачей, баннер акции
+.doctors-rating,
+.banner-action{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: 100%;
+	margin-top: 24px;
+	border-bottom: none;
+
+	background-color: #93cac4;
+    background-image: -webkit-linear-gradient(left, #93cac4,#b6d6a8);
+    background-image: -moz-linear-gradient(left, #93cac4,#b6d6a8);
+    background-image: -o-linear-gradient(left, #93cac4,#b6d6a8);
+    background-image: -ms-linear-gradient(left, #93cac4,#b6d6a8);
+    background-image: linear-gradient(left,#93cac4,#b6d6a8);
+
+    &:first-child{
+    	margin-top: 0px;
+    }
+
+	.rating-header{
+		position: absolute;
+		top: 30px; left: 40px;
+		width: 400px;
+		font-size: 36px;
+		line-height: 36px;
+		color: #fff;
+	}
+
+	.smile-svg{
+		display: block;
+	}
+
+	.textblock-wrapper{
+		position: absolute;
+		left: 40px;
+		bottom: 32px;
+		width: 400px;
+	}
+
+	.textblock{
+		font-size: 16px;
+		line-height: 18px;
+		color: #fff;
+	}
+}
+
+.doctors-rating{
+	height: 372px;
+}
+.banner-action{
+	height: 300px;
+
+	.banner-action-photo{
+		display: block;
+		position: absolute;
+		width: 100%;
+		left: 0px; right: 0px;
+	}
+}
+
+//Градиенты
+
+.first-gradient{
+	background-color: #686aad;
+	background-image: -webkit-linear-gradient(left, #686aad, #8e7bb6);
+    background-image: -moz-linear-gradient(left, #686aad, #8e7bb6);
+    background-image: -o-linear-gradient(left, #686aad, #8e7bb6);
+    background-image: -ms-linear-gradient(left, #686aad, #8e7bb6);
+    background-image: linear-gradient(left, #686aad, #8e7bb6);
+}
+
+.doctor-rating-block,
+.second-gradient{
+	background-color: #93cac4;
+	background-image: -webkit-linear-gradient(left, #93cac4, #b6d6a8);
+    background-image: -moz-linear-gradient(left, #93cac4, #b6d6a8);
+    background-image: -o-linear-gradient(left, #93cac4, #b6d6a8);
+    background-image: -ms-linear-gradient(left, #93cac4, #b6d6a8);
+    background-image: linear-gradient(left,#93cac4, #b6d6a8);
+}
+
+.third-gradient{
+	background-color: #52C1C5;
+	background-image: -webkit-linear-gradient(left, #77afcf, #87d5bd);
+    background-image: -moz-linear-gradient(left, #77afcf, #87d5bd);
+    background-image: -o-linear-gradient(left, #77afcf, #87d5bd);
+    background-image: -ms-linear-gradient(left, #77afcf, #87d5bd);
+    background-image: linear-gradient(left, #77afcf, #87d5bd);
+}
+
+.forth-gradient{
+	background-color: #CE81C5;
+	background-image: -webkit-linear-gradient(left, #9870ad, #d191d4);
+    background-image: -moz-linear-gradient(left, #9870ad, #d191d4);
+    background-image: -o-linear-gradient(left, #9870ad, #d191d4);
+    background-image: -ms-linear-gradient(left, #9870ad, #d191d4);
+    background-image: linear-gradient(left, #9870ad, #d191d4);
+}
+
+.fifth-gradient{
+	background-color: #6ACCCA;
+	background-image: -webkit-linear-gradient(left, #00acc1, #e3dfd1);
+    background-image: -moz-linear-gradient(left, #00acc1, #e3dfd1);
+    background-image: -o-linear-gradient(left, #00acc1, #e3dfd1);
+    background-image: -ms-linear-gradient(left, #00acc1, #e3dfd1);
+    background-image: linear-gradient(left, #00acc1, #e3dfd1);
+}

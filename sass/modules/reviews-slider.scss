@@ -1,0 +1,195 @@
+
+//Отзывы
+
+.doctor-reviews{
+	width: auto !important;
+    margin: 8px -16px 64px -16px;
+    font-size: 0px;
+    letter-spacing: -1px;
+
+    &:after{
+    	visibility: hidden;
+	    display: block;
+	    font-size: 0;
+	    content: " ";
+	    clear: both;
+	    height: 0;
+    }
+
+    &.owl-slider{
+		.owl-prev,
+		.owl-next{
+			top: 30%;
+		}
+	}
+
+    .doctor-review-wrapper{
+		display: inline-block;
+	    vertical-align: top;
+	    padding: 3px 16px;
+	    letter-spacing: normal;
+	    font-size: 16px;
+    }
+
+    >.doctor-review-wrapper{
+		float: left;
+	    width: 33.33%;
+    }
+
+    .review-header{
+		font-size: 32px;
+		line-height: 32px;
+    	margin-bottom: 14px;
+	}
+
+	.name{
+		margin-bottom: 7px;
+	}
+}
+
+.doctor-reviews,
+.review{
+	.name{
+		font-size: 14px;
+		font-style: italic;
+	}
+}
+
+.doctor-review-block,
+.review{
+
+	.review-text{
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.answer-block{
+		background-color: #f4f5ef;
+		.textblock{
+			font-size: 16px;
+			line-height: 22px;
+			margin-bottom: 12px;
+
+			p{
+				margin-bottom: 12px;
+			}
+
+			@include blueLinks;
+		}
+	}
+
+	.more-info{
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+}
+
+
+.doctor-review-block{
+	box-shadow: 1px 1px 5px #d9d9d9;
+	border-radius: 3px;
+
+	.review-text{
+		padding: 22px 30px;
+		margin-bottom: 0px;
+
+		p{
+			margin-bottom: 22px;
+		}	
+	}
+
+	.answer-block{
+		padding: 26px 30px;
+	}
+
+	.doctor-name{
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: bold;
+		margin-bottom: 2px;
+	}
+}
+
+.review{
+	position: relative;
+	margin-top: 37px;
+
+	&.-favorite- {
+	    .review-header:after {
+	      @extend .ico-star;
+
+	      content: '';
+	      background-image: url(../img/icons.png);
+	      position: absolute;
+	      right: 100%;
+	      top: 9px;
+	      margin-right: 10px;
+	    }
+	  }
+
+	.review-text{
+		margin-bottom: 15px;
+		p{
+			margin-bottom: 12px;
+		}	
+	}
+
+	.answer-block{
+		margin-bottom: 20px;
+		padding: 22px 25px;
+	}
+
+	.name {
+		margin-bottom: 4px;
+	}
+
+	.review-header {
+		font-size: 30px;
+		line-height: 30px;
+		margin-bottom: 15px;
+		position: relative;
+	}
+
+	.review-doctor-name{
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: bold;
+		margin-bottom: 8px;
+	}
+}
+
+//Обёртка для заголовка
+.header-wrapper{
+
+	h2,.open-question-wrapper{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	h2{
+		float: left;
+		margin: 0px 0px 5px 0px;
+		max-width: 990px;
+	}
+
+	.open-question-wrapper{
+		float: right;
+		margin-top: -5px;
+	}
+
+	&:after{
+		visibility: hidden;
+	    display: block;
+	    font-size: 0;
+	    content: " ";
+	    clear: both;
+	    height: 0;
+	}
+}
+
+.more-doctor-reviews{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 50px;
+}

@@ -1,0 +1,53 @@
+include ../mixins/smile
+
+.row-flex.row-extra-padding.discount-grid
+	include ../modules/discount-grid-vertical
+
+	div.col-6
+		a.banner-action.smile-toggle.first-gradient(href="#", data-smile='#coffe-smile')
+			div.rating-header Настоящий итальянский кофе при посещении клиники в утренние часы
+			div.textblock-wrapper 
+				svg.smile-svg(width='42px', height='33px', version='1.1', xmlns='http://www.w3.org/2000/svg')
+					path.smile-path(d='M0 10 Q 43 10 86 10', stroke='#fff', stroke-width='2px', fill='transparent', id="coffe-smile")
+				div.textblock Чашечка экспрессо Lavazza с утра — любимый ритуал наших врачей и генерального директора. Приглашаем разделить эту небольшую радость с нами и зарядиться
+	div.col-6
+		a.banner-action.smile-toggle.second-gradient(href="#", data-smile='#cons-smile')
+			div.rating-header Консультация ведущего специалиста в «горящие» часы со скидкой 25%
+			div.textblock-wrapper 
+				svg.smile-svg(width='42px', height='33px', version='1.1', xmlns='http://www.w3.org/2000/svg')
+					path.smile-path(d='M0 10 Q 43 10 86 10', stroke='#fff', stroke-width='2px', fill='transparent', id="cons-smile")
+				div.textblock С 11<sup>00</sup> до 15<sup>00</sup> в клинике «САДКО» установлены «горящие» часы. В это время действуют скидки на большинство услуг. Полная информация о «горящих» часах содержится на странице «Цены и Акции»
+
+	div.col-6
+		a.banner-action.smile-toggle.third-gradient(href="#", data-smile='#coffe-smile1')
+			div.rating-header Настоящий итальянский кофе при посещении клиники в утренние часы
+			div.textblock-wrapper 
+				svg.smile-svg(width='42px', height='33px', version='1.1', xmlns='http://www.w3.org/2000/svg')
+					path.smile-path(d='M0 10 Q 43 10 86 10', stroke='#fff', stroke-width='2px', fill='transparent', id="coffe-smile1")
+				div.textblock Чашечка экспрессо Lavazza с утра — любимый ритуал наших врачей и генерального директора. Приглашаем разделить эту небольшую радость с нами и зарядиться
+	div.col-6
+		a.banner-action.smile-toggle.forth-gradient(href="#", data-smile='#cons-smile1')
+			div.rating-header Консультация ведущего специалиста в «горящие» часы со скидкой 25%
+			div.textblock-wrapper 
+				svg.smile-svg(width='42px', height='33px', version='1.1', xmlns='http://www.w3.org/2000/svg')
+					path.smile-path(d='M0 10 Q 43 10 86 10', stroke='#fff', stroke-width='2px', fill='transparent', id="cons-smile1")
+				div.textblock С 11<sup>00</sup> до 15<sup>00</sup> в клинике «САДКО» установлены «горящие» часы. В это время действуют скидки на большинство услуг. Полная информация о «горящих» часах содержится на странице «Цены и Акции»
+
+	div.col-6
+		a.banner-action.smile-toggle.fifth-gradient(href="#", data-smile='#coffe-smile2')
+			div.rating-header Настоящий итальянский кофе при посещении клиники в утренние часы
+			div.textblock-wrapper 
+				svg.smile-svg(width='42px', height='33px', version='1.1', xmlns='http://www.w3.org/2000/svg')
+					path.smile-path(d='M0 10 Q 43 10 86 10', stroke='#fff', stroke-width='2px', fill='transparent', id="coffe-smile2")
+				div.textblock Чашечка экспрессо Lavazza с утра — любимый ритуал наших врачей и генерального директора. Приглашаем разделить эту небольшую радость с нами и зарядиться
+
+	div.col-6
+		a.banner-action.forth-gradient(href="#")
+			img.banner-action-photo(src="#{srcPath}img/content/banner4.jpg", alt="")
+			div.rating-header Консультация ведущего специалиста в «горящие» часы со скидкой 25%
+			div.textblock-wrapper 
+				div.textblock С 11<sup>00</sup> до 15<sup>00</sup> в клинике «САДКО» установлены «горящие» часы. В это время действуют скидки на большинство услуг. Полная информация о «горящих» часах содержится на странице «Цены и Акции»
+
+div.spoiler-wave-wrap
+	a.-pseudo-.-link-wrap-(href='#')
+		span.spoiler-toggle Загрузить ещё

@@ -1,0 +1,99 @@
+extends ../layout-inner
+include ../mixins/quot-title
+include ../mixins/fixed-menu
+include ../mixins/book-tile
+include ../mixins/bonus-calc
+
+
+block title
+	| Цены и акции
+block content
+	+fixed-menu([
+		{id: 'intro', title: 'Обращение'},
+		{id: 'discounts', title: 'Действующие акции'},
+		{id: 'complex', title: 'Комплексные программы'},
+		{id: 'client-card', title: 'Карта клиента'},
+		{id: 'visit', title: 'Формы посещения'},
+		{id: 'prices', title: 'Стоимость услуг'},
+	])
+
+	//Блок с цитатой
+	div.start-quote-wrapper
+		div.contents
+			h1#intro Цены и акции
+			//Цитата
+			div.quot.row-flex.-quot-no-border-
+				div.col-10
+					div.quot--text Мы стремимся обеспечить качественным лечением всех, кто в этом нуждается. Поэтому у нас постоянно действует система скидок и акций. Ждем вас в нашей клинике!
+
+
+	.contents.prices-page
+
+		div.relative
+			h2#discounts Действующие акции
+			a.all-link.more-link.-link-wrap-(href='#') <span>Все акции</span> &rarr;
+		include ../modules/discount-grid
+
+		h2#complex Комплексные программы
+		include ../modules/actions
+
+
+		h2#client-card Карта клиента
+		include ../modules/client-card
+		
+
+		h2#visit Выберите удобную форму посещения
+
+		.row-flex
+			.col-4
+				+book-tile({
+					img: 'prices-clock.jpg',
+					title: 'Горящие часы',
+					titleNote: 'минус 30% от стандартных цен',
+					icoFront: 'ico-clock-wings-black',
+					content: 'Все, что нужно — это оставить заявку и, когда оператор позвонит, в течение часа приехать на прием',
+					button: 'Оставить заявку',
+					backTitle: 'Записаться на прием в горящие часы',
+					backTitleNote: 'минус 30% от обычных цен',
+					backIco: 'ico-clock-wings-white'
+				})(class='-clock-')
+			.col-4
+				+book-tile({
+					img: 'prices-doctor.jpg',
+					title: 'Визит к врачу',
+					titleNote: 'стандартные цены',
+					icoFront: 'ico-doc-black',
+					content: 'Консультации со специалистами в обычном режиме.Цены стандартные, но и торопиться никуда не нужно',
+					button: 'Записаться',
+					backTitle: 'Записаться на прием',
+					backTitleNote: 'Обычная стоимость',
+					backIco: 'ico-doc-white'
+				})(class='-doc-')
+			.col-4
+				+book-tile({
+					img: 'prices-lead.jpg',
+					title: 'Ведущий специалист',
+					titleNote: 'плюс 30% к стандартным ценам',
+					icoFront: 'ico-medal-black',
+					content: 'В сложных ситуациях мы рекомендуем обращаться к ведущим специалистам',
+					button: 'Записаться',
+					backTitle: 'Записаться к ведущему специалисту',
+					backTitleNote: 'плюс 30% к стандартным ценам',
+					backIco: 'ico-medal-white'
+				})(class='-lead-')
+
+		div.relative.offices-header
+			h2#prices Стоимость услуг
+			div.file-link-wrapper.all-link
+				a(href="#").file-link.pdf-link.hover-link
+					i.icon
+					div.file-name
+						span Полный прайс-лист
+		div.textblock.fast-phone Быстрая запись на прием — по телефону:  <a href="#">+7 (831) 421-01-01</a>
+
+		include ../modules/price-gird
+
+
+
+		
+//block pageJS

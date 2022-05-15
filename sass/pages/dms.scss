@@ -1,0 +1,318 @@
+//Страница ДМС
+
+.dms-page{
+
+	padding-bottom: 55px;
+
+	.study-stage-wrapper{
+		margin-top: 15px;
+	}
+	.study-stage-wrapper .right-column .textblock{
+		font-size: 16px;
+		line-height: 20px;
+
+		.phone{
+			font-size: 18px;
+			margin: 10px 0px;
+		}
+	}
+
+	.dms-conditions-header{
+		font-size: 36px;
+		margin-top: 40px;
+		margin-bottom: 21px;
+	}
+
+	.textblock{
+		h2, h3, h4,h5,h6,
+	    .h2, .h3, .h4,.h5,.h6{
+	        font-size: 18px;
+	        line-height: 22px;
+	        font-weight: bold;
+	        margin-top: 12px;
+	    }
+
+	    @include blueLinks;
+	}
+
+	.more-link{
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 35px;
+	}
+}
+
+//Преимущества
+.dms-benefits{
+	h2{
+		margin-top: 35px;
+		margin-bottom: 20px;
+		max-width: 75%;
+	}
+	.about-benefits{
+		font-size: 18px;
+		line-height: 24px;
+
+		p{
+			margin-bottom: 25px; 
+		}
+	}
+
+	.dms-program,
+	.full-program{
+		margin-top: 15px;
+		padding: 1px 40px 1px 26px;
+
+		ul{
+			margin-bottom: 0px;
+		}
+	}
+
+	.full-program{
+		padding-top: 16px;
+		padding-bottom: 16px;
+		background-color: #f5f6ec;
+	}
+}
+
+//Сотрудничество
+.dms-cooperation-block{
+	margin-top: -20px;
+
+	h2{
+		max-width: 66.67%;
+		margin-bottom: 10px;
+	}
+	.col-7 .textblock{
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 45px;
+	}
+
+	.col-5{
+		padding-left: 46px;
+		padding-right: 100px;
+	}
+
+	.btn{
+		line-height: 61px;
+		height: 63px;
+	}
+}
+
+
+//Страховые компании
+.dms-companies-wrapper{
+	padding-left: 30px !important;
+
+	h3{
+		margin-top: -8px;
+		margin-bottom: 4px;
+	}
+
+	.textblock{
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	table{
+		width: 100%;
+		margin: 5px 0px 36px 0px;
+	}
+
+	td{
+		vertical-align: middle;
+		padding: 23px 0px 17px 0px;
+		border-bottom: 1px solid #e5e5e5;
+
+		font-size: 18px;
+		line-height: 22px;
+
+		&.image{
+			width: 45%;
+			padding-right: 10px;
+		}
+
+		&.phone{
+			width: 55%;
+		}
+
+		img{
+			max-width: 100%;
+		}
+	}
+}
+
+//Вкладки условий
+.dms-tab{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 14px;
+	background-color: #f5f6ec;
+	font-size: 18px;
+	padding: 10px 30px 40px 30px;
+	border-radius: 20px 20px 0px 0px;
+	box-shadow: 1px 0px 4px #d6d6d6;
+	border-bottom: none; 
+
+	position: relative;
+	
+	&.active{
+		background-color: #FFF;
+
+		&:after{
+			content:"";
+			position: absolute;
+			z-index: 11;
+			bottom: 12px;
+			left: 0px; right: 0px;
+			height: 20px;
+			background-color: #FFF;
+		}
+	}
+}
+
+//Условия
+.dms-conditions-block{
+	width: 100%;
+	position: relative;
+	margin-top: -30px;
+	z-index: 10;
+	padding: 28px 60px 40px 60px;
+
+	border-radius: 20px;
+	background-color: #FFF;
+	box-shadow: 1px 1px 4px #d6d6d6;
+
+	&.dms-organizations,
+	&.dms-patients{
+
+		ul{
+			padding-left: 0px;
+		}
+
+		table{
+			width: 100%;
+
+			.special{
+				width: 336px;
+				padding-right: 35px;
+			}
+
+			.links{
+				width: 141px;
+			}
+		}
+
+		td{
+			vertical-align: top;
+		}
+
+		.-text-center-{
+			margin-top: 17px;
+		}
+
+	}
+
+	&.dms-organizations{
+		.textblock{
+			line-height: 18px;
+		}
+
+		h3{
+			margin-bottom: 28px;
+		}
+
+		.col-8 h3{
+			margin-bottom: 26px;
+		}
+	}
+
+	&.dms-patients{
+		.col-8.textblock{
+			padding-right: 40px;
+
+			p{
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+//Контакты
+.dms-contacts{
+	padding-top: 60px;
+
+	.textblock{
+		line-height: 24px;
+
+		h3, span{
+			font-size: 16px;
+			line-height: 18px;
+		}
+
+		h3{
+			margin-top: 0px;
+			margin-bottom: 10px;
+		}
+
+		@include blueLinks;
+
+		p{
+			margin-bottom: 14px;
+		}
+	}
+
+	.dms-docs{
+		padding-top: 8px;
+		.btn{
+			display: inline-block;
+			vertical-align: top;
+			font-size: 16px;
+			line-height: 29px;
+			height: 31px;
+			margin-left: 15px;
+			border-radius: 10px;
+		}
+
+		.file-link .file-name span{
+			font-size: 16px;
+			line-height: 18px;
+		}
+
+		.file-link-wrapper{
+			margin: 13px 0px;
+		}
+	}
+
+	.docs-header{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 16px;
+		line-height: 31px;
+		font-weight: bold;
+	}
+}
+
+.dms-conditions-block .textblock,
+.dms-program,
+.full-program{
+	ul{
+		padding-left: 29px;
+	}
+
+	ul>li {
+		list-style: none;
+		position: relative;
+
+		&:before{
+			content:"";
+			position: absolute;
+			left: -29px; top: 8px;
+			width: 4px; height: 4px;
+			background-image: url(../img/icons.png);
+			background-repeat: no-repeat;
+			background-position: -335px -92px;
+		}
+	}
+}

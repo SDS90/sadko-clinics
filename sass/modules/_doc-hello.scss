@@ -1,0 +1,73 @@
+/* -------------------------------------------------
+    Doctor hello
+   ------------------------------------------------- */
+
+.doc-hello {
+  @include clearfix;
+  margin-bottom: $sectionMargin / 2;
+
+  .doctor-manager{
+    width: 275px;
+    float: left;
+  }
+
+  .full-manager{
+    width: 272px;
+    float: left;
+  }
+}
+
+//  Image
+// -------------------------------------------------
+/*
+.doc-hello--img {
+  width: 275px;
+  margin-right: 40px;
+  float: left;
+  line-height: 1.1;
+
+  figure {
+    margin-bottom: 10px;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+}
+
+.doc-hello--img--duty {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+*/
+//  Content
+// -------------------------------------------------
+
+.doc-hello--content {
+  //overflow: hidden;
+  margin-left: 315px;
+  font-size: 18px;
+  line-height: 24px;
+
+  p {
+    margin-bottom: 23px;
+  }
+}
+.doc-hello--content--title {
+  display: block;
+  font-size: 36px;
+  margin-bottom: 11px;
+  line-height: 1;
+}
+
+/*
+.doc-hello--content--actions {
+  margin-top: 60px;
+
+  [class*='btn'] {
+    margin-right: 6px;
+  }
+}
+*/

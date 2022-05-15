@@ -1,0 +1,543 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Образование  и развитие
+block content
+	//include ../modules/clinic-tiles
+	//Фиксированное меню
+	div.fixed-menu
+		a(href="#introBlock")
+			div 
+				span Обращение
+		a(href="#educationCenter")
+			div 
+				span Учебный центр САДКО
+		a(href="#profSystem")
+			div 
+				span Система роста
+		a(href="#youngDoctors")
+			div 
+				span Молодые таланты
+		a(href="#programsBlock")
+			div 
+				span Программы обучения
+		a(href="#academyBlock")
+			div 
+				span Академия
+		a(href="#articlesBlock")
+			div 
+				span Статьи и советы врачей
+		a(href="#reviewsBlock")
+			div 
+				span Отзывы о центре
+
+	//Блок с цитатой
+	div.start-quote-wrapper
+		div.contents
+			h1#introBlock Образование и развитие
+			//Цитата
+			div.quot.row-flex.-quot-no-border-
+				div.col-10
+					div.quot--text За 16 лет мы создали не только отличную клинику для пациентов, но и очень привлекательное место для работы врачей. С Вами будут работать лучшие специалисты в своей области.
+
+
+	div.contents.education-page
+
+		h2#educationCenter Учебный центр САДКО
+
+		div.textblock.about-education
+			p Центр инновационного образования и развития уже 10 лет занимается организацией учебных программ в рамках деятельности крупнейшего в регионе медицинского холдинга САДКО.
+
+			p Лекторы центра — опытные клиницисты, постоянно развивающие свое профессиональное мастерство в России и за рубежом. Программы курсов составлены с учетом последних достижений мировой медицины. Особое внимание уделяется практической части — для этого каждое рабочее место укомплектовывается необходимым оборудованием и материалами в зависимости от курса.
+
+			p Сайт учебного центра: <a href="http://nn.sadkomed.ru/">http://nn.sadkomed.ru/</a>
+
+		//Фильтр программ
+		div.filter-wrapper.clear
+				//Сам фильтр
+				div.page-filter.clear
+					//Список
+					span.filter-block-wrapper
+						span.filter-open-button Подобрать программу
+						//Список тем
+						div.filter-block
+							div.closed Закрыть
+							//Список в одну колонку
+							div.filter-list-wrapper
+								div.filter-list
+									ul
+										li
+											a(href="#") Автозаводский район
+										li
+											a(href="#") Сормовский район
+										li
+											a(href="#") Канавинский район
+										li
+											a(href="#") Советский район
+										li
+											a(href="#") Ленинский район
+										li
+											a(href="#") Московский район
+										li
+											a(href="#") Приокский район
+
+				a(href="#").delete-filter Все программы
+				a(href="#").delete-filter Скоро будут
+				a(href="#").delete-filter Прошедшие
+
+		//Блок с программами
+		div.row-flex.education-program-wrapper.doctors-education-program
+			div.col-3
+				//Программа
+				div.education-program
+					img.program-image(src='#{srcPath}img/content/course2.jpg' alt="")
+					//Описание программы
+					div.about-program.-violet-
+						//Открытый блок
+						div.about-show-block
+							//Заголовок и дата
+							div.about-program-top
+								div.program-name Курс Дмитрия Компаниеца «Сочетанное протезирование»
+								div.program-date 23 сентября 2015 г.
+							//Время работы
+							div.about-program-info
+								div.time с 18
+									sup 00 
+									|  до 20
+									sup 00
+								div.price 9000 <span class="rouble">a</span>
+						//Скрытый блок
+						//div.about-hide-block
+							p
+								a(href="#") Школа сахарного диабета
+							p
+								a(href="#") Ул. Бекетова, 13
+							div.-text-center-
+								//Здесь особый класс - course-toggle, он вызывает форму записи на курс
+								button.btn.course-toggle(data-book-info="Записаться на лекцию «Что такое ожирение?»" data-book-about="17 сентября с 17<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+			div.col-3
+				//Программа
+				div.education-program
+					img.program-image(src='#{srcPath}img/content/course2.jpg' alt="")
+					//Описание программы (фиолетовый блок)
+					div.about-program.-blue-
+						//Открытый блок
+						div.about-show-block
+							//Заголовок и дата
+							div.about-program-top
+								div.program-name Курс «Неотложные состояния в стоматологиии». Валентин Николаевич Ивашов
+								div.program-date 15 ноября 2015 г.
+							//Время работы
+							div.about-program-info
+								div.time с 13
+									sup 00 
+									|  до 18
+									sup 00
+								div.price 1500 <span class="rouble">a</span>
+						//Скрытый блок
+						//div.about-hide-block
+							p
+								a(href="#") Школа сахарного диабета
+							p
+								a(href="#") Ул. Бекетова, 13
+							div.-text-center-
+								button.btn.course-toggle(data-book-info="Записаться на лекцию «Стресс. Профилактика эмоционального выгорания»" data-book-about="15 ноября с 18<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+			div.col-3
+				//Программа
+				div.education-program
+					img.program-image(src='#{srcPath}img/content/course2.jpg' alt="")
+					//Описание программы (синий блок)
+					div.about-program.-green-
+						//Открытый блок
+						div.about-show-block
+							//Заголовок и дата
+							div.about-program-top
+								div.program-name Курс «Применение коффердама в практике стоматолога-ортопеда»
+								div.program-date 23 октября 2015 г.
+							//Время работы
+							div.about-program-info
+								div.time с 09
+									sup 00 
+									|  до 17
+									sup 00
+								div.price 5000 <span class="rouble">a</span>
+						//Скрытый блок
+						//div.about-hide-block
+							p
+								a(href="#") Школа сахарного диабета
+							p
+								a(href="#") Ул. Бекетова, 13
+							div.-text-center-
+								button.btn.course-toggle(data-book-info="Записаться на лекцию «Психологические причины избыточного набора веса»" data-book-about="23 октября с 17<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+			div.col-3
+				//Программа
+				div.education-program
+					img.program-image(src='#{srcPath}img/content/course2.jpg' alt="")
+					//Описание программы
+					div.about-program.-light-violet-
+						//Открытый блок
+						div.about-show-block
+							//Заголовок и дата
+							div.about-program-top
+								div.program-name Курс «Микрохирургия пародонта». Пужак Андрей Вадимович
+								div.program-date 28 ноября 2015 г.
+							//Время работы
+							div.about-program-info
+								div.time с 13
+									sup 00 
+									|  до 18
+									sup 00
+								div.price 9000 <span class="rouble">a</span>
+
+		//Кнопка "Показать ещё" 
+		div.clinic-tiles--hide-toggle.more-doctors
+			a.-pseudo-.-link-wrap-.open-hidden-doctors(href='#')
+				span.spoiler-toggle Загрузить ещё
+
+		h2#profSystem Система профессионального роста врачей
+
+		div.textblock.about-education
+			p Мы часто говорим про качество образования, но не задумываемся о том, что оно зависит от профессионализма преподавателей. В <a href="#">учебном центре «САДКО»</a> мы собрали лучший педагогический состав, чтобы готовить для нашей клиники лучших специалистов. Профессора и доценты преподают в рамках стандартов международного образования и строжайше контролируют успеваемость.
+
+		include ../personal-modules/teachers
+
+		h2#learnMapBlock Учебный центр «САДКО»
+		include ../modules/learn-map
+
+		h2#youngDoctors Молодые таланты
+
+		div.textblock.about-education
+			p В современной медицине зачастую получается так, что молодой специалист гораздо подкованнее тех, кто закончил свое обучение 10-15 лет назад. Опыта конечно никто не отнимет и он, в большинстве случаев, определяющий фактор, но свежий взгляд и нестандартный подход — это те качества, благодаря которым, молодые специалисты удачно вписываются в наш врачебный коллектив.
+
+		a.more-link.-link-wrap-(href='#') <span>Все врачи клиники</span>
+
+		//Эти блоки показываем
+		div.doctor-wrappers-visible
+			//Строка на 4 блока обычных докторов
+			div.row-flex.doctors-wrapper
+				//Блок одного обычного доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Покровский Михаил Юрьевич
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									ul.doctor-special-list
+										li 
+											b Главный врач
+										li Стоматолог-ортопед
+
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+				//Блок одного обычных доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Иван Жмак
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									div.doctor-special-list-wrapper
+										ul.doctor-special-list
+											li 
+												b Главный врач
+											li Стоматолог-ортопед
+											li Акушер-терапевт, ведение беременности пони  
+										//Скрытый блок специальностей
+										ul.doctor-special-list.doctor-special-hidden-list
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+
+								a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+				//Блок одного обычных доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Покровский Михаил Юрьевич
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									ul.doctor-special-list
+										li 
+											b Главный врач
+										li Стоматолог-ортопед
+										li Стоматолог-терапевт
+										li Стоматолог-стоматолог
+
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+				//Блок одного обычного доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Константинопольский Константин Константинович
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									div.doctor-special-list-wrapper
+										ul.doctor-special-list
+											li 
+												b Главный врач
+											li Стоматолог-ортопед
+											li Акушер-терапевт, ведение беременности пони  
+										//Скрытый блок специальностей
+										ul.doctor-special-list.doctor-special-hidden-list
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+
+								a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Кнопка "Показать ещё" - здесь по нажатию просто открываем скрытых врачей
+		div.clinic-tiles--hide-toggle.more-doctors
+			a.-pseudo-.-link-wrap-.open-hidden-doctors(href='#')
+				span.spoiler-toggle Показать ещё
+
+		//Обучающие программы
+		h2#programsBlock.education-header Обучающие программы для пациентов
+
+		include ../modules/education-program
+
+		//Академия
+		h2#academyBlock.academy-header Академия отцовства и материнства &laquoЦарство любви&raquo;
+		+quot('На занятия в нашу клинику приходят не только будущие мамы, которые встали на учёт здесь, но и беременные из муниципальных женских консультаций, и даже из других платных медицинских центров', 'Елена Денисенко','Акушер-гинеколог клиники </br>&laquoСАДКО&raquo;', 8,4)
+
+		//Блок с видео
+		include ../modules/promo-video
+
+		h3 Курсы академии
+		include ../modules/academy-courses					
+
+		//Советы
+		h2#articlesBlock Вопрос - ответ
+		include ../modules/qa
+
+		//Статьи
+		h2 Полезные статьи
+		include ../modules/articles
+			
+		//Отзывы
+		div.header-wrapper
+			h2#reviewsBlock Отзывы о &laquoСадко&raquo;
+			//Кнопка с вызовом попапа
+			div.open-question-wrapper
+				a.btn.btn-reverse-colors.open-question-popup(href="#") Добавить отзыв
+				include ../modules/review-popup
+
+		include ../modules/reviews-slider
+			
+
+
+//Персональные скрипты для этой страницы
+//block pageJS
+	

@@ -1,0 +1,343 @@
+@import "../base";
+
+/* -------------------------------------------------
+    Learn map
+   ------------------------------------------------- */
+
+$mapHeight: 580px;
+
+.learn-map{
+  position: relative;
+  padding: 23px 24px;
+  border-radius: 4px;
+}
+
+.learn-map .map-info {
+  position: relative;
+}
+.learn-map--map {
+  height: $mapHeight;
+  box-shadow: 0 1px 3px #555;
+  border-radius: 4px;
+}
+
+.learn-map--wrapper{
+  position: relative;
+  &.disabled:after{
+    content:"";
+    position: absolute;
+    left: 0px; top: 0px;
+    right: 0px; bottom: 0px;
+    z-index: 90;
+    background-color: rgb(244,245,239);
+    background-color: rgba(244,245,239,0.8);
+    background-image: url(../img/icons/ajax-loader.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+
+//  Filter
+// -------------------------------------------------
+
+.learn-map--filter{
+  padding-top: 24px;
+}
+
+.learn-map--filter--doc,
+.learn-map--delete-filter{
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+}
+
+.learn-map--filter--doc {
+  width: 484px;
+  padding-top: 14px;
+
+  label {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 16px;
+    padding-right: 24px;
+    white-space: nowrap;
+
+    &.disabled{
+      opacity: 0.7;
+    }
+  }
+}
+
+.learn-map--delete-filter{
+  padding-top: 16px;
+  font-size: 16px;
+  color: #787878;
+  border-bottom: 1px dashed rgba(79,79,79,0.5);
+}
+
+.learn-map--filter--my-doc {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+
+  .search-list--input--controls{
+    right: 15px;
+  }
+
+  .search-list--input input[type='text']{
+    width: 250px;
+    padding-right: 50px;
+    @include transition(all .3s $ease-in-out-quad);
+
+    &:focus{
+      width: 300px;
+    }
+  }
+
+  button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    opacity: 0.8;
+    margin-left: 0px;
+
+    &:after{
+      display: none !important;
+    }
+  }
+}
+
+//Общее о конференциях
+
+//Список конференций
+.conferences-list-wrapper{
+  z-index: 12;
+  width: 100%;
+  left: 0px; right: 0px;
+  bottom: 0px; min-height: 100%;
+  background-color: #f4f5ef;
+  white-space: nowrap;
+
+  &.scroll-wrapper{
+    &:after,&:before{
+      content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+        width: 100%;
+        z-index: 100;
+    }
+
+    &.scrolling:before {
+        left: 0px;
+        z-index: 50;
+        width: 30px;
+        background-image: -webkit-linear-gradient(right, transparent 0%, #f4f5ef 100%);
+        background-image: -o-linear-gradient(right, transparent 0%, #f4f5ef 100%);
+        background-image: -moz-linear-gradient(right, transparent 0%, #f4f5ef 100%);
+        background-image: -ms-linear-gradient(right, transparent 0%, #f4f5ef 100%);
+        background-image: linear-gradient(right, transparent 0%, #f4f5ef 100%);
+    }
+
+    &:after {
+        right: 0;
+        width: 30px;
+        background-image: -webkit-linear-gradient(left, transparent 0%, #f4f5ef 100%);
+        background-image: -o-linear-gradient(left, transparent 0%, #f4f5ef 100%);
+        background-image: -moz-linear-gradient(left, transparent 0%, #f4f5ef 100%);
+        background-image: -ms-linear-gradient(left, transparent 0%, #f4f5ef 100%);
+        background-image: linear-gradient(left, transparent 0%, #f4f5ef 100%);
+    }
+  } 
+
+  &.scroll-content{
+    height: auto !important;
+  }
+
+  .conferences-list{
+    padding-bottom: 15px;
+  }
+
+  .conference-name{
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    min-width: 300px;
+    max-width: 400px;
+    padding-right: 30px;
+    white-space: normal;
+
+    &:hover{
+      color: #787878;
+    }
+  }
+
+  .scroll-element.scroll-x{
+    position: absolute;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      height: 3px;
+      z-index: 900;
+
+      div{
+        position: absolute;
+        display: block;
+        height: 100%;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .scroll-element_outer{
+        bottom: 0px;
+        height: 3px;
+      }
+
+      .scroll-element_track{
+        background-color: transparent;
+      }
+      .scroll-bar {
+        background-color: #33beb7;
+    }
+  }
+}
+
+//Данные конференции
+.conference-city-wrapper{
+  position: absolute;
+  left: -2px; right: -2px;
+  bottom: -2px;
+  background-color: #f4f5ef;
+  padding: 18px 2px 2px;
+  box-shadow: 0px 1px 0px 0px #555 inset;
+  z-index: 10;
+
+  &.no-show-block,
+  .no-show-block{
+    display: none;
+  }
+
+  .conference-info>*{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .conference-info{
+    padding-bottom: 15px;
+    .conference-name{
+      float: left;
+      width: 420px;
+      padding-right: 95px;
+    }
+  }
+
+  .conference-name{
+    font-size: 24px;
+    line-height: 30px;
+  } 
+
+  .conference-lectors{
+    float: left;
+    width: 295px;
+    padding-right: 60px;
+    i{
+      line-height: 30px;
+    }
+  }
+
+  .conference-members{
+    float: left;
+    width: 300px;
+    padding-right: 80px;
+
+    .textblock{@include blueLinks;}
+    
+    i{
+      line-height: 30px;
+    }
+
+    .more-wrapper{
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      padding-top: 2px;
+    }
+
+    .more-members{
+      color: #787878;
+      font-style: italic;
+      border-color: #787878;
+      border-style: dashed;
+    }
+
+    .more-members-info{
+      position: absolute;
+      width: 420px;
+      bottom: 30px;
+      left: 50%;
+      margin-left: -210px;
+      padding: 23px 25px;
+      //border: 1px solid #555;
+      box-shadow: 0 0 7px #555;
+      border-radius: 4px;
+      background-color: #FFF;
+
+      &:after, &:before {
+        content: '';
+        position: absolute;
+        background: #fff;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+        width: 20px; height: 20px;
+        
+        z-index: -1; /* Прячем за основным блоком */
+        transform: rotate(45deg); /* Поворачиваем на 45º */
+        -webkit-transform: rotate(45deg);
+       }
+       &:after{
+        box-shadow: 0 0 7px #555; /* Добавляем тень для уголка */
+       }
+       &:before {
+        z-index: 1; /* Накладываем поверх, чтобы скрыть следы тени */
+        box-shadow: none !important; /* Прячем тень */
+       }
+    }
+  }
+
+  .conferences-number{
+    font-family:"futura-pt","Open Sans",Tahoma,Arial,sans-serif;
+    float: right;
+    width: 88px;
+    height: 88px;
+    background-color: #FFF;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0px;
+    &:hover{
+      .num,.text{
+        color: #787878;
+      }
+    }
+    .num {
+      font-size: 48px;
+      line-height: 48px;
+      text-indent: -5px;
+      letter-spacing: -5px;
+    }
+    .text{
+      font-size: 12px;
+      line-height: 12px;
+      font-style: italic;
+    }
+  }
+}

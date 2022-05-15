@@ -1,0 +1,208 @@
+
+//Оставить отзыв (попап для вопроса)
+
+.open-question-wrapper{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+
+	.question-popup{
+		display: none;
+		position: absolute;
+		width: 570px;
+		left: 50%;
+		margin-left: -285px;
+		z-index: 1090;
+		background-color: #FFF;
+		border: 2px solid #33beb7;
+		border-radius: 23px;
+		text-align: left;
+
+		&:after{
+			content:"";
+			position: absolute;
+			left: 50%;
+			margin-left: -18px;
+			width: 36px; height: 21px;
+			background-image: url(../img/icons.png);
+			background-repeat: no-repeat;
+		}
+
+		&.top-popup{
+			bottom: 76px;
+
+			&:after{
+				bottom: -21px; 
+				background-position: -100px 0px;
+			}			
+		}
+
+		&.bottom-popup{
+			top: 76px;
+			
+			&:after{
+				top: -21px; 
+				background-position: -100px -21px;
+			}			
+		}
+
+		.book-form{
+			display: block;
+			position: relative;
+			padding: 29px 40px 30px 40px;
+			font-weight: normal;
+
+			.closed-popup{
+				position: absolute;
+			    top: 10px;
+			    right: 19px;
+			    font-size: 14px;
+			    cursor: pointer;
+			    z-index: 8040;
+			    color: #b6b5b5;
+			    text-decoration: none;
+			    border-bottom: none;
+			    background-image: none;
+
+				&:hover,
+				&:hover:after{
+					color: #4f4f4f;
+				}
+
+				&:after{
+					color: #b6b5b5;
+					white-space: nowrap;
+					content:'×';
+					font-size: 20px;
+					position: absolute;
+					top: -3px; right: -12px;
+				}
+			}
+		}
+
+		.scroll-element.scroll-y{
+			display: block;
+			position: absolute;
+		    right: 0;
+		    top: 5px;
+		    bottom: 5px;
+		    width: 7px;
+		    z-index: 900;
+
+		    >div{
+		    	position: absolute;
+				display: block;
+			    height: 100%;
+			    top: 0;
+			    left: 0px;
+			    width: 100%;
+		    	overflow: hidden;
+		    }
+
+		    .scroll-element_outer{
+		    	left: 2px;
+	    		width: 2px;
+		    }
+
+		    .scroll-element_track{
+		    	border-radius: 3px;
+		    	background-color: #f2f2f2;
+		    }
+		    .scroll-bar {
+		    	min-height: 10px;
+		    	border-radius: 3px;
+			    background-color: #33beb7;
+			}
+		}
+	}
+
+	.thanks-block{
+		display: none;
+		width: 100%;
+		padding: 47px 70px 44px 70px;
+		text-align: center;
+
+		.thanks-header{
+			font-size: 36px;
+			margin-bottom: 12px;
+		}
+
+		.textblock{
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 35px;
+
+			a{
+				color: #2d9eaa;
+    			border-color: #b2d4d3;
+			}
+		}
+	}
+
+	.popup-header{
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 4px;
+	}
+
+	.scroll-wrapper{
+		height: 218px;
+		margin-bottom: 0px;
+	}
+
+	.error-text{
+		margin-top: 5px;
+	}
+
+	.book-form--row {
+		margin-bottom: 8px;
+		label{
+			font-weight: normal;
+			max-width: 65px;
+		}
+	}
+
+	.-justify-content-{
+		padding-top: 6px;
+	}
+
+	.book-form--accept{
+		width: 300px;
+		margin-top: 16px;
+		font-weight: normal;
+	}
+
+	.ages-input{
+		width: 30px;
+	}
+}
+
+.open-question-popup{
+	position: relative;
+}
+
+.open-question-wrapper .question-popup,
+.service-form-wrapper .question-form.book-form,
+.question-form{
+	textarea{
+		width: 100%;
+		min-height: 220px;
+		height: 220px;
+		margin-top: 0px;
+		padding: 20px 10px 20px 28px;
+		background-image: none;
+		background-color: #ebece5;
+		resize: none;
+		outline: none;
+		font-family: $bFontFamily;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 22px;
+		border: none;
+		border-radius: 3px;
+
+		&:focus{
+			background-image: none;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@import "../base";
+@import "../bourbon";
+
+/* -------------------------------------------------
+    Patient gallery
+   ------------------------------------------------- */
+
+$itemHeight: 774px;
+
+.patient-gallery {
+  position: relative;
+  margin-bottom: $sectionMargin;
+
+  .gallery--item {
+    height: $itemHeight;
+    width: 100%;
+  }
+}
+.patient-gallery--btn {
+  bottom: 40px;
+  position: absolute;
+  left: 53px;
+}
+.patient-gallery--resp-link {
+  position: absolute;
+  bottom: 51px;
+  right: 53px;
+}

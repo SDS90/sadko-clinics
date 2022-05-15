@@ -1,0 +1,39 @@
+/* -------------------------------------------------
+    Price grid
+   ------------------------------------------------- */
+
+.price-grid {
+  &.panel {
+    padding: 50px;
+  }
+
+  .search {
+    margin-bottom: 23px;
+  }
+
+  h3{
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 27px;
+    margin-bottom: 22px;
+  }
+}
+
+.price-grid-services {
+
+  li {
+    margin: 0 0 3px;
+    line-height: 1;
+
+    a {
+      font-size: 16px;
+      position: relative;
+      padding: 0 1px;
+      border-color: transparent;
+
+      &:hover {
+        border-color: #cacaca !important;
+      }
+    }
+  }
+}

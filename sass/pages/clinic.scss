@@ -1,0 +1,82 @@
+//Клиника
+
+.clinic-page{
+
+	h2{
+		margin-top: 34px;
+		margin-bottom: 32px;
+	}
+
+	.equipment-header{
+		margin-top: 19px;
+	}
+
+	.equipment-gallery{
+		margin-bottom: 56px;
+	}
+
+	.more-articles{
+		margin: 25px 0px 47px 0px;
+	}
+
+	.actions-block{
+		margin-top: -17px;
+		margin-bottom: 11px;
+	}
+
+	.branches-header{
+		margin: 40px 0px 15px 0px;
+	}
+
+	.clinic-tile--title{
+		height: 80px;
+	}
+
+	.clinic-tile--descr{
+		max-width: 85%;
+	}
+
+	.clinic-tiles{
+		margin: -15px 0px 20px 0px;
+	}
+
+	.clinic-tiles--list{
+		margin-bottom: 0px;
+	}
+
+	.learn-map{
+		margin: -15px 0px 50px 0px;
+	}
+
+	.doctor-articles{
+		margin: -16px 0px 50px 0px;
+	}
+
+	.promo-video{
+		margin-top: -20px;
+	}
+}
+
+//Вариант баннера с картинкой
+.second-banner-block{
+	display: block;
+	width: 100%;
+	position: relative;
+
+	>img{
+		display: block;
+		width: 100%;
+	}
+
+	.banner-info{
+		position: absolute;
+		bottom: 0px; left: 0px;
+		width: 100%;
+		background-color: #8582bc;
+		background-color: rgba(133,130,188,0.8);
+		padding: 10px 14px;
+		font-size: 30px;
+		line-height: 36px;
+		color: #fff;
+	}
+}

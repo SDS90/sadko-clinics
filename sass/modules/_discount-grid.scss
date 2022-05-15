@@ -1,0 +1,40 @@
+/* -------------------------------------------------
+    Discount grid
+   ------------------------------------------------- */
+
+.discount-grid {
+
+  margin-left: -12px;
+  margin-right: -12px;
+
+  [class*='col-'] {
+      padding: 12px;
+  }
+
+  .banner-block {
+    display: block;
+    overflow: hidden;
+    border-bottom: none;
+
+    &.-banner-overlay-{
+      cursor: pointer;
+    }
+
+    .btn{
+      color: #4f4f4f;
+      background-color: #fff;
+      box-shadow: none;
+
+      &:hover{
+        background-color: #33beb7;
+        color: #fff;
+      }
+    }
+  }
+
+  .doctors-rating {
+    .textblock-wrapper{
+      width: auto;
+    }
+  }
+}

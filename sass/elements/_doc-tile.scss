@@ -1,0 +1,57 @@
+@import "../base-colors";
+
+/* -------------------------------------------------
+    Doctor tile
+   ------------------------------------------------- */
+
+$width: 386.67px;
+$height: 187px;
+
+.doc-tile {
+  //background: #ebebeb radial-gradient(circle 150px at 60px 100%, #fff, transparent);
+  display: inline-block;
+  vertical-align: top;
+  width: $width;
+  height: $height;
+  position: relative;
+  border: none;
+  //padding: 31px 30px 0 109px;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    background: linear-gradient(to left, #000, transparent);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 20;
+    opacity: .1;
+  }
+
+  &:before {
+    content: '';
+    background: $colorTurq;
+    position: absolute;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  &:hover {
+    &:before {
+      opacity: .5;
+    }
+  }
+
+  &.active, &.is-nav-selected {
+    background-color: #f5f6ec;
+    &:before {
+      opacity: 1;
+    }
+  }
+}

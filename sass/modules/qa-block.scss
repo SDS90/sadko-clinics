@@ -1,0 +1,56 @@
+
+//Советы врачей
+.qa-wrapper{
+	margin-bottom: 50px;
+
+	.qa-form{
+		margin-bottom: 0px;
+	}
+
+	.qa-block{
+		position: relative;
+		padding-bottom: 20px;
+	}
+
+	.more-link{
+		position: absolute;
+		bottom: 0px; left: 16px;
+	}
+}
+
+.advice-block{
+	.name{
+		font-size: 14px;
+		font-style: italic;
+	}
+	
+	.question-header{
+		font-size: 32px;
+		margin-top: -3px;
+    	margin-bottom: 6px;
+	}
+
+	.question{
+		font-size: 18px;
+		line-height: 23px;
+		margin-bottom: 25px;
+	}
+
+	.doctor-name{
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	.answer{
+		font-size: 16px;
+		line-height: 22px;
+		margin-bottom: 8px;
+	}
+
+	.more-info{
+		font-size: 16px;
+		line-height: 20px;
+	}
+}

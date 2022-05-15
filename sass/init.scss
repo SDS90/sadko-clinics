@@ -1,0 +1,124 @@
+@import 'reset';
+@import 'typography';
+@import 'utils';
+@import 'layout';
+@import "buttons";
+@import "grids";
+@import "icons";
+
+//  Libs
+// -------------------------------------------------
+
+@import "libs/libs";
+@import "libs/libs-override";
+
+//Pages
+
+@import 'pages/command';
+@import 'pages/doctor';
+@import 'pages/articles';
+@import 'pages/services';
+@import 'pages/service-detail';
+@import 'pages/education';
+@import 'pages/about';
+@import 'pages/technical';
+//@import 'pages/clinic';
+@import 'pages/dms';
+@import 'pages/inner';
+@import 'pages/actions';
+//@import 'pages/contacts';
+@import 'pages/patients';
+@import 'pages/news';
+@import 'pages/prices';
+@import 'pages/vacancies';
+@import 'pages/reviews';
+@import 'pages/sadko';
+@import 'pages/main';
+@import 'pages/page404';
+
+@import 'pages/landing';
+
+//  Modules
+// -------------------------------------------------
+
+@import "modules/header/exports";
+@import "modules/footer";
+@import "modules/lang-switcher";
+@import "modules/clinic-tiles/exports";
+@import "modules/galleries";
+@import 'modules/countries-gallery';
+@import "modules/doc-gallery";
+@import "modules/patient-gallery";
+@import "modules/learn-map";
+@import "modules/book-form";
+@import "modules/fixed-menu";
+@import 'modules/banner-slider';
+@import 'modules/question-popup';
+//@import 'modules/address-map';
+@import 'modules/search-list'; //что это?
+@import 'modules/contacts/exports';
+@import 'modules/qa-form';
+@import 'modules/qa-block';
+@import 'modules/doc-hello';
+@import 'modules/promo-video';
+@import 'modules/branches-map';
+@import 'modules/book-tile';
+@import 'modules/discount-grid';
+@import 'modules/price-grid';
+@import 'modules/forms';
+@import 'modules/company-news';
+
+@import 'modules/filter';
+@import 'modules/doctor-block';
+@import 'modules/stages-list';
+@import 'modules/photo-slider';
+@import 'modules/articles';
+@import 'modules/results';
+@import 'modules/reviews-slider';
+
+@import 'modules/education-program';
+@import 'modules/academy-courses';
+@import 'modules/professional-education';
+
+@import 'modules/technologies';
+@import 'modules/about-slider';
+@import 'modules/principles';
+@import 'modules/success-slider';
+@import 'modules/services';
+
+@import 'modules/banners';
+
+//Doctor page modules
+@import 'modules/doctor-page/full-doctor-block';
+@import 'modules/doctor-page/doctor-special';
+@import 'modules/doctor-page/doctor-education';
+
+
+//  Elements
+// -------------------------------------------------
+
+@import "elements/quot";
+@import "elements/quot-title";
+@import "elements/doc-tile";
+@import "elements/panel";
+@import "elements/checkbox";
+@import "elements/form";
+//@import "elements/select";
+@import "elements/dot-note";
+@import "elements/modal";
+@import "elements/icon-row";
+@import "elements/wallet";
+@import 'elements/bonus-calc';
+//@import 'elements/search';
+@import 'elements/video-block';
+@import 'elements/file';
+
+
+//  Plugins
+// -------------------------------------------------
+
+//@import "plugins/scroll";
+@import "plugins/owl.carousel";
+@import 'plugins/rangeSlider';
+@import 'plugins/autocomplete';
+@import "plugins/fancybox";

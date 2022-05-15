@@ -1,0 +1,190 @@
+@import "../base";
+
+/* -------------------------------------------------
+    Scroll
+   ------------------------------------------------- */
+
+$sliderWidth: 5px;
+$sliderWidthActive: 5px;
+
+$verticalBarWidth: 5px;
+$verticalBarActiveWidth: 5px;
+
+$opacityBase: .9;
+$opacityActive: .9;
+
+
+%sliderHoverStatus {
+  opacity: $opacityActive;
+  width: $sliderWidthActive;
+}
+
+%sliderActiveStatus {
+  @extend %sliderHoverStatus;
+  // Remove top transition when slider is active
+  @include transition(width .2s, opacity .3s);
+}
+
+.ui-scroll-target {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//  Scroll container
+// -------------------------------------------------
+   
+.ui-scroll {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+
+  &:hover {
+    .ui-scroll--bar-slider {
+      opacity: $opacityActive;
+    }
+  }
+}
+
+//  Scroll inner wrapper (add padding here if need)
+// -------------------------
+.ui-scroll--helper {
+}
+
+
+//  Scroll sliders
+// -------------------------------------------------
+   
+.ui-scroll--bar-slider {
+  background: #33beb7;
+  cursor: pointer;
+  position: absolute;
+  opacity: $opacityBase;
+  border-radius: 3px;
+}
+
+//  General bars style
+// -------------------------------------------------
+
+.ui-scroll--bar {
+  cursor: pointer;
+  background: #fff;
+  position: absolute;
+  z-index: 10;
+  border-radius: 3px;
+
+  @include transition(background-color .2s, border-color .2s, width .3s, opacity .3s);
+
+  //&:hover, &.active {
+    //background: rgba(0, 0, 0, .1);
+  //}
+}
+
+//  Vertical bar
+// -------------------------------------------------
+
+.ui-scroll--bar-vertical {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: $verticalBarWidth;
+
+  //  Slider
+  // -------------------------
+  .ui-scroll--bar-slider {
+    top: 0;
+    width: $sliderWidth;
+    
+    @include transition(width .2s, opacity .3s);
+  }
+
+  //  Hover and active
+  // -------------------------
+  &:hover, &.active {
+    width: $verticalBarActiveWidth;
+
+    .ui-scroll--bar-slider {
+      @extend %sliderHoverStatus;
+    }
+  }
+
+  &.active {
+    .ui-scroll--bar-slider {
+      @extend %sliderActiveStatus;
+    }
+  }
+}
+
+//  Horizontal bat
+// -------------------------------------------------
+
+.ui-scroll--bar-horizontal {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: $verticalBarWidth;
+
+  .ui-scroll--bar-slider {
+    left: 0;
+    bottom: 3px;
+    height: $sliderWidth;
+
+    @include transition(height .2s, opacity .3s);
+  }
+
+
+  &:hover, &.active {
+    height: $verticalBarActiveWidth;
+
+    .ui-scroll--bar-slider {
+      opacity: $opacityActive;
+      height: $sliderWidthActive;
+    }
+  }
+
+  &.active {
+    .ui-scroll--bar-slider {
+      opacity: $opacityActive;
+      height: $sliderWidthActive;
+
+      @include transition(height .2s, opacity .3s);
+    }
+  }
+}
+
+
+//  Hidden status
+// -------------------------------------------------
+   
+.-vert-scroll-hidden-  {
+  .ui-scroll--bar-vertical {
+    opacity: 0;
+    right: -10px;
+  }
+}
+
+.-hor-scroll-hidden- {
+  .ui-scroll--bar-horizontal {
+    opacity: 0;
+    bottom: -10px;
+  }
+}
+
+//  Test DOM elem
+// -------------------------------------------------
+
+.ui-scroll-test {
+  background: #ffffff;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  overflow: auto;
+  left: -10000px;
+  top: 0;
+  opacity: 0;
+  z-index: -1;
+
+  div {
+    height: 300px;
+  }
+}

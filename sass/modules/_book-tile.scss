@@ -1,0 +1,251 @@
+/* -------------------------------------------------
+    Book tile
+   ------------------------------------------------- */
+
+$headerBg:  rgba(#f5f6ec, .95);
+$duration: 400ms;
+$tf: ease;
+
+.book-tile {
+  border-radius: 20px;
+  margin-bottom: 49px;
+  position: relative;
+  overflow: hidden;
+  height: 558px;
+  z-index: 1;
+
+  &.-clock- {
+    .book-tile--bottom,
+    .book-tile--back,
+    .book-tile--answer {
+      background: rgba(#e08860, .95);
+    }
+  }
+
+  &.-doc- {
+    .book-tile--bottom,
+    .book-tile--back,
+    .book-tile--answer {
+      background: rgba(#7baebc, .95);
+    }
+  }
+  &.-lead- {
+    .book-tile--bottom,
+    .book-tile--back,
+    .book-tile--answer {
+      background: rgba(#648a9d, .95);
+    }
+  }
+
+  &.-back- {
+    .book-tile--back {
+      opacity: 1;
+      transition: all $duration 50ms $tf;
+      @include transform(translateX(0));
+    }
+
+    .book-tile--back--content {
+      opacity: 1;
+      transition: all $duration 100ms $tf;
+      @include transform(translateX(0));
+    }
+
+    .book-tile--header {
+      opacity: 0;
+      @include transform(translateY(-100%));
+    }
+
+    .book-tile--bottom {
+      opacity: 0;
+      @include transform(translateY(100%));
+    }
+
+  }
+}
+
+.book-tile--front {
+  opacity: 1;
+  transition: all $duration $tf;
+  height: 100%;
+}
+
+.book-tile--img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  max-width: 100%;
+}
+
+
+.book-tile--header {
+  background: $headerBg;
+  height: 126px;
+  text-align: center;
+  position: relative;
+  padding: 23px 22px 0;
+
+  opacity: 1;
+  transition: all $duration $tf;
+  @include transform(translateY(0));
+
+  &:after {
+    content: '';
+    background: $headerBg;
+    border-radius: 0 0 52px 52px;
+    width: 105px;
+    height: 52px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+
+    @include transform(translate(-50%, 0));
+  }
+}
+
+.book-tile--header--title {
+  font-size: 36px;
+  display: block;
+}
+
+.book-tile--header--ico {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  z-index: 1;
+
+  @include transform(translate(-50%, 0));
+}
+
+.book-tile--bottom {
+  position: absolute;
+  bottom: 0;
+  height: 212px;
+  text-align: center;
+  color: #fff;
+  padding: 22px 22px 0;
+
+  opacity: 1;
+  transition: all $duration $tf;
+  @include transform(translateY(0));
+
+  p {
+    line-height: 1.3;
+  }
+
+  .btn-white {
+    position: absolute;
+    bottom: 41px;
+    left: 50%;
+
+    @include transform(translate(-50%,0));
+  }
+}
+
+//  Back
+// -------------------------------------------------
+
+.book-tile--back {
+  color: #fff;
+  position: absolute;
+  padding: 26px 25px 25px;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  overflow: hidden;
+
+  transition: all $duration $tf;
+  @include transform(translateX(100%));
+
+  .book-btn {
+    width: auto;
+    padding: 0 20px;
+  }
+
+  .book-form--section {
+    margin: 20px 0 30px;
+
+    &.first-section{
+      margin-top: 2px;
+    }
+
+    .error-text{
+      color: rgb(245,246,236);
+    }
+  }
+
+  textarea {
+    max-height: 160px;
+  }
+}
+
+.book-tile--back--content {
+  transition: all $duration $tf;
+  opacity: 0;
+  @include transform(translateX(100%));
+}
+
+.book-tile--back--header {
+  padding: 0 50px 0 0;
+  position: relative;
+  min-height: 70px;
+}
+
+.book-tile--back--header--title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 3px;
+  display: block;
+}
+
+.book-tile--back--header--ico {
+  position: absolute;
+  right: 0;
+  top: 4px;
+
+  @include transform(translateX(20%));
+}
+
+//Answer 
+
+.book-tile--answer{
+  //display: none;
+  color: #fff;
+  position: absolute;
+  padding: 150px 25px 25px 25px;
+  left: 100%;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  overflow: hidden;
+  text-align: center;
+
+  .answer-header{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+
+  p{
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .answer-btn{
+    position: absolute;
+    bottom: 41px;
+    left: 50%;
+    line-height: 42px;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+  
+}

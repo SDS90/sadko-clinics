@@ -1,0 +1,180 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Поликлиника
+block content
+
+	//Фиксированное меню
+	div.fixed-menu
+		a(href="#clinicBlock")
+			div 
+				span Обращение
+		a(href="#managementBlock")
+			div 
+				span Руководство
+		a(href="#ourPrinciplesBlock")
+			div 
+				span Принципы
+		a(href="#cabinetsBlock")
+			div 
+				span Отделения
+		a(href="#actionsBlock")
+			div 
+				span Акции
+		a(href="#doctorsBlock")
+			div 
+				span Врачи
+		a(href="#tekhnologiesBlock")
+			div 
+				span Технологии
+		a(href="#officesBlock")
+			div 
+				span Филиалы
+		a(href="#articlesBlock")
+			div 
+				span Статьи и советы
+		a(href="#reviewsBlock")
+			div 
+				span Отзывы
+
+	//Стартовый слайдер
+	div.about-slider#clinicBlock
+		//Один слайд
+		div.slide
+			//Фотография
+			div.slide-photo
+				img(src="#{srcPath}img/bg/FY2T1210.jpg", width="2500", height="1667", alt="")
+			//Контент
+			div.contents
+				//Заголовок
+				div.about-header Поликлиника
+				div.slide-text 
+					| Мы работаем в интересах
+					br 
+					| вашего здоровья
+		//Один слайд
+		div.slide
+			//Фотография
+			div.slide-photo
+				img(src="#{srcPath}img/bg/entertainment-snow.jpg", width="2560", height="1600", alt="")
+			//Контент
+			div.contents
+				//Заголовок
+				div.about-header Поликлиника
+				div.slide-text 
+					| Мы работаем в интересах
+					br 
+					| вашего здоровья
+
+	//Контент
+	div.contents.about-page
+
+		//О поликлинике
+		div.about-clinic.textblock Лечебно-диагностический центр  «САДКО» — это уникальный медицинский комплекс, ломающий стереотип поликлиники, это клиника будущего, распахнувшая двери для нижегородцев уже сегодня. В клинике «САДКО» действует принцип «от и до», означающий комплексный подход к Вашему здоровью и позволяющий гармонично сочетать возможность тщательного обследования и лечения в условиях одного медицинского учреждения. Лечебно-диагностический центр  «САДКО» — это 12 специализированных  отделений, оснащенных новейшим оборудованием экспертного класса с исключительными  возможностями, полная компьютеризация и автоматизация комплекса.
+
+		//Руководство филиала
+		h2#managementBlock Руководство филиала
+		include ../personal-modules/managers
+
+		//Наши принципы
+		h2#ourPrinciplesBlock Наши принципы
+		include ../modules/principles-blocks
+
+	//Отделения - вынесено отдельно, т.к. блок на всю ширину
+	div.brown-section.offices-service-block
+		div.contents
+
+			//Отделения
+			div.relative.offices-header
+				h2#cabinetsBlock Отделения
+				div.file-link-wrapper.all-link
+					a(href="#").file-link.pdf-link.hover-link
+						i.icon
+						div.file-name
+							span Стоимость услуг
+
+			include ../modules/service
+
+	//Контент
+	div.contents.about-page
+
+		//Акции
+		span#actionsBlock
+		include ../modules/actions
+
+		//Специалисты
+		h2#doctorsBlock Специалисты
+		include ../personal-modules/doctors-clinic-page
+
+		//Технологии
+		h2.techno-header#tekhnologiesBlock Технологии
+
+		include ../modules/technologies-clinic-page
+
+		//Филиалы
+		h2#officesBlock Сеть филиалов
+		include ../modules/branches-map
+
+		h2 Фотогалерея
+
+		//Фотогалерея
+		div.photo-slider
+			//Одно фото с подписью
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Первый рабочий день стоматолога-терапевта 
+					a(href="#") А.В. Ковалёвой
+			//Одно фото с подписью
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/doctor-gallery.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Управляющий сормовским филиалом на собеседовании
+			//Одно фото с подписью
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Лекция перед экзаменом по эстетической стоматологии
+			//Одно фото с подписью
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/doctor-gallery.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Фантомный класс в отделении стоматологии
+			//Одно фото с подписью
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Первый рабочий день стоматолога-терапевта 
+					a(href="#") А.В. Ковалёвой
+
+		h2 Наше видео
+		include ../modules/promo-video
+
+		h2 Вопрос-ответ
+		include ../modules/qa
+
+		h2#articlesBlock Полезные статьи
+		include ../modules/articles
+
+		//Отзывы
+		div.header-wrapper
+			h2#reviewsBlock Отзывы о «САДКО»
+			//Кнопка с вызовом попапа
+			div.open-question-wrapper
+				a.btn.btn-reverse-colors.open-question-popup(href="#") Добавить отзыв
+				include ../modules/review-popup
+
+		include ../modules/reviews-slider
+
+
+
+//Персональные скрипты для этой страницы
+//block pageJS
+	script(src='https://maps.googleapis.com/maps/api/js?')
+	script(src='#{srcPath}js/utils.js')
+	script(src='#{srcPath}js/components/gradientAnimation.js')
+	script(src='#{srcPath}js/plugins/spoiler.js')
+	//script(src='#{srcPath}js/plugins/ui-select.js')
+	

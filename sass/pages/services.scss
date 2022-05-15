@@ -1,0 +1,264 @@
+//Услуги
+
+.service-page{
+	padding-top: 38px;
+
+	h1{
+		padding-right: 200px;
+		margin-bottom: 18px;
+	}
+
+	.reviews-header{
+		margin: 32px 0px 10px 0px;
+	}
+
+	.header-wrapper{
+		margin-top: 57px;
+	}
+}
+
+.services-header{
+	width: 100%;
+	margin-bottom: 10px;
+
+	h1,
+	.open-link{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	h1{
+		float: left;
+		max-width: 950px;
+	}
+
+	.open-link{
+		float: right;
+		margin-top: 17px;
+		width: 24px;
+		height: 31px;
+		background-image: url(../img/icons.png);
+		background-position: -252px -172px;
+		background-repeat: no-repeat;
+		border-bottom: none;
+	}
+
+	.file-name{
+		width: 145px;
+	}
+}
+
+//Ссылки
+.services-link-block{
+	width: 100%;
+	position: relative;
+	padding-right: 50%;
+	margin: 0px -8px 68px -8px;
+	padding-left: 8px;
+	height: 405px;
+
+	.services-logo-block{
+		position: absolute;
+		right: 8px; top: 0px;
+		width: 597px; height: 405px;
+		background-image: url(../img/bg/services-logo-bg.png);
+		background-repeat: no-repeat;
+		border-radius: 30px;
+		box-shadow: 4px 5px 5px #aeb8ae;
+
+		>a span,
+		.text-links{
+			text-shadow: 3px 4px 2px #c9cfc9;
+		}
+
+		a{
+			border-bottom: none;
+		}
+
+		>a,
+		>a span{
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		>a{
+			position: absolute;
+			font-size: 16px;
+			line-height: 18px;
+
+			img{
+				max-width: 100%;
+				display: block;
+				padding-bottom: 6px;
+			}
+		}
+
+		.text-links{
+			position: absolute;
+			top: 249px; left: 60px; right: 60px;
+			font-size: 18px;
+			line-height: 24px;
+
+			li{
+				list-style: none;
+				margin-bottom: 1px;
+			}
+		}
+
+		.center-image{
+			position: absolute;
+			top: 50%; left: 60px; right: 60px;
+			margin-top: 4px;
+			height: 1px;
+			background-color: #b2b2b2;
+			text-align: center;
+		}
+
+		.image-wrapper{
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			padding: 0px 21px;
+			background-color: #fdfdfd;
+			min-height: 100%;
+		}
+	}
+
+	.service-block{
+		margin-top: 52px;
+		font-size: 18px;
+		line-height: 24px;
+
+		li{
+			margin-bottom: 2px;
+		}
+
+		a{
+			border-color: transparent;
+			&:hover{ 
+				border-color: #cacaca  !important;
+			}
+		}
+	}
+}
+
+
+//Поиск
+.service-search-form,
+.reviews-search-form{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background-color: #FFF;
+
+	.search-textfield,
+	.search-button{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.search-textfield{
+		float: left;
+		padding-left: 20px;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		font-family: $bFontFamily;
+		font-size: 18px;
+		color: #4f4f4f;
+	}
+
+	.search-button{
+		float: right;
+		width: 60px;
+		height: 48px;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		background-image: url(../img/icons/search.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		cursor: pointer;
+		font-family: $bFontFamily;
+		font-size: 18px;
+		color: #4f4f4f;
+	}
+
+	.autocomplete-list{
+		display: none;
+		position: absolute;
+		top: 100%; left: 0px;
+		width: 100%;
+		background-color: #FFF;
+		margin-left: 0px;
+		box-shadow: 2px 2px 6px #cfcfcf;
+
+		li{
+			list-style-type: none;
+			width: 100%;
+		}
+
+		a{
+			display: block;
+			width: 100%;
+			height: 31px;
+			padding: 0px 21px;
+			font-size: 18px;
+			line-height: 31px;
+			border-bottom: none;
+
+			&:hover{
+				background-color: #f5f6ec;
+			}
+		}
+	}
+
+	input::-webkit-input-placeholder {
+	    font-family: $bFontFamily;
+	    font-size: 16px;
+	    color: #787878;
+	    font-style: italic;
+    }
+  	input::-moz-placeholder {
+	    font-family: $bFontFamily;
+	    font-size: 16px;
+	    color: #787878; 
+	    font-style: italic;
+	}
+  	input::placeholder {
+	    font-family: $bFontFamily;
+	    font-size: 16px;
+	    color: #787878; 
+	    font-style: italic;
+	}
+}
+
+.service-search-form{
+	border: 1px solid #787878;
+	margin-bottom: 10px;
+	.search-textfield{
+		width: 1098px;
+		height: 48px;
+	}
+}
+
+.reviews-search-form{
+	border: 2px solid #a2a2a2;
+	margin-bottom: 20px;
+	.search-textfield{
+		width: 700px;
+		height: 46px;
+	}
+}
+
+//Быстрый поиск
+.fast-search-wrapper{
+	width: 100%;
+	font-size: 16px;
+	line-height: 25px;
+
+	span, a{
+		font-style: italic;
+		color: #787878; 
+	}
+}

@@ -1,0 +1,234 @@
+//Данные доктора
+.full-doctor-block{
+	width: 100%;
+	margin-bottom: 33px;
+
+	.doctor-video-wrapper,
+	.doctor-info{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.doctor-info{
+		float: left;
+		width: 430px;
+		margin-top: -1px;
+	}
+
+	.doctor-video-wrapper{
+		float: right;
+		width: 716px;
+
+		.video-wrapper{
+			width: 716px;
+			height: 402px;
+		}
+
+		.video-frame{
+			width: 716px;
+			height: 402px;
+		}
+
+		iframe{
+			width: 716px;
+			height: 602px;
+			margin-top: -100px;
+		}
+	}
+
+	.doctor-skills{
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 11px;
+
+		&.doctor-experts b,
+		&.doctor-questions{
+			font-size: 16px;
+		}
+
+		&.doctor-questions{
+			line-height: 22px;
+			margin-bottom: 19px;
+		}
+
+		span{
+			color: #fff;
+			background-color: #0696a3;
+			padding: 0px 3px;
+		}
+	}
+
+	.doctor-phone {
+		font-style: italic;
+		font-size: 16px;
+		margin-bottom: 14px;
+
+		a{
+			font-size: 18px;
+			color: #33beb7;
+			border-bottom: 1px solid #c1ebe9;
+		}
+	}
+
+	.flags{
+		margin-top: 5px;
+
+		img{
+			display: inline-block;
+			vertical-align: top;
+			height: 18px;
+			margin-right: 7px;
+		}
+	}
+
+	.doctor-address{
+		margin-left: 0px;
+		padding-left: 0px;
+
+		li{
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 5px;
+
+			&:before{
+				display: none;
+			}
+		}
+
+	}
+
+	.buttons-wrapper{
+		margin-top: -5px;
+		margin-bottom: 35px;
+
+		.left>a{
+			background-color: #FFF;
+			color: #33beb7;
+			margin-right: 5px;
+			&:hover{
+				background-color: #33beb7;
+				color: #fff;
+			}
+		}
+
+		.open-question-wrapper{
+			margin-left: 10px;
+		}
+	}
+
+}
+
+//Цитата доктора
+.doctor-quote{
+	position: relative;
+	width: 100%;
+	background-color: #f4f5ef;
+	padding: 28px 30px 23px 55px;
+	font-size: 18px;
+	line-height: 24px;
+
+	&:before {
+	    content: '”';
+	    font-family: "Proxima-Nova","futura-pt","Open Sans",Tahoma,Arial,sans-serif;
+	    font-size: 70px;
+	    font-weight: bold;
+	    line-height: 1;
+	    position: absolute;
+	    left: 20px;
+	    top: 26px;
+	}
+}
+
+.doctor-history-block,
+.doctor-special-full-block{
+
+	.textblock,
+	.image-wrapper{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.textblock{
+		width: 710px;
+		font-size: 18px;
+		line-height: 24px;
+
+		h3, h3, .h2, .h2{
+			font-size: 18px;
+			line-height: 24px;
+			font-weight: bold;
+			margin-top: 0px;
+			margin-bottom: 7px;
+		}
+	}
+
+	&.special-block .textblock{
+		h2, h3, .h2, .h3{
+			color: #4f4f4f;
+		    font-weight: normal;
+		    font-size: 36px;
+		    margin-top: 0px;
+		    margin-bottom: 19px;
+		}
+	}
+
+	.image-wrapper{
+		width: 420px;
+
+		img{
+			display: block;
+			width: 100%;
+		}
+
+		.btn:hover{
+			box-shadow: none;
+		}
+	}
+}
+
+//история
+.doctor-history-block{
+	.textblock{
+		float: left;
+		width: 710px;
+	}
+
+	.image-wrapper{
+		float: right;
+		padding-top: 39px;
+
+		img{
+			margin-bottom: 5px;
+		}
+
+		.about-image{
+			font-style: italic;
+			font-size: 14px;
+			line-height: 18px;
+			color: #787878;
+		}
+	}
+}
+
+//Специализации доктора
+.doctor-special-full-block{
+	margin-bottom: 32px;
+
+	.textblock{
+		float: right;
+	}
+
+	.image-wrapper{
+		position: relative;
+
+		.-text-center-{
+			width: 100%;
+			position: absolute;
+			bottom: 30px;
+		}
+	}
+
+	.btn:hover{
+		background-color: #FFF;
+	}
+}

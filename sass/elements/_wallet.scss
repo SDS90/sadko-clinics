@@ -1,0 +1,48 @@
+/* -------------------------------------------------
+    Wallet
+   ------------------------------------------------- */
+
+.wallet {
+  background: url(../img/wallet.jpg) left top no-repeat;
+  width: 394px;
+  height: 486px;
+  position: relative;
+
+  .btn-white {
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    white-space: nowrap;
+
+    @include transform(translateX(-50%));
+
+    &:hover {
+      & ~ .wallet--card {
+        &:after {
+          top: 7px;
+        }
+      }
+    }
+  }
+}
+
+.wallet--card {
+  position: absolute;
+  width: 353px;
+  height: 159px;
+  top: 109px;
+  left: 24px;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    background: url(../img/bonus-card.png) left top no-repeat;
+    width: 353px;
+    height: 159px;
+    position: absolute;
+    left: 0;
+    top: 97px; // Animate TOP, because of Chrome glitch bug
+
+    transition: all .4s ease;
+  }
+}

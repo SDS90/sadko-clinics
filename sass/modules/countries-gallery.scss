@@ -1,0 +1,222 @@
+/* -------------------------------------------------
+    Countries gallery
+   ------------------------------------------------- */
+$countriesItemHeight: 720px;
+$countriesDuration: .5s;
+$timingFunction: $ease-in-out-quad;
+
+
+.countries-gallery {
+  height: $countriesItemHeight;
+  width: 100%;
+  min-width: 1160px;
+  margin: -15px 0px 20px 0px;
+  overflow: hidden;
+
+  .gallery--item {
+    height: $countriesItemHeight;
+    width: 100%;
+    position: relative;
+  }
+
+  .contents{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    height: 100%;
+    margin-left: -600px;
+  }
+
+  .country-photo{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .flickity-prev-next-button{
+    display: none;
+  }
+}
+
+
+.country-info{
+	position: absolute;
+	z-index: 800;
+	right: 20px;
+	top: 24px;
+  bottom: 24px;
+	width: 420px;
+  padding: 30px 48px 20px 48px;
+	background-color: #fff;
+
+  .country-name-wrapper{
+    display: table;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .country-flag,
+  .country-name{
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .country-flag{
+    width: 88px;
+    img{
+      display: block;
+      width: 88px;
+      height: 88px;
+      border: 6px solid #f4f5ef;
+      border-radius: 50%;
+    }
+  }
+
+  .country-name{
+    width: 236px;
+    padding-left: 19px;
+    font-size: 36px;
+  }
+
+  .subheader{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #d0d1ca;
+    margin: 25px 0px 0px 0px;
+  }
+
+  ul{
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+
+ li{
+    list-style-type: none;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+
+  .more-info{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 22px;
+    color: #33beb7;
+    border-bottom: 1px dashed #33beb7;
+  }
+
+  .full-list-wrapper{
+    position: absolute;
+    left: 0px; top: 0px;
+    right: 0px; bottom: 0px;
+    background-color: #FFF;
+    z-index: 100;
+
+    .subheader{
+      margin-left: 48px;
+      margin-right: 48px;
+    }
+
+    .scroll-element.scroll-y{
+      position: absolute;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        width: 12px;
+        z-index: 900;
+
+        div{
+          position: absolute;
+          display: block;
+          height: 100%;
+          top: 0;
+          left: 0px;
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .scroll-element_outer{
+          left: 0px;
+          width: 12px;
+        }
+
+        .scroll-element_track{
+        background-color: #f4f5ef;
+        width: 12px;
+      }
+
+      .scroll-bar{
+        background-color: #33beb7;
+        width: 9px;
+        left: 2px;
+        min-height: 10px;
+        border-radius: 0px;
+      }
+    }
+
+    .scroll-wrapper{
+      &:after{
+        content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          pointer-events: none;
+          width: 100%;
+          z-index: 100;
+      }
+
+      &:after {
+          bottom: 0;
+          height: 30px;
+          background-image: -webkit-linear-gradient(top, transparent 0%, #fff 100%);
+          background-image: -o-linear-gradient(top, transparent 0%, #fff 100%);
+          background-image: -moz-linear-gradient(top, transparent 0%, #fff 100%);
+          background-image: -ms-linear-gradient(top, transparent 0%, #fff 100%);
+          background-image: linear-gradient(top, transparent 0%, #fff 100%);
+      }
+    }
+
+    .full-list{
+      max-height: 622px;
+    }
+
+    ul{
+      padding: 10px 48px 30px 48px;
+    }
+  }
+
+  .closed{
+      position: absolute;
+      top: 7px;
+      right: 15px;
+      font-size: 14px;
+      line-height: 18px;
+      color: #b6b5b5;
+      cursor: pointer;
+      padding: 0px 14px 15px 0px;
+      background-color: #FFF;
+      z-index: 1010;
+
+      &:after{
+        position: absolute;
+        color: #b6b5b5;
+        content:'×';
+        font-size: 20px;
+        top: 1px;
+        right: 0px;
+      }
+
+      &:hover,
+      &:hover:after{
+        color: #4f4f4f;
+      }
+    }
+
+}
+
+.countries-gallery--img {
+  display: block;
+  position: relative;
+}

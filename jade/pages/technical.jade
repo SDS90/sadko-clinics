@@ -1,0 +1,88 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Оборудование
+block content
+
+	//Фиксированное меню
+	div.fixed-menu
+		a(href="#countriesBlock")
+			div 
+				span Страны-партнёры
+		a(href="#technologyBlock")
+			div 
+				span Материалы и технологии
+		a(href="#safetyBlock")
+			div 
+				span 7 уровней безопасности
+		a(href="#equipmentBlock")
+			div 
+				span Оборудование
+		a(href="#methodsBlock")
+			div 
+				span Методы лечения
+		a(href="#centersBlock")
+			div 
+				span Центры
+
+	//Контент
+	div.contents.technical-page
+
+		//Заголовок 
+		h1 Техника и оборудование
+
+		
+		//Цитата
+		div.quot.row-flex.-quot-no-border-
+			div.col-8
+				div.quot--text Наши врачи используют швейцарское, американское и японское оборудование. Аппаратам не больше двух лет.
+
+		include ../modules/equipment-gallery
+
+		//Страны-партнёры
+		h2#countriesBlock Страны-партнёры
+
+	include ../modules/countries-slider
+
+	//Контент
+	div.contents.technical-bottom-page
+		//Блок навигации для слайдера стран
+		div.countries-gallery--nav#countries-gallery-nav
+			div.countries-gallery--nav--item
+				span Россия
+			div.countries-gallery--nav--item
+				span Швейцария
+
+		
+		//Материалы и технологии
+		h2#technologyBlock Материалы и технологии
+		include ../modules/technologies
+
+		//7 уровней безопасности
+		h2#safetyBlock 7 уровней безопасности
+		include ../modules/principles-blocks
+		
+		//Оборудование
+		h2#equipmentBlock Оборудование
+		include ../modules/technologies
+
+		//Статьи
+		h2#methodsBlock Полезные статьи
+		include ../modules/articles
+
+		h2#centersBlock Центры развития инноваций и технологий
+
+		include ../mixins/clinic-tile
+		//Центры развития
+		div.clinic-tiles
+			//Блоки центра
+			div.clinic-tiles--list.semi-spoiler#clinic-tiles
+				+clinic-tile(14, 'ЦЕНТР Инновационного образования', 'В сотрудничестве с медицинской академией Нижнего Новгорода. Интернов и ординаторов обучают практикующие врачи клиники')(class='-double-height-')
+				+clinic-tile(15, 'Зуботехническая лаборатория', 'Качественные зубные протезы из металлокерамики и безметалловой керамики используются для имплантации зубов')(class='-double-height-')
+				+clinic-tile(16, 'Диагностическая лаборатория', 'Специалисты выполняют полный спектр лабораторных анализов')(class='-double-height-')
+
+
+//Персональные скрипты для этой страницы
+//block pageJS

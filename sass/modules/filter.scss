@@ -1,0 +1,316 @@
+
+//Фильтр
+.filter-wrapper{
+	width: 100%;
+
+	.page-filter,
+	.delete-filter{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 0px;
+		letter-spacing: -1;
+
+		*{
+			font-size: 18px;
+			letter-spacing: normal;
+		}
+	}
+
+	.delete-filter{
+		cursor: pointer;
+		float: right;
+		padding: 0px 0px;
+		font-size: 18px;
+    	letter-spacing: normal;
+	    line-height: 20px;
+	    border-radius: 0px;
+	    margin: 15px 0px 0px 15px;
+	    background-color: #FFF;
+	    border-bottom: 1px dashed #4f4f4f;
+	}
+
+	.delete-filter,
+	.program-link{
+		&:hover{
+	    	background-color: transparent;
+	    	color: #4f4f4f;
+	    	border-color: transparent;
+	    }
+	}
+
+	span, a{
+		color: #4f4f4f;
+		line-height: 47px;
+	}
+
+	.reset-filter{
+		position: relative;
+		font-size: 15px;
+		border-style: dashed;
+
+		&:after{
+			content:"";
+			position: absolute;
+			right: -15px;
+			top: 50%; margin-top: -3px;
+			width: 9px; height: 9px;
+			background-image: url(../img/icons.png);
+			background-repeat: no-repeat;
+			background-position: -119px -196px;
+		}
+	}
+
+	span.filter-button,
+	a.filter-button,
+	.filter-open-button{
+		display: inline-block;
+		vertical-align: top;
+		padding: 0px 19px;
+		margin: 0px 10px 10px 0px;
+		font-size: 18px;
+		line-height: 47px;
+		color: #4f4f4f;
+		text-decoration: none;
+		background-color: #f5f6ec;
+		border: none;
+		border-radius: 33px/50px;
+		cursor: pointer;
+
+		@include transition(all .3s $ease-in-out-quad);
+
+		input[type="checkbox"]{
+			display: none;
+		}
+
+
+		&:hover,
+		&.active,
+		&.top-filter:hover,
+		&.top-filter.active{
+			background-color: #33beb7;
+			color: #fff;
+		}
+
+		&.active{
+			box-shadow: 1px 1px 2px #d6d6d6;
+		}
+
+		&.show-all{
+			padding: 0px 0px;
+			line-height: 20px;
+			border-radius: 0px;
+			margin: 14px 0px 0px 15px;
+			background-color: #FFF;
+			border-bottom: 1px dashed  #4f4f4f;
+			&:hover{
+				color: #4f4f4f;
+				border-color: transparent;
+			}
+		}
+
+		&.top-filter{
+			line-height: 43px;
+			background-color: transparent;
+			border: 2px solid #33beb7;
+			color: #33beb7;
+			text-transform: uppercase;
+			&.active:hover{
+				color: #33beb7;
+				background-color: transparent;
+			}
+			&:hover{
+				color: #fff;
+				background-color: #33beb7;
+			}
+		}
+	}
+
+	span.filter-name{
+		background-color: #FFF;
+		padding: 0px 25px 0px 0px;
+	}
+
+
+	//Поиск по фамилии
+	.filter-block-wrapper{
+		position: relative;
+		padding: 0px;
+
+		input[type='checkbox']{
+			display: none;
+		}
+
+		.checkbox{
+			width: 18px;
+			height: 18px;
+			margin: -5px 0px 0px 12px;
+		}
+
+		label{
+			margin-left: 6px;
+		}
+
+		.filter-block{
+			display: none;
+			position: absolute;
+			z-index: 1000;
+			left: 0px;
+			max-width: 650px;
+			max-height: 400px;
+
+			&:after {
+			    content: ''; 
+			    position: absolute; /* Абсолютное позиционирование */
+			    left: 55px; top: -20px; /* Положение треугольника */
+			    border: 10px solid transparent; /* Прозрачные границы */
+			    border-bottom: 10px solid #f5f6ec; /* Добавляем треугольник */
+   			}
+
+			*{
+				height: auto;
+				line-height: normal;
+				margin: 0px;
+				padding: 0px;
+			}
+
+			div.closed{
+				position: absolute;
+				z-index: 2000;
+				top: 14px;
+				right: 30px;
+				font-size: 14px;
+				line-height: 14px;
+				cursor: pointer;
+				color: #b6b5b5;
+
+				&:hover,
+				&:hover:after{
+					color: #4f4f4f;
+				}
+
+				&:after{
+					color: #b6b5b5;
+					content:'×';
+					font-size: 20px;
+					position: absolute;
+					top: 1px;
+					right: -12px;
+				}
+			}
+		}
+
+		.filter-block>.filter-list-wrapper{
+			min-width: 180px;
+			max-height: 400px;
+			background-color: #f5f6ec;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: 2px 2px 3px #d3d3d2;
+
+			&.column-list{
+				width: 650px;
+			}
+
+			 &:before,
+			 &:after{
+			    position: absolute;
+			    content: "";
+			    left: 0px;
+			    right: 0px;
+			    height: 50px;
+			    z-index: 100;
+			}
+
+			&:before {
+			    top: 0px;
+			    background-image: -webkit-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+			    background-image: -o-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+			    background-image: -moz-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+			    background-image: -ms-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+			    background-image: linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+			}
+
+			&:after {
+			    bottom: 0;
+			    background-image: -webkit-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+			    background-image: -o-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+			    background-image: -moz-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+			    background-image: -ms-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+			    background-image: linear-gradient(top, transparent 0%, #f5f6ec 100%);
+			}
+
+			ul{
+				margin-bottom: 20px;
+
+				li{
+					display: block;
+				}
+
+				span,
+				a{
+					display: inline;
+					border-radius: 0px;
+					white-space: nowrap;
+					font-size: 16px;
+					line-height: 22px;	
+					cursor: pointer;
+					border-color: transparent;		
+				}
+
+				li.active span, span:hover,
+				li.active a, a:hover{
+					border-color: #4f4f4f !important;
+				}
+			}
+		}
+
+		.filter-list{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			padding: 40px 18px 20px 18px;
+		}
+
+		.letter {
+			font-size: 18px;
+			line-height: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.scroll-element.scroll-y{
+			position: absolute;
+		    right: 0;
+		    top: 39px;
+		    bottom: 20px;
+		    width: 19px;
+		    z-index: 900;
+
+		    div{
+		    	position: absolute;
+				display: block;
+			    height: 100%;
+			    top: 0;
+			    left: 0px;
+			    width: 100%;
+		    	overflow: hidden;
+		    }
+
+		    .scroll-element_outer{
+		    	left: 0px;
+	    		width: 3px;
+		    }
+
+		    .scroll-element_track{
+		    	border-radius: 3px;
+		    	background-color: #d1dedf;
+		    }
+		    .scroll-bar {
+		    	min-height: 30px;
+		    	border-radius: 3px;
+			    background-color: #33beb7;
+			}
+		}
+	}
+
+}

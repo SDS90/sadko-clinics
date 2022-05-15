@@ -1,0 +1,48 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Вакансии
+block content
+
+
+	//Контент
+	div.contents.vacancies-page
+
+		//Заголовок - название
+		div.relative
+			h1 Вакансии
+			div.file-link-wrapper.all-link
+				a(href="#").file-link.pdf-link.hover-link
+					i.icon
+					div.file-name
+						span Скачать анкету соискателя
+				
+
+		//Цитата
+		div.quot.row-flex.-quot-no-border-
+			div.col-11
+				div.quot--text Люди — наша основная ценность, поэтому к набору сотрудников мы подходим крайне ответственно. Будьте готовы ответить на массу уточнящих вопросов и пройти как минимум три собеседования: с директором по персоналу, с глав-врачом, с управляющим филиалом. Это утомляет, но именно такая система зарекомендовала себя в найме лучших специлистов в своей отрасли. В случае успешного прохождения конторльных точек будем рады принять вас в наш дружный коллектив. 
+
+		div.row-flex
+			//Колонка вакансий
+			div.col-9
+				h2 Нам нужны только профессионалы
+
+				include ../modules/vacancies
+				
+
+			//Колонка новостей
+			div.col-3
+				include ../modules/news-column
+
+	//Здесь у нас отдельная секция из-за коричневого фона Система проф.роста
+	div.brown-section.professional-system
+		div.contents
+			h2#systemBlock Система профессионального роста врачей
+
+			include ../modules/professional-education
+		
+//Персональные скрипты для этой страницы
+//block pageJS

@@ -1,0 +1,88 @@
+@import "../base";
+@import "../bourbon";
+
+/* -------------------------------------------------
+    Modal window
+   ------------------------------------------------- */
+
+$baseWidth: 640px;
+$zIndex: 9999;
+
+$duration: .2s;
+$easing: $ease-in-out-quad;
+
+$panelOuterPadding: 24px;
+$panelPadding: 28px 60px;
+
+//Всплывающие формы
+
+.modal-form-wrapper{
+  width: 514px;
+  position: fixed;
+  left: 50%; top: 50%;
+  z-index: 10000;
+  padding: 28px 60px;
+  font-size: 15px;
+  background-color: #FFF;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  margin-left: -257px;
+  opacity: 0;
+
+  @include transition(opacity 0.4s, top 0s 0s);
+
+  &.active{
+    opacity: 1;
+  }
+}
+
+.modal {
+  background: rgb(51,190,183);
+  background: rgba(51,190,183,0.4);
+  text-align: center;
+  position: fixed;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  opacity: 0;
+  z-index: $zIndex;
+
+  @include transition(opacity $duration, top 0s $duration);
+
+  //  Active
+  // -------------------------
+
+  &.active {
+    top: 0;
+    opacity: 1;
+    @include transition(opacity $duration, top 0s 0s);
+  }
+
+  &.manager-modal-block{
+    background: #fff;
+  }
+}
+
+//  Close toggle
+// -------------------------
+
+.modal-close {
+  cursor: pointer;
+  color: #b6b5b5;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-family: Times New Roman, serif;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 13px;
+  overflow: hidden;
+  padding: 6px;
+  z-index: 1000;
+
+  &:hover {
+    color: #4f4f4f;
+  }
+}

@@ -1,0 +1,9 @@
+mixin q (name, header, q, doctor, answer, link)
+	.advice-block
+		.name= name
+		.question-header=header
+		.question.textblock= q
+		.doctor-name Отвечает 
+			a.blue-link(href="#")=doctor
+		.answer.textblock= answer
+		a.more-info.blue-link(href="#") Читать полностью

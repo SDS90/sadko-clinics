@@ -1,0 +1,67 @@
+//Command
+
+.command-quote-wrapper,
+.brown-section,
+.start-quote-wrapper{
+	position: relative;
+	width: 100%;
+	min-width: $bLayoutMinWidth;
+	background-color: #f4f5ef;
+	padding: 45px 0px 10px 0px;
+
+	h1{
+    	margin-bottom: 35px;
+	}
+}
+
+
+.brown-section{
+	padding: 40px 0px 24px 0px;
+}
+
+
+h3.map-header{
+	font-size: 36px;
+	line-height: 48px;
+	margin: 48px 0px 17px 0px;
+}
+
+h2.winner-header{
+	margin-top: -37px;
+}
+
+//Command page
+
+.command-page{
+	padding-top: 38px;
+
+	.page-filter{
+		width: 100%;
+		position: relative;
+		padding-right: 60px;
+		margin-bottom: 10px;
+	}
+
+	.top-filter{
+		position: absolute;
+		top: 0px; right: 0px;
+		margin-right: 0px !important;
+	}
+
+	.more-doctors{
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	.photo-gallery-header{
+		margin-top: 3px;
+		margin-bottom: 5px;
+	}
+}
+
+.command-page,
+.doctor-page{
+	.header-wrapper .btn{
+		margin: 8px 0px 0px 23px;
+	}
+}

@@ -1,0 +1,126 @@
+
+//  Get number without unit
+// -------------------------------------------------
+
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+//  Create grid columns styles
+// -------------------------------------------------
+
+
+@mixin grids($colNum, $gridBreakPoints: '') {
+  $width: 100 / $colNum;
+
+  .row-flex {
+    @for $i from 1 through $colNum {
+      $itemWidth: #{$width * $i}#{'%'};
+
+      > .col-#{$i} {
+        width: $itemWidth;
+      }
+
+      > .col-offset-#{$i} {
+        margin-left: #{$width * $i}#{'%'};
+      }
+    }
+
+
+    @if (length($gridBreakPoints) > 1) {
+      @each $break in $gridBreakPoints {
+        $suffix: nth($break, 1);
+        $breakPoint: nth($break, 2);
+
+        @media all and (max-width: $breakPoint) {
+
+          @for $i from 1 through $colNum {
+            $itemWidth: #{$width * $i}#{'%'};
+
+            > .col-#{$suffix}-#{$i} {
+              width: $itemWidth;
+            }
+
+            > .col-#{$suffix}-offset-#{$i} {
+              margin-left: #{$width * $i}#{'%'};
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@mixin gridsTable($colNum, $gridBreakPoints: '') {
+  $width: 100 / $colNum;
+
+  .row-16 {
+    @for $i from 1 through $colNum {
+      $itemWidth: #{$width * $i}#{'%'};
+
+      .col-#{$i} {
+        width: $itemWidth;
+      }
+
+      .col-offset-#{$i} {
+        margin-left: #{$width * $i}#{'%'};
+      }
+    }
+  }
+
+  @if ($gridBreakPoints) {
+    .row-16 {
+      @each $break in $gridBreakPoints {
+        $suffix: nth($break, 1);
+        $breakPoint: nth($break, 2);
+
+        @media all and (max-width: $breakPoint) {
+
+          @for $i from 1 through $colNum {
+            $itemWidth: #{$width * $i}#{'%'};
+
+            .col-#{$suffix}-#{$i} {
+              width: $itemWidth;
+            }
+
+            .col-#{$suffix}-offset-#{$i} {
+              margin-left: #{$width * $i}#{'%'};
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin link($color) {
+  color: $color;
+  border-bottom: 1px solid lighten($color, 20);
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+
+@mixin verticalMiddle() {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  > * {
+    vertical-align: middle;
+    display: inline-block;
+    white-space: normal;
+  }
+}
+
+@mixin blueLinks{
+  a{
+    color: #33beb7;
+    border-color: #c1ebe9;
+  }
+}

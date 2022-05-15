@@ -1,0 +1,6 @@
+mixin fixed-menu(items)
+	div.fixed-menu
+		each item in items
+			a(href='##{item.id}')
+				div
+					span= item.title

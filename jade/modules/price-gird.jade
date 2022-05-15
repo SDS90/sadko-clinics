@@ -1,0 +1,32 @@
+.price-grid
+	.search
+		form.service-search-form.clear
+			input.search-textfield(type="text" placeholder="Найти")
+			input.search-button(type="submit" value="")
+
+	//Фильтр
+	div.filter-wrapper.clear
+		//Сам фильтр
+		div.page-filter
+			span.filter-name Выбрать направление:
+			span.filter-block-wrapper
+				span.filter-open-button Стоматология
+				//Список тем
+				div.filter-block
+					div.closed Закрыть
+					//Список в одну колонку
+					div.filter-list-wrapper
+						div.filter-list
+							ul
+								li
+									a(href="#") Стоматология
+								li
+									a(href="#") Гастроэнтерология
+								li
+									a(href="#") Женские проблемы
+								li
+									a(href="#") Вирусология
+								li
+									a(href="#") Алкоголизм и наркомания
+	h3 Стоматология
+	include price-grid-items

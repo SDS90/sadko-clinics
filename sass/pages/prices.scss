@@ -1,0 +1,39 @@
+//Цены и акции
+
+.prices-page{
+
+	h2{
+		margin-top: 33px;
+		margin-bottom: 22px;
+	}
+
+	.relative{
+		h2{
+			padding-right: 100px;
+		}
+
+		.all-link{
+			position: absolute;
+			right: 0px;
+			top: 0px;
+		}
+	}
+
+	.discount-grid{
+		margin-bottom: -10px;
+	}
+
+	.spoiler-wave-wrap{
+		margin-bottom: 23px;
+	}
+
+	.actions-wrapper{
+		margin-bottom: 15px;
+	}
+
+	.offices-header{
+		h2{
+			margin-bottom: 8px;
+		}
+	}
+}

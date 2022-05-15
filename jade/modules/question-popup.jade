@@ -1,0 +1,41 @@
+//Попап с вопросом, стрелка вниз
+div.question-popup.bottom-popup
+
+	//Форма
+	form.book-form 
+		div.closed-popup Закрыть
+		//Заголовок
+		div.popup-header Задайте свой вопрос
+		
+		//Текстовое поле
+		textarea.textarea-scrollbar.scrollbar-outer.question-text 
+
+		//Это не пустой блок - сюда выводится текст ошибки
+		div.error-text
+
+		div.row-flex
+			div.col-7
+				div.book-form--row
+					label Имя
+					input.book-form--row--content.required-field(type='text')
+			div.col-5
+				div.book-form--row
+					label Возраст
+					input.book-form--row--content.ages-input(type='text')
+		div.row-flex
+			div.col-7
+				div.book-form--row
+					label E-mail
+					input.book-form--row--content.email-field(type='text')
+		//Отправка
+		div.-justify-content-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+			button.btn.submit-btn Опубликовать
+
+	//Спасибо
+	div.thanks-block
+		div.thanks-header Уфф.. <br> Непростой вопрос.
+		div.textblock Мы подумаем и обязательно ответим. Начальство заставляет нас думать быстро, поэтому ответим уже через сутки. Спасибо, что доверяете и спрашиваете!
+		a.btn.closed-popup Закрыть

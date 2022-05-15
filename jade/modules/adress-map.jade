@@ -1,0 +1,1604 @@
+include ../mixins/search-list-item
+
+.address-map.contents
+		h2#addresses Адреса и телефоны клиник
+		.address-map--content
+			.address-map--map#address-map
+			.search-list
+				//.search-list--input
+					input(type='text', placeholder='Найти свою клинику')
+					.search-list--input--controls
+						span.ico-search
+						span.ico-cross
+				.search-list--items#address-list(data-marker="#{srcPath}img/icons/marker.png" data-active-marker="#{srcPath}img/icons/active-marker.png")
+
+					.custom-scroll
+						//+search-list-item('Стоматология', '+7 (831) 4-120-120', ['ул. Бекетова, 13','ул. Родионова, 199','пр. Ленина, 67/1','Сормовское шоссе, 20'])
+						//+search-list-item('Поликлиника', '+7 (831) 4-120-120', ['ул. Бекетова, 13','ул. Родионова, 199','пр. Ленина, 67/1','Сормовское шоссе, 20'])
+						//+search-list-item('Центр женского здоровья', '+7 (831) 4-120-120', ['ул. Бекетова, 13','ул. Родионова, 199','пр. Ленина, 67/1','Сормовское шоссе, 20'], true)
+						//+search-list-item('Центр женского здоровья', '+7 (831) 4-120-120', ['ул. Бекетова, 13','ул. Родионова, 199','пр. Ленина, 67/1','Сормовское шоссе, 20'])
+
+						.search-list-item
+							.search-list-item--header
+								a(href='#') Стоматология
+							span.search-list-item--phone +7 (831) 4-120-120
+							ul.-unstyled-
+									li
+										a(href='#') ул. Бекетова, 13
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.290939" data-longitude="43.998264")
+											div.closed ×
+											div.clinic-name Стоматология на Бекетова
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в стоматологию на Бекетова" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') ул. Родионова, 199
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.301142" data-longitude="44.079193")
+											div.closed ×
+											div.clinic-name Стоматология на Родионова
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в стоматологию на Родионова" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') пр. Ленина, 67/1
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.272025" data-longitude="43.916511")
+											div.closed ×
+											div.clinic-name Стоматология на Ленина
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в стоматологию на Ленина" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') Сормовское шоссе, 20
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.320209" data-longitude="43.926557")
+											div.closed ×
+											div.clinic-name Стоматология на Сормовском шоссе
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в стоматологию на Сормовской" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+						.search-list-item
+							.search-list-item--header
+								a(href='#') Поликлиника
+							span.search-list-item--phone +7 (831) 4-120-120
+							ul.-unstyled-
+									li
+										a(href='#') ул. Бекетова, 13
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.290939" data-longitude="43.998264")
+											div.closed ×
+											div.clinic-name Поликлиника на Бекетова
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в поликлинику на Бекетова" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') ул. Родионова, 199
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.301142" data-longitude="44.079193")
+											div.closed ×
+											div.clinic-name Поликлиника на Родионова
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в поликлинику на Родионова" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') пр. Ленина, 67/1
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.272025" data-longitude="43.916511")
+											div.closed ×
+											div.clinic-name Поликлиника на Ленина
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в поликлинику на Ленина" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') Сормовское шоссе, 20
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.320209" data-longitude="43.926557")
+											div.closed ×
+											div.clinic-name Поликлиника на Сормовском шоссе
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в поликлинику на Сормовской" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+						.search-list-item
+							.search-list-item--header
+								a(href='#') Центр женского здоровья
+								span.ico-external
+							span.search-list-item--phone +7 (831) 4-120-120
+							ul.-unstyled-
+									li
+										a(href='#') ул. Бекетова, 13
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.290939" data-longitude="43.998264")
+											div.closed ×
+											div.clinic-name Центр женского здоровья на Бекетова
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в Центр женского здоровья на Бекетова" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') ул. Родионова, 199
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.301142" data-longitude="44.079193")
+											div.closed ×
+											div.clinic-name Центр женского здоровья на Родионова
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в Центр женского здоровья на Родионова" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') пр. Ленина, 67/1
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.272025" data-longitude="43.916511")
+											div.closed ×
+											div.clinic-name Центр женского здоровья на Ленина
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в Центр женского здоровья на Ленина" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') Сормовское шоссе, 20
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.320209" data-longitude="43.926557")
+											div.closed ×
+											div.clinic-name Центр женского здоровья на Сормовском шоссе
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в Центр женского здоровья на Сормовской" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+						.search-list-item
+							.search-list-item--header
+								a(href='#') Центр женского здоровья
+							span.search-list-item--phone +7 (831) 4-120-120
+							ul.-unstyled-
+									li
+										a(href='#') ул. Бекетова, 13
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.290939" data-longitude="43.998264")
+											div.closed ×
+											div.clinic-name Центр женского здоровья на Бекетова
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в Центр женского здоровья на Бекетова" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') ул. Родионова, 199
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.301142" data-longitude="44.079193")
+											div.closed ×
+											div.clinic-name Центр женского здоровья на Родионова
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в Центр женского здоровья на Родионова" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') пр. Ленина, 67/1
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.272025" data-longitude="43.916511")
+											div.closed ×
+											div.clinic-name Центр женского здоровья на Ленина
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в Центр женского здоровья на Ленина" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть
+
+									li
+										a(href='#') Сормовское шоссе, 20
+										//Блок с адресом
+										div.clinic-map-info(data-latitude="56.320209" data-longitude="43.926557")
+											div.closed ×
+											div.clinic-name Центр женского здоровья на Сормовском шоссе
+											div.clear
+												div.times-wrapper
+													p Режим работы:
+													p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+													p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+												div.contacts-wrapper
+													div.contacts-block
+														p Телефон:
+														p
+															b +7 (831) 3-120-120
+
+											div.textblock Как добраться?
+
+											//Поиск адреса
+											form.clear.address-search
+												input.textfield(type="text" placeholder="Введите ваш адрес")
+												input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+											//Записаться на приём
+											a.btn.book-toggle(href="#" data-book-info="Записаться на приём в Центр женского здоровья на Сормовской" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Акции
+											div.actions-scroll
+												div.actions-block-wrapper
+													h3 Акции
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Консультации и диагностика
+														br
+														a(href="#") Бесплатно
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Лазерная стоматология - новый формат лечения зубов.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+													// Одна акция. Небольшой текст и ссылка
+													div.textblock
+														| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+														br
+														a(href="#") Скидка 25%
+
+											div.clear
+												//Ссылка
+												a.btn.btn-reverse-colors.manager-toggle.left(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Мы приняли ваше мнение, и обязательно свяжемся в случае чего.") Написать руководству
+
+												//Кнопка с вызовом попапа
+												div.open-question-wrapper.right
+													//Ссылка
+													a.btn.btn-reverse-colors.open-question-popup(href="#") Оставить отзыв
+													//Попап с вопросом, стрелка вниз
+													div.question-popup.top-popup
+
+														//Форма
+														form.book-form 
+															div.closed-popup Закрыть
+															//Заголовок
+															div.popup-header Расскажите ваше мнение
+															
+															//Текстовое поле
+															textarea.textarea-scrollbar.scrollbar-outer
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label Имя
+																		input.book-form--row--content(type='text')
+																div.col-5
+																	div.book-form--row
+																		label Возраст
+																		input.book-form--row--content.ages-input(type='text')
+															div.row-flex
+																div.col-7
+																	div.book-form--row
+																		label E-mail
+																		input.book-form--row--content(type='email')
+															//Отправка
+															div.-justify-content-
+																label.book-form--accept
+																	input(type='checkbox', name='license', value='')
+																	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+																button.btn Опубликовать
+
+														//Спасибо
+														div.thanks-block
+															div.thanks-header Спасибо за ваше мнение!
+															div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+																a(href="#") jenni@mail.ru
+															a.btn.closed-popup Закрыть

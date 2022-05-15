@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Садко -&nbsp;Главная</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280">
+    <!--meta(name='viewport', content='width=device-width, initial-scale=1.0')-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <link rel="shortcut icon" href="../img/sadko_favicon.ico" type="image/x-icon">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <!--link(href='#{srcPath}fancybox/jquery.fancybox.css', rel='stylesheet', type='text/css')-->
+    <link href="../css/jquery.scrollbar.css" rel="stylesheet" type="text/css">
+    <script src="../js/libs/libs.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--Стандартная шапка - для главной страницы-->
+      <header class="header">
+        <!--Блок с матовым стеклом-->
+        <!--div.header-bg(id='headerBg')-->
+        <!--Блок с видео. Видео загружается в трёх форматах + картинка - на случай, если этот элемент не поддерживается-->
+        <div class="video-section">
+          <!--Видео (mp4, webm,ogv)-->
+          <div class="video-wrapper">
+            <video id="headerVideo" poster="../video/sadko-hd.jpg" preload loop>
+              <source src="../video/sadko-hd.mp4" type="video/mp4">
+              <source src="../video/sadko-hd.webm" type="video/webm">
+              <source src="../video/sadko-hd.ogv" type="video/ogg">
+              <!--object(type="application/x-shockwave-flash" data="#{srcPath}video/flashfox.swf" width="1920" height="1080" style="position:relative;")
+              param(name="movie" value="../video/flashfox.swf")
+              param(name="allowFullScreen" value="true")
+              param(name="flashVars" value="autoplay=false&amp;controls=false&amp;fullScreenEnabled=false&amp;posterOnEnd=true&amp;loop=true&amp;poster=../video/first_screen_5.jpg&amp;src=first_screen_5.m4v")
+              embed(src="../video/flashfox.swf" width="1920" height="1080" style="position:relative;" flashVars="autoplay=false&amp;controls=false&amp;fullScreenEnabled=false&amp;posterOnEnd=true&amp;loop=true&amp;poster=../video/first_screen_5.jpg&amp;src=first_screen_5.m4v" allowFullScreen="true" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_en")
+              img(alt="first_screen_5" src="../video/first_screen_5.jpg" style="position:absolute;left:0;" width="100%" title="Video playback is not supported by your browser")
+              
+              -->
+            </video>
+          </div>
+        </div>
+        <div class="contents">
+          <!--Верхняя часть шапки-->
+          <div class="header-top">
+            <!--Логотип--><a href="/" class="header-logo"><img src="../img/logo.png" alt="Логотип компании Садко"></a>
+            <!--Режим работы-->
+            <div class="work-time-wrapper"><span class="work-time">8<sup>00</sup> - 20<sup>00</sup> Пн.- Сб.</span><span class="work-time">9<sup>00</sup> - 18<sup>00</sup> Вс.</span></div>
+            <!--Вход в личный кабинет--><a href="/" class="header-login"><i class="ico-heart"></i><span>Войти в личный кабинет</span></a>
+            <!--Здесь в data-атрибуте указывается заголовок, который будет показываться в форме записи на приём. Если заголовка нет - будет показан стандартный вариант, но лучше указать даже его.--><a href="#" data-smile="#smile" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту." class="smile-toggle book-toggle"> <i class="ico-bell"></i><span>Записаться</span></a>
+            <!--телефон-->
+            <div class="header-top--right"><a href="#" class="header-phone">+7 (831) 421-01-01</a></div>
+          </div>
+          <!--Надпись по центру главной-->
+          <div id="headerTitle" class="header-title">
+            <h1 data-smile="#smile" class="smile-toggle">Мы<span class="header-title--dash">
+                <!--Тут анимация с улыбкой-->
+                      <svg width="86px" height="33px" version="1.1" xmlns="http://www.w3.org/2000/svg" class="smile-svg">
+                        <path d="M0 10 Q 43 10 86 10" stroke="#fff" stroke-width="2px" fill="transparent" id="smile"></path>
+                      </svg></span>Садко<span class="header-title--note">Сеть медицинских клиник, которым доверяют</span></h1>
+          </div>
+        </div>
+        <!--Навигация на главной странице-->
+        <!--Навигация-->
+        <nav class="nav-main">
+          <!--Стандартный пункт меню - просто ссылка-->
+          <div class="nav-main--item normal"><a href="#"> <span>Вся правда о САДКО</span></a></div>
+          <!--Пункт меню с маленьким всплывающим блоком-->
+          <div class="nav-main--item -has-inner- -has-inner-small"><a href="#"> <span>Пациентам</span></a>
+            <!--Мини-блок меню. Здесь только две колонки со списком заголовков-->
+            <div class="nav-main--inner -inner-small">
+              <div data-lock-window-scroll="true" class="custom-scroll-wrap">
+                <div class="row-flex nav-main--inner--content">
+                  <div class="col-9">
+                    <div class="nav-main--inner-title"><a href="#">Комплексные программы</a></div>
+                    <div class="nav-main--inner-title"><a href="#">Отзывы</a></div>
+                    <div class="nav-main--inner-title"><a href="#">Вопрос-Ответ</a></div>
+                    <div class="nav-main--inner-title"><a href="#">Наше видео</a></div>
+                    <div class="nav-main--inner-title"><a href="#">Полезные статьи</a></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nav-main--inner-title"><a href="#">ОМС</a></div>
+                    <div class="nav-main--inner-title"><a href="#">ДМС</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Пунтк меню со стандартным всплывающим блоком на всю ширину-->
+          <div class="nav-main--item -has-inner-"><span><span>Услуги и клиники</span></span>
+            <!--Стандартный всплывающий блок меню - состоит из колонок и списков со ссылками-->
+            <div class="nav-main--inner">
+              <div data-lock-window-scroll="true" class="custom-scroll-wrap">
+                <div class="row-flex nav-main--inner--content">
+                  <div class="col-3">
+                    <!--Подзаголовок-->
+                    <div class="nav-main--inner-title"><a href="#">Лечебно-диагностический центр</a></div>
+                    <!--Список-->
+                    <div class="row-flex">
+                      <div class="col-6">
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Терапия</a></li>
+                          <li><a href="#">Пульманология</a></li>
+                          <li><a href="#">Гематология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Дерматология</a></li>
+                          <li><a href="#">Аллергология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Отоларинология</a></li>
+                          <li><a href="#">Гирудотерапия</a></li>
+                          <li><a href="#">Венерология</a></li>
+                          <li><a href="#">Наркология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Неврология</a></li>
+                          <li><a href="#">Эндокринология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Иглорефлексотерапия</a></li>
+                          <li><a href="#">Физиотерапия</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Проктология</a></li>
+                          <li><a href="#">Урология</a></li>
+                          <li><a href="#">Детская урология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Гастроэнтерология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Кардиология</a></li>
+                          <li><a href="#">Хирургия</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Рентген</a></li>
+                          <li><a href="#">Профилактические исследования</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="nav-main--inner-title"><a href="#">Лечебно-диагностический центр</a></div>
+                    <div class="row-flex">
+                      <div class="col-6">
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение склероза</a></li>
+                          <li><a href="#">Лечение депрессии</a></li>
+                          <li><a href="#">Ревматолог</a></li>
+                          <li><a href="#">Лечение межпозвоночных грыж</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Диагностика</a></li>
+                          <li><a href="#">Магнитотерапия</a></li>
+                          <li><a href="#">Осциллционный массаж</a></li>
+                          <li><a href="#">Вытяжение позвоночника</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nav-main--inner-title"><a href="#">Стоматология</a><span class="nav-main--inner-title--note"><a href="#">Семь клиник</a></span></div>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Лечение кариеса</a></li>
+                      <li><a href="#">Лечение пульпита</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Профессиональная гигиена</a></li>
+                      <li><a href="#">Ортодонтия</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Виниры и люминиры</a></li>
+                      <li><a href="#">Имплантация</a></li>
+                      <li><a href="#">Парадонтология</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Компьютерная томография</a></li>
+                      <li><a href="#">Нейромышечная стоматология</a></li>
+                      <li><a href="#">Отбеливание зубов</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Цифровой дизацн улыбки</a></li>
+                      <li><a href="#">Лечение под микроскопом</a></li>
+                      <li><a href="#">Диагностика</a></li>
+                    </ul>
+                    <div class="nav-main--inner-title"><a href="#">Центр ортодонтии &laquo;Джем&raquo;</a></div>
+                    <div class="nav-main--inner-title"><a href="#">Центр имплантации</a></div>
+                    <div class="nav-main--inner-title"><a href="#">Центр мужского здоровья</a></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nav-main--inner-title"><a href="#">Детская стоматология &laquo;Динозубрик&raquo;</a></div>
+                    <div class="nav-main--inner-title"><a href="#">Центр женского здоровья</a><span class="nav-main--inner-title--note"><a href="#">Четыре центра</a></span></div>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Лечение бесплодия</a></li>
+                      <li><a href="#">Онколог-маммолог</a></li>
+                      <li><a href="#">Лечение кист яичников</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Планирование беременности</a></li>
+                      <li><a href="#">Курсы для беременных</a></li>
+                      <li><a href="#">Ведение беременности - шаг за шагом</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Лечение патологии шейки матки</a></li>
+                      <li><a href="#">Прерывание беременности</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Цифровая гистеровидеоскопия</a></li>
+                      <li><a href="#">УЗИ</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Гинекология</a></li>
+                    </ul>
+                    <div class="nav-main--inner-title"><a href="#">&laquoЗдоровенок&raquo; - детская клиника и стоматология</a></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nav-main--inner-title"><a href="#">Центр маммологии</a></div>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">3D маммография</a></li>
+                      <li><a href="#">УЗИ молочной железы</a></li>
+                      <li><a href="#">Пункция молочной железы</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Анализ крови на анкомаркеры</a></li>
+                      <li><a href="#">Аппаратная биопсия</a></li>
+                    </ul>
+                    <div class="nav-main--inner-title"><a href="#">Диагностическая лаборатория</a></div>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Бактериологическая лаборатория</a></li>
+                      <li><a href="#">Иммунологическая лаборатория</a></li>
+                      <li><a href="#">Молекулярно-обиологическая лаборатория (ПЦР)</a></li>
+                      <li><a href="#">Общеклиннические и биохимические исследования</a></li>
+                    </ul>
+                    <div class="nav-main--inner-title"><a href="#">Зуботехническая лаборатория</a></div>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Съемные зубные протезы</a></li>
+                      <li><a href="#">Бюгельные зубные протезы</a></li>
+                      <li><a href="#">Безметалловая керамика</a></li>
+                      <li><a href="#">Металлокерамика</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Пунтк меню со стандартным всплывающим блоком на всю ширину-->
+          <div class="nav-main--item -has-inner-"><a href="#"> <span>Технологи и инновации</span></a>
+            <!--Ещё один стандартный всплывающий блок. Здесь меньше пунктов меню, и расположены они по-другому-->
+            <div class="nav-main--inner">
+              <div data-lock-window-scroll="true" class="custom-scroll-wrap">
+                <div class="row-flex nav-main--inner--content">
+                  <div class="col-3">
+                    <div class="nav-main--inner-title"><a href="#">Лечебно-диагностический центр</a></div>
+                    <div class="row-flex">
+                      <div class="col-6">
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Терапия</a></li>
+                          <li><a href="#">Пульманология</a></li>
+                          <li><a href="#">Гематология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Дерматология</a></li>
+                          <li><a href="#">Аллергология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Отоларинология</a></li>
+                          <li><a href="#">Гирудотерапия</a></li>
+                          <li><a href="#">Венерология</a></li>
+                          <li><a href="#">Наркология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Неврология</a></li>
+                          <li><a href="#">Эндокринология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Иглорефлексотерапия</a></li>
+                          <li><a href="#">Физиотерапия</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Проктология</a></li>
+                          <li><a href="#">Урология</a></li>
+                          <li><a href="#">Детская урология</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nav-main--inner-title"><a href="#">Стоматология</a><span class="nav-main--inner-title--note"><a href="#">Семь клиник</a></span></div>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Лечение кариеса</a></li>
+                      <li><a href="#">Лечение пульпита</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Профессиональная гигиена</a></li>
+                      <li><a href="#">Ортодонтия</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Виниры и люминиры</a></li>
+                      <li><a href="#">Имплантация</a></li>
+                      <li><a href="#">Парадонтология</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Компьютерная томография</a></li>
+                      <li><a href="#">Нейромышечная стоматология</a></li>
+                      <li><a href="#">Отбеливание зубов</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Цифровой дизацн улыбки</a></li>
+                      <li><a href="#">Лечение под микроскопом</a></li>
+                      <li><a href="#">Диагностика</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <div class="nav-main--inner-title"><a href="#">Детская стоматология &laquo;Динозубрик&raquo;</a></div>
+                    <div class="nav-main--inner-title"><a href="#">Центр женского здоровья</a><span class="nav-main--inner-title--note"><a href="#">Четыре центра</a></span></div>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Лечение бесплодия</a></li>
+                      <li><a href="#">Онколог-маммолог</a></li>
+                      <li><a href="#">Лечение кист яичников</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Планирование беременности</a></li>
+                      <li><a href="#">Курсы для беременных</a></li>
+                      <li><a href="#">Ведение беременности - шаг за шагом</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Лечение патологии шейки матки</a></li>
+                      <li><a href="#">Прерывание беременности</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Цифровая гистеровидеоскопия</a></li>
+                      <li><a href="#">УЗИ</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Гинекология</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <div class="nav-main--inner-title"><a href="#">Центр маммологии</a></div>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">3D маммография</a></li>
+                      <li><a href="#">УЗИ молочной железы</a></li>
+                      <li><a href="#">Пункция молочной железы</a></li>
+                    </ul>
+                    <ul class="nav-main--inner-group">
+                      <li><a href="#">Анализ крови на анкомаркеры</a></li>
+                      <li><a href="#">Аппаратная биопсия</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Стандартный пункт меню-->
+          <div class="nav-main--item normal"><a href="#"> <span>Образование и развитие</span></a></div>
+          <div class="nav-main--item normal"><a href="#"> <span>Врачи и команда</span></a></div>
+          <div class="nav-main--item normal"><a href="#"> <span>Цены и акции</span></a></div>
+          <div class="nav-main--item normal"><a href="#"> <span>Контакты</span></a></div>
+        </nav>
+      </header>
+      <header id="topHeader" class="header-inner main-header-inner">
+        <!--Шапка для внутренних страниц-->
+        <div class="contents">
+          <!--Верхняя часть шапки-->
+          <div class="header-top">
+            <!--Логотип--><a href="/" class="header-logo"><img src="../img/logo.png" alt="Логотип компании Садко"></a>
+            <!--Режим работы-->
+            <div class="work-time-wrapper"><span class="work-time">8<sup>00</sup> - 20<sup>00</sup> Пн.- Сб.</span><span class="work-time">9<sup>00</sup> - 18<sup>00</sup> Вс.</span></div>
+            <!--Вход в личный кабинет--><a href="/" class="header-login"><i class="ico-heart"></i><span>Войти в личный кабинет</span></a>
+            <!--Здесь в data-атрибуте указывается заголовок, который будет показываться в форме записи на приём. Если заголовка нет - будет показан стандартный вариант, но лучше указать даже его.--><a href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту." class="smile-toggle book-toggle"> <i class="ico-bell"></i><span>Записаться</span></a>
+            <!--телефон-->
+            <div class="header-top--right"><a href="#" class="header-phone">+7 (831) 421-01-01</a></div>
+          </div>
+        </div>
+        <!--Меню навигации-->
+        <div class="nav-wrapper">
+          <div class="nav-block">
+            <nav class="nav-main">
+              <!--Так выделяется (класс .active) активный пункт (открытая страница)-->
+              <div class="nav-main--item normal"><a href="#"> <span>Вся правда о САДКО</span></a></div>
+              <!--Этот пункт имеет всплывающий миниатюрный блок (только заголовки)-->
+              <div class="nav-main--item -has-inner- -has-inner-small"><a href="#"> <span>Пациентам</span></a>
+                <!--Мини-блок меню. Здесь только две колонки со списком заголовков-->
+                <div class="nav-main--inner -inner-small">
+                  <div data-lock-window-scroll="true" class="custom-scroll-wrap">
+                    <div class="row-flex nav-main--inner--content">
+                      <div class="col-9">
+                        <div class="nav-main--inner-title"><a href="#">Комплексные программы</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Отзывы</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Вопрос-Ответ</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Наше видео</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Полезные статьи</a></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">ОМС</a></div>
+                        <div class="nav-main--inner-title"><a href="#">ДМС</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Этот пункт имеет стандартный всплывающий блок. Кроме того, вместо ссылки тут может быть span-->
+              <div class="nav-main--item -has-inner- active"><span><span>Услуги и клиники</span></span>
+                <!--Стандартный всплывающий блок меню - состоит из колонок и списков со ссылками-->
+                <div class="nav-main--inner">
+                  <div data-lock-window-scroll="true" class="custom-scroll-wrap">
+                    <div class="row-flex nav-main--inner--content">
+                      <div class="col-3">
+                        <!--Подзаголовок-->
+                        <div class="nav-main--inner-title"><a href="#">Лечебно-диагностический центр</a></div>
+                        <!--Список-->
+                        <div class="row-flex">
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Терапия</a></li>
+                              <li><a href="#">Пульманология</a></li>
+                              <li><a href="#">Гематология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Дерматология</a></li>
+                              <li><a href="#">Аллергология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Отоларинология</a></li>
+                              <li><a href="#">Гирудотерапия</a></li>
+                              <li><a href="#">Венерология</a></li>
+                              <li><a href="#">Наркология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Неврология</a></li>
+                              <li><a href="#">Эндокринология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Иглорефлексотерапия</a></li>
+                              <li><a href="#">Физиотерапия</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Проктология</a></li>
+                              <li><a href="#">Урология</a></li>
+                              <li><a href="#">Детская урология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Гастроэнтерология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Кардиология</a></li>
+                              <li><a href="#">Хирургия</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Рентген</a></li>
+                              <li><a href="#">Профилактические исследования</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="nav-main--inner-title"><a href="#">Лечебно-диагностический центр</a></div>
+                        <div class="row-flex">
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Лечение склероза</a></li>
+                              <li><a href="#">Лечение депрессии</a></li>
+                              <li><a href="#">Ревматолог</a></li>
+                              <li><a href="#">Лечение межпозвоночных грыж</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Диагностика</a></li>
+                              <li><a href="#">Магнитотерапия</a></li>
+                              <li><a href="#">Осциллционный массаж</a></li>
+                              <li><a href="#">Вытяжение позвоночника</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Стоматология</a><span class="nav-main--inner-title--note"><a href="#">Семь клиник</a></span></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение кариеса</a></li>
+                          <li><a href="#">Лечение пульпита</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Профессиональная гигиена</a></li>
+                          <li><a href="#">Ортодонтия</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Виниры и люминиры</a></li>
+                          <li><a href="#">Имплантация</a></li>
+                          <li><a href="#">Парадонтология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Компьютерная томография</a></li>
+                          <li><a href="#">Нейромышечная стоматология</a></li>
+                          <li><a href="#">Отбеливание зубов</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Цифровой дизацн улыбки</a></li>
+                          <li><a href="#">Лечение под микроскопом</a></li>
+                          <li><a href="#">Диагностика</a></li>
+                        </ul>
+                        <div class="nav-main--inner-title"><a href="#">Центр ортодонтии &laquo;Джем&raquo;</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Центр имплантации</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Центр мужского здоровья</a></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Детская стоматология &laquo;Динозубрик&raquo;</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Центр женского здоровья</a><span class="nav-main--inner-title--note"><a href="#">Четыре центра</a></span></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение бесплодия</a></li>
+                          <li><a href="#">Онколог-маммолог</a></li>
+                          <li><a href="#">Лечение кист яичников</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Планирование беременности</a></li>
+                          <li><a href="#">Курсы для беременных</a></li>
+                          <li><a href="#">Ведение беременности - шаг за шагом</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение патологии шейки матки</a></li>
+                          <li><a href="#">Прерывание беременности</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Цифровая гистеровидеоскопия</a></li>
+                          <li><a href="#">УЗИ</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Гинекология</a></li>
+                        </ul>
+                        <div class="nav-main--inner-title"><a href="#">&laquoЗдоровенок&raquo; - детская клиника и стоматология</a></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Центр маммологии</a></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">3D маммография</a></li>
+                          <li><a href="#">УЗИ молочной железы</a></li>
+                          <li><a href="#">Пункция молочной железы</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Анализ крови на анкомаркеры</a></li>
+                          <li><a href="#">Аппаратная биопсия</a></li>
+                        </ul>
+                        <div class="nav-main--inner-title"><a href="#">Диагностическая лаборатория</a></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Бактериологическая лаборатория</a></li>
+                          <li><a href="#">Иммунологическая лаборатория</a></li>
+                          <li><a href="#">Молекулярно-обиологическая лаборатория (ПЦР)</a></li>
+                          <li><a href="#">Общеклиннические и биохимические исследования</a></li>
+                        </ul>
+                        <div class="nav-main--inner-title"><a href="#">Зуботехническая лаборатория</a></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Съемные зубные протезы</a></li>
+                          <li><a href="#">Бюгельные зубные протезы</a></li>
+                          <li><a href="#">Безметалловая керамика</a></li>
+                          <li><a href="#">Металлокерамика</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Этот пункт имеет стандартный всплывающий блок-->
+              <div class="nav-main--item -has-inner-"><a href="#"> <span>Технологи и инновации</span></a>
+                <!--Ещё один стандартный всплывающий блок. Здесь меньше пунктов меню, и расположены они по-другому-->
+                <div class="nav-main--inner">
+                  <div data-lock-window-scroll="true" class="custom-scroll-wrap">
+                    <div class="row-flex nav-main--inner--content">
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Лечебно-диагностический центр</a></div>
+                        <div class="row-flex">
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Терапия</a></li>
+                              <li><a href="#">Пульманология</a></li>
+                              <li><a href="#">Гематология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Дерматология</a></li>
+                              <li><a href="#">Аллергология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Отоларинология</a></li>
+                              <li><a href="#">Гирудотерапия</a></li>
+                              <li><a href="#">Венерология</a></li>
+                              <li><a href="#">Наркология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Неврология</a></li>
+                              <li><a href="#">Эндокринология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Иглорефлексотерапия</a></li>
+                              <li><a href="#">Физиотерапия</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Проктология</a></li>
+                              <li><a href="#">Урология</a></li>
+                              <li><a href="#">Детская урология</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Стоматология</a><span class="nav-main--inner-title--note"><a href="#">Семь клиник</a></span></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение кариеса</a></li>
+                          <li><a href="#">Лечение пульпита</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Профессиональная гигиена</a></li>
+                          <li><a href="#">Ортодонтия</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Виниры и люминиры</a></li>
+                          <li><a href="#">Имплантация</a></li>
+                          <li><a href="#">Парадонтология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Компьютерная томография</a></li>
+                          <li><a href="#">Нейромышечная стоматология</a></li>
+                          <li><a href="#">Отбеливание зубов</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Цифровой дизацн улыбки</a></li>
+                          <li><a href="#">Лечение под микроскопом</a></li>
+                          <li><a href="#">Диагностика</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Детская стоматология &laquo;Динозубрик&raquo;</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Центр женского здоровья</a><span class="nav-main--inner-title--note"><a href="#">Четыре центра</a></span></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение бесплодия</a></li>
+                          <li><a href="#">Онколог-маммолог</a></li>
+                          <li><a href="#">Лечение кист яичников</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Планирование беременности</a></li>
+                          <li><a href="#">Курсы для беременных</a></li>
+                          <li><a href="#">Ведение беременности - шаг за шагом</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение патологии шейки матки</a></li>
+                          <li><a href="#">Прерывание беременности</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Цифровая гистеровидеоскопия</a></li>
+                          <li><a href="#">УЗИ</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Гинекология</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Центр маммологии</a></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">3D маммография</a></li>
+                          <li><a href="#">УЗИ молочной железы</a></li>
+                          <li><a href="#">Пункция молочной железы</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Анализ крови на анкомаркеры</a></li>
+                          <li><a href="#">Аппаратная биопсия</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--А этот пункт вообще не имеет всплывающих блоков - он просто ссылка-->
+              <div class="nav-main--item normal"><a href="#"> <span>Образование и развитие</span></a></div>
+              <div class="nav-main--item normal"><a href="#"> <span>Врачи и команда</span></a></div>
+              <div class="nav-main--item normal"><a href="#"> <span>Цены и акции</span></a></div>
+              <div class="nav-main--item normal"><a href="#"> <span>Контакты</span></a></div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="content">
+        <div class="contents main-page">
+          <div class="clinic-tiles">
+            <div id="clinic-tiles" class="clinic-tiles--list semi-spoiler">
+                        <div id="clinic-tile-gradient" class="clinic-tile -clinic-tile-main-"><span class="clinic-tile-main-header">Мы работаем в интересах Вашего здоровья.</span>
+                          <p>Наша задача &mdash; превзойти Ваши ожидания.<br/>Мы открыты к общению.</p>
+                        </div><a href="#" class="clinic-tile -clinic-tile-type-1-"><img src="../img/clinic-type-img/clinic-type-img-1.png" alt="" class="clinic-tile--bg">
+                          <p class="clinic-tile--descr">Лечебно-диагностический центр &laquo;САДКО&raquo; &mdash; это 5 клиник в разных частях Нижнего Новгорода</p>
+                          <div class="clinic-tile--contacts">
+                            <div class="clinic-tile--title">
+                              <h2>Поликлиника</h2>
+                            </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                            <ul class="clinic-tile--adrs">
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                            </ul>
+                          </div></a><a href="#" class="clinic-tile -clinic-tile-type-2- -double-height-"><img src="../img/clinic-type-img/clinic-type-img-2.png" alt="" class="clinic-tile--bg">
+                          <p class="clinic-tile--descr">Создать семью, построить гармоничные отношения, стать мамой, быть здоровой, красивой и довольной собой в любом</p>
+                          <div class="clinic-tile--contacts">
+                            <div class="clinic-tile--title">
+                              <h2>Центр женского здоровья</h2>
+                            </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                            <ul class="clinic-tile--adrs">
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                            </ul>
+                          </div></a><a href="#" class="clinic-tile -clinic-tile-type-3-"><img src="../img/clinic-type-img/clinic-type-img-3.png" alt="" class="clinic-tile--bg">
+                          <p class="clinic-tile--descr">Специалисты высокого уровня с опытом лечения за рубежом</p>
+                          <div class="clinic-tile--contacts">
+                            <div class="clinic-tile--title">
+                              <h2>Стоматология</h2>
+                            </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                            <ul class="clinic-tile--adrs">
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                            </ul>
+                          </div></a><a href="#" class="clinic-tile -clinic-tile-type-4-"><img src="../img/clinic-type-img/clinic-type-img-4.png" alt="" class="clinic-tile--bg">
+                          <p class="clinic-tile--descr">Хорошие эмоции, веселый смех — источники жизненной энергии и силы</p>
+                          <div class="clinic-tile--contacts">
+                            <div class="clinic-tile--title">
+                              <h2>Детская клиника и стоматология  «здоровенок»</h2>
+                            </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                            <ul class="clinic-tile--adrs">
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                            </ul>
+                          </div></a><a href="#" class="clinic-tile -clinic-tile-type-5-"><img src="../img/clinic-type-img/clinic-type-img-5.png" alt="" class="clinic-tile--bg">
+                          <p class="clinic-tile--descr">Специалисты выполняют полный спектр лабораторных анализов</p>
+                          <div class="clinic-tile--contacts">
+                            <div class="clinic-tile--title">
+                              <h2>Диагностическая лаборатория</h2>
+                            </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                            <ul class="clinic-tile--adrs">
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                            </ul>
+                          </div></a><a href="#" class="clinic-tile -clinic-tile-type-6- -double-height-"><img src="../img/clinic-type-img/clinic-type-img-6.png" alt="" class="clinic-tile--bg">
+                          <p class="clinic-tile--descr">Первая в Нижнем Новгороде специализированная детская стоматология</p>
+                          <div class="clinic-tile--contacts">
+                            <div class="clinic-tile--title">
+                              <h2>Детская стоматология «динозубрик»</h2>
+                            </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                            <ul class="clinic-tile--adrs">
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                            </ul>
+                          </div></a><a href="#" class="clinic-tile -clinic-tile-type-7-"><img src="../img/clinic-type-img/clinic-type-img-7.png" alt="" class="clinic-tile--bg">
+                          <p class="clinic-tile--descr">Ранняя диагностика молочной железы</p>
+                          <div class="clinic-tile--contacts">
+                            <div class="clinic-tile--title">
+                              <h2>ЦЕНТР маммологии</h2>
+                            </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                            <ul class="clinic-tile--adrs">
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                            </ul>
+                          </div></a><a href="#" class="clinic-tile -clinic-tile-type-8-"><img src="../img/clinic-type-img/clinic-type-img-8.png" alt="" class="clinic-tile--bg">
+                          <p class="clinic-tile--descr">От простых операций до проведения эксклюзивных процедур любой сложности</p>
+                          <div class="clinic-tile--contacts">
+                            <div class="clinic-tile--title">
+                              <h2>ЦЕНТР имплантации</h2>
+                            </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                            <ul class="clinic-tile--adrs">
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                            </ul>
+                          </div></a><a href="#" class="clinic-tile -clinic-tile-type-9-"><img src="../img/clinic-type-img/clinic-type-img-9.png" alt="" class="clinic-tile--bg">
+                          <p class="clinic-tile--descr">Клиника полного цикла. Все этапы ортодонтического лечения</p>
+                          <div class="clinic-tile--contacts">
+                            <div class="clinic-tile--title">
+                              <h2>ЦЕНТР ортодонтии «джем»</h2>
+                            </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                            <ul class="clinic-tile--adrs">
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                              <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                            </ul>
+                          </div></a>
+                        <div class="clinic-tile clinic-tile-gallery -double-width-">
+                          <div id="tile-gallery" data-flickity-options="{ &quot;prevNextButtons&quot;: false }" class="gallery"><a href="#" class="gallery--item">
+                              <div class="clinic-tile-gallery--content"><span class="clinic-tile-gallery--title">Подарочные <strong>сертификаты &laquo;САДКО&raquo;</strong></span>
+                                <p class="clinic-tile-gallery--text">С возможностью выбора номинала и стоимости услуг</p>
+                              </div>
+                              <div class="clinic-tile-gallery--img"><img src="../img/content/certificate.png" alt=""></div></a><a href="#" class="gallery--item">
+                              <div class="clinic-tile-gallery--content"><span class="clinic-tile-gallery--title">Подарочные <strong>сертификаты &laquo;САДКО&raquo;</strong></span>
+                                <p class="clinic-tile-gallery--text">С возможностью выбора номинала и стоимости услуг</p>
+                              </div>
+                              <div class="clinic-tile-gallery--img"><img src="../img/content/certificate.png" alt=""></div></a><a href="#" class="gallery--item">
+                              <div class="clinic-tile-gallery--content"><span class="clinic-tile-gallery--title">Подарочные <strong>сертификаты &laquo;САДКО&raquo;</strong></span>
+                                <p class="clinic-tile-gallery--text">С возможностью выбора номинала и стоимости услуг</p>
+                              </div>
+                              <div class="clinic-tile-gallery--img"><img src="../img/content/certificate.png" alt=""></div></a></div>
+                        </div>
+              <div class="clinic-tiles--hidden"><a href="#" class="clinic-tile -clinic-tile-type-10- -double-height-"><img src="../img/clinic-type-img/clinic-type-img-10.png" alt="" class="clinic-tile--bg">
+                            <p class="clinic-tile--descr">В сотрудничестве с медицинской академией Нижнего Новгорода. Интернов и ординаторов обучают практикующие врачи клиники</p>
+                            <div class="clinic-tile--contacts">
+                              <div class="clinic-tile--title">
+                                <h2>ЦЕНТР Инновационного образования</h2>
+                              </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                              <ul class="clinic-tile--adrs">
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              </ul>
+                            </div></a><a href="#" class="clinic-tile -clinic-tile-type-11-"><img src="../img/clinic-type-img/clinic-type-img-11.png" alt="" class="clinic-tile--bg">
+                            <p class="clinic-tile--descr">Качественные зубные протезы из металлокерамики и безметалловой керамики используются для </p>
+                            <div class="clinic-tile--contacts">
+                              <div class="clinic-tile--title">
+                                <h2>Зуботехническая лаборатория</h2>
+                              </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                              <ul class="clinic-tile--adrs">
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              </ul>
+                            </div></a><a href="#" class="clinic-tile -clinic-tile-type-12-"><img src="../img/clinic-type-img/clinic-type-img-12.png" alt="" class="clinic-tile--bg">
+                            <p class="clinic-tile--descr">Курс лечения и реабилитации, с применением бальнеолеченияи физеопроцедур</p>
+                            <div class="clinic-tile--contacts">
+                              <div class="clinic-tile--title">
+                                <h2>ЦЕНТР неврологии</h2>
+                              </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                              <ul class="clinic-tile--adrs">
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              </ul>
+                            </div></a><a href="#" class="clinic-tile -clinic-tile-type-13-"><img src="../img/clinic-type-img/clinic-type-img-13.png" alt="" class="clinic-tile--bg">
+                            <p class="clinic-tile--descr">В здоровом теле — здоровый дух!</p>
+                            <div class="clinic-tile--contacts">
+                              <div class="clinic-tile--title">
+                                <h2>центр мужского здоровья</h2>
+                              </div><span class="clinic-tile--phone">+7 (831) 4-120-777</span>
+                              <ul class="clinic-tile--adrs">
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-">ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Бекетова, 13</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> ул. Родионова, 199</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> пр. Ленина, 67/1</span></li>
+                                <li><span onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/" class="-link-white-"> Сормовское шоссе, 20</span></li>
+                              </ul>
+                            </div></a>
+                          <div class="clinic-tile clinic-tile-coming-soon"><span class="clinic-tile-coming-soon--title">Центр психологической помощи</span>
+                            <div class="clinic-tile-coming-soon--date -justify-content-"><span>открытие 12.08.2015</span>
+                              <button class="btn-white">Узнать подробности</button>
+                            </div>
+                          </div>
+              </div>
+            </div>
+            <div class="clinic-tiles--hide-toggle"><a href="#" class="-pseudo- -link-wrap-"><span data-target="#clinic-tiles" data-semi-spoiler="true" data-default-height="1250" data-active-text="Скрыть часть центров" class="spoiler-toggle">Показать все центры</span></a></div>
+          </div>
+          <div class="quot row-flex">
+            <div class="col-8">
+              <div class="quot--text">Наши врачи используют швейцарское, американское и японское оборудование. Аппаратам не больше двух лет.</div>
+            </div>
+            <div class="quot--author col-4"><a href="#" class="-text-link-">Сколов В.Ю.</a><span class="quot--author--position">Президент группы компаний </br>&laquoСАДКО&raquo;</span></div>
+          </div>
+          <div class="equipment-gallery">
+            <div id="equipment-gallery" class="gallery">
+              <div class="gallery--item">
+                <div class="dot-notes">
+                  <div style="left: 180px; top: 150px" title="25 кратная детализация изображения, стереотаксическая биопсия и интеллектуальные механизмы контроля качества " class="dot-note"></div>
+                  <div style="left: 430px; top: 460px" title="25 кратная детализация изображения, стереотаксическая биопсия и интеллектуальные механизмы контроля качества " class="dot-note"></div>
+                </div><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">Маммография с 3D томосинтезом - только в клинике «Садко»!</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование такое-то." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item">
+                <div style="left: 180px; top: 150px" title="25 кратная детализация изображения, стереотаксическая биопсия и интеллектуальные механизмы контроля качества " class="dot-note"></div>
+                <div style="left: 430px; top: 460px" title="25 кратная детализация изображения, стереотаксическая биопсия и интеллектуальные механизмы контроля качества " class="dot-note"></div><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">&laquoЗеленая&raquo; томография в стоматологии на ул. Пискунова</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование другое." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item"><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">4D ультра-звуковое исследование с эластографией</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на ещё одно обследование." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item"><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">Стоматология под общим наркозом</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование такое-то." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item"><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">Имплантация, гарантия 80 лет</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование такое-то." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item"><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">Стоматология под общим наркозом</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование такое-то." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item"><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">Имплантация, гарантия 80 лет</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование такое-то." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item">
+                <div class="dot-notes">
+                  <div style="left: 180px; top: 150px" title="25 кратная детализация изображения, стереотаксическая биопсия и интеллектуальные механизмы контроля качества " class="dot-note"></div>
+                  <div style="left: 430px; top: 460px" title="25 кратная детализация изображения, стереотаксическая биопсия и интеллектуальные механизмы контроля качества " class="dot-note"></div>
+                </div><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">Маммография с 3D томосинтезом - только в клинике «Садко»!</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование такое-то." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item">
+                <div style="left: 180px; top: 150px" title="25 кратная детализация изображения, стереотаксическая биопсия и интеллектуальные механизмы контроля качества " class="dot-note"></div>
+                <div style="left: 430px; top: 460px" title="25 кратная детализация изображения, стереотаксическая биопсия и интеллектуальные механизмы контроля качества " class="dot-note"></div><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">&laquoЗеленая&raquo; томография в стоматологии на ул. Пискунова</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование другое." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item"><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">4D ультра-звуковое исследование с эластографией</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на ещё одно обследование." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item"><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">Стоматология под общим наркозом</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование такое-то." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item"><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">Имплантация, гарантия 80 лет</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование такое-то." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item"><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">Стоматология под общим наркозом</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование такое-то." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+              <div class="gallery--item"><img src="../img/equipment-gallery/1.jpg" alt="" class="equipment-gallery--img">
+                <div class="equipment-gallery--tip">
+                  <h1 class="equipment-gallery--tip--title">Имплантация, гарантия 80 лет</h1>
+                  <div class="equipment-gallery--tip--content">
+                    <p>Уникальное инновационное оборудование для диагностики рака груди на самой ранней стадии — SIEMENS MAMMOMAT с 3D томосинтезом! В данный момент в России только 2 таких маммографа: один находится в Москве, другой — в Центре маммологии «Садко» в Нижнем Новгороде.</p>
+                  </div><a href="#" data-book-info="Записаться на обследование" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на обследование такое-то." class="btn book-toggle">Обследование со скидкой 25%</a>
+                </div>
+              </div>
+            </div>
+            <div id="equipment-gallery-nav" class="equipment-gallery--nav">
+              <div class="equipment-gallery--nav--item"><span>Маммография с 3D тамосинтезом</span></div>
+              <div class="equipment-gallery--nav--item"><span>&laquoЗеленая&raquo; томография в стоматологии на ул. Пискунова</span></div>
+              <div class="equipment-gallery--nav--item"><span>4D ультра-звуковое исследование с эластографией</span></div>
+              <div class="equipment-gallery--nav--item"><span>Стоматология под общим наркозом</span></div>
+              <div class="equipment-gallery--nav--item"><span>Имплантация, гарантия 80 лет</span></div>
+              <div class="equipment-gallery--nav--item"><span>Стоматология под общим наркозом</span></div>
+              <div class="equipment-gallery--nav--item"><span>Имплантация, гарантия 80 лет</span></div>
+              <div class="equipment-gallery--nav--item"><span>Маммография с 3D тамосинтезом</span></div>
+              <div class="equipment-gallery--nav--item"><span>&laquoЗеленая&raquo; томография в стоматологии на ул. Пискунова</span></div>
+              <div class="equipment-gallery--nav--item"><span>4D ультра-звуковое исследование с эластографией</span></div>
+              <div class="equipment-gallery--nav--item"><span>Стоматология под общим наркозом</span></div>
+              <div class="equipment-gallery--nav--item"><span>Имплантация, гарантия 80 лет</span></div>
+              <div class="equipment-gallery--nav--item"><span>Стоматология под общим наркозом</span></div>
+              <div class="equipment-gallery--nav--item"><span>Имплантация, гарантия 80 лет</span></div>
+            </div>
+          </div>
+          <div class="quot row-flex -quot-no-border-">
+            <div class="col-8">
+              <div class="quot--text">За 16 лет мы создали не только отличную клинику для пациентов, но и очень привлекательное место для работы врачей. С Вами будут работать лучшие специалисты в</div>
+            </div>
+          </div>
+          <div class="doc-gallery-wrap">
+            <div id="doc-gallery" class="doc-gallery">
+              <!--Блок конкретного доктора-->
+              <div class="doc-gallery--item">
+                <!--Видеоблок-->
+                <div class="video-wrapper">
+                  <div class="video-overblock"></div>
+                  <div class="video-frame"><iframe src="https://player.vimeo.com/video/140303762?color=ffffff&title=0&byline=0&portrait=0&badge=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                  <!--Открыть видео--><span class="video-button"></span>
+                </div>
+                <!--О докторе-->
+                <div class="doctor-info"><a href="#" class="doctor-name">Агафонова Галина Владимировна</a>
+                  <ul class="doctor-skills">
+                    <li>кандидат медицинских наук</li>
+                    <li>ведущий специалист</li>
+                    <li>урология</li>
+                  </ul>
+                  <div class="flags"><img src="../img/icons/jamaica.png" data-text="Ямайка" alt="" class="show-text"><img src="../img/icons/romania.png" data-text="Румыния" alt="" class="show-text"><img src="../img/icons/croatia.png" data-text="Хорватия" alt="" class="show-text"></div>
+                  <div class="textblock">
+                     
+                    <b>Стаж работы:</b><br><i>15 лет</i>
+                  </div>
+                </div><a href="#" class="all-doctors-link">Все врачи клиники</a>
+              </div>
+              <!--Блок конкретного доктора-->
+              <div class="doc-gallery--item">
+                <!--Видеоблок-->
+                <div class="video-wrapper">
+                  <div class="video-overblock"></div>
+                  <div class="video-frame"><iframe src="https://player.vimeo.com/video/140303762?color=ffffff&title=0&byline=0&portrait=0&badge=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                  <!--Открыть видео--><span class="video-button"></span>
+                </div>
+                <!--О докторе-->
+                <div class="doctor-info"><a href="#" class="doctor-name">Громова Евгения Игоревна</a>
+                  <ul class="doctor-skills">
+                    <li>кандидат медицинских наук</li>
+                    <li>ведущий специалист</li>
+                    <li>урология</li>
+                  </ul>
+                  <div class="flags"><img src="../img/icons/jamaica.png" data-text="Ямайка" alt="" class="show-text"><img src="../img/icons/romania.png" data-text="Румыния" alt="" class="show-text"><img src="../img/icons/croatia.png" data-text="Хорватия" alt="" class="show-text"></div>
+                  <div class="textblock">
+                     
+                    <b>Стаж работы:</b><br><i>15 лет</i>
+                  </div>
+                </div><a href="#" class="all-doctors-link">Все врачи клиники</a>
+              </div>
+              <!--Блок конкретного доктора-->
+              <div class="doc-gallery--item">
+                <!--Видеоблок-->
+                <div class="video-wrapper">
+                  <div class="video-overblock"></div>
+                  <div class="video-frame"><iframe src="https://player.vimeo.com/video/140303762?color=ffffff&title=0&byline=0&portrait=0&badge=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                  <!--Открыть видео--><span class="video-button"></span>
+                </div>
+                <!--О докторе-->
+                <div class="doctor-info"><a href="#" class="doctor-name">Горькова Ирина Владимировна</a>
+                  <ul class="doctor-skills">
+                    <li>кандидат медицинских наук</li>
+                    <li>ведущий специалист</li>
+                    <li>урология</li>
+                  </ul>
+                  <div class="flags"><img src="../img/icons/jamaica.png" data-text="Ямайка" alt="" class="show-text"><img src="../img/icons/romania.png" data-text="Румыния" alt="" class="show-text"><img src="../img/icons/croatia.png" data-text="Хорватия" alt="" class="show-text"></div>
+                  <div class="textblock">
+                     
+                    <b>Стаж работы:</b><br><i>15 лет</i>
+                  </div>
+                </div><a href="#" class="all-doctors-link">Все врачи клиники</a>
+              </div>
+              <!--Блок конкретного доктора-->
+              <div class="doc-gallery--item">
+                <!--Видеоблок-->
+                <div class="video-wrapper">
+                  <div class="video-overblock"></div>
+                  <div class="video-frame"><iframe src="https://player.vimeo.com/video/140303762?color=ffffff&title=0&byline=0&portrait=0&badge=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                  <!--Открыть видео--><span class="video-button"></span>
+                </div>
+                <!--О докторе-->
+                <div class="doctor-info"><a href="#" class="doctor-name">Громова Евгения Игоревна</a>
+                  <ul class="doctor-skills">
+                    <li>кандидат медицинских наук</li>
+                    <li>ведущий специалист</li>
+                    <li>урология</li>
+                  </ul>
+                  <div class="flags"><img src="../img/icons/jamaica.png" data-text="Ямайка" alt="" class="show-text"><img src="../img/icons/romania.png" data-text="Румыния" alt="" class="show-text"><img src="../img/icons/croatia.png" data-text="Хорватия" alt="" class="show-text"></div>
+                  <div class="textblock">
+                     
+                    <b>Стаж работы:</b><br><i>15 лет</i>
+                  </div>
+                </div><a href="#" class="all-doctors-link">Все врачи клиники</a>
+              </div>
+              <!--Блок конкретного доктора-->
+              <div class="doc-gallery--item">
+                <!--Видеоблок-->
+                <div class="video-wrapper">
+                  <div class="video-overblock"></div>
+                  <div class="video-frame"><iframe src="https://player.vimeo.com/video/140303762?color=ffffff&title=0&byline=0&portrait=0&badge=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                  <!--Открыть видео--><span class="video-button"></span>
+                </div>
+                <!--О докторе-->
+                <div class="doctor-info"><a href="#" class="doctor-name">Горькова Ирина Владимировна</a>
+                  <ul class="doctor-skills">
+                    <li>кандидат медицинских наук</li>
+                    <li>ведущий специалист</li>
+                    <li>урология</li>
+                  </ul>
+                  <div class="flags"><img src="../img/icons/jamaica.png" data-text="Ямайка" alt="" class="show-text"><img src="../img/icons/romania.png" data-text="Румыния" alt="" class="show-text"><img src="../img/icons/croatia.png" data-text="Хорватия" alt="" class="show-text"></div>
+                  <div class="textblock">
+                     
+                    <b>Стаж работы:</b><br><i>15 лет</i>
+                  </div>
+                </div><a href="#" class="all-doctors-link">Все врачи клиники</a>
+              </div>
+            </div>
+            <div id="doc-gallery-nav" class="doc-gallery-nav">
+              <!--Карточка врача-->
+              <div class="doc-tile doctor-signature clear">
+                <!--Фото-->
+                <div class="doctor-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Агафонова Галина Владимировна" class="doctor-photo"></a></div>
+                <!--Описание-->
+                <div class="about-doctor">
+                  <!--Имя-->
+                  <div class="doctor-name">Агафонова Галина Владимировна</div>
+                  <!--Список специализаций-->
+                  <ul class="doctor-special-list">
+                    <li>стоматолог-терапевт</li>
+                  </ul>
+                </div>
+              </div>
+              <!--Карточка врача-->
+              <div class="doc-tile doctor-signature clear">
+                <!--Фото-->
+                <div class="doctor-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Громова Евгения Игоревна" class="doctor-photo"></a></div>
+                <!--Описание-->
+                <div class="about-doctor">
+                  <!--Имя-->
+                  <div class="doctor-name">Громова Евгения Игоревна</div>
+                  <!--Список специализаций-->
+                  <ul class="doctor-special-list">
+                    <li> <b>ведущий специалист</b></li>
+                    <li>заведующий отделением урологии</li>
+                  </ul>
+                </div>
+              </div>
+              <!--Карточка врача-->
+              <div class="doc-tile doctor-signature clear">
+                <!--Фото-->
+                <div class="doctor-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Громова Евгения Игоревна" class="doctor-photo"></a></div>
+                <!--Описание-->
+                <div class="about-doctor">
+                  <!--Имя-->
+                  <div class="doctor-name">Горькова Ирина Владимировна</div>
+                  <!--Список специализаций-->
+                  <ul class="doctor-special-list">
+                    <li>гинеколог</li>
+                    <li>криогинеколог</li>
+                  </ul>
+                </div>
+              </div>
+              <!--Карточка врача-->
+              <div class="doc-tile doctor-signature clear">
+                <!--Фото-->
+                <div class="doctor-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Громова Евгения Игоревна" class="doctor-photo"></a></div>
+                <!--Описание-->
+                <div class="about-doctor">
+                  <!--Имя-->
+                  <div class="doctor-name">Громова Евгения Игоревна</div>
+                  <!--Список специализаций-->
+                  <ul class="doctor-special-list">
+                    <li> <b>ведущий специалист</b></li>
+                    <li>заведующий отделением урологии</li>
+                  </ul>
+                </div>
+              </div>
+              <!--Карточка врача-->
+              <div class="doc-tile doctor-signature clear">
+                <!--Фото-->
+                <div class="doctor-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Громова Евгения Игоревна" class="doctor-photo"></a></div>
+                <!--Описание-->
+                <div class="about-doctor">
+                  <!--Имя-->
+                  <div class="doctor-name">Горькова Ирина Владимировна</div>
+                  <!--Список специализаций-->
+                  <ul class="doctor-special-list">
+                    <li>гинеколог</li>
+                    <li>криогинеколог</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="patient-gallery">
+            <div id="patient-gallery" class="gallery">
+              <div class="gallery--item"><img src="../img/patient-gallery/1.jpg" alt=""></div>
+              <div class="gallery--item"><img src="../img/patient-gallery/2.jpg" alt=""></div>
+            </div>
+            <div class="patient-gallery--btn">
+              <button id="patient-gallery-btn" class="btn-white btn-white-hover btn-scale-active">А Вы наш пациент?</button>
+            </div><a href="#" class="patient-gallery--resp-link -link-white-">Почитать отзывы</a>
+          </div>
+          <div class="quot row-flex">
+            <div class="col-9">
+              <div class="quot--text">Медицина — это вдохновение и драйв! Наши доктора регулярно ездят по миру, заряжаются энергетикой иностранных специалистов и конечно</div>
+            </div>
+            <div class="quot--author col-3"><a href="#" class="-text-link-">Соколов В.Ю.</a><span class="quot--author--position">Президент группы компаний </br>&laquoСАДКО&raquo;</span></div>
+          </div>
+          <div class="panel learn-map">
+            <div class="learn-map--wrapper">
+              <!--Блок карты-->
+              <div id="learn-map" data-marker="../img/icons/marker.png" data-active-marker="../img/icons/active-marker.png" class="learn-map--map"></div>
+              <div id="learnMapInfo" class="map-info"></div>
+            </div>
+            <div class="learn-map--filter clear">
+              <div id="learmCheckFilter" class="learn-map--filter--doc">
+                <label>
+                  <input type="radio" name="check-filter" value="stomatologist" class="check-radio"><span>Стоматологи</span>
+                </label>
+                <label>
+                  <input type="radio" name="check-filter" value="specialist" class="check-radio"><span>Специалисты поликлиники</span>
+                </label>
+              </div><a href="#" class="learn-map--delete-filter">Сбросить все фильтры</a>
+              <div class="learn-map--filter--my-doc">
+                <form id="learnSearchDoctor" class="search-list--input">
+                  <input type="text" placeholder="Найти своего врача">
+                  <div class="search-list--input--controls">
+                    <button class="ico-search-wide"></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="contents">
+          <div class="row-flex">
+            <div class="col-3">
+              <ul class="footer-nav">
+                <li><a href="#">Вся правда о САДКО</a></li>
+                <li><a href="#">Пациентам</a></li>
+                <li><a href="#">Услуги и клиники</a></li>
+                <li><a href="#">Технологии и инновации</a></li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <ul class="footer-nav">
+                <li><a href="#">Образование и развитие</a></li>
+                <li><a href="#">Врачи и команда</a></li>
+                <li><a href="#">Цены и акции</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="col-2 footer-time">
+              <div class="-mb-xs-">8<sup>00</sup> - 20<sup>00</sup> Пн.- Сб.</div>
+              <div class="-mb-xs- -mb-">9<sup>00</sup> - 18<sup>00</sup> Вс.</div>
+              <div class="-mb-xs-">Телефон:<br>+7 (831) 421-01-01</div>
+            </div>
+            <div class="col-4">
+              <div class="-justify-content-">
+                <div class="lang-switch"><a href="#" class="active">Ru</a><a href="#">Eng</a></div>
+                <div><a href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту." class="btn footer-to-sign book-toggle">Записаться на прием</a>
+                  <div class="clear">
+                    <button class="footer-top"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="contents"><a class="footer-logo"><img src="../img/logo.png"></a>
+            <div class="footer-copy">
+              <p>&copy; 2009 - 2015</p>
+              <p>Сеть медицинских клиник &laquo;САДКО&raquo; в Н.Новгороде</p>
+            </div>
+            <div class="footer-design">Дизайн сайта - <a href='#'>x design</a><br>Разработка и интеграция - <a href='#'>WebSharks</a></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--Форма записи на приём-->
+    <div id="book-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form start-form">
+        <div class="form-header">Карточка записи на прием</div>
+        <p>На прием будет записан пациент, чьи данные указаны в анкете ниже. Заполните пожалуйста все поля, иначе, мы не сможем вас узнать и записаться не получится.</p><input type="hidden" name="sessid" id="sessid_2" value="" />
+        <input type="hidden" name="WEB_FORM_ID" value="" />
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Имя*</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон*</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div>
+          <!--div.book-form--row
+          label E-mail
+          input.book-form--row--content.email-field(type='text')
+          
+          --><input name="" type="hidden" class="doctor-id" value="">
+          <input name="form_text_6" type="hidden" value="">
+          <input type="hidden" value="" class="book-form-action">
+        </div>
+        <div class="book-form--section">
+          <h2>Примечания</h2>
+          <textarea></textarea>
+        </div>
+        <div class="-justify-content-">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+          <button class="btn book-btn submit-btn">Записаться на прием</button>
+        </div>
+      </form>
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Спасибо!</div>
+        <p>Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Форма отзыва/вопроса-->
+    <div id="question-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form question-form">
+        <!--Подзаголовок-->
+        <div class="form-header">Что вы думаете о нас?</div>
+        <textarea class="textarea-scrollbar scrollbar-outer question-text"></textarea>
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Имя</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div>
+          <div class="book-form--row">
+            <label>E-mail</label>
+            <input type="text" class="book-form--row--content email-field">
+          </div>
+        </div><input name="" type="hidden" class="question-id" value="">		
+        <div class="-text-center-">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+          <button class="btn book-btn submit-btn">Отправить</button>
+        </div>
+      </form>
+      <!--Ответ - спасибо-->
+      <div class="question-answer-form -text-center-">
+        <div class="big-header">Спасибо за вопрос!</div>
+        <p>Все вопросы мы передаем специалистам. В течение 24 часов у врачей обычно находится время, чтобы ответить. Если ваш вопрос не терпит отлагательств, пожалуйста, позвоните!</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Форма записи по акции-->
+    <div id="action-app-content" class="modal-form-wrapper -dn- action-form">
+      <div class="modal-close">×</div>
+      <form class="book-form start-form action-form">
+        <div class="form-header"> </div>
+        <div class="textblock"></div>
+        <div class="action-form-section"> 
+          <div class="book-form--section">
+            <!--Это не пустой блок - сюда выводится текст ошибки-->
+            <div class="error-text"></div>
+            <div class="book-form--row">
+              <label>Имя</label>
+              <input type="text" class="book-form--row--content required-field">
+            </div>
+            <div class="book-form--row">
+              <label>Телефон</label>
+              <input type="text" class="book-form--row--content phone-field">
+            </div>
+            <div class="book-form--row">
+              <label>E-mail</label>
+              <input type="text" class="book-form--row--content email-field">
+            </div><input name="" type="hidden" class="action-id" value="">
+          </div>
+          <div class="-justify-content-">
+            <label class="book-form--accept">
+              <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+            </label>
+            <button class="btn book-btn submit-btn">Записаться на прием</button>
+          </div>
+        </div>
+      </form>
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Спасибо!</div>
+        <p>Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Форма записи на курс-->
+    <div id="course-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form start-form course-form">
+        <div class="form-header">Записаться на лекцию</div>
+        <div class="textblock">
+          <p>Время работы</p>
+        </div>
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Имя</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div>
+          <div class="book-form--row">
+            <label>E-mail</label>
+            <input type="text" class="book-form--row--content email-field">
+          </div><input name="" type="hidden" class="course-id" value="">
+        </div>
+        <div class="-justify-content-">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+          <button class="btn book-btn submit-btn">Отправить заявку</button>
+        </div>
+      </form>
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Ждём вас!</div>
+        <p>Мы записали вас в группу. Позвоните пожалуйста по телефону <B>8 (831) 414-45-67</b>, если у вас изменятся планы.</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Форма отклика на вакансию-->
+    <div id="vacancy-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form start-form vacancy-form">
+        <div class="form-header">Откликнуться на вакансию</div>
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Имя</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div>
+          <div class="book-form--row">
+            <label>E-mail</label>
+            <input type="email" class="book-form--row--content email-field">
+          </div>
+        </div><input name="" type="hidden" class="vacancy-id" value="">
+        <div class="book-form--section">
+          <h2>Примечания</h2>
+          <textarea></textarea>
+          <!--Прикрепляем файл-->
+          <div id="resumeAddFileButton" data-text="Прикрепить файл резюме" class="file-button">Прикрепить файл резюме</div>
+          <input type="file" id="resumeFileField" onchange="changeResumeFileField();" class="file-input">
+        </div>
+        <div class="-justify-content-">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+          <button class="btn book-btn submit-btn">Отправить заявку</button>
+        </div>
+      </form>
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Заявка принята!</div>
+        <p>Мы рассмотрим вашу кандидатуру и перезвоним по указанному телефону в течение 5 рабочих дней</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Форма записи на услугу-->
+    <div id="service-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <div class="service-form-wrapper">
+        <!--Стартовый блок (показываем при загрузке)-->
+        <div class="service-form-start-block">
+          <h3 class="service-header">Стоимость</h3>
+          <!--Кнопки-->
+          <div class="service-cost-buttons">
+            <!--Активная кнопка всегда выделена.Дата-атрибуты совпадают с классами списков-->
+            <button data-dl="clock-list" data-cost-type="Горящие часы" class="cost-button clock"></button>
+            <button data-dl="normal-list" data-cost-type="Визит к врачу" class="cost-button normal active"></button>
+            <button data-dl="premium-list" data-cost-type="Визит к ведущему специалисту" class="cost-button premium"></button>
+          </div>
+          <!--Список-содержание (горящие часы)-->
+          <dl class="cost-dl clock-list"></dl>
+          <!--Список-содержание (визит к врачу)-->
+          <dl class="cost-dl normal-list"></dl>
+          <!--Список-содержание (визит к ведущему врачу)-->
+          <dl class="cost-dl premium-list"></dl>
+          <!--Текстовый блок-->
+          <div class="textblock"> </div>
+          <div class="-justify-content-"><a class="btn btn-reverse-colors service-book">Записаться на приём</a><a href="#" class="btn-reverse-colors btn question-book">Задать вопрос</a></div>
+        </div>
+        <!--Форма записи-->
+        <form class="book-form start-form">
+          <!--Закрыть-->
+          <div class="closed">Закрыть </div>
+          <!--Куда записываемся-->
+          <div class="form-header"> </div>
+          <!--Тип цены-->
+          <div class="cost-type"> </div>
+          <p>На прием будет записан пациент, чьи данные указаны в анкете ниже. Заполните пожалуйста все поля, иначе, мы не сможем вас узнать и записаться не получится.</p>
+          <div class="book-form--section">
+            <!--Это не пустой блок - сюда выводится текст ошибки-->
+            <div class="error-text"></div>
+            <div class="book-form--row">
+              <label>Имя</label>
+              <input type="text" class="book-form--row--content required-field">
+            </div>
+            <div class="book-form--row">
+              <label>Телефон</label>
+              <input type="text" class="book-form--row--content phone-field">
+            </div>
+            <div class="book-form--row">
+              <label>E-mail</label>
+              <input type="text" class="book-form--row--content email-field">
+            </div><input name="" type="hidden" class="service-id" value="">
+          </div>
+          <div class="book-form--section textarea-wrapper">
+            <h2>Примечания</h2>
+            <textarea></textarea>
+          </div>
+          <div class="-text-center-">
+            <label class="book-form--accept">
+              <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+            </label>
+            <button class="btn book-btn submit-btn">Записаться на прием</button>
+          </div>
+        </form>
+        <!--Ответ - спасибо-->
+        <div class="answer-form -text-center-">
+          <div class="big-header">Спасибо!</div>
+          <p>Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.</p>
+          <button class="answer-btn btn book-btn">Продолжить</button>
+        </div>
+        <!--Вопрос-->
+        <form class="book-form question-form">
+          <!--Закрыть-->
+          <div class="closed">Закрыть </div>
+          <!--Подзаголовок-->
+          <div class="form-header">Спросить совета</div>
+          <textarea class="textarea-scrollbar scrollbar-outer question-text"></textarea>
+          <div class="book-form--section">
+            <!--Это не пустой блок - сюда выводится текст ошибки-->
+            <div class="error-text"></div>
+            <div class="book-form--row">
+              <label>Имя</label>
+              <input type="text" class="book-form--row--content required-field">
+            </div>
+            <div class="book-form--row">
+              <label>Телефон</label>
+              <input type="text" class="book-form--row--content phone-field">
+            </div>
+            <div class="book-form--row">
+              <label>E-mail</label>
+              <input type="text" class="book-form--row--content email-field">
+            </div>
+          </div>
+          <div class="-text-center-">
+            <label class="book-form--accept">
+              <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+            </label>
+            <button class="btn book-btn submit-btn">Задать вопрос</button>
+          </div>
+        </form>
+        <!--Ответ - спасибо-->
+        <div class="question-answer-form -text-center-">
+          <div class="big-header">Спасибо за вопрос!</div>
+          <p>Все вопросы мы передаем специалистам. В течение 24 часов у врачей обычно находится время, чтобы ответить. Если ваш вопрос не терпит отлагательств, пожалуйста, позвоните!</p>
+          <button class="answer-btn btn book-btn">Продолжить</button>
+        </div>
+      </div>
+    </div>
+    <!--Форма вопроса руководству-->
+    <div id="manager-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form manager-form start-form">
+        <div class="manager-header">У вас идея?</div>
+        <div class="textblock"> 
+          <p>Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет</p>
+        </div>
+        <div class="book-form--section">
+          <h2>Опишите идею</h2>
+          <textarea class="modal-textarea-scrollbar scrollbar-outer question-text"></textarea>
+        </div>
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Ваше имя</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div><input name="" type="hidden" class="manager-id" value="">
+        </div>
+        <div class="-text-center- clear">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+        </div>
+        <div class="book-form--row">
+          <button class="btn book-btn submit-btn">Предложить идею</button>
+        </div>
+      </form>
+      <div class="book-form answer-form manager-form">
+        <div class="manager-header">Волнительно, правда?</div>
+        <p>Не переживайте, у нас очень хорошие руководители. Они обязательно разберутся, и сделают всё наилучшим образом.</p>
+        <button class="answer-btn btn book-btn">Отправить</button>
+      </div>
+    </div>
+    <!--Форма  оформления карты-->
+    <div id="card-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form manager-form start-form">
+        <div class="manager-header">Вам к нам!</div>
+        <div class="textblock">
+           
+          у нас сейчас нет технической возможности и надобности электронного оформления карты пациенту. ему все равно придется идти в клинику и эту карту оформлять и забирать. можно убрать здесь форму, а вместо нее оставить это всплывающее окошко и текст с тем, что вам карту оформят при первом посещении блаблбалблабалаб текст напишем
+        </div>
+        <!--div.book-form--section
+        //Это не пустой блок - сюда выводится текст ошибки
+        div.error-text
+        div.book-form--row
+        	label Ваше имя
+        	input.book-form--row--content.required-field(type='text')
+        div.book-form--row
+        	label Телефон
+        	input.book-form--row--content.phone-field(type='text')
+        div.book-form--row
+        	label E-mail
+        	input.book-form--row--content.email-field(type='text')
+        
+        <input name="" type="hidden" class="card-id" value="">
+        
+        -->
+        <!--div.-text-center-.clear
+        label.book-form--accept
+        	input(type='checkbox', name='license', value='')
+        	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+        
+        -->
+        <!--div.book-form--row
+        button.btn.book-btn.submit-btn Оформить
+        
+        -->
+      </form>
+      <!--div.book-form.answer-form.manager-form
+      div.manager-header Волнительно, правда?
+      p Не переживайте, у нас очень хорошие руководители. Они обязательно разберутся, и сделают всё наилучшим образом.
+      button.answer-btn.btn.book-btn Отправить
+      
+      -->
+    </div>
+    <!--Заявка для юр.лиц-->
+    <div id="jur-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form start-form">
+        <div class="form-header">Карточка записи на прием</div>
+        <p>На прием будет записан пациент, чьи данные указаны в анкете ниже. Заполните пожалуйста все поля, иначе, мы не сможем вас узнать и записаться не получится.</p><input type="hidden" name="sessid" id="sessid_2" value="" />
+        <input type="hidden" name="WEB_FORM_ID" value="" />
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Имя*</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон*</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div>
+          <!--div.book-form--row
+          label E-mail
+          input.book-form--row--content.email-field(type='text')
+          
+          --><input name="" type="hidden" class="doctor-id" value="">
+          <input name="form_text_6" type="hidden" value="">
+          <input type="hidden" value="" class="book-form-action">
+        </div>
+        <div class="book-form--section">
+          <h2>Примечания</h2>
+          <textarea></textarea>
+        </div>
+        <div class="-justify-content-">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+          <button class="btn book-btn submit-btn">Записаться на прием</button>
+        </div>
+      </form>
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Спасибо!</div>
+        <p>Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Блок ответа-->
+    <div id="answer-app-content" class="modal-form-wrapper -dn-">
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Заявка принята!</div>
+        <p>Мы рассмотрим вашу кандидатуру и перезвоним по указанному телефону в течение 5 рабочих дней</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Глобальные скрипты, которые загружаются на всех страницах-->
+    <script src="../js/libs/libs.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.min.js"></script>
+    <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?"></script>
+    <script src="../fancybox/jquery.fancybox.js"></script>
+    <script src="../fancybox/jquery.fancybox-media.js"></script>
+    <script src="../js/plugins/owl.carousel.min.js"></script>
+    <script src="../js/plugins/ui-check-radio.js"></script>
+    <script src="../js/plugins/jquery.scrollbar.min.js"></script>
+    <script src="../js/plugins/jquery.mousewheel.min.js"></script>
+    <script src="../js/plugins/spoiler.js"></script>
+    <script src="../js/plugins/ion.rangeSlider.js"></script>
+    <script src="../js/modules/mainNavigation.js"></script>
+    <script src="../js/modules/smileControl.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/components/gradientAnimation.js"></script>
+    <script src="../js/components/learnMap.js"></script>
+    <script src="../js/components/bonus-calc.js"></script>
+    <script src="../js/controllers/global.js"></script>
+    <script src="../js/controllers/filter.js"></script>
+    <script src="../js/controllers/forms.js"></script>
+    <script src="../js/controllers/about.js"></script>
+    <script src="../js/controllers/index.js"></script>
+    <script src="../js/controllers/doctors.js"></script>
+    <script src="../js/controllers/doctor-page.js"></script>
+    <script src="../js/controllers/technical.js"></script>
+    <script src="../js/controllers/education.js"></script>
+    <script src="../js/controllers/prices.js"></script>
+    <script src="../js/controllers/services.js"></script>
+    <script src="../js/controllers/sadko-truth.js"></script>
+    <script src="../js/controllers/branches.js"></script>
+    <!--script(src="http://use.typekit.net/zju2rse.js")-->
+    <!--script.
+    try {
+    	Typekit.load({
+    		active: function () {
+    			curstomScrolls.forEach(function (scroll) {
+    				scroll.refreshState();
+    			})
+    		},
+    		async: true
+    	});
+    } catch (e) {
+    }
+    -->
+  </body>
+</html>

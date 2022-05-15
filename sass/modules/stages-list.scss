@@ -1,0 +1,61 @@
+
+//Стадии обучения
+
+.study-stages-wrapper{
+	margin-top: -3px;
+}
+
+.stage-block{
+	width: 100%;
+	margin-bottom: 35px;
+
+	.stage-num,
+	.stage-text{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.stage-num{
+		float: left;
+		width: 42px;
+		line-height: 38px;
+		border-radius: 50%;
+		border: 2px solid #33beb7;
+		color: #33beb7;
+		font-size: 24px;
+		text-align: center;
+		padding-left: 3px;
+		margin-right: 20px;
+	}
+
+	.stage-text{
+		float: left;
+		width: 500px;
+		padding-right: 10px;
+	}
+
+	.stage-header{
+		font-size: 18px;
+		line-height: 24px;
+		color: #4f4f4f;
+		margin: 8px 0px 14px 0px;
+	}
+
+	.textblock{
+		font-size: 16px;
+		line-height: 22px;
+		color: #787878;
+	}
+
+	.stage-header,
+	.textblock{
+		@include blueLinks;
+	}
+
+	.stage-header a,
+	.textblock a{
+		&:hover{
+			border-color: transparent;
+		}
+	}
+}

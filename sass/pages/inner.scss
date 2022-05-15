@@ -1,0 +1,99 @@
+//Внутренняя страница
+
+.contents.inner-page{
+	padding-top: 50px;
+	padding-bottom: 49px;
+
+	>.relative h1{
+		max-width: 90%;
+		margin-bottom: 10px;
+	}
+
+	h2{
+		margin-top: 40px;
+		margin-bottom: 5px;
+	}
+
+	.inner-about{
+		padding-bottom: 10px;
+	}
+
+	.special-wrapper{
+		margin-top: 22px;
+		padding-bottom: 20px;
+	}
+
+	.back-link{
+		position: absolute;
+		right: 0px; top: -27px;
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.inner-about{
+		.textblock{
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 6px;
+
+			p{
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	.quot{
+		margin-bottom: 40px;
+		margin-top: 26px;
+	}
+
+	.textblock{
+		h2, .h2{
+	      margin-top: 0px !important;
+	      margin-bottom: 10px !important;
+	    }
+
+	    h3, .h3{
+	      font-size: 36px;
+	      line-height: 36px;
+	      margin-top: 24px;
+	      margin-bottom: 10px;
+	    }
+
+	    ul, ol{
+	        padding-left: 26px;
+	        font-size: 18px;
+	        line-height: 24px;
+	    }
+
+	    ul>li{
+	        list-style-type: none;
+	        position: relative;
+
+	        &:before{
+	          content:"";
+	          position: absolute;
+	          left: -26px;
+	          top: 10px;
+	          width: 12px;
+	          height: 2px;
+	          background-color: #4f4f4f;
+	        }
+	    }
+
+	    table{
+	      margin-bottom: 20px;
+	    }
+
+	    td{
+	      padding-right: 55px;
+	      font-size: 16px;
+	      line-height: 24px;
+	    }
+
+	    caption{
+	      font-weight: bold;
+	      text-align: left;
+	    }
+	}
+}

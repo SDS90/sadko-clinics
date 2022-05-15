@@ -1,0 +1,83 @@
+div.row-flex.articles-wrapper
+	//Тут две колонки - в одной блоки-ссылки на статьи, вторая колонка - баннер
+	div.col-9
+		//Строка на три блока-статьи
+		div.row-flex
+			//Блок одной статьи
+			div.col-4.article-block
+				//Тут фотография, заголовок, краткое описание и теги
+				img(src='#{srcPath}img/doctor-photos/article1.jpg')
+				a.article-link(href="#") Что вам угрожает в кабинете у стоматолога
+				div.textblock Современные врачи-стоматологи относятся тщательно к дезинфекции своих кабинетов и инструментов
+				//Имя врача
+				a(href="#").doctor-name-wrapper Колыванова А.Д.
+				div.tags-wrapper
+					a(href="#") стоматология,
+					a(href="#") другое
+			//Блок одной статьи
+			div.col-4.article-block
+				img(src='#{srcPath}img/doctor-photos/article1.jpg')
+				a.article-link(href="#") Мои бессонные ночи, или как уснуть без овец
+				div.textblock А кто вы по национальности сна? Ученые провели исследование и выяснили, что время и место сна отличается у жителей разных стран
+				//Имя врача
+				a(href="#").doctor-name-wrapper Колыванова А.Д.
+				div.tags-wrapper
+					a(href="#") дримология
+			//Блок одной статьи
+			div.col-4.article-block
+				img(src='#{srcPath}img/doctor-photos/article1.jpg')
+				a.article-link(href="#") Диеты и женское здоровье: профессиональный подход
+				div.textblock В нашем мире только ленивый человек не пробовал похудеть. Даже если у него недостаток веса
+				//Имя врача
+				a(href="#").doctor-name-wrapper Колыванова А.Д.
+				div.tags-wrapper
+					a(href="#") диетология,
+					a(href="#") гастроэнерология
+		//Строка на три блока
+		div.row-flex
+			//Блок одной статьи
+			div.col-4.article-block
+				img(src='#{srcPath}img/doctor-photos/article1.jpg')
+				a.article-link(href="#") Что вам угрожает в кабинете у стоматолога
+				div.textblock Современные врачи-стоматологи относятся тщательно к дезинфекции своих кабинетов и инструментов
+				div.tags-wrapper
+					a(href="#") стоматология,
+					a(href="#") другое
+			//Блок одной статьи
+			div.col-4.article-block
+				img(src='#{srcPath}img/doctor-photos/article1.jpg')
+				a.article-link(href="#") Мои бессонные ночи, или как уснуть без овец
+				div.textblock А кто вы по национальности сна? Ученые провели исследование и выяснили, что время и место сна отличается у жителей разных стран
+				div.tags-wrapper
+					a(href="#") дримология
+			//Блок одной статьи
+			div.col-4.article-block
+				img(src='#{srcPath}img/doctor-photos/article1.jpg')
+				a.article-link(href="#") Диеты и женское здоровье: профессиональный подход
+				div.textblock В нашем мире только ленивый человек не пробовал похудеть. Даже если у него недостаток веса
+				div.tags-wrapper
+					a(href="#") диетология,
+					a(href="#") гастроэнерология
+	//Колонка со ссылками
+	div.col-3
+		//Баннер-слайдер
+		div.banner-slider
+			div.banner-block
+				img(src='#{srcPath}img/content/banner.jpg')
+				div.banner-inner Консультация стоматолога
+					br
+					|со скидкой 25%
+					a.btn.book-toggle(href="#") Записаться
+			//Вариант баннера с белым текстом
+			div.banner-block.white-text
+				img(src='#{srcPath}img/content/banner2.jpg')
+				div.banner-inner Скидка 15%
+					br
+					|на лазерное
+					br
+					|отбеливание зубов
+					a.btn.book-toggle(href="#") Записаться
+//Кнопка "Загрузить ещё" - загрузка вероятно должна реализовываться при помощи аякс-запросов
+div.clinic-tiles--hide-toggle.more-articles
+	a.-pseudo-.-link-wrap-(href='#')
+		span.spoiler-toggle Загрузить ещё статьи

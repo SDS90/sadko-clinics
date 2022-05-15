@@ -1,0 +1,197 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Услуги и клиники
+block content
+	//include ../modules/clinic-tiles
+	//Фиксированное меню
+		div.fixed-menu
+			a(href="#doctorsBlock")
+				div 
+					span Специалисты
+			a(href="#studyBlock")
+				div 
+					span Как мы обучаем
+			a(href="#winnersBlock")
+				div 
+					span Победители соревнований
+			a(href="#teachersBlock")
+				div 
+					span Преподаватели
+			a(href="#articlesBlock")
+				div 
+					span Статьи и советы
+
+	div.contents.service-page
+
+		//Обёртка для заголовка
+		div.services-header.clear
+			h1 Услуги и клиники
+			a(href="#linkBlock").open-link
+
+		//Блок со ссылками
+		div.services-link-block#linkBlock
+			
+			//Блок с логотипами
+			div.services-logo-block
+				//Логотипы
+				a(href="#" style="left: 60px; top: 55px;")
+					img(src="#{srcPath}img/logos/jam.png", alt="")
+					span Центр ортодонтии <br> «Джем»
+				a(href="#" style="left: 230px; top: 52px;")
+					img(src="#{srcPath}img/logos/dino.png", alt="")
+					span(style="margin-top: -4px;") Детская стоматология <br> «Динозубрик»
+				a(href="#" style="left: 395px; top: 55px;")
+					img(src="#{srcPath}img/logos/zdorov.png", alt="")
+					span Детская клиника <br> «Динозубрик»
+				
+				//Центральная картинка (садко)
+				div.center-image
+					div.image-wrapper
+						img(src="#{srcPath}img/logos/sadko.png", alt="" style="margin-top: -15px;")
+
+				//Список ссылок
+				div.text-links
+					div.row-flex
+						ul.col-6
+							li
+								a(href="#") Клиника неврологии
+							li
+								a(href="#") Центр профессиональной имплантации
+							li
+								a(href="#") Маммологический центр
+						ul.col-6
+							li
+								a(href="#") Центр развития стоматологии
+							li
+								a(href="#") Клиника современных технологий
+			
+			//Списки ссылок
+			div.row-flex
+				div.col-5.service-block
+					ul
+						li
+							a(href="#") Стоматология
+						li
+							a(href="#") Поликлиника
+						li
+							a(href="#") Женский центр
+						li
+							a(href="#") Детская поликлиника
+						li
+							a(href="#") Медицинские анализы
+						li
+							a(href="#") УЗИ, рентген
+						li
+							a(href="#") Маммография
+						li
+							a(href="#") Вакцинация
+						li
+							a(href="#") Сопровождение иностранных пациентов
+				div.col-6.service-block
+					ul
+						li
+							a(href="#") ДМС
+						li
+							a(href="#") ОМС
+						li
+							a(href="#") Диагностические программы
+						li
+							a(href="#") Годовые программы обслуживания
+						li
+							a(href="#") Программы патронажа детей
+						li
+							a(href="#") Программы ведения беременности
+						li
+							a(href="#") Лабораторная служба
+						li
+							a(href="#") Служба выезда на дом
+						li
+							a(href="#") Дневной стационар
+						li
+							a(href="#") Оперативная гинекология
+
+		//Поиск
+		form.service-search-form.clear
+			input.search-textfield(type="text" placeholder="Найти услугу")
+			input.search-button(type="submit" value="")
+			//Список автозаполнения
+			ul.autocomplete-list
+				li
+					a(href="#") Гастрит
+					a(href="#") Гастроэнтеролог
+					a(href="#") Гастал
+		//Быстрый поиск
+		div.fast-search-wrapper.textblock
+			a(href="#") Стоматология
+			|,
+			a(href="#") Поликлиника
+			|,
+			a(href="#") Центр женского здоровья
+			|,
+			a(href="#") Центр мужского здоровья
+			|,
+			a(href="#") Детская поликлиника Здоровенок
+			|,
+			a(href="#") Детская стоматология Динозубрик 
+			|,
+			a(href="#") Центр неврологии
+			|,
+			a(href="#") Центр имплантации
+			|,
+			a(href="#") Центр Ортодонтии «Джем»
+
+		//Классы блоков сервиса
+			dental-block - Стоматология
+			clinic-block - Поликлиника
+			women-block - Центр женского здоровья
+			men-block - Центр мужского здоровья
+			zdorovenok-block - Детская поликлиника здоровёнок
+			dino-block - Детская стоматология Динозубрик
+			neurology-block - Центр неврологии
+			implant-block - Центр имплантации
+			jam-block - центр ортодонтии
+		
+		//Блок сервиса (стоматология)
+		include ../services/stomatology
+
+		//Блок сервиса (Поликлиника)
+		include ../services/clinic
+		
+		//Блок сервиса (Центр женского здоровья)
+		include ../services/women
+
+		//Блок сервиса (Центр мужского здоровья)
+		include ../services/men
+
+		//Блок сервиса (Здоровёнок)
+		include ../services/zdorov
+
+		//Блок сервиса (Динозубрик)
+		include ../services/dinozubrik
+
+		//Блок сервиса (Центр неврологии)
+		include ../services/neurology
+
+		//Блок сервиса (Центр имплантации)
+		include ../services/implant
+
+		//Блок сервиса (Центр Джем)
+		include ../services/jam
+
+		//Отзывы
+		div.header-wrapper
+			h2 Отзывы о клинике «САДКО»
+			//Кнопка с вызовом попапа
+			div.open-question-wrapper
+				a.btn.btn-reverse-colors.open-question-popup(href="#") Добавить отзыв
+				include ../modules/review-popup
+
+		include ../modules/reviews-slider
+
+
+//Персональные скрипты для этой страницы
+//block pageJS
+	

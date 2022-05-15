@@ -1,0 +1,45 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Список статей
+block content
+
+	//Фиксированное меню
+	//div.fixed-menu
+		a(href="#doctorsBlock")
+			div 
+				span Специалисты
+		a(href="#studyBlock")
+			div 
+				span Как мы обучаем
+		a(href="#winnersBlock")
+			div 
+				span Победители соревнований
+		a(href="#teachersBlock")
+			div 
+				span Преподаватели
+		a(href="#articlesBlock")
+			div 
+				span Статьи и советы
+
+	//Блок с цитатой
+	div.contents.articles-page
+
+		//Заголовок - имя врача
+		div.relative
+			h1 Статьи
+
+		//Фильтр статей
+		include ../filters/articles-filter
+				
+		//Блок со статьями
+		include ../modules/articles
+
+		//Акции
+		include ../modules/actions
+
+
+//Персональные скрипты для этой страницы
+//block pageJS

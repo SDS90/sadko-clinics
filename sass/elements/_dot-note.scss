@@ -1,0 +1,40 @@
+@import "../bourbon";
+
+/* -------------------------------------------------
+    Dot notes
+   ------------------------------------------------- */
+
+$duration: .5s;
+$tf: $ease-out-quad;
+
+.dot-note {
+  background: rgba(221, 66, 126, .7);
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+
+  &:after {
+    content: '';
+    border-radius: 50%;
+    background: #c93c73;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    @include transform(translate(-50%, -50%));
+    transition: all $duration $tf;
+
+  }
+
+  &:hover {
+
+    &:after {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+div.feedback-form
+	form.book-form.-bordered-.start-form
+		div.book-form--section
+			//Это не пустой блок - сюда выводится текст ошибки
+			div.error-text
+			div.book-form--row
+				label Имя
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон
+				input.book-form--row--content.phone-field(type='text')
+			div.book-form--row
+				label E-mail
+				input.book-form--row--content.email-field(type='text')
+		div.book-form--section
+			h2 Вопрос
+			textarea.autosize.question-text
+		div.-justify-content-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+			button.btn.book-btn.submit-btn Отправить
+	div.book-form.answer-form.-text-center-.-bordered-
+		div.big-header Уфф.. Непростой вопрос.
+		p Мы подумаем и обязательно ответим. Начальство заставляет нас думать быстро, поэтому ответим уже через сутки. Спасибо, что доверяете и спрашиваете!
+		button.answer-btn.btn.book-btn Продолжить

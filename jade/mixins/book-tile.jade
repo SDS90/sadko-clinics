@@ -1,0 +1,29 @@
+include book-form
+
+mixin book-tile(params)
+	.book-tile(class= attributes.class)
+		img.book-tile--img(src='#{srcPath}img/content/#{params.img}')
+		.book-tile--front
+			.book-tile--header
+				span.book-tile--header--title= params.title
+				span= params.titleNote
+				i.book-tile--header--ico(class= params.icoFront)
+			.book-tile--bottom
+				p= params.content
+				span.btn-white.book-tile--toggle= params.button
+		.book-tile--back
+			.book-tile--back--content
+				.book-tile--back--header
+					span.book-tile--back--header--title= params.backTitle
+					span= params.backTitleNote
+					i.book-tile--back--header--ico(class= params.backIco)
+				+book-form({
+					textareaTitle: 'Примечания',
+					button: 'Записаться',
+					buttonClass: 'btn-white'
+				})(class='-white-')
+		.book-tile--answer
+			.answer-header Спасибо!
+			p Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.
+			button.answer-btn.book-tile--toggle.btn-white Продолжить
+

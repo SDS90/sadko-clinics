@@ -1,0 +1,9 @@
+mixin review(params)
+	.review(class=attributes.class)
+		span.review--date= params.date
+		span.review--title= params.title
+		.review--text.
+			!{params.text}
+		.review--answer.text-panel.
+			!{params.answer}
+			<div class='review--answer-read'><a href='#' class='-link-turq-'>Читать ответ полностью</a></div>

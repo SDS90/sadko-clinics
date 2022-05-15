@@ -1,0 +1,33 @@
+@import "../base";
+@import "../bourbon";
+
+/* -------------------------------------------------
+    Spoilers
+   ------------------------------------------------- */
+
+$duration: .4s;
+$timingFunction: $ease-in-out-quad;
+
+//  Toggle
+// -------------------------------------------------
+
+.spoiler-toggle {
+  cursor: pointer;
+
+  > * {
+    vertical-align: middle;
+  }
+}
+
+//  Content
+// -------------------------------------------------
+
+.spoiler {
+  display: none;
+}
+
+.semi-spoiler {
+  overflow: hidden;
+
+  @include transition(max-height $duration $timingFunction);
+}

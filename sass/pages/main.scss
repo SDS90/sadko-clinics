@@ -1,0 +1,23 @@
+//Главная страница
+
+.main-page{
+	padding-top: 23px;
+
+	.clinic-tiles--list.active{
+		margin-bottom: 40px;
+	}
+
+	.clinic-tiles--hide-toggle{
+		position: relative;
+    	z-index: 10;
+		margin: 20px 0px 0px 0px;
+	}
+
+	.equipment-gallery--nav{
+		margin-bottom: 80px;
+	}
+
+	.clinic-tiles{
+		margin-bottom: 60px;
+	}
+}

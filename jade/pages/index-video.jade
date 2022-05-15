@@ -1,0 +1,28 @@
+extends ../layout-main-video
+include ../mixins/quot
+
+
+block title
+	| Главная
+block content
+	include ../modules/clinic-tiles
+	+quot('Наши врачи используют швейцарское, американское и японское оборудование. Аппаратам не больше двух лет.', 'Сколов В.Ю.', 'Президент группы компаний </br>&laquoСАДКО&raquo;','8','4')
+	include ../modules/equipment-gallery
+	div.quot.row-flex.-quot-no-border-
+		div.col-8
+			div.quot--text За 16 лет мы создали не только отличную клинику для пациентов, но и очень привлекательное место для работы врачей. С Вами будут работать лучшие специалисты в
+	include ../modules/doctor-gallery
+	include ../modules/patient-gallery
+	+quot('Медицина — это вдохновение и драйв! Наши доктора регулярно ездят по миру, заряжаются энергетикой иностранных специалистов и конечно', 'Соколов В.Ю.','Президент группы компаний </br>&laquoСАДКО&raquo;', 9,3)
+	include ../modules/learn-map
+
+//Персональные скрипты для этой страницы
+block pageJS
+	script(src='https://maps.googleapis.com/maps/api/js?')
+	script(src='#{srcPath}js/utils.js')
+	script(src='#{srcPath}js/components/gradientAnimation.js')
+	script(src='#{srcPath}js/plugins/spoiler.js')
+	//script(src='#{srcPath}js/plugins/ui-select.js')
+	script(src='#{srcPath}js/modules/smileControl.js')
+	script(src='#{srcPath}js/components/learnMap.js')
+	script(src='#{srcPath}js/controllers/index.js')

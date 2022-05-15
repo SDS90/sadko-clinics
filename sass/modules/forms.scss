@@ -1,0 +1,469 @@
+//Формы
+
+//Форма подписки
+.subscribe-wrapper{
+	text-align: right;
+	position: relative;
+	width: 100%;
+	height: 47px;
+
+	.hidden{
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+
+	.subscribe-button{
+		position: absolute;
+		right: 0px; top: 0px;
+		line-height: 47px;
+
+		@include transition(all .3s $ease-in-out-quad);
+
+		&.active{
+			width: 100%;
+			background-color: transparent;
+		}
+	}
+
+	.subscribe-form{
+		position: absolute;
+		width: 100%;
+		left: 0px; top: 6px;
+
+		@include transition(all .3s $ease-in-out-quad);
+
+		&.error{
+			input::-webkit-input-placeholder{color: #da6f5b;}
+			input::-moz-placeholder{color: #da6f5b;}
+			input::placeholder{color: #da6f5b;}
+
+			.textfield,
+			.submit-btn{
+				border-color: #da6f5b;
+			}
+
+			.submit-btn{
+				background-color: #da6f5b;
+
+				&:hover{
+					background-color: transparent;
+					color: #da6f5b;
+				}
+			}
+		}
+	}
+
+	.textfield,
+	.submit-btn{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.textfield{
+		float: left;
+		width: 150px;
+		height: 36px;
+		font-size: 16px;
+		border: 1px solid #c0c0c0;
+		border-radius: 6px;
+		padding: 0px 10px;
+		outline: none;
+		background-color: transparent;
+		color: #4f4f4f;
+	}
+
+	input::-webkit-input-placeholder{
+		font-family:"futura-pt","Open Sans",Tahoma,Arial,sans-serif;
+		font-size:16px;
+		color: #787878;
+	}
+	input::-moz-placeholder{
+		font-family:"futura-pt","Open Sans",Tahoma,Arial,sans-serif;
+		font-size:16px;
+		color: #787878;
+	}
+	input::placeholder{
+		font-family:"futura-pt","Open Sans",Tahoma,Arial,sans-serif;
+		font-size:16px;
+		color: #787878;
+	}
+
+	.submit-btn{
+		float: right;
+		width: 112px;
+		height: 36px;
+		line-height: 32px;
+		text-align: center;
+		background-color: #33beb7;
+		border: 2px solid #33beb7;
+		border-radius: 6px;
+		color: #fff;
+		cursor: pointer;
+		outline: none;
+
+		&:hover{
+			color: #33beb7;
+			background-color: transparent;
+		}
+	}
+}
+
+.service-form-wrapper{
+	width: 100%;
+	border-radius: 16px;
+	background-color: #FFF;
+
+	h3{
+		font-size: 36px;
+		margin: 0px 10px 17px 10px;
+	}
+
+	//Стартовая форма
+	.service-form-start-block{
+		border-radius: 16px;
+		padding: 43px 40px 55px 35px;
+		box-shadow: 1px 1px 6px #d6d6d6;
+
+		dl{
+			width:100%;
+			font-size:0;
+			line-height:0;
+			letter-spacing:-1px;
+			padding: 0px 10px;
+		}
+
+		dt, dd{
+			span{
+				background-color: #fff;
+			}
+		}
+
+		dt{
+			display:inline-block;
+			width: 55%;
+			border-bottom: 1px solid #c3c4bd;
+			margin-bottom: 15px;
+			font-size: 16px;
+			line-height: 18px;
+			letter-spacing: normal;
+
+		}
+		dd{
+			display:inline-block;
+			text-align: right;
+			width: 45%;
+			border-bottom: 1px solid #c3c4bd;
+			margin-bottom: 15px;
+			font-size: 18px;
+			line-height: 20px;
+			letter-spacing: normal;
+
+			span{
+				padding-left: 10px;
+			}
+		}
+
+		.textblock{
+			//width: 100%;
+			margin: 28px 10px 44px 10px;
+			padding: 14px 30px 19px 0px;
+			border-top: 2px solid #787878;
+			border-bottom: 2px solid #787878;
+			font-size: 16px;
+			line-height: 18px;
+			color: #787878;
+		}
+
+		.btn{
+			font-size: 16px;
+		}
+
+		.-justify-content-{
+			margin-top: -10px;;
+		}
+	}
+
+	//Форма записи
+	>.book-form{
+		position: relative;
+		display: none;
+
+		border-radius: 16px;
+		padding: 26px 40px 36px 35px;
+		box-shadow: 1px 1px 6px #d6d6d6;
+
+		.closed{
+			position: absolute;
+			top: 7px;
+			right: 15px;
+			font-size: 14px;
+			line-height: 18px;
+			color: #b6b5b5;
+			cursor: pointer;
+			padding: 0px 14px 15px 0px;
+			background-color: #FFF;
+			z-index: 1010;
+
+			&:after{
+				position: absolute;
+				color: #b6b5b5;
+				content:'×';
+				font-size: 20px;
+				top: 1px;
+				right: 0px;
+			}
+
+			&:hover,
+			&:hover:after{
+				color: #4f4f4f;
+			}
+		}
+
+		.form-header{
+			font-size: 24px;
+			line-height: 24px;
+			font-weight: bold;
+			margin-bottom: 8px;
+			position: relative;
+			z-index: 1030;
+		}
+
+		.cost-type{
+			margin-bottom: 7px;
+		}
+
+		textarea{
+			min-height: 80px;
+		}
+
+		.book-form--section{
+			margin: 0px 0px 16px 0px;
+		}
+
+		.book-form--row{
+			margin-bottom: 7px;
+		}
+
+		.textarea-wrapper{
+			margin-top: 34px;
+			margin-bottom: 9px;
+		}
+	}
+
+	.answer-form,
+	.question-answer-form{
+		display: none;
+		border-radius: 16px;
+		padding: 125px 40px 42px 35px;
+		box-shadow: 1px 1px 6px #d6d6d6;
+
+		p {
+			font-size: 18px;
+			line-height: 24px;
+			color: #818181;
+		}
+
+		.big-header{
+			font-size: 36px;
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.service-form-wrapper>.book-form,
+.question-form {
+	.book-form--accept{
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+
+	.book-btn{
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 25px;
+	}
+}
+
+//Кнопки
+.service-cost-buttons{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 7px;
+	font-size: 0px;
+	letter-spacing: -1px;
+	padding: 0px 10px;
+
+	.cost-button{
+		display: inline-block;
+		vertical-align: top;
+		width: 36px; height: 42px;
+		margin: 0px 5px;
+		background-color: transparent;
+		background-image: url(../img/icons.png);
+		background-repeat: no-repeat;
+		border: none;
+		outline: none;
+		cursor: pointer;
+
+		&.clock{
+			background-position: -223px 0px;
+			&.active{
+				background-position: -223px -42px;
+			}
+		}
+
+		&.normal{
+			background-position: -260px 0px;
+			&.active{
+				background-position: -260px -42px;
+			}
+		}
+
+		&.premium{
+			background-position: -297px 0px;
+			&.active{
+				background-position: -297px -42px;
+			}
+		}
+	}
+}
+
+.manager-form{
+
+	&.error-form{
+		.manager-header.card-header:after{
+			-moz-transform: rotate(180deg);
+		    -ms-transform: rotate(180deg);
+		    -webkit-transform: rotate(180deg); 
+		    -o-transform: rotate(180deg); 
+			transform: rotate(180deg);
+		}
+	}
+
+  .manager-header{
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 12px;
+
+    &.card-header{
+    	display: inline-block;
+    	vertical-align: top;
+    	padding-right: 100px;
+		position: relative;
+
+		&:after{
+			content:"";
+			position: absolute;
+			top: 50%; right: 0px;
+			width: 74px;
+			height: 18px;
+			margin-top: -9px;
+			background-image: url(../img/icons.png);
+			background-position: -252px -151px;
+			background-repeat: no-repeat;
+
+			@include transition(all .3s $ease-in-out-quad);
+		}
+    }
+  }
+
+  .book-form--section{
+  	margin-top: 5px;
+  	margin-bottom: 0px;
+  }
+
+  h2{
+  	margin-top: 0px;
+  	margin-bottom: 10px;
+  }
+
+  .textblock{
+  	padding-bottom: 15px;
+  }
+
+  .textblock,
+  .textblock p{
+	font-size: 18px;
+	line-height: 24px;
+	color: #4f4f4f;
+  }
+
+  .book-form--row{
+  	width: 80%;
+  	margin-bottom: 5px;
+  }
+
+  .book-form--accept{
+  	display: block;
+  	width: 100%;
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+  	text-align: left;
+  }
+
+  .modal-textarea-scrollbar,
+  .modal-textarea-scrollbar:focus{
+  	width: 100%;
+    height: 218px;
+    margin-top: 0px;
+    padding: 20px 10px 20px 28px;
+    background-image: none;
+    background-color: #ebece5;
+    resize: none;
+    outline: none;
+    font-family: "futura-pt","Open Sans",Tahoma,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .book-btn{
+  	margin-top: 35px;
+  }
+
+  .scroll-element.scroll-y{
+		display: block;
+		position: absolute;
+	    right: 0;
+	    top: 5px;
+	    bottom: 5px;
+	    width: 7px;
+	    z-index: 900;
+
+	    >div{
+	    	position: absolute;
+			display: block;
+		    height: 100%;
+		    top: 0;
+		    left: 0px;
+		    width: 100%;
+	    	overflow: hidden;
+	    }
+
+	    .scroll-element_outer{
+	    	left: 2px;
+    		width: 2px;
+	    }
+
+	    .scroll-element_track{
+	    	border-radius: 3px;
+	    	background-color: #f2f2f2;
+	    }
+	    .scroll-bar {
+	    	min-height: 10px;
+	    	border-radius: 3px;
+		    background-color: #0696a3;
+		}
+	}
+
+}
+
+//Плейсхолдеры ошибок
+.question-text.error::-webkit-input-placeholder{color:#da6f5b}
+.question-text.error::-moz-input-placeholder{color:#da6f5b}
+.question-text.error::input-placeholder{color:#da6f5b}

@@ -1,0 +1,19 @@
+/* -------------------------------------------------
+    Language button group
+   ------------------------------------------------- */
+
+.lang-switch {
+  a {
+  	display: inline-block;
+  	vertical-align: top;
+    border: none;
+    margin: 0 6px;
+    line-height: 26px;
+    border-bottom: 1px solid #c2c3bf;
+
+    &.active,
+    &:hover{
+      border-color: transparent;
+    }
+  }
+}

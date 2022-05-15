@@ -1,0 +1,81 @@
+//Слайдер для фотографий
+
+.photo-slider{
+
+	width: auto !important;
+	margin: 0px -12px 0px -12px;
+    font-size: 0px;
+    letter-spacing: -1px;
+
+	.link-block{
+		display: inline-block;
+		vertical-align: top;
+		width: 296px;
+	    padding: 3px 11px;
+	    letter-spacing: normal;
+	    font-size: 12px;
+	    border-bottom: none;
+
+	    img{
+	    	display: block;
+	    	width: 100%;
+	    	margin-bottom: 8px;
+	    }
+	}
+
+	.open-video {
+		&:hover{
+			span{
+				border-color: transparent;
+			}
+		}
+
+		span{
+			font-weight: bold;
+			border-bottom: 1px solid #272727;
+		}
+	}
+
+	.textblock{
+		font-size: 16px;
+		line-height: 22px;
+		@include blueLinks;
+	}
+
+	.owl-prev,
+	.owl-next{
+		position: absolute;
+		display: block;
+		top: 74px;
+		width: 13px;
+		height: 29px;
+		background-image: url(../img/icons.png);
+		background-repeat: no-repeat;
+		font-size: 0px;
+		letter-spacing: -1px;
+
+		&.disabled{
+			opacity: 0.3;
+		}
+	}
+
+	.owl-prev{
+		left: -17px;
+		background-position: -35px -66px;
+		&:hover{
+			background-position: -35px -96px;
+		}
+	}
+
+	.owl-next{
+		right: -17px;
+		background-position: -50px -66px;
+		&:hover{
+			background-position: -50px -96px;
+		}
+	}
+}
+
+.image-link{
+	border-bottom: none;
+}

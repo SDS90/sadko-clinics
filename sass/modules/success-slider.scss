@@ -1,0 +1,76 @@
+
+
+//Награды и победы
+.company-success{
+	margin-top: -8px;
+
+	.col-4{
+		padding: 0px 16px 5px 16px;
+	}
+
+	.image-wrapper{
+		width: 100%;
+		min-height: 150px;
+		margin-bottom: 17px;
+		position: relative;
+		img{
+			position: absolute;
+			bottom: 0px; left: 0px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.name{
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: bold;
+		color: #4f4f4f;
+		border-color: #cacaca;
+	}
+
+	.textblock{
+		margin-top: 11px;
+		padding-right: 30px;
+		font-size: 18px;
+		line-height: 24px;
+
+		a{
+			font-size: 16px;
+		}
+
+		@include blueLinks;
+	}
+
+	.owl-prev,
+	.owl-next{
+		position: absolute;
+		display: block;
+		top: 125px;
+		width: 16px;
+		height: 35px;
+		background-image: url(../img/icons.png);
+		background-repeat: no-repeat;
+		font-size: 0px;
+
+		&.disabled{
+			opacity: 0.3;
+		}
+	}
+
+	.owl-prev{
+		left: -20px;
+		background-position: 0px -66px;
+		&:hover{
+			background-position: 0px -103px;
+		}
+	}
+
+	.owl-next{
+		right: -20px;
+		background-position: -18px -66px;
+		&:hover{
+			background-position: -18px -103px;
+		}
+	}
+}

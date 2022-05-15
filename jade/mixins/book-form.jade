@@ -1,0 +1,23 @@
+mixin book-form(params)
+	form.book-form(class= attributes.class)
+		div.book-form--section.first-section
+			//Это не пустой блок - сюда выводится текст ошибки
+			div.error-text
+			div.book-form--row
+				label Имя
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон
+				input.book-form--row--content.phone-field(type='text')
+			div.book-form--row
+				label E-mail
+				input.book-form--row--content.email-field(type='text')
+		div.book-form--section
+			if params.textareaTitle
+				h2= params.textareaTitle
+			textarea.autosize
+		div.-justify-content-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-reduced-">условия</a> обработки моих данных
+			button.book-btn.submit-btn(class= params.buttonClass ? params.buttonClass : 'btn')= params.button || 'Отправить'

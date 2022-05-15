@@ -1,0 +1,49 @@
+/* -------------------------------------------------
+    QA form
+   ------------------------------------------------- */
+
+.qa-form {
+  textarea {
+    border: none;
+    resize: none !important;
+    border-radius: 2px;
+    background: #fff;
+    min-height: 150px;
+    padding: 8px 12px;
+    width: 100%;
+
+    &.error{
+      color: #da6f5b;
+      border: 1px solid #da6f5b;
+    }
+  }
+
+  input.error{
+      color: #da6f5b;
+    }
+
+  .checkbox.error{
+    border-color: #da6f5b;
+  }
+
+  .text-panel--title{
+    margin-bottom: 3px;
+  }
+}
+
+.qa-form--row {
+  label {
+    display: inline-block;
+    width: 82px;
+    vertical-align: middle;
+  }
+
+  input[type='text'] {
+    height: 32px;
+    width: calc(100% - 86px);
+  }
+}
+
+.qa-form--submit {
+  width: 221px;
+}

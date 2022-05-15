@@ -1,0 +1,23 @@
+
+//Результаты работы доктора
+.doctor-result-block{
+	margin-top: 11px;
+
+	.result-photo{
+		display: block;
+		width: 100%;
+		margin-bottom: 8px;
+	}
+
+	.result-name{
+		font-size: 14px;
+		font-weight: bold;
+		font-style: italic;
+		margin-bottom: 18px;
+	}
+
+	.textblock{
+		font-size: 18px;
+		line-height: 24px;
+	}
+}

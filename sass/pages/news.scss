@@ -1,0 +1,32 @@
+//Страница новостей
+
+.news-page{
+	padding-top: 43px;
+	padding-bottom: 63px;
+
+	h1{
+		margin-bottom: 10px;;
+	}
+
+	.row-flex{
+		margin-left: -12px;
+		margin-right: -12px;
+	}
+
+	[class*='col-'] {
+	    padding: 0px 12px;
+	}
+
+	.company-news-block{
+		margin-bottom: 38px;
+	}
+
+	.actions-wrapper{
+		margin-top: 60px;
+		margin-bottom: 5px;
+	}
+
+	.spoiler-wave-wrap{
+		margin-top: 0px;
+	}
+}

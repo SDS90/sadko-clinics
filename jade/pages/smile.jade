@@ -1,0 +1,501 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Цифровой дизайн улыбки
+block content
+
+	//Фиксированное меню
+	//div.fixed-menu
+		a(href="#doctorsBlock")
+			div 
+				span Специалисты
+		a(href="#studyBlock")
+			div 
+				span Как мы обучаем
+		a(href="#winnersBlock")
+			div 
+				span Победители соревнований
+		a(href="#teachersBlock")
+			div 
+				span Преподаватели
+		a(href="#articlesBlock")
+			div 
+				span Статьи и советы
+
+	//Блок с цитатой
+	div.contents.service-detail-page
+
+		//Заголовок - название
+		div.relative
+			h1 Цифровой дизайн улыбки
+			a.all-link.blue-link.hover-link(href="#") Все услуги
+
+		//Цитата
+		div.quot.row-flex.-quot-no-border-
+			div.col-11
+				div.quot--text В вашем распоряжении команда высококлассных специалистов - стоматологов клиники "Садко". Более 15 лет непрерывной работы и совершенствования технологий и наработок. Международные стажировки с лучшими мировыми специалистами. Вам остаётся только выбрать вашу новую улыбку...
+
+		div.about-service-detail.clear
+			//Текст
+			div.col-7.text-column
+				h2 Есть из чего выбрать
+				div.textblock
+					p Заглянуть в будущее и увидеть свою новую улыбку...Нет, не магия! Вполне реальная возможность, которую предлагают специалисты «Садко». Теперь мечты станут реальностью! Уже сегодня вы можете прийти к доктору и получить фотографию вашей будущей улыбки.
+
+					p Пол, индивидуальность, возраст. 3 критерия, которые должен учитывать специалист по эстетической реставрации. Улыбка каждого человека уникальна. Она зависит как от строения лица, так и от настроения человека. Важно! Гармоничная и естественная улыбка — это не всегда белоснежные и идеально ровные зубы.
+
+					//Картинка
+					figure
+						img(src='#{srcPath}img/content/cochman.jpg', alt='')
+						figcaption 
+							b Кристиан Кочман 
+							| — ведущий мировой специалист в эстетической стоматологии, создал инновационную программу 
+							a(href="#") Digital Smile Design (DSD)
+
+					figure
+						img(src='#{srcPath}img/content/smile.jpg', alt='')
+						figcaption Корректируя форму резцов и клыков, можно создать образ, соответствующий вашему имиджу
+
+					p Гюрель Галип — основатель и президент Турецкой академии эстетической стоматологии. В своей книге «Керамические виниры» подробно описал, на что нужно обратить внимание при реставрации. Несколько примечательных фактов из его наработок:
+
+					ul
+						li Для женщин, предпочитающих яркие цвета помады, необходима разработка особой программы эстетической реставрации. Цвет виниров должен гармонировать с цветом губ;
+						li 
+							i Женственная улыбка 
+							| характеризуется утонченностью, округлыми и плавными формами. Закругленные режущие края верхних резцов — признак женской улыбки;
+						li Мужские зубы часто имеют прямоугольную и резкую форму. Для мужчин характерны более энергичные и жесткие режущие края;
+						li Заостренная форма клыков придаст агрессивность внешнему виду;
+						li Зубы молодых людей полупрозрачные, плотные и блестящие. По вашему желанию, специалист по эстетическому восстановлению может вернуть молодость улыбки;
+						li Важно учитывать форму носогубной складки и губ. Красивая улыбка достигается, когда линия нижнего края улыбки проходит по краю верхних центральных резцов.
+			//Форма записи
+			div.form-wrapper
+
+				include ../modules/service-form
+
+		h2 Советы наших врачей
+		include ../modules/qa
+
+		h2 Ведущие специалисты
+		include ../personal-modules/doctor-service-specialists
+
+		include ../modules/equipment-gallery
+
+		//Результаты
+		h2.resuls-header Результаты работы доктора
+		include ../modules/results
+		
+
+		//5 этапов
+		h2 5 этапов цифрового дизайна улыбки
+
+		div.row-flex.study-stages-wrapper
+			//Левая колонка
+			div.col-6
+				//Пункт обучения
+				div.stage-block.clear
+					//Номер
+					div.stage-num 1.
+					div.stage-text
+						//Заголовок
+						div.stage-header Анализ пожеланий пациента относительно своей будущей улыбки
+						//Краткое описание
+						div.textblock Самое простое — найти фотографии знаменитостей, улыбка которых вам нравится и показать их доктору. Он уже подскажет какой из вариантов вам подойдет больше всего.
+				//Пункт обучения
+				div.stage-block.clear
+					div.stage-num 2.
+					div.stage-text
+						div.stage-header Фотосессия пациента по установленному стандарту
+						div.textblock Это фотографии технического назначения, они делаются в строго определнных ракурсах. Снимки нужны для последующей обработке в программе.
+				//Пункт обучения
+				div.stage-block.clear
+					div.stage-num 3.
+					div.stage-text
+						div.stage-header Моделирование будущей улыбки на компьютере с помощью специального программного обеспечения и графических программ
+			//Правая колонка
+			div.col-6
+				//Пункт обучения
+				div.stage-block.clear
+					div.stage-num 4.
+					div.stage-text
+						div.stage-header Создание восковой модели
+						div.textblock Восковая модель будущей улыбки создается для примерки и оценки дизайна. На этом этапе возможны корректировки перед началом реставрации
+				//Пункт обучения
+				div.stage-block.clear
+					div.stage-num 5.
+					div.stage-text
+						div.stage-header Реализация
+						div.textblock Претворение в жизнь цифрового проекта с помощью конкретных методов эстетического восстановления (виниры, люминиры, коронки и др.)
+
+		h3.photo-gallery-header Фотогалерея
+			
+		div.photo-slider
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Обычно пациенты выбирают за образец улыбки знаменитостей
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/doctor-gallery.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Профессиональная съёмка улыбки для создания 3D-модели и слепка
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Гипсовый слепок желаемой улыбки перед началом процедур
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/doctor-gallery.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Новая улыбка паценте - результат работы стоматологов САДКО
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Довольные пациенты благодарят доктора
+
+		//Наши специалисты
+		h2 Специалисты
+
+		//Обёртка врачей
+		div.doctor-wrappers-visible
+			//Строка на 4 блока обычных докторов
+			div.row-flex.doctors-wrapper
+				//Блок одного обычного доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Покровский Михаил Юрьевич
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									ul.doctor-special-list
+										li 
+											b Главный врач
+										li Стоматолог-ортопед
+
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+				//Блок одного обычных доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Иван Жмак
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									div.doctor-special-list-wrapper
+										ul.doctor-special-list
+											li 
+												b Главный врач
+											li Стоматолог-ортопед
+											li Акушер-терапевт, ведение беременности пони  
+										//Скрытый блок специальностей
+										ul.doctor-special-list.doctor-special-hidden-list
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+
+								a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+				//Блок одного обычных доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Покровский Михаил Юрьевич
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									ul.doctor-special-list
+										li 
+											b Главный врач
+										li Стоматолог-ортопед
+										li Стоматолог-терапевт
+										li Стоматолог-стоматолог
+
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+				//Блок одного обычного доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Константинопольский Константин Константинович
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									div.doctor-special-list-wrapper
+										ul.doctor-special-list
+											li 
+												b Главный врач
+											li Стоматолог-ортопед
+											li Акушер-терапевт, ведение беременности пони  
+										//Скрытый блок специальностей
+										ul.doctor-special-list.doctor-special-hidden-list
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+
+								a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Кнопка "Показать ещё" - здесь по нажатию просто открываем скрытых врачей
+		div.clinic-tiles--hide-toggle.more-doctors
+			a.-pseudo-.-link-wrap-.open-hidden-doctors(href='#')
+				span.spoiler-toggle Показать ещё 10 врачей
+
+		//Акции
+		h2 Действующие акции
+
+		div.row-flex.discount-grid
+			//Блок-ссылка на информацию о рейтинге
+			div.col-6
+				a.banner-action.smile-toggle.action-block(href="#", data-smile='#doctors-smile')
+					div.rating-header Консультации ведущего специалиста в горящие часы со скидкой 25%
+					div.textblock-wrapper 
+						svg.smile-svg(width='42px', height='33px', version='1.1', xmlns='http://www.w3.org/2000/svg')
+							path.smile-path(d='M0 10 Q 43 10 86 10', stroke='#fff', stroke-width='2px', fill='transparent', id="doctors-smile")
+						div.textblock Приоткроем завесу тайны и расскажем что происходит внутри коллектива врачей. Как появляются лидеры и почему они лидеры.
+			div.col-6
+				a.banner-action.smile-toggle.first-gradient(href="#", data-smile='#doctors-smile1')
+					div.rating-header Консультации ведущего специалиста в горящие часы со скидкой 25%
+					div.textblock-wrapper 
+						svg.smile-svg(width='42px', height='33px', version='1.1', xmlns='http://www.w3.org/2000/svg')
+							path.smile-path(d='M0 10 Q 43 10 86 10', stroke='#fff', stroke-width='2px', fill='transparent', id="doctors-smile1")
+						div.textblock Приоткроем завесу тайны и расскажем что происходит внутри коллектива врачей. Как появляются лидеры и почему они лидеры.
+
+		a.more-link.-link-wrap-(href='#') <span>Все акции клиники</span> &rarr;
+
+		h2 Смежные и похожие услуги
+		include ../services/other-services
+
+		//Видео
+		h2  Наше видео
+		include ../modules/promo-video
+
+
+		//Статьи и советы
+		h2.articles-header Статьи и советы наших врачей
+		include ../modules/articles
+
+			
+		//Отзывы
+		div.header-wrapper
+			h2 Отзывы о САДКО
+			//Кнопка с вызовом попапа
+			div.open-question-wrapper
+				a.btn.btn-reverse-colors.open-question-popup(href="#") Добавить отзыв
+				include ../modules/review-popup
+
+		include ../modules/reviews-slider
+
+		//Записаться
+		div.-text-center-
+			a.btn.book-toggle.service-book-btn(href="#" data-book-info="Записаться на цифровой дизайн улыбки" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет на цифровой дизайн улыбки.") Хочу записаться на цифровой дизайн улыбки
+
+
+
+
+//Персональные скрипты для этой страницы
+//block pageJS

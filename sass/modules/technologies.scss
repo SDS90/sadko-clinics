@@ -1,0 +1,160 @@
+
+//Материалы и оборудование
+
+.technologies-wrapper{
+	.row-flex{
+		margin-left: -12px;
+		margin-right: -12px;
+	}
+	[class*='col-'] {
+	    padding: 0px 12px;
+	}
+
+	.col-4{
+		img{
+			height: 247px;
+		}
+		.bottom-block{
+			bottom: -247px; 
+			height: 319px;
+		}
+		.technology-scroll{
+			height: 176px;
+		}
+	}
+
+	.col-3{
+		img{
+			height: 181px;
+		}
+		.bottom-block{
+			bottom: -181px; 
+			height: 253px;
+		}
+		.technology-scroll{
+			height: 103px;
+		}
+	}
+
+	.col-6{
+		img{
+			height: 307px;
+		}
+		.bottom-block{
+			bottom: -307px; 
+			height: 379px;
+		}
+		.technology-scroll{
+			height: 235px;
+		}
+	}
+}
+
+//Блок материала
+.technology-block{
+	position: relative;
+	padding-bottom: 72px;
+	margin-bottom: 24px;
+	overflow: hidden;
+
+	&.opened{
+
+		.technology-name-wrapper.top{
+			background-color: transparent;
+		}
+
+		.technology-name button{
+			background-position: -227px -90px;
+		}
+	}
+	
+	img{
+		display: block;
+		width: 100%;
+	}
+
+	.technology-name-wrapper{
+		display: table;
+		width: 100%;
+		height: 72px;
+		background-color: #f4f5ef;
+	}
+
+	.technology-name{
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 2px 70px 2px 24px;
+		@include blueLinks;
+
+		.technology{
+			font-size: 18px;
+			line-height: 26px;
+			text-transform: uppercase;
+		}
+
+		.more-link{
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		button{
+			position: absolute;
+			right: 25px; top: 50%;
+			margin-top: -16px;
+			display: inline-block;
+			width: 32px; height: 32px;
+			cursor: pointer;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			background-image: url(../img/icons.png);
+			background-repeat: no-repeat;
+			background-position: -260px -90px;
+		}
+	}
+
+	.bottom-block{
+		position: absolute;
+		left: 0px; right: 0px;
+		width: 100%;
+		overflow: hidden;
+		background-color: #f4f5ef;
+	}
+
+	.about-technology{
+		padding: 0px 25px 25px 25px;
+	}
+
+	.scroll-wrapper.technology-scroll{
+		&:after,&:before{
+			content: '';
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    pointer-events: none;
+		    width: 100%;
+		    z-index: 100;
+		}
+
+		&.scrolling:before {
+			top: 0px;
+		    height: 30px;
+		    background-image: -webkit-linear-gradient(bottom, transparent 0%, #f4f5ef 100%);
+		    background-image: -o-linear-gradient(bottom, transparent 0%, #f4f5ef 100%);
+		    background-image: -moz-linear-gradient(bottom, transparent 0%, #f4f5ef 100%);
+		    background-image: -ms-linear-gradient(bottom, transparent 0%, #f4f5ef 100%);
+		    background-image: linear-gradient(bottom, transparent 0%, #f4f5ef 100%);
+		}
+
+		&:after {
+			bottom: 0;
+		    height: 30px;
+		    background-image: -webkit-linear-gradient(top, transparent 0%, #f4f5ef 100%);
+		    background-image: -o-linear-gradient(top, transparent 0%, #f4f5ef 100%);
+		    background-image: -moz-linear-gradient(top, transparent 0%, #f4f5ef 100%);
+		    background-image: -ms-linear-gradient(top, transparent 0%, #f4f5ef 100%);
+		    background-image: linear-gradient(top, transparent 0%, #f4f5ef 100%);
+		}
+	}
+}

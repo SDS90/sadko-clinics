@@ -1,0 +1,111 @@
+@import "../base";
+
+/* -------------------------------------------------
+    Footer
+   ------------------------------------------------- */
+
+.footer {
+  background: #f4f5ef;
+  color: #4f4f4f;
+  padding: 38px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $footerHeight;
+}
+
+.footer-nav {
+  margin: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: 8px;
+  }
+
+  a {
+    font-size: 18px;
+    color: #4f4f4f;
+    border: none;
+  }
+}
+
+.footer-time {
+  sup {
+    font-size: 10px;
+    vertical-align: 7px;
+    margin-left: 1px;
+  }
+
+  .-mb-{
+    margin-bottom: 24px;
+  }
+}
+
+.footer-to-sign {
+  margin-top: -10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #c5c5c5;
+  margin: 48px 0 0;
+  padding: 42px 0 0;
+
+  .contents:after{
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+  }
+}
+
+.footer-logo {
+  border: none;
+  height: 36px;
+  margin-right: 13px;
+}
+
+.footer-logo,
+.footer-copy {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-copy {
+  font-size: 14px;
+  p {
+    margin: 0;
+  }
+}
+
+.footer-design {
+  float: right;
+  text-align: right;
+  font-size: 14px;
+}
+
+.footer-top{
+  display: block;
+  vertical-align: top;
+  float: right;
+  width: 48px;
+  height: 47px;
+  margin-top: 27px;
+  background-color: transparent;
+  background-image: url(../img/icons.png);
+  background-position: -337px -114px;
+  background-repeat: no-repeat;
+  outline: none;
+  border: 2px solid #33beb7;
+  border-radius: 33px/50px;
+  cursor: pointer;
+
+  @include transition(background-color .3s $ease-in-out-quad);
+
+  &:hover{
+    background-color: #33beb7;
+    background-position: -337px -162px;
+  }
+}

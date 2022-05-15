@@ -1,0 +1,114 @@
+@import "../base-colors";
+
+/* -------------------------------------------------
+    Custom checkboxes
+   ------------------------------------------------- */
+
+$duration: .2s;
+
+input[type='checkbox'],
+input[type='radio'] {
+  cursor: pointer;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  opacity: 0;
+  z-index: 2;
+}
+
+.label-btn {
+  position: relative;
+}
+
+.radio {
+  position: relative;
+}
+
+.checkbox,
+.radio{
+  display: inline-block;
+  border: 1px solid #ccc;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+
+  &:before, &:after  {
+    content: '';
+    position: absolute;
+    opacity: 0;
+
+    @include transition(all $duration);
+  }
+
+  &:after {
+    background: radial-gradient(circle 11px at center, #5ecdc0 10%, transparent);
+    width: 22px;
+    height: 22px;
+    @include transform(translate(-50%, -50%) scale(.1));
+  }
+
+  &:before {
+    @include transform(translate(-6px, -11px) scale(1.3));
+    z-index: 2;
+  }
+
+  &:hover, &.-hover- {
+    cursor: pointer;
+    border-color: #acacac;
+    background: rgba(255, 255, 255, .5);
+  }
+
+  &.-checked- {
+    background: #fff;
+
+    &:after, &:before {
+      opacity: 1;
+      @include transform(translate(-50%, -50%) scale(1));
+    }
+
+    &:before {
+      @include transform(translate(-6px, -11px) scale(1));
+    }
+  }
+}
+
+.checkbox{
+  border-radius: 2px;
+
+  &:before, &:after  {
+    left: 50%;
+    top: 50%;
+  }
+
+  &:before {
+    @extend .ico-ok;
+    background-image: url('../img/icons.png');
+  }
+}
+
+.radio {
+  border-radius: 50%;
+  margin-right: 5px;
+
+  &:before, &:after  {
+    left: 5px;
+    top: 5px;
+  }
+
+  &:after {
+    left: 6px;
+    top: 6px;
+  }
+
+  &:before {
+    display: none;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+  }
+}

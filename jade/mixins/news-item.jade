@@ -1,0 +1,14 @@
+mixin news-item(data)
+	.news-item(class = attributes.class)
+		span.news-item--date= data.date
+		span.news-item--title
+			a(href='#').
+				!{data.title}
+		if data.img
+			img.news-item--img(src='#{srcPath}/img/content/#{data.img}')
+		.news-item--content.
+			!{data.content}
+		if data.tags
+			.news-item--tag
+				.tags-wrapper
+					a(href='#')= data.tags

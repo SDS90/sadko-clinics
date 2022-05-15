@@ -1,0 +1,272 @@
+//Страница Акции
+
+.actions-page{
+	padding-top: 53px;
+	padding-bottom: 65px;
+
+	.subscription-link{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 18px;
+		color: #0696a3;
+		border-color: #b4dfe3;
+	}
+
+	h1{
+		margin-bottom: 32px;
+	}
+
+	.quot{
+		margin-bottom: 35px;
+	}
+
+	h2{
+		margin-top: 35px;
+		margin-bottom: 14px;
+	}
+
+	.actions-wrapper{
+		margin-bottom: 0px;
+	}
+
+	.more-articles{
+		margin-top: 8px;
+		margin-bottom: 17px;
+	}
+
+	.actions-page-wrapper{
+		margin-left: -12px;
+		margin-right: -12px;
+		
+		[class*='col-'] {
+		    padding: 0px 12px;
+		}
+	}
+
+	.actions-page-wrapper .news-column-wrapper{
+		padding-top: 42px;
+	}
+	.news-column{
+		padding-top: 40px;
+
+		h3{
+			font-size: 36px;
+			line-height: 36px;
+			margin-bottom: 18px;
+		}
+	}
+
+	.filter-wrapper{
+		margin-bottom: 5px;
+	}
+
+}
+
+//Большой баннер акции
+.action-full-banner{
+	display: block;
+	width: 100%;
+	border-bottom: none;
+	margin-bottom: 50px;
+	border-bottom: none;
+
+	img{
+		display: block;
+		width: 100%;
+	}
+
+	.action-table-wrapper{
+		padding: 17px 25px;
+		background-color: #93cac4;
+	    background-image: -webkit-linear-gradient(left, #93cac4,#b6d6a8);
+	    background-image: -moz-linear-gradient(left, #93cac4,#b6d6a8);
+	    background-image: -o-linear-gradient(left, #93cac4,#b6d6a8);
+	    background-image: -ms-linear-gradient(left, #93cac4,#b6d6a8);
+	    background-image: linear-gradient(left,#93cac4,#b6d6a8);
+	}
+
+	.action-table{
+		display: table;
+		width: 100%;
+		color: #fff;
+
+		a{
+			color: #fff;
+		}
+
+		>div{
+			display: table-cell;
+			vertical-align: middle;
+			padding: 0px 8px;
+		}
+
+		.discount{
+			width: 220px;
+			font-size: 72px;
+			font-weight: bold;
+			color: #fff;
+			white-space: nowrap;
+		}
+
+		.about{
+			width: 350px;
+			font-size: 30px;
+			line-height: 30px;
+		}
+
+		.button-wrapper{
+			text-align: right;
+		}
+
+		.btn{
+			color: #648c88;
+		}
+	}
+}
+
+//Большой блок акции
+.action-full-block{
+	display: block;
+	width: 100%;
+	position: relative;
+	margin-bottom: 52px;
+	border-bottom: none;
+
+	&.action-finish-block{
+		color: #787878;
+
+		.action-price-wrapper,
+		.textblock{
+			color: #787878;
+		}
+
+		.hover-block,
+		.action-dates{
+			display: none !important;
+		}
+
+		.action-finish{
+			display: block;
+		}
+	}
+
+	.action-name-wrapper,
+	.action-price-wrapper{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		z-index: 2;
+	}
+
+	.action-name-wrapper{
+		float: left;
+		width: 60%;
+		text-align: left;
+	}
+
+	.action-price-wrapper{
+		float: right;
+		width: 40%;
+		text-align: right;
+		color: #0696a3;
+	}
+
+	.action-header{
+		font-size: 30px;
+		line-height: 30px;
+		margin-bottom: 5px;
+	}
+
+	.textblock{
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.action-dates{
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 16px;
+	}
+
+	.action-price{
+		font-size: 36px;
+		line-height: 36px;
+		font-weight: bold;
+		margin-bottom: 0px;
+	}
+
+	.action-price-descr{
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.action-finish{
+		display: none;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: bold;
+		color: #da6f5b;
+	}
+
+	.hover-block{
+		-webkit-box-sizing: content-box;
+	    -moz-box-sizing: content-box;
+	    box-sizing: content-box;
+	    display: none;
+	    position: absolute;
+	    left: -20px;
+	    top: -20px;
+	    right: -20px;
+	    min-height: 100%;
+	    background-color: #f6f7f1;
+	    padding: 10px 0px 40px 15px;
+	    box-shadow: 2px 2px 5px #d9d9d9;
+	    border-radius: 3px;
+	    z-index: 1;
+
+	    .btn{
+	    	position: absolute;
+		    right: 20px;
+		    bottom: 10px;
+		    z-index: 3;
+	    }
+	}
+}
+
+
+//Акции (баннеры)
+.actions-wrapper{
+  margin-bottom: 30px;
+
+  &.row-flex{
+  	margin-left: -5px;
+  	margin-right: -5px;
+
+  	[class*='col-']{
+  		padding: 0px 5px;
+  	}
+  }
+
+  a {
+	border-bottom:none;
+  }
+
+  .margin-image{
+	margin-top: -6px;
+
+	a{
+		display: block;
+		width: 100%;
+		overflow-x: hidden;
+	}
+
+	img{
+		max-width: none;
+	}
+  }
+
+  img {
+	max-width: 100%;
+  }
+}
+

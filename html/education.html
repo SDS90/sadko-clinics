@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Садко -&nbsp;Образование  и развитие</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280">
+    <!--meta(name='viewport', content='width=device-width, initial-scale=1.0')-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <link rel="shortcut icon" href="../img/sadko_favicon.ico" type="image/x-icon">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <!--link(href='#{srcPath}fancybox/jquery.fancybox.css', rel='stylesheet', type='text/css')-->
+    <link href="../css/jquery.scrollbar.css" rel="stylesheet" type="text/css">
+    <script src="../js/libs/libs.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="topHeader" class="header-inner">
+        <!--Шапка для внутренних страниц-->
+        <div class="contents">
+          <!--Верхняя часть шапки-->
+          <div class="header-top">
+            <!--Логотип--><a href="/" class="header-logo"><img src="../img/logo.png" alt="Логотип компании Садко"></a>
+            <!--Режим работы-->
+            <div class="work-time-wrapper"><span class="work-time">8<sup>00</sup> - 20<sup>00</sup> Пн.- Сб.</span><span class="work-time">9<sup>00</sup> - 18<sup>00</sup> Вс.</span></div>
+            <!--Вход в личный кабинет--><a href="/" class="header-login"><i class="ico-heart"></i><span>Войти в личный кабинет</span></a>
+            <!--Здесь в data-атрибуте указывается заголовок, который будет показываться в форме записи на приём. Если заголовка нет - будет показан стандартный вариант, но лучше указать даже его.--><a href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту." class="smile-toggle book-toggle"> <i class="ico-bell"></i><span>Записаться</span></a>
+            <!--телефон-->
+            <div class="header-top--right"><a href="#" class="header-phone">+7 (831) 421-01-01</a></div>
+          </div>
+        </div>
+        <!--Меню навигации-->
+        <div class="nav-wrapper">
+          <div class="nav-block">
+            <nav class="nav-main">
+              <!--Так выделяется (класс .active) активный пункт (открытая страница)-->
+              <div class="nav-main--item normal"><a href="#"> <span>Вся правда о САДКО</span></a></div>
+              <!--Этот пункт имеет всплывающий миниатюрный блок (только заголовки)-->
+              <div class="nav-main--item -has-inner- -has-inner-small"><a href="#"> <span>Пациентам</span></a>
+                <!--Мини-блок меню. Здесь только две колонки со списком заголовков-->
+                <div class="nav-main--inner -inner-small">
+                  <div data-lock-window-scroll="true" class="custom-scroll-wrap">
+                    <div class="row-flex nav-main--inner--content">
+                      <div class="col-9">
+                        <div class="nav-main--inner-title"><a href="#">Комплексные программы</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Отзывы</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Вопрос-Ответ</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Наше видео</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Полезные статьи</a></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">ОМС</a></div>
+                        <div class="nav-main--inner-title"><a href="#">ДМС</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Этот пункт имеет стандартный всплывающий блок. Кроме того, вместо ссылки тут может быть span-->
+              <div class="nav-main--item -has-inner- active"><span><span>Услуги и клиники</span></span>
+                <!--Стандартный всплывающий блок меню - состоит из колонок и списков со ссылками-->
+                <div class="nav-main--inner">
+                  <div data-lock-window-scroll="true" class="custom-scroll-wrap">
+                    <div class="row-flex nav-main--inner--content">
+                      <div class="col-3">
+                        <!--Подзаголовок-->
+                        <div class="nav-main--inner-title"><a href="#">Лечебно-диагностический центр</a></div>
+                        <!--Список-->
+                        <div class="row-flex">
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Терапия</a></li>
+                              <li><a href="#">Пульманология</a></li>
+                              <li><a href="#">Гематология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Дерматология</a></li>
+                              <li><a href="#">Аллергология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Отоларинология</a></li>
+                              <li><a href="#">Гирудотерапия</a></li>
+                              <li><a href="#">Венерология</a></li>
+                              <li><a href="#">Наркология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Неврология</a></li>
+                              <li><a href="#">Эндокринология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Иглорефлексотерапия</a></li>
+                              <li><a href="#">Физиотерапия</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Проктология</a></li>
+                              <li><a href="#">Урология</a></li>
+                              <li><a href="#">Детская урология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Гастроэнтерология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Кардиология</a></li>
+                              <li><a href="#">Хирургия</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Рентген</a></li>
+                              <li><a href="#">Профилактические исследования</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="nav-main--inner-title"><a href="#">Лечебно-диагностический центр</a></div>
+                        <div class="row-flex">
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Лечение склероза</a></li>
+                              <li><a href="#">Лечение депрессии</a></li>
+                              <li><a href="#">Ревматолог</a></li>
+                              <li><a href="#">Лечение межпозвоночных грыж</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Диагностика</a></li>
+                              <li><a href="#">Магнитотерапия</a></li>
+                              <li><a href="#">Осциллционный массаж</a></li>
+                              <li><a href="#">Вытяжение позвоночника</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Стоматология</a><span class="nav-main--inner-title--note"><a href="#">Семь клиник</a></span></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение кариеса</a></li>
+                          <li><a href="#">Лечение пульпита</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Профессиональная гигиена</a></li>
+                          <li><a href="#">Ортодонтия</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Виниры и люминиры</a></li>
+                          <li><a href="#">Имплантация</a></li>
+                          <li><a href="#">Парадонтология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Компьютерная томография</a></li>
+                          <li><a href="#">Нейромышечная стоматология</a></li>
+                          <li><a href="#">Отбеливание зубов</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Цифровой дизацн улыбки</a></li>
+                          <li><a href="#">Лечение под микроскопом</a></li>
+                          <li><a href="#">Диагностика</a></li>
+                        </ul>
+                        <div class="nav-main--inner-title"><a href="#">Центр ортодонтии &laquo;Джем&raquo;</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Центр имплантации</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Центр мужского здоровья</a></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Детская стоматология &laquo;Динозубрик&raquo;</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Центр женского здоровья</a><span class="nav-main--inner-title--note"><a href="#">Четыре центра</a></span></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение бесплодия</a></li>
+                          <li><a href="#">Онколог-маммолог</a></li>
+                          <li><a href="#">Лечение кист яичников</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Планирование беременности</a></li>
+                          <li><a href="#">Курсы для беременных</a></li>
+                          <li><a href="#">Ведение беременности - шаг за шагом</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение патологии шейки матки</a></li>
+                          <li><a href="#">Прерывание беременности</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Цифровая гистеровидеоскопия</a></li>
+                          <li><a href="#">УЗИ</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Гинекология</a></li>
+                        </ul>
+                        <div class="nav-main--inner-title"><a href="#">&laquoЗдоровенок&raquo; - детская клиника и стоматология</a></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Центр маммологии</a></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">3D маммография</a></li>
+                          <li><a href="#">УЗИ молочной железы</a></li>
+                          <li><a href="#">Пункция молочной железы</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Анализ крови на анкомаркеры</a></li>
+                          <li><a href="#">Аппаратная биопсия</a></li>
+                        </ul>
+                        <div class="nav-main--inner-title"><a href="#">Диагностическая лаборатория</a></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Бактериологическая лаборатория</a></li>
+                          <li><a href="#">Иммунологическая лаборатория</a></li>
+                          <li><a href="#">Молекулярно-обиологическая лаборатория (ПЦР)</a></li>
+                          <li><a href="#">Общеклиннические и биохимические исследования</a></li>
+                        </ul>
+                        <div class="nav-main--inner-title"><a href="#">Зуботехническая лаборатория</a></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Съемные зубные протезы</a></li>
+                          <li><a href="#">Бюгельные зубные протезы</a></li>
+                          <li><a href="#">Безметалловая керамика</a></li>
+                          <li><a href="#">Металлокерамика</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Этот пункт имеет стандартный всплывающий блок-->
+              <div class="nav-main--item -has-inner-"><a href="#"> <span>Технологи и инновации</span></a>
+                <!--Ещё один стандартный всплывающий блок. Здесь меньше пунктов меню, и расположены они по-другому-->
+                <div class="nav-main--inner">
+                  <div data-lock-window-scroll="true" class="custom-scroll-wrap">
+                    <div class="row-flex nav-main--inner--content">
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Лечебно-диагностический центр</a></div>
+                        <div class="row-flex">
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Терапия</a></li>
+                              <li><a href="#">Пульманология</a></li>
+                              <li><a href="#">Гематология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Дерматология</a></li>
+                              <li><a href="#">Аллергология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Отоларинология</a></li>
+                              <li><a href="#">Гирудотерапия</a></li>
+                              <li><a href="#">Венерология</a></li>
+                              <li><a href="#">Наркология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Неврология</a></li>
+                              <li><a href="#">Эндокринология</a></li>
+                            </ul>
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Иглорефлексотерапия</a></li>
+                              <li><a href="#">Физиотерапия</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="nav-main--inner-group">
+                              <li><a href="#">Проктология</a></li>
+                              <li><a href="#">Урология</a></li>
+                              <li><a href="#">Детская урология</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Стоматология</a><span class="nav-main--inner-title--note"><a href="#">Семь клиник</a></span></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение кариеса</a></li>
+                          <li><a href="#">Лечение пульпита</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Профессиональная гигиена</a></li>
+                          <li><a href="#">Ортодонтия</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Виниры и люминиры</a></li>
+                          <li><a href="#">Имплантация</a></li>
+                          <li><a href="#">Парадонтология</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Компьютерная томография</a></li>
+                          <li><a href="#">Нейромышечная стоматология</a></li>
+                          <li><a href="#">Отбеливание зубов</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Цифровой дизацн улыбки</a></li>
+                          <li><a href="#">Лечение под микроскопом</a></li>
+                          <li><a href="#">Диагностика</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Детская стоматология &laquo;Динозубрик&raquo;</a></div>
+                        <div class="nav-main--inner-title"><a href="#">Центр женского здоровья</a><span class="nav-main--inner-title--note"><a href="#">Четыре центра</a></span></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение бесплодия</a></li>
+                          <li><a href="#">Онколог-маммолог</a></li>
+                          <li><a href="#">Лечение кист яичников</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Планирование беременности</a></li>
+                          <li><a href="#">Курсы для беременных</a></li>
+                          <li><a href="#">Ведение беременности - шаг за шагом</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Лечение патологии шейки матки</a></li>
+                          <li><a href="#">Прерывание беременности</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Цифровая гистеровидеоскопия</a></li>
+                          <li><a href="#">УЗИ</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Гинекология</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3">
+                        <div class="nav-main--inner-title"><a href="#">Центр маммологии</a></div>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">3D маммография</a></li>
+                          <li><a href="#">УЗИ молочной железы</a></li>
+                          <li><a href="#">Пункция молочной железы</a></li>
+                        </ul>
+                        <ul class="nav-main--inner-group">
+                          <li><a href="#">Анализ крови на анкомаркеры</a></li>
+                          <li><a href="#">Аппаратная биопсия</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--А этот пункт вообще не имеет всплывающих блоков - он просто ссылка-->
+              <div class="nav-main--item normal"><a href="#"> <span>Образование и развитие</span></a></div>
+              <div class="nav-main--item normal"><a href="#"> <span>Врачи и команда</span></a></div>
+              <div class="nav-main--item normal"><a href="#"> <span>Цены и акции</span></a></div>
+              <div class="nav-main--item normal"><a href="#"> <span>Контакты</span></a></div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="content inner-page">
+        <!--include ../modules/clinic-tiles-->
+        <!--Фиксированное меню-->
+        <div class="fixed-menu"><a href="#introBlock">
+            <div> <span>Обращение</span></div></a><a href="#educationCenter">
+            <div> <span>Учебный центр САДКО</span></div></a><a href="#profSystem">
+            <div> <span>Система роста</span></div></a><a href="#youngDoctors">
+            <div> <span>Молодые таланты</span></div></a><a href="#programsBlock">
+            <div> <span>Программы обучения</span></div></a><a href="#academyBlock">
+            <div> <span>Академия</span></div></a><a href="#articlesBlock">
+            <div> <span>Статьи и советы врачей</span></div></a><a href="#reviewsBlock">
+            <div> <span>Отзывы о центре</span></div></a></div>
+        <!--Блок с цитатой-->
+        <div class="start-quote-wrapper">
+          <div class="contents">
+            <h1 id="introBlock">Образование и развитие</h1>
+            <!--Цитата-->
+            <div class="quot row-flex -quot-no-border-">
+              <div class="col-10">
+                <div class="quot--text">За 16 лет мы создали не только отличную клинику для пациентов, но и очень привлекательное место для работы врачей. С Вами будут работать лучшие специалисты в своей области.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents education-page">
+          <h2 id="educationCenter">Учебный центр САДКО</h2>
+          <div class="textblock about-education">
+            <p>Центр инновационного образования и развития уже 10 лет занимается организацией учебных программ в рамках деятельности крупнейшего в регионе медицинского холдинга САДКО.</p>
+            <p>Лекторы центра — опытные клиницисты, постоянно развивающие свое профессиональное мастерство в России и за рубежом. Программы курсов составлены с учетом последних достижений мировой медицины. Особое внимание уделяется практической части — для этого каждое рабочее место укомплектовывается необходимым оборудованием и материалами в зависимости от курса.</p>
+            <p>Сайт учебного центра: <a href="http://nn.sadkomed.ru/">http://nn.sadkomed.ru/</a></p>
+          </div>
+          <!--Фильтр программ-->
+          <div class="filter-wrapper clear">
+            <!--Сам фильтр-->
+            <div class="page-filter clear">
+              <!--Список--><span class="filter-block-wrapper"><span class="filter-open-button">Подобрать программу</span>
+                <!--Список тем-->
+                <div class="filter-block">
+                  <div class="closed">Закрыть</div>
+                  <!--Список в одну колонку-->
+                  <div class="filter-list-wrapper">
+                    <div class="filter-list">
+                      <ul>
+                        <li><a href="#">Автозаводский район</a></li>
+                        <li><a href="#">Сормовский район</a></li>
+                        <li><a href="#">Канавинский район</a></li>
+                        <li><a href="#">Советский район</a></li>
+                        <li><a href="#">Ленинский район</a></li>
+                        <li><a href="#">Московский район</a></li>
+                        <li><a href="#">Приокский район</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div></span>
+            </div><a href="#" class="delete-filter">Все программы</a><a href="#" class="delete-filter">Скоро будут</a><a href="#" class="delete-filter">Прошедшие</a>
+          </div>
+          <!--Блок с программами-->
+          <div class="row-flex education-program-wrapper doctors-education-program">
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/content/course2.jpg" alt="" class="program-image">
+                <!--Описание программы-->
+                <div class="about-program -violet-">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Курс Дмитрия Компаниеца «Сочетанное протезирование»</div>
+                      <div class="program-date">23 сентября 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time">с 18<sup>00 </sup> до 20<sup>00</sup></div>
+                      <div class="price">9000 <span class="rouble">a</span></div>
+                    </div>
+                  </div>
+                  <!--Скрытый блок-->
+                  <!--div.about-hide-block
+                  p
+                  	a(href="#") Школа сахарного диабета
+                  p
+                  	a(href="#") Ул. Бекетова, 13
+                  div.-text-center-
+                  	//Здесь особый класс - course-toggle, он вызывает форму записи на курс
+                  	button.btn.course-toggle(data-book-info="Записаться на лекцию «Что такое ожирение?»" data-book-about="17 сентября с 17<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+                  -->
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/content/course2.jpg" alt="" class="program-image">
+                <!--Описание программы (фиолетовый блок)-->
+                <div class="about-program -blue-">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Курс «Неотложные состояния в стоматологиии». Валентин Николаевич Ивашов</div>
+                      <div class="program-date">15 ноября 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time">с 13<sup>00 </sup> до 18<sup>00</sup></div>
+                      <div class="price">1500 <span class="rouble">a</span></div>
+                    </div>
+                  </div>
+                  <!--Скрытый блок-->
+                  <!--div.about-hide-block
+                  p
+                  	a(href="#") Школа сахарного диабета
+                  p
+                  	a(href="#") Ул. Бекетова, 13
+                  div.-text-center-
+                  	button.btn.course-toggle(data-book-info="Записаться на лекцию «Стресс. Профилактика эмоционального выгорания»" data-book-about="15 ноября с 18<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+                  -->
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/content/course2.jpg" alt="" class="program-image">
+                <!--Описание программы (синий блок)-->
+                <div class="about-program -green-">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Курс «Применение коффердама в практике стоматолога-ортопеда»</div>
+                      <div class="program-date">23 октября 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time">с 09<sup>00 </sup> до 17<sup>00</sup></div>
+                      <div class="price">5000 <span class="rouble">a</span></div>
+                    </div>
+                  </div>
+                  <!--Скрытый блок-->
+                  <!--div.about-hide-block
+                  p
+                  	a(href="#") Школа сахарного диабета
+                  p
+                  	a(href="#") Ул. Бекетова, 13
+                  div.-text-center-
+                  	button.btn.course-toggle(data-book-info="Записаться на лекцию «Психологические причины избыточного набора веса»" data-book-about="23 октября с 17<sup>00</sup> до 20<sup>00</sup>, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону <b>8 (831) 414-45-67</b>, если у вас изменятся планы.") Записаться
+                  -->
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/content/course2.jpg" alt="" class="program-image">
+                <!--Описание программы-->
+                <div class="about-program -light-violet-">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Курс «Микрохирургия пародонта». Пужак Андрей Вадимович</div>
+                      <div class="program-date">28 ноября 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time">с 13<sup>00 </sup> до 18<sup>00</sup></div>
+                      <div class="price">9000 <span class="rouble">a</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Кнопка "Показать ещё" -->
+          <div class="clinic-tiles--hide-toggle more-doctors"><a href="#" class="-pseudo- -link-wrap- open-hidden-doctors"><span class="spoiler-toggle">Загрузить ещё</span></a></div>
+          <h2 id="profSystem">Система профессионального роста врачей</h2>
+          <div class="textblock about-education">
+            <p>Мы часто говорим про качество образования, но не задумываемся о том, что оно зависит от профессионализма преподавателей. В <a href="#">учебном центре «САДКО»</a> мы собрали лучший педагогический состав, чтобы готовить для нашей клиники лучших специалистов. Профессора и доценты преподают в рамках стандартов международного образования и строжайше контролируют успеваемость.</p>
+          </div>
+          <!--Здесь как обычно - обёртка, показываем, что эти блоки показываем по загрузке-->
+          <div class="doctor-wrappers-visible">
+            <!--Строка на 4 преподавателя-->
+            <div class="row-flex doctors-wrapper">
+              <!--Блок одного преподавателя-->
+              <div class="col-3">
+                <div class="doctor-block teacher-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Буяло Евгения Владимировна" class="doctor-photo"></a>
+                  <!--Блок с описанием-->
+                  <div class="about-doctor-wrapper">
+                    <!--Кнопки-->
+                    <div class="button-wrapper"><a href="http://vimeo.com/9532951" class="button open-video">
+                        <div class="button-block video"><i class="icon"></i></div></a></div>
+                    <!--О докторе-->
+                    <div class="about-doctor">
+                      <!--Обёртка для скролла-->
+                      <div class="doctor-scroll-wrapper">
+                        <!--Имя-->
+                        <div class="doctor-name"><a href="#">Буяло Евгения Владимировна</a>
+                          <!--Кнопки-->
+                          <div class="button-wrapper -dn-"><a href="http://vimeo.com/9532951" class="button open-video">
+                              <div class="button-block video"><i class="icon"></i></div></a></div>
+                        </div>
+                        <!--Должности преподавателя-->
+                        <ul class="teacher-info textblock">
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                        </ul>
+                        <!--Скрытый блок практики-->
+                        <ul class="teacher-info textblock doctor-special-hidden-list -dn-">
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                        </ul>
+                      </div><a href="#" data-opened-text="Свернуть" class="more-doctor-special blue-link">Другая практика</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Блок одного преподавателя-->
+              <div class="col-3">
+                <div class="doctor-block teacher-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Буяло Евгения Владимировна" class="doctor-photo"></a>
+                  <!--Блок с описанием-->
+                  <div class="about-doctor-wrapper">
+                    <!--Кнопки-->
+                    <div class="button-wrapper"><a href="http://vimeo.com/9532951" class="button open-video">
+                        <div class="button-block video"><i class="icon"></i></div></a></div>
+                    <!--О докторе-->
+                    <div class="about-doctor">
+                      <!--Обёртка для скролла-->
+                      <div class="doctor-scroll-wrapper">
+                        <!--Имя-->
+                        <div class="doctor-name"><a href="#">Буяло Евгения Владимировна</a>
+                          <!--Кнопки-->
+                          <div class="button-wrapper -dn-"><a href="http://vimeo.com/9532951" class="button open-video">
+                              <div class="button-block video"><i class="icon"></i></div></a></div>
+                        </div>
+                        <!--Должности преподавателя-->
+                        <ul class="teacher-info textblock">
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Блок одного преподавателя-->
+              <div class="col-3">
+                <div class="doctor-block teacher-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Буяло Евгения Владимировна" class="doctor-photo"></a>
+                  <!--Блок с описанием-->
+                  <div class="about-doctor-wrapper">
+                    <!--Кнопки-->
+                    <div class="button-wrapper"><a href="http://vimeo.com/9532951" class="button open-video">
+                        <div class="button-block video"><i class="icon"></i></div></a></div>
+                    <!--О докторе-->
+                    <div class="about-doctor">
+                      <!--Обёртка для скролла-->
+                      <div class="doctor-scroll-wrapper">
+                        <!--Имя-->
+                        <div class="doctor-name"><a href="#">Буяло Евгения Владимировна</a>
+                          <!--Кнопки-->
+                          <div class="button-wrapper -dn-"><a href="http://vimeo.com/9532951" class="button open-video">
+                              <div class="button-block video"><i class="icon"></i></div></a></div>
+                        </div>
+                        <!--Должности преподавателя-->
+                        <ul class="teacher-info textblock">
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                        </ul>
+                        <!--Скрытый блок практики-->
+                        <ul class="teacher-info textblock doctor-special-hidden-list -dn-">
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                        </ul>
+                      </div><a href="#" data-opened-text="Свернуть" class="more-doctor-special blue-link">Другая практика</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Блок одного преподавателя-->
+              <div class="col-3">
+                <div class="doctor-block teacher-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Буяло Евгения Владимировна" class="doctor-photo"></a>
+                  <!--Блок с описанием-->
+                  <div class="about-doctor-wrapper">
+                    <!--Кнопки-->
+                    <div class="button-wrapper"><a href="http://vimeo.com/9532951" class="button open-video">
+                        <div class="button-block video"><i class="icon"></i></div></a></div>
+                    <!--О докторе-->
+                    <div class="about-doctor">
+                      <!--Обёртка для скролла-->
+                      <div class="doctor-scroll-wrapper">
+                        <!--Имя-->
+                        <div class="doctor-name"><a href="#">Буяло Евгения Владимировна</a>
+                          <!--Кнопки-->
+                          <div class="button-wrapper -dn-"><a href="http://vimeo.com/9532951" class="button open-video">
+                              <div class="button-block video"><i class="icon"></i></div></a></div>
+                        </div>
+                        <!--Должности преподавателя-->
+                        <ul class="teacher-info textblock">
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                        </ul>
+                        <!--Скрытый блок практики-->
+                        <ul class="teacher-info textblock doctor-special-hidden-list -dn-">
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                          <li>Ректор <a href="#">Академии отцовства и материнства</a></li>
+                        </ul>
+                      </div><a href="#" data-opened-text="Свернуть" class="more-doctor-special blue-link">Другая практика</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Кнопка "Показать ещё" - здесь вероятно надо подгружать новые блоки аяксом. Не забываем про функцию setDoctorSizes() - после каждой загрузки (doctors.js)!-->
+          <div class="clinic-tiles--hide-toggle more-doctors"><a href="#" class="-pseudo- -link-wrap-"><span class="spoiler-toggle">Другие преподаватели</span></a></div>
+          <h2 id="learnMapBlock">Учебный центр «САДКО»</h2>
+          <div class="panel learn-map">
+            <div class="learn-map--wrapper">
+              <!--Блок карты-->
+              <div id="learn-map" data-marker="../img/icons/marker.png" data-active-marker="../img/icons/active-marker.png" class="learn-map--map"></div>
+              <div id="learnMapInfo" class="map-info"></div>
+            </div>
+            <div class="learn-map--filter clear">
+              <div id="learmCheckFilter" class="learn-map--filter--doc">
+                <label>
+                  <input type="radio" name="check-filter" value="stomatologist" class="check-radio"><span>Стоматологи</span>
+                </label>
+                <label>
+                  <input type="radio" name="check-filter" value="specialist" class="check-radio"><span>Специалисты поликлиники</span>
+                </label>
+              </div><a href="#" class="learn-map--delete-filter">Сбросить все фильтры</a>
+              <div class="learn-map--filter--my-doc">
+                <form id="learnSearchDoctor" class="search-list--input">
+                  <input type="text" placeholder="Найти своего врача">
+                  <div class="search-list--input--controls">
+                    <button class="ico-search-wide"></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <h2 id="youngDoctors">Молодые таланты</h2>
+          <div class="textblock about-education">
+            <p>В современной медицине зачастую получается так, что молодой специалист гораздо подкованнее тех, кто закончил свое обучение 10-15 лет назад. Опыта конечно никто не отнимет и он, в большинстве случаев, определяющий фактор, но свежий взгляд и нестандартный подход — это те качества, благодаря которым, молодые специалисты удачно вписываются в наш врачебный коллектив.</p>
+          </div><a href="#" class="more-link -link-wrap-"><span>Все врачи клиники</span></a>
+          <!--Эти блоки показываем-->
+          <div class="doctor-wrappers-visible">
+            <!--Строка на 4 блока обычных докторов-->
+            <div class="row-flex doctors-wrapper">
+              <!--Блок одного обычного доктора-->
+              <div class="col-3">
+                <div class="doctor-block normal-doctor-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Покровский Михаил Юрьевич" class="doctor-photo"></a>
+                  <!--Блок с описанием-->
+                  <div class="about-doctor-wrapper">
+                    <!--Кнопки-->
+                    <div class="button-wrapper"><a href="http://vimeo.com/9532951" class="button open-video">
+                        <div class="button-block video"><i class="icon"></i></div></a><a href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому." class="button book-toggle"> 
+                        <div class="button-block book"><i class="icon"></i><span class="book-text">Записаться</span></div></a></div>
+                    <!--О докторе-->
+                    <div class="about-doctor">
+                      <!--Обёртка для скролла-->
+                      <div class="doctor-scroll-wrapper">
+                        <!--Имя-->
+                        <div class="doctor-name"><a href="#">Покровский Михаил Юрьевич</a></div>
+                        <!--Кнопки-->
+                        <div class="button-wrapper -dn-"><a href="http://vimeo.com/9532951" class="button open-video">
+                            <div class="button-block video"><i class="icon"></i></div></a><a href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому." class="button book-toggle"> 
+                            <div class="button-block book"><i class="icon"></i><span class="book-text">Записаться</span></div></a></div>
+                        <!--Список специализаций-->
+                        <ul class="doctor-special-list">
+                          <li> <b>Главный врач</b></li>
+                          <li>Стоматолог-ортопед</li>
+                        </ul>
+                      </div>
+                      <!--Этот блок прижат к низу-->
+                      <div class="bottom-block">
+                        <!--Эксперты-->
+                        <div class="doctor-experts-wrapper">
+                          <div class="flags"><img src="../img/icons/jamaica.png" data-text="" class="show-text"><img src="../img/icons/romania.png" data-text="" class="show-text"><img src="../img/icons/croatia.png" data-text="" class="show-text"></div>
+                        </div>
+                        <!--Стаж работы-->
+                        <div class="work-stage textblock">
+                           
+                          <b>Стаж работы:</b><br><i>15 лет</i>
+                        </div>
+                        <!--Приз-->
+                        <!--div.show-prize
+                        div.-dn-
+                        	p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+                        	p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+                        
+                        -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Блок одного обычных доктора-->
+              <div class="col-3">
+                <div class="doctor-block normal-doctor-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Иван Жмак" class="doctor-photo"></a>
+                  <!--Блок с описанием-->
+                  <div class="about-doctor-wrapper">
+                    <!--Кнопки-->
+                    <div class="button-wrapper"><a href="http://vimeo.com/9532951" class="button open-video">
+                        <div class="button-block video"><i class="icon"></i></div></a><a href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану." class="button book-toggle"> 
+                        <div class="button-block book"><i class="icon"></i><span class="book-text">Записаться</span></div></a></div>
+                    <!--О докторе-->
+                    <div class="about-doctor">
+                      <!--Обёртка для скролла-->
+                      <div class="doctor-scroll-wrapper">
+                        <!--Имя-->
+                        <div class="doctor-name"><a href="#">Иван Жмак</a></div>
+                        <!--Кнопки-->
+                        <div class="button-wrapper -dn-"><a href="http://vimeo.com/9532951" class="button open-video">
+                            <div class="button-block video"><i class="icon"></i></div></a><a href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану." class="button book-toggle"> 
+                            <div class="button-block book"><i class="icon"></i><span class="book-text">Записаться</span></div></a></div>
+                        <!--Список специализаций-->
+                        <div class="doctor-special-list-wrapper">
+                          <ul class="doctor-special-list">
+                            <li> <b>Главный врач</b></li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Акушер-терапевт, ведение беременности пони  </li>
+                          </ul>
+                          <!--Скрытый блок специальностей-->
+                          <ul class="doctor-special-list doctor-special-hidden-list">
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                          </ul>
+                        </div>
+                      </div><a href="#" data-opened-text="Свернуть" class="more-doctor-special blue-link">Другие специализации</a>
+                      <!--Этот блок прижат к низу-->
+                      <div class="bottom-block">
+                        <!--Эксперты-->
+                        <div class="doctor-experts-wrapper">
+                          <div class="flags"><img src="../img/icons/jamaica.png" data-text="" class="show-text"><img src="../img/icons/romania.png" data-text="" class="show-text"><img src="../img/icons/croatia.png" data-text="" class="show-text"></div>
+                        </div>
+                        <!--Стаж работы-->
+                        <div class="work-stage textblock">
+                           
+                          <b>Стаж работы:</b><br><i>15 лет</i>
+                        </div>
+                        <!--Приз-->
+                        <!--div.show-prize
+                        div.-dn-
+                        	p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+                        	p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+                        -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Блок одного обычных доктора-->
+              <div class="col-3">
+                <div class="doctor-block normal-doctor-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Покровский Михаил Юрьевич" class="doctor-photo"></a>
+                  <!--Блок с описанием-->
+                  <div class="about-doctor-wrapper">
+                    <!--Кнопки-->
+                    <div class="button-wrapper"><a href="http://vimeo.com/9532951" class="button open-video">
+                        <div class="button-block video"><i class="icon"></i></div></a><a href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло." class="button book-toggle"> 
+                        <div class="button-block book"><i class="icon"></i><span class="book-text">Записаться</span></div></a></div>
+                    <!--О докторе-->
+                    <div class="about-doctor">
+                      <!--Обёртка для скролла-->
+                      <div class="doctor-scroll-wrapper">
+                        <!--Имя-->
+                        <div class="doctor-name"><a href="#">Покровский Михаил Юрьевич</a></div>
+                        <!--Кнопки-->
+                        <div class="button-wrapper -dn-"><a href="http://vimeo.com/9532951" class="button open-video">
+                            <div class="button-block video"><i class="icon"></i></div></a><a href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану." class="button book-toggle"> 
+                            <div class="button-block book"><i class="icon"></i><span class="book-text">Записаться</span></div></a></div>
+                        <!--Список специализаций-->
+                        <ul class="doctor-special-list">
+                          <li> <b>Главный врач</b></li>
+                          <li>Стоматолог-ортопед</li>
+                          <li>Стоматолог-терапевт</li>
+                          <li>Стоматолог-стоматолог</li>
+                        </ul>
+                      </div>
+                      <!--Этот блок прижат к низу-->
+                      <div class="bottom-block">
+                        <!--Эксперты-->
+                        <div class="doctor-experts-wrapper">
+                          <div class="flags"><img src="../img/icons/jamaica.png" data-text="" class="show-text"><img src="../img/icons/romania.png" data-text="" class="show-text"><img src="../img/icons/croatia.png" data-text="" class="show-text"></div>
+                        </div>
+                        <!--Стаж работы-->
+                        <div class="work-stage textblock">
+                           
+                          <b>Стаж работы:</b><br><i>15 лет</i>
+                        </div>
+                        <!--Приз-->
+                        <!--div.show-prize
+                        div.-dn-
+                        	p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+                        	p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+                        -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Блок одного обычного доктора-->
+              <div class="col-3">
+                <div class="doctor-block normal-doctor-block"><a href="#"><img src="../img/doctor-photos/doctor1.jpg" alt="Константинопольский Константин Константинович" class="doctor-photo"></a>
+                  <!--Блок с описанием-->
+                  <div class="about-doctor-wrapper">
+                    <!--Кнопки-->
+                    <div class="button-wrapper"><a href="http://vimeo.com/9532951" class="button open-video">
+                        <div class="button-block video"><i class="icon"></i></div></a><a href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому." class="button book-toggle"> 
+                        <div class="button-block book"><i class="icon"></i><span class="book-text">Записаться</span></div></a></div>
+                    <!--О докторе-->
+                    <div class="about-doctor">
+                      <!--Обёртка для скролла-->
+                      <div class="doctor-scroll-wrapper">
+                        <!--Имя-->
+                        <div class="doctor-name"><a href="#">Константинопольский Константин Константинович</a></div>
+                        <!--Кнопки-->
+                        <div class="button-wrapper -dn-"><a href="http://vimeo.com/9532951" class="button open-video">
+                            <div class="button-block video"><i class="icon"></i></div></a><a href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану." class="button book-toggle"> 
+                            <div class="button-block book"><i class="icon"></i><span class="book-text">Записаться</span></div></a></div>
+                        <!--Список специализаций-->
+                        <div class="doctor-special-list-wrapper">
+                          <ul class="doctor-special-list">
+                            <li> <b>Главный врач</b></li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Акушер-терапевт, ведение беременности пони  </li>
+                          </ul>
+                          <!--Скрытый блок специальностей-->
+                          <ul class="doctor-special-list doctor-special-hidden-list">
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                            <li>Стоматолог-ортопед</li>
+                            <li>Стоматолог-терапевт</li>
+                          </ul>
+                        </div>
+                      </div><a href="#" data-opened-text="Свернуть" class="more-doctor-special blue-link">Другие специализации</a>
+                      <!--Этот блок прижат к низу-->
+                      <div class="bottom-block">
+                        <!--Эксперты-->
+                        <div class="doctor-experts-wrapper">
+                          <div class="flags"><img src="../img/icons/jamaica.png" data-text="" class="show-text"><img src="../img/icons/romania.png" data-text="" class="show-text"><img src="../img/icons/croatia.png" data-text="" class="show-text"><img src="../img/icons/romania.png" data-text="" class="show-text"><img src="../img/icons/croatia.png" data-text="" class="show-text"><img src="../img/icons/romania.png" data-text="" class="show-text"><img src="../img/icons/croatia.png" data-text="" class="show-text"><img src="../img/icons/romania.png" data-text="" class="show-text"><img src="../img/icons/croatia.png" data-text="" class="show-text"></div>
+                        </div>
+                        <!--Стаж работы-->
+                        <div class="work-stage textblock">
+                           
+                          <b>Стаж работы:</b><br><i>15 лет</i>
+                        </div>
+                        <!--Приз-->
+                        <!--div.show-prize
+                        div.-dn-
+                        	p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+                        	p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+                        
+                        -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Кнопка "Показать ещё" - здесь по нажатию просто открываем скрытых врачей-->
+          <div class="clinic-tiles--hide-toggle more-doctors"><a href="#" class="-pseudo- -link-wrap- open-hidden-doctors"><span class="spoiler-toggle">Показать ещё</span></a></div>
+          <!--Обучающие программы-->
+          <h2 id="programsBlock" class="education-header">Обучающие программы для пациентов</h2>
+          <!--Фильтр программ-->
+          <div class="filter-wrapper clear">
+            <!--Сам фильтр-->
+            <div class="page-filter clear">
+              <!--Список--><span class="filter-block-wrapper"><span class="filter-open-button">Подобрать программу</span>
+                <!--Список тем-->
+                <div class="filter-block">
+                  <div class="closed">Закрыть</div>
+                  <!--Список в одну колонку-->
+                  <div class="filter-list-wrapper">
+                    <div class="filter-list">
+                      <ul>
+                        <li><a href="#">Автозаводский район</a></li>
+                        <li><a href="#">Сормовский район</a></li>
+                        <li><a href="#">Канавинский район</a></li>
+                        <li><a href="#">Советский район</a></li>
+                        <li><a href="#">Ленинский район</a></li>
+                        <li><a href="#">Московский район</a></li>
+                        <li><a href="#">Приокский район</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div></span>
+            </div><a href="#" class="delete-filter">Все программы</a><a href="#" class="delete-filter">Скоро будут</a><a href="#" class="delete-filter">Прошедшие</a>
+          </div>
+          <!--Блоки программ-->
+          <div class="row-flex education-program-wrapper">
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/bg/program.jpg" alt="" class="program-image">
+                <!--Описание программы-->
+                <div class="about-program">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Что такое ожирение?</div>
+                      <div class="program-date">17 сентября 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time">с 17<sup>00 </sup> до 20<sup>00</sup></div>
+                      <div class="price">бесплатно</div>
+                    </div>
+                  </div>
+                  <!--Скрытый блок-->
+                  <div class="about-hide-block">
+                    <p><a href="#">Школа сахарного диабета</a></p>
+                    <p><a href="#">Ул. Бекетова, 13</a></p>
+                    <div class="-text-center-">
+                      <!--Здесь особый класс - course-toggle, он вызывает форму записи на курс-->
+                      <button data-book-info="Записаться на лекцию «Что такое ожирение?»" data-book-about="17 сентября с 17&lt;sup&gt;00&lt;/sup&gt; до 20&lt;sup&gt;00&lt;/sup&gt;, ул. Бекетова, 13" data-course-id="1" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону &lt;b&gt;8 (831) 414-45-67&lt;/b&gt;, если у вас изменятся планы." class="btn course-toggle">Записаться</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/bg/program.jpg" alt="" class="program-image">
+                <!--Описание программы (фиолетовый блок)-->
+                <div class="about-program -violet-">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Стресс. Профилактика эмоционального выгорания</div>
+                      <div class="program-date">15 ноября 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time">с 18<sup>00 </sup> до 20<sup>00</sup></div>
+                      <div class="price">бесплатно</div>
+                    </div>
+                  </div>
+                  <!--Скрытый блок-->
+                  <div class="about-hide-block">
+                    <p><a href="#">Школа сахарного диабета</a></p>
+                    <p><a href="#">Ул. Бекетова, 13</a></p>
+                    <div class="-text-center-">
+                      <button data-book-info="Записаться на лекцию «Стресс. Профилактика эмоционального выгорания»" data-book-about="15 ноября с 18&lt;sup&gt;00&lt;/sup&gt; до 20&lt;sup&gt;00&lt;/sup&gt;, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону &lt;b&gt;8 (831) 414-45-67&lt;/b&gt;, если у вас изменятся планы." class="btn course-toggle">Записаться</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/bg/program.jpg" alt="" class="program-image">
+                <!--Описание программы (синий блок)-->
+                <div class="about-program -blue-">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Психологические причины избыточного набора веса</div>
+                      <div class="program-date">23 октября 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time">с 17<sup>00 </sup> до 20<sup>00</sup></div>
+                      <div class="price">бесплатно</div>
+                    </div>
+                  </div>
+                  <!--Скрытый блок-->
+                  <div class="about-hide-block">
+                    <p><a href="#">Школа сахарного диабета</a></p>
+                    <p><a href="#">Ул. Бекетова, 13</a></p>
+                    <div class="-text-center-">
+                      <button data-book-info="Записаться на лекцию «Психологические причины избыточного набора веса»" data-book-about="23 октября с 17&lt;sup&gt;00&lt;/sup&gt; до 20&lt;sup&gt;00&lt;/sup&gt;, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону &lt;b&gt;8 (831) 414-45-67&lt;/b&gt;, если у вас изменятся планы." class="btn course-toggle">Записаться</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/bg/program.jpg" alt="" class="program-image">
+                <!--Описание программы-->
+                <div class="about-program">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Что такое диабет?</div>
+                      <div class="program-date">17 августа 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time"> <a href="#">Смотреть отчёт</a></div>
+                      <div class="price"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Блоки программ-->
+          <div class="row-flex education-program-wrapper">
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/bg/program.jpg" alt="" class="program-image">
+                <!--Описание программы-->
+                <div class="about-program">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Что такое ожирение?</div>
+                      <div class="program-date">17 сентября 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time">с 17<sup>00 </sup> до 20<sup>00</sup></div>
+                      <div class="price">бесплатно</div>
+                    </div>
+                  </div>
+                  <!--Скрытый блок-->
+                  <div class="about-hide-block">
+                    <p><a href="#">Школа сахарного диабета</a></p>
+                    <p><a href="#">Ул. Бекетова, 13</a></p>
+                    <div class="-text-center-">
+                      <!--Здесь особый класс - course-toggle, он вызывает форму записи на курс-->
+                      <button data-book-info="Записаться на лекцию «Что такое ожирение?»" data-book-about="17 сентября с 17&lt;sup&gt;00&lt;/sup&gt; до 20&lt;sup&gt;00&lt;/sup&gt;, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону &lt;b&gt;8 (831) 414-45-67&lt;/b&gt;, если у вас изменятся планы." class="btn course-toggle">Записаться</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/bg/program.jpg" alt="" class="program-image">
+                <!--Описание программы (фиолетовый блок)-->
+                <div class="about-program -violet-">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Стресс. Профилактика эмоционального выгорания</div>
+                      <div class="program-date">15 ноября 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time">с 18<sup>00 </sup> до 20<sup>00</sup></div>
+                      <div class="price">бесплатно</div>
+                    </div>
+                  </div>
+                  <!--Скрытый блок-->
+                  <div class="about-hide-block">
+                    <p><a href="#">Школа сахарного диабета</a></p>
+                    <p><a href="#">Ул. Бекетова, 13</a></p>
+                    <div class="-text-center-">
+                      <button data-book-info="Записаться на лекцию «Стресс. Профилактика эмоционального выгорания»" data-book-about="15 ноября с 18&lt;sup&gt;00&lt;/sup&gt; до 20&lt;sup&gt;00&lt;/sup&gt;, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону &lt;b&gt;8 (831) 414-45-67&lt;/b&gt;, если у вас изменятся планы." class="btn course-toggle">Записаться</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/bg/program.jpg" alt="" class="program-image">
+                <!--Описание программы (синий блок)-->
+                <div class="about-program -blue-">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Психологические причины избыточного набора веса</div>
+                      <div class="program-date">23 октября 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time">с 17<sup>00 </sup> до 20<sup>00</sup></div>
+                      <div class="price">бесплатно</div>
+                    </div>
+                  </div>
+                  <!--Скрытый блок-->
+                  <div class="about-hide-block">
+                    <p><a href="#">Школа сахарного диабета</a></p>
+                    <p><a href="#">Ул. Бекетова, 13</a></p>
+                    <div class="-text-center-">
+                      <button data-book-info="Записаться на лекцию «Психологические причины избыточного набора веса»" data-book-about="23 октября с 17&lt;sup&gt;00&lt;/sup&gt; до 20&lt;sup&gt;00&lt;/sup&gt;, ул. Бекетова, 13" data-book-answer="Мы записали вас в группу. Позвоните пожалуйста по телефону &lt;b&gt;8 (831) 414-45-67&lt;/b&gt;, если у вас изменятся планы." class="btn course-toggle">Записаться</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <!--Программа-->
+              <div class="education-program"><img src="../img/bg/program.jpg" alt="" class="program-image">
+                <!--Описание программы-->
+                <div class="about-program">
+                  <!--Открытый блок-->
+                  <div class="about-show-block">
+                    <!--Заголовок и дата-->
+                    <div class="about-program-top">
+                      <div class="program-name">Что такое диабет?</div>
+                      <div class="program-date">17 августа 2015 г.</div>
+                    </div>
+                    <!--Время работы-->
+                    <div class="about-program-info">
+                      <div class="time"> <a href="#">Смотреть отчёт</a></div>
+                      <div class="price"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Кнопка "Загрузить ещё" - загрузка вероятно должна реализовываться при помощи аякс-запросов-->
+          <div class="clinic-tiles--hide-toggle more-courses"><a href="#" class="-pseudo- -link-wrap-"><span class="spoiler-toggle">Загрузить ещё курсы	</span></a></div>
+          <!--Академия-->
+          <h2 id="academyBlock" class="academy-header">Академия отцовства и материнства &laquoЦарство любви&raquo;</h2>
+          <div class="quot row-flex">
+            <div class="col-8">
+              <div class="quot--text">На занятия в нашу клинику приходят не только будущие мамы, которые встали на учёт здесь, но и беременные из муниципальных женских консультаций, и даже из других платных медицинских центров</div>
+            </div>
+            <div class="quot--author col-4"><a href="#" class="-text-link-">Елена Денисенко</a><span class="quot--author--position">Акушер-гинеколог клиники </br>&laquoСАДКО&raquo;</span></div>
+          </div>
+          <!--Блок с видео-->
+          <div class="row-flex promo-video">
+            <div class="col-6">
+              <iframe src="https://player.vimeo.com/video/130200007" width="100%" height="423" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+            </div>
+            <div class="col-6 promo-video--content">
+              <h3>Физиотерапия</h3>
+              <p>Здоровье без лекарств — мечта практически каждого современного человека. А если это достигается с помощью комплекса приятных, расслабляющих процедур- вообще сказка. Эта сказка сегодня - реальность. В Многопрофильной клинике "Садко" на ул. Родионова разработаны специализированные программы для восстановления и поддержания здоровья каждой женщины.</p>
+              <div class="promo-video--content--bottom"><a href="#" class="-link-wrap-"><span>Все видеоролики САДКО</span></a><span class="promo-video--channel"><a href='#' class='-no-b-'><img src='../img/vimeo-logo.png' /></a> &mdash; наш канал на Vimeo</span></div>
+            </div>
+          </div>
+          <h3>Курсы академии</h3>
+          <!--Курсы - два блока-->
+          <div class="academy-courses">
+            <div class="course-column"><img src="../img/content/course1.jpg" alt="" class="course-image"></div>
+            <div class="course-column academy-course-block -red-">
+              <div class="course-header">Академия отцовства и материнства «Царство Любви». Курсы для беременных.</div>
+              <div class="about-course-block">
+                <div class="textblock">
+                  <div class="block-header">Каждую субботу в 13 <sup>00</sup></div>Бесплатная консультация руководителя «Академии отцовства и материнства» Татьяны Петровны Головановой <a href="#">test</a>
+                </div>
+                <div class="course-info">
+                  <div class="address">
+                    <div class="block-header">Адрес</div>
+                    <div>
+                       
+                      ул. Бекетова, 13 <br>Центр женского здоровья «Садко»
+                    </div>
+                  </div>
+                  <div class="phone">
+                    <div class="block-header">Телефон</div>
+                    <div>+7 (831) 412 07 77</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Советы-->
+          <h2 id="articlesBlock">Вопрос - ответ</h2>
+          <div class="qa-wrapper">
+            <div class="row-flex">
+              <div class="col-9 qa-block">
+                <div class="row-flex">
+                  <div class="col-4">
+                              <div class="advice-block">
+                                <div class="name">21 октября 2015 г., Анна, 25 лет</div>
+                                <div class="question-header">Анализы</div>
+                                <div class="question textblock">Здравствуйте! подскажите, что мне надо сдать, чтобы выявить скрытые инфекции на подобии кишечной палочки, стафилаккоки и т.д. и когда лучше сдать, так как последнюю свечу я вставляла 15 августа. И сколько стоит ВПЧ по женской части.</div>
+                                <div class="doctor-name">Отвечает <a href="#" class="blue-link">А.В. Исламова</a></div>
+                                <div class="answer textblock">Чтобы выявить скрытые инфекции, рекомендуем Вам сдать анализ «Исследование биоциноза влагалища с определением чувствительности к антибиотикам» ... </div><a href="#" class="more-info blue-link">Читать полностью</a>
+                              </div>
+                  </div>
+                  <div class="col-4">
+                              <div class="advice-block">
+                                <div class="name">21 октября 2015 г., Ирина, 27 лет</div>
+                                <div class="question-header">Болит бок</div>
+                                <div class="question textblock">Начал болеть левый бок (прямо за ребрами). Болит не понятно что — толи сердце, толи легкое, толи нерв какой то защемился? Пожалуйста, подскажите, к какому врачу правильно обратиться? </div>
+                                <div class="doctor-name">Отвечает <a href="#" class="blue-link">К.К. Константинопольский</a></div>
+                                <div class="answer textblock">Судя потому, как Вы описали жалобы, предполагаю, что у Вас межреберная невралгия (защемление межреберного нерва) ...</div><a href="#" class="more-info blue-link">Читать полностью</a>
+                              </div>
+                  </div>
+                  <div class="col-4">
+                              <div class="advice-block">
+                                <div class="name">21 октября 2015 г., Елена, 26 лет</div>
+                                <div class="question-header">Боли у мужа</div>
+                                <div class="question textblock">Моего мужа мучают непрекращающиеся боли в животе уже на протяжении 8 лет . В основном, около пупка. Пытались лечиться и в поликлинике по месту жительства и в платных филиалах. Ничего не помогает. Никто не может определить причину.</div>
+                                <div class="doctor-name">Отвечает <a href="#" class="blue-link">С.С. Светланова</a></div>
+                                <div class="answer textblock">Хирургическая патология за 8 лет существования недомогания проявила бы себя каким-либо образом ...</div><a href="#" class="more-info blue-link">Читать полностью</a>
+                              </div>
+                  </div>
+                </div>
+                <!--Все вопросы--><a href="#" class="more-link -link-wrap-"><span>Все вопросы и ответы</span></a>
+              </div>
+              <div class="col-3">
+                <form class="text-panel qa-form"><span class="text-panel--title">Спросить</span>
+                  <div class="text-panel--section">
+                    <!--Это не пустой блок - сюда выводится текст ошибки-->
+                    <div class="error-text"></div>
+                    <div class="qa-form--row">
+                      <label>Ваше имя</label>
+                      <input type="text" class="-border-input- required-field">
+                    </div>
+                    <div class="qa-form--row">
+                      <label>Возраст</label>
+                      <input type="text" class="-border-input- required-field">
+                    </div>
+                    <div class="qa-form--row">
+                      <label>E-mail</label>
+                      <input type="text" class="-border-input- email-field">
+                    </div>
+                  </div>
+                  <div class="text-panel--section">
+                    <p><strong>Ваш вопрос</strong></p>
+                    <textarea class="autosize question-text"></textarea>
+                  </div>
+                  <label class="form--accept-checkbox text-panel--section">
+                    <input type="checkbox" class="check-radio"><span>Я принимаю <a href='#' class='-link-turq-'>условия</a> обработки моих данных</span>
+                  </label>
+                  <p class="-text-center-"><a class="btn qa-form--submit submit-btn">Задать вопрос доктору</a></p>
+                </form>
+                <div class="text-panel answer-form -text-center-"><span class="text-panel--title">Спасибо за вопрос</span>
+                  <p>Все вопросы мы передаём специалистам. В течение 24 часов у врачей обычно находится время, чтобы ответить. Если ваш вопрос не терпит отлагательств - пожалуйста, позвоните!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Статьи-->
+          <h2>Полезные статьи</h2>
+          <div class="doctor-articles">
+            <div class="row-flex articles-wrapper">
+              <!--Тут две колонки - в одной блоки-ссылки на статьи, вторая колонка - баннер-->
+              <div class="col-9">
+                <!--Строка на три блока-статьи-->
+                <div class="row-flex">
+                  <!--Блок одной статьи-->
+                  <div class="col-4 article-block">
+                    <!--Тут фотография, заголовок, краткое описание и теги--><img src="../img/doctor-photos/article1.jpg"><a href="#" class="article-link">Что вам угрожает в кабинете у стоматолога</a>
+                    <div class="textblock">Современные врачи-стоматологи относятся тщательно к дезинфекции своих кабинетов и инструментов</div>
+                    <div class="tags-wrapper"><a href="#">стоматология,</a><a href="#">другое</a></div>
+                  </div>
+                  <!--Блок одной статьи-->
+                  <div class="col-4 article-block"><img src="../img/doctor-photos/article1.jpg"><a href="#" class="article-link">Мои бессонные ночи, или как уснуть без овец</a>
+                    <div class="textblock">А кто вы по национальности сна? Ученые провели исследование и выяснили, что время и место сна отличается у жителей разных стран</div>
+                    <div class="tags-wrapper"><a href="#">дримология</a></div>
+                  </div>
+                  <!--Блок одной статьи-->
+                  <div class="col-4 article-block"><img src="../img/doctor-photos/article1.jpg"><a href="#" class="article-link">Диеты и женское здоровье: профессиональный подход</a>
+                    <div class="textblock">В нашем мире только ленивый человек не пробовал похудеть. Даже если у него недостаток веса</div>
+                    <div class="tags-wrapper"><a href="#">диетология,</a><a href="#">гастроэнерология</a></div>
+                  </div>
+                </div>
+                <!--Строка на три блока-->
+                <div class="row-flex">
+                  <!--Блок одной статьи-->
+                  <div class="col-4 article-block"><img src="../img/doctor-photos/article1.jpg"><a href="#" class="article-link">Что вам угрожает в кабинете у стоматолога</a>
+                    <div class="textblock">Современные врачи-стоматологи относятся тщательно к дезинфекции своих кабинетов и инструментов</div>
+                    <div class="tags-wrapper"><a href="#">стоматология,</a><a href="#">другое</a></div>
+                  </div>
+                  <!--Блок одной статьи-->
+                  <div class="col-4 article-block"><img src="../img/doctor-photos/article1.jpg"><a href="#" class="article-link">Мои бессонные ночи, или как уснуть без овец</a>
+                    <div class="textblock">А кто вы по национальности сна? Ученые провели исследование и выяснили, что время и место сна отличается у жителей разных стран</div>
+                    <div class="tags-wrapper"><a href="#">дримология</a></div>
+                  </div>
+                  <!--Блок одной статьи-->
+                  <div class="col-4 article-block"><img src="../img/doctor-photos/article1.jpg"><a href="#" class="article-link">Диеты и женское здоровье: профессиональный подход</a>
+                    <div class="textblock">В нашем мире только ленивый человек не пробовал похудеть. Даже если у него недостаток веса</div>
+                    <div class="tags-wrapper"><a href="#">диетология,</a><a href="#">гастроэнерология</a></div>
+                  </div>
+                </div>
+                <!--Кнопка "Загрузить ещё" - загрузка вероятно должна реализовываться при помощи аякс-запросов-->
+                <div class="clinic-tiles--hide-toggle more-articles"><a href="#" class="-pseudo- -link-wrap-"><span class="spoiler-toggle">Загрузить ещё статьи</span></a></div>
+              </div>
+              <!--Колонка со ссылками-->
+              <div class="col-3">
+                <!--Баннер-слайдер-->
+                <div class="banner-slider"><a href="#" class="banner-block"><img src="../img/content/banner.jpg">
+                    <div class="banner-inner">Консультация стоматолога <br>со скидкой 25%
+                      <!--Специальный класс открывает форму записи--><span href="#" data-book-info="Консультация стоматолога со скидкой 25%" data-book-about="&amp;lt;p&amp;gt; &amp;lt;b&amp;gt;Только до 15 октября 2015 года&amp;lt;/b&amp;gt; получите скидку 25% на терапевтические услуги во взрослой стоматологии «Садко» или детской стоматологии «Здоровёнок» на ул. Новая, 51.&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Приглашаем Вас посетить обновленный стоматологический комплекс «САДКО» в самом сердце Нижнего Новгорода — на площади Горького! Стоматология на площади Горького традиционно собрала лучшие инновационные наработки и многолетний опыт экспертов сети клиник «САДКО», которые по праву признаны ведущими специалистами региона.&amp;lt;/p&amp;gt;" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту." class="btn action-toggle">Записаться</span>
+                    </div></a>
+                  <!--Вариант баннера с белым текстом--><a href="#" class="banner-block white-text"><img src="../img/content/banner2.jpg">
+                    <div class="banner-inner">Скидка 15% <br>на лазерное<br>отбеливание зубов
+                      <!--Специальный класс открывает форму записи--><span href="#" data-book-info="Лазерное отбеливание со скидкой 15%" data-book-about="&lt;p&gt;&lt;b&gt;Только до 15 октября 2015 года&lt;/b&gt;; получите скидку 25% на терапевтические услуги во взрослой стоматологии «Садко» или детской стоматологии «Здоровёнок» на ул. Новая, 51.&lt;/p&gt;; &lt;p&gt;; Приглашаем Вас посетить обновленный стоматологический комплекс «САДКО» в самом сердце Нижнего Новгорода — на площади Горького! Стоматология на площади Горького традиционно собрала лучшие инновационные наработки и многолетний опыт экспертов сети клиник «САДКО», которые по праву признаны ведущими специалистами региона.&lt;/p&gt;;" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту." class="btn action-toggle">Записаться</span>
+                    </div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Отзывы-->
+          <div class="header-wrapper">
+            <h2 id="reviewsBlock">Отзывы о &laquoСадко&raquo;</h2>
+            <!--Кнопка с вызовом попапа-->
+            <div class="open-question-wrapper"><a href="#" class="btn btn-reverse-colors open-question-popup">Добавить отзыв</a>
+              <!--Попап с вопросом, стрелка вниз-->
+              <div class="question-popup bottom-popup">
+                <!--Форма-->
+                <form class="book-form"> 
+                  <div class="closed-popup">Закрыть</div>
+                  <!--Заголовок-->
+                  <div class="popup-header">Расскажите ваше мнение</div>
+                  <!--Текстовое поле-->
+                  <textarea class="textarea-scrollbar scrollbar-outer question-text"> </textarea>
+                  <!--Это не пустой блок - сюда выводится текст ошибки-->
+                  <div class="error-text"></div>
+                  <div class="row-flex">
+                    <div class="col-7">
+                      <div class="book-form--row">
+                        <label>Имя</label>
+                        <input type="text" class="book-form--row--content">
+                      </div>
+                    </div>
+                    <div class="col-5">
+                      <div class="book-form--row">
+                        <label>Возраст</label>
+                        <input type="text" class="book-form--row--content ages-input">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row-flex">
+                    <div class="col-7">
+                      <div class="book-form--row">
+                        <label>E-mail</label>
+                        <input type="text" class="book-form--row--content email-field">
+                      </div>
+                    </div>
+                  </div>
+                  <!--Отправка-->
+                  <div class="-justify-content-">
+                    <label class="book-form--accept">
+                      <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+                    </label>
+                    <button class="btn submit-btn">Опубликовать</button>
+                  </div>
+                </form>
+                <!--Спасибо-->
+                <div class="thanks-block">
+                  <div class="thanks-header">Спасибо за ваше мнение!</div>
+                  <div class="textblock">Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту <a href="#">jenni@mail.ru</a></div><a class="btn closed-popup">Закрыть</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Отзывы-->
+          <div class="doctor-reviews owl-slider">
+            <!--Блок отзыва-->
+            <div class="doctor-review-wrapper">
+              <div class="name">23 ноября 2015 г., Елена 35 лет</div>
+              <div class="review-header">Благодарность</div>
+              <div class="doctor-review-block">
+                <div class="textblock review-text">
+                  <p>Огромное спасибо Ершову Александру Сергеевичу за высокий профессионализм, чуткое и внимательное отношение к пациентам, наглядное и понятное объяснение результатов диагностики, сумевшему вернуть радость жизни, омраченную в двух других клиниках (в одной из которых не знают где право, где лево, а в другой посмотрев снимки, но ориентируясь на описание на ощупь (и это в 21 веке!) взяли биопсию,и не найдя в ней никаких отклонений, давили на психику, что онкология меня обязательно настигнет, если я не буду пить их БАДы).</p>
+                  <p>Я рада, что на собственном опыте убедилась в том, что Садко действительно клиника, оснащенная современным оборудованием, на котором работают Профессионалы!</p>
+                  <p>Отдельное спасибо и специалисту кабинета маммографии!</p>
+                </div>
+                <div class="answer-block">
+                  <div class="doctor-name">Отвечает <a href="#" class="blue-link">C.И. Распалова</a></div>
+                  <div class="textblock">Юлия, спасибо большое, что Вы написали нам!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis tempore ipsam quisquam modi, in ratione vitae velit laborum, ullam architecto omnis aperiam. Debitis in itaque repudiandae, autem veniam adipisci vero.</div><a href="#" class="more-info blue-link">Читать полностью</a>
+                </div>
+              </div>
+            </div>
+            <!--Блок отзыва-->
+            <div class="doctor-review-wrapper">
+              <div class="name">23 ноября 2015 г., Елена 35 лет</div>
+              <div class="review-header">Лечебная физкультура</div>
+              <div class="doctor-review-block">
+                <div class="textblock review-text">
+                  <p>Огромное спасибо Ершову Александру Сергеевичу за высокий профессионализм, чуткое и внимательное отношение к пациентам, наглядное и понятное объяснение результатов диагностики, сумевшему вернуть радость жизни, омраченную в двух других клиниках (в одной из которых не знают где право, где лево, а в другой посмотрев снимки, но ориентируясь на описание на ощупь (и это в 21 веке!) взяли биопсию,и не найдя в ней никаких отклонений, давили на психику, что онкология меня обязательно настигнет, если я не буду пить их БАДы).</p>
+                </div>
+                <div class="answer-block">
+                  <div class="doctor-name">Отвечает <a href="#" class="blue-link">C.И. Распалова</a></div>
+                  <div class="textblock">Юлия, спасибо большое, что Вы написали нам!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis tempore ipsam quisquam modi, in ratione vitae velit laborum, ullam architecto omnis aperiam. Debitis in itaque repudiandae, autem veniam adipisci vero.</div><a href="#" class="more-info blue-link">Читать полностью</a>
+                </div>
+              </div>
+            </div>
+            <!--Блок отзыва-->
+            <div class="doctor-review-wrapper">
+              <div class="name">23 ноября 2015 г., Елена 35 лет</div>
+              <div class="review-header">Удаление капюшона над зубом мудрости</div>
+              <div class="doctor-review-block">
+                <div class="textblock review-text">
+                  <p>Я рада, что на собственном опыте убедилась в том, что Садко действительно клиника, оснащенная современным оборудованием, на котором работают Профессионалы!</p>
+                  <p>Отдельное спасибо и специалисту кабинета маммографии!</p>
+                </div>
+                <div class="answer-block">
+                  <div class="doctor-name">Отвечает <a href="#" class="blue-link">C.И. Распалова</a></div>
+                  <div class="textblock">Юлия, спасибо большое, что Вы написали нам!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis tempore ipsam quisquam modi, in ratione vitae velit laborum, ullam architecto omnis aperiam. Debitis in itaque repudiandae, autem veniam adipisci vero.</div><a href="#" class="more-info blue-link">Читать полностью</a>
+                </div>
+              </div>
+            </div>
+            <!--Блок отзыва-->
+            <div class="doctor-review-wrapper">
+              <div class="name">23 ноября 2015 г., Елена 35 лет</div>
+              <div class="review-header">Удаление капюшона над зубом мудрости</div>
+              <div class="doctor-review-block">
+                <div class="textblock review-text">
+                  <p>Я рада, что на собственном опыте убедилась в том, что Садко действительно клиника, оснащенная современным оборудованием, на котором работают Профессионалы!</p>
+                  <p>Отдельное спасибо и специалисту кабинета маммографии!</p>
+                </div>
+                <div class="answer-block">
+                  <div class="doctor-name">Отвечает <a href="#" class="blue-link">C.И. Распалова</a></div>
+                  <div class="textblock">Юлия, спасибо большое, что Вы написали нам!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis tempore ipsam quisquam modi, in ratione vitae velit laborum, ullam architecto omnis aperiam. Debitis in itaque repudiandae, autem veniam adipisci vero.</div><a href="#" class="more-info blue-link">Читать полностью</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Все отзывы--><a href="#" class="more-link -link-wrap- more-doctor-reviews"><span>Все отзывы</span></a>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="contents">
+          <div class="row-flex">
+            <div class="col-3">
+              <ul class="footer-nav">
+                <li><a href="#">Вся правда о САДКО</a></li>
+                <li><a href="#">Пациентам</a></li>
+                <li><a href="#">Услуги и клиники</a></li>
+                <li><a href="#">Технологии и инновации</a></li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <ul class="footer-nav">
+                <li><a href="#">Образование и развитие</a></li>
+                <li><a href="#">Врачи и команда</a></li>
+                <li><a href="#">Цены и акции</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="col-2 footer-time">
+              <div class="-mb-xs-">8<sup>00</sup> - 20<sup>00</sup> Пн.- Сб.</div>
+              <div class="-mb-xs- -mb-">9<sup>00</sup> - 18<sup>00</sup> Вс.</div>
+              <div class="-mb-xs-">Телефон:<br>+7 (831) 421-01-01</div>
+            </div>
+            <div class="col-4">
+              <div class="-justify-content-">
+                <div class="lang-switch"><a href="#" class="active">Ru</a><a href="#">Eng</a></div>
+                <div><a href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту." class="btn footer-to-sign book-toggle">Записаться на прием</a>
+                  <div class="clear">
+                    <button class="footer-top"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="contents"><a class="footer-logo"><img src="../img/logo.png"></a>
+            <div class="footer-copy">
+              <p>&copy; 2009 - 2015</p>
+              <p>Сеть медицинских клиник &laquo;САДКО&raquo; в Н.Новгороде</p>
+            </div>
+            <div class="footer-design">Дизайн сайта - <a href='#'>x design</a><br>Разработка и интеграция - <a href='#'>WebSharks</a></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--Форма записи на приём-->
+    <div id="book-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form start-form">
+        <div class="form-header">Карточка записи на прием</div>
+        <p>На прием будет записан пациент, чьи данные указаны в анкете ниже. Заполните пожалуйста все поля, иначе, мы не сможем вас узнать и записаться не получится.</p><input type="hidden" name="sessid" id="sessid_2" value="" />
+        <input type="hidden" name="WEB_FORM_ID" value="" />
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Имя*</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон*</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div>
+          <!--div.book-form--row
+          label E-mail
+          input.book-form--row--content.email-field(type='text')
+          
+          --><input name="" type="hidden" class="doctor-id" value="">
+          <input name="form_text_6" type="hidden" value="">
+          <input type="hidden" value="" class="book-form-action">
+        </div>
+        <div class="book-form--section">
+          <h2>Примечания</h2>
+          <textarea></textarea>
+        </div>
+        <div class="-justify-content-">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+          <button class="btn book-btn submit-btn">Записаться на прием</button>
+        </div>
+      </form>
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Спасибо!</div>
+        <p>Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Форма отзыва/вопроса-->
+    <div id="question-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form question-form">
+        <!--Подзаголовок-->
+        <div class="form-header">Что вы думаете о нас?</div>
+        <textarea class="textarea-scrollbar scrollbar-outer question-text"></textarea>
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Имя</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div>
+          <div class="book-form--row">
+            <label>E-mail</label>
+            <input type="text" class="book-form--row--content email-field">
+          </div>
+        </div><input name="" type="hidden" class="question-id" value="">		
+        <div class="-text-center-">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+          <button class="btn book-btn submit-btn">Отправить</button>
+        </div>
+      </form>
+      <!--Ответ - спасибо-->
+      <div class="question-answer-form -text-center-">
+        <div class="big-header">Спасибо за вопрос!</div>
+        <p>Все вопросы мы передаем специалистам. В течение 24 часов у врачей обычно находится время, чтобы ответить. Если ваш вопрос не терпит отлагательств, пожалуйста, позвоните!</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Форма записи по акции-->
+    <div id="action-app-content" class="modal-form-wrapper -dn- action-form">
+      <div class="modal-close">×</div>
+      <form class="book-form start-form action-form">
+        <div class="form-header"> </div>
+        <div class="textblock"></div>
+        <div class="action-form-section"> 
+          <div class="book-form--section">
+            <!--Это не пустой блок - сюда выводится текст ошибки-->
+            <div class="error-text"></div>
+            <div class="book-form--row">
+              <label>Имя</label>
+              <input type="text" class="book-form--row--content required-field">
+            </div>
+            <div class="book-form--row">
+              <label>Телефон</label>
+              <input type="text" class="book-form--row--content phone-field">
+            </div>
+            <div class="book-form--row">
+              <label>E-mail</label>
+              <input type="text" class="book-form--row--content email-field">
+            </div><input name="" type="hidden" class="action-id" value="">
+          </div>
+          <div class="-justify-content-">
+            <label class="book-form--accept">
+              <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+            </label>
+            <button class="btn book-btn submit-btn">Записаться на прием</button>
+          </div>
+        </div>
+      </form>
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Спасибо!</div>
+        <p>Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Форма записи на курс-->
+    <div id="course-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form start-form course-form">
+        <div class="form-header">Записаться на лекцию</div>
+        <div class="textblock">
+          <p>Время работы</p>
+        </div>
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Имя</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div>
+          <div class="book-form--row">
+            <label>E-mail</label>
+            <input type="text" class="book-form--row--content email-field">
+          </div><input name="" type="hidden" class="course-id" value="">
+        </div>
+        <div class="-justify-content-">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+          <button class="btn book-btn submit-btn">Отправить заявку</button>
+        </div>
+      </form>
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Ждём вас!</div>
+        <p>Мы записали вас в группу. Позвоните пожалуйста по телефону <B>8 (831) 414-45-67</b>, если у вас изменятся планы.</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Форма отклика на вакансию-->
+    <div id="vacancy-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form start-form vacancy-form">
+        <div class="form-header">Откликнуться на вакансию</div>
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Имя</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div>
+          <div class="book-form--row">
+            <label>E-mail</label>
+            <input type="email" class="book-form--row--content email-field">
+          </div>
+        </div><input name="" type="hidden" class="vacancy-id" value="">
+        <div class="book-form--section">
+          <h2>Примечания</h2>
+          <textarea></textarea>
+          <!--Прикрепляем файл-->
+          <div id="resumeAddFileButton" data-text="Прикрепить файл резюме" class="file-button">Прикрепить файл резюме</div>
+          <input type="file" id="resumeFileField" onchange="changeResumeFileField();" class="file-input">
+        </div>
+        <div class="-justify-content-">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+          <button class="btn book-btn submit-btn">Отправить заявку</button>
+        </div>
+      </form>
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Заявка принята!</div>
+        <p>Мы рассмотрим вашу кандидатуру и перезвоним по указанному телефону в течение 5 рабочих дней</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Форма записи на услугу-->
+    <div id="service-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <div class="service-form-wrapper">
+        <!--Стартовый блок (показываем при загрузке)-->
+        <div class="service-form-start-block">
+          <h3 class="service-header">Стоимость</h3>
+          <!--Кнопки-->
+          <div class="service-cost-buttons">
+            <!--Активная кнопка всегда выделена.Дата-атрибуты совпадают с классами списков-->
+            <button data-dl="clock-list" data-cost-type="Горящие часы" class="cost-button clock"></button>
+            <button data-dl="normal-list" data-cost-type="Визит к врачу" class="cost-button normal active"></button>
+            <button data-dl="premium-list" data-cost-type="Визит к ведущему специалисту" class="cost-button premium"></button>
+          </div>
+          <!--Список-содержание (горящие часы)-->
+          <dl class="cost-dl clock-list"></dl>
+          <!--Список-содержание (визит к врачу)-->
+          <dl class="cost-dl normal-list"></dl>
+          <!--Список-содержание (визит к ведущему врачу)-->
+          <dl class="cost-dl premium-list"></dl>
+          <!--Текстовый блок-->
+          <div class="textblock"> </div>
+          <div class="-justify-content-"><a class="btn btn-reverse-colors service-book">Записаться на приём</a><a href="#" class="btn-reverse-colors btn question-book">Задать вопрос</a></div>
+        </div>
+        <!--Форма записи-->
+        <form class="book-form start-form">
+          <!--Закрыть-->
+          <div class="closed">Закрыть </div>
+          <!--Куда записываемся-->
+          <div class="form-header"> </div>
+          <!--Тип цены-->
+          <div class="cost-type"> </div>
+          <p>На прием будет записан пациент, чьи данные указаны в анкете ниже. Заполните пожалуйста все поля, иначе, мы не сможем вас узнать и записаться не получится.</p>
+          <div class="book-form--section">
+            <!--Это не пустой блок - сюда выводится текст ошибки-->
+            <div class="error-text"></div>
+            <div class="book-form--row">
+              <label>Имя</label>
+              <input type="text" class="book-form--row--content required-field">
+            </div>
+            <div class="book-form--row">
+              <label>Телефон</label>
+              <input type="text" class="book-form--row--content phone-field">
+            </div>
+            <div class="book-form--row">
+              <label>E-mail</label>
+              <input type="text" class="book-form--row--content email-field">
+            </div><input name="" type="hidden" class="service-id" value="">
+          </div>
+          <div class="book-form--section textarea-wrapper">
+            <h2>Примечания</h2>
+            <textarea></textarea>
+          </div>
+          <div class="-text-center-">
+            <label class="book-form--accept">
+              <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+            </label>
+            <button class="btn book-btn submit-btn">Записаться на прием</button>
+          </div>
+        </form>
+        <!--Ответ - спасибо-->
+        <div class="answer-form -text-center-">
+          <div class="big-header">Спасибо!</div>
+          <p>Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.</p>
+          <button class="answer-btn btn book-btn">Продолжить</button>
+        </div>
+        <!--Вопрос-->
+        <form class="book-form question-form">
+          <!--Закрыть-->
+          <div class="closed">Закрыть </div>
+          <!--Подзаголовок-->
+          <div class="form-header">Спросить совета</div>
+          <textarea class="textarea-scrollbar scrollbar-outer question-text"></textarea>
+          <div class="book-form--section">
+            <!--Это не пустой блок - сюда выводится текст ошибки-->
+            <div class="error-text"></div>
+            <div class="book-form--row">
+              <label>Имя</label>
+              <input type="text" class="book-form--row--content required-field">
+            </div>
+            <div class="book-form--row">
+              <label>Телефон</label>
+              <input type="text" class="book-form--row--content phone-field">
+            </div>
+            <div class="book-form--row">
+              <label>E-mail</label>
+              <input type="text" class="book-form--row--content email-field">
+            </div>
+          </div>
+          <div class="-text-center-">
+            <label class="book-form--accept">
+              <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+            </label>
+            <button class="btn book-btn submit-btn">Задать вопрос</button>
+          </div>
+        </form>
+        <!--Ответ - спасибо-->
+        <div class="question-answer-form -text-center-">
+          <div class="big-header">Спасибо за вопрос!</div>
+          <p>Все вопросы мы передаем специалистам. В течение 24 часов у врачей обычно находится время, чтобы ответить. Если ваш вопрос не терпит отлагательств, пожалуйста, позвоните!</p>
+          <button class="answer-btn btn book-btn">Продолжить</button>
+        </div>
+      </div>
+    </div>
+    <!--Форма вопроса руководству-->
+    <div id="manager-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form manager-form start-form">
+        <div class="manager-header">У вас идея?</div>
+        <div class="textblock"> 
+          <p>Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет</p>
+        </div>
+        <div class="book-form--section">
+          <h2>Опишите идею</h2>
+          <textarea class="modal-textarea-scrollbar scrollbar-outer question-text"></textarea>
+        </div>
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Ваше имя</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div><input name="" type="hidden" class="manager-id" value="">
+        </div>
+        <div class="-text-center- clear">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+        </div>
+        <div class="book-form--row">
+          <button class="btn book-btn submit-btn">Предложить идею</button>
+        </div>
+      </form>
+      <div class="book-form answer-form manager-form">
+        <div class="manager-header">Волнительно, правда?</div>
+        <p>Не переживайте, у нас очень хорошие руководители. Они обязательно разберутся, и сделают всё наилучшим образом.</p>
+        <button class="answer-btn btn book-btn">Отправить</button>
+      </div>
+    </div>
+    <!--Форма  оформления карты-->
+    <div id="card-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form manager-form start-form">
+        <div class="manager-header">Вам к нам!</div>
+        <div class="textblock">
+           
+          у нас сейчас нет технической возможности и надобности электронного оформления карты пациенту. ему все равно придется идти в клинику и эту карту оформлять и забирать. можно убрать здесь форму, а вместо нее оставить это всплывающее окошко и текст с тем, что вам карту оформят при первом посещении блаблбалблабалаб текст напишем
+        </div>
+        <!--div.book-form--section
+        //Это не пустой блок - сюда выводится текст ошибки
+        div.error-text
+        div.book-form--row
+        	label Ваше имя
+        	input.book-form--row--content.required-field(type='text')
+        div.book-form--row
+        	label Телефон
+        	input.book-form--row--content.phone-field(type='text')
+        div.book-form--row
+        	label E-mail
+        	input.book-form--row--content.email-field(type='text')
+        
+        <input name="" type="hidden" class="card-id" value="">
+        
+        -->
+        <!--div.-text-center-.clear
+        label.book-form--accept
+        	input(type='checkbox', name='license', value='')
+        	| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+        
+        -->
+        <!--div.book-form--row
+        button.btn.book-btn.submit-btn Оформить
+        
+        -->
+      </form>
+      <!--div.book-form.answer-form.manager-form
+      div.manager-header Волнительно, правда?
+      p Не переживайте, у нас очень хорошие руководители. Они обязательно разберутся, и сделают всё наилучшим образом.
+      button.answer-btn.btn.book-btn Отправить
+      
+      -->
+    </div>
+    <!--Заявка для юр.лиц-->
+    <div id="jur-app-content" class="modal-form-wrapper -dn-">
+      <div class="modal-close">×</div>
+      <form class="book-form start-form">
+        <div class="form-header">Карточка записи на прием</div>
+        <p>На прием будет записан пациент, чьи данные указаны в анкете ниже. Заполните пожалуйста все поля, иначе, мы не сможем вас узнать и записаться не получится.</p><input type="hidden" name="sessid" id="sessid_2" value="" />
+        <input type="hidden" name="WEB_FORM_ID" value="" />
+        <div class="book-form--section">
+          <!--Это не пустой блок - сюда выводится текст ошибки-->
+          <div class="error-text"></div>
+          <div class="book-form--row">
+            <label>Имя*</label>
+            <input type="text" class="book-form--row--content required-field">
+          </div>
+          <div class="book-form--row">
+            <label>Телефон*</label>
+            <input type="text" class="book-form--row--content phone-field">
+          </div>
+          <!--div.book-form--row
+          label E-mail
+          input.book-form--row--content.email-field(type='text')
+          
+          --><input name="" type="hidden" class="doctor-id" value="">
+          <input name="form_text_6" type="hidden" value="">
+          <input type="hidden" value="" class="book-form-action">
+        </div>
+        <div class="book-form--section">
+          <h2>Примечания</h2>
+          <textarea></textarea>
+        </div>
+        <div class="-justify-content-">
+          <label class="book-form--accept">
+            <input type="checkbox" name="license" value="">Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+          </label>
+          <button class="btn book-btn submit-btn">Записаться на прием</button>
+        </div>
+      </form>
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Спасибо!</div>
+        <p>Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Блок ответа-->
+    <div id="answer-app-content" class="modal-form-wrapper -dn-">
+      <div class="book-form answer-form -text-center-">
+        <div class="big-header">Заявка принята!</div>
+        <p>Мы рассмотрим вашу кандидатуру и перезвоним по указанному телефону в течение 5 рабочих дней</p>
+        <button class="answer-btn btn book-btn">Продолжить</button>
+      </div>
+    </div>
+    <!--Глобальные скрипты, которые загружаются на всех страницах-->
+    <script src="../js/libs/libs.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.min.js"></script>
+    <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?"></script>
+    <script src="../fancybox/jquery.fancybox.js"></script>
+    <script src="../fancybox/jquery.fancybox-media.js"></script>
+    <script src="../js/plugins/owl.carousel.min.js"></script>
+    <script src="../js/plugins/ui-check-radio.js"></script>
+    <script src="../js/plugins/jquery.scrollbar.min.js"></script>
+    <script src="../js/plugins/jquery.mousewheel.min.js"></script>
+    <script src="../js/plugins/spoiler.js"></script>
+    <script src="../js/plugins/ion.rangeSlider.js"></script>
+    <script src="../js/modules/mainNavigation.js"></script>
+    <script src="../js/modules/smileControl.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/components/gradientAnimation.js"></script>
+    <script src="../js/components/learnMap.js"></script>
+    <script src="../js/components/bonus-calc.js"></script>
+    <script src="../js/controllers/global.js"></script>
+    <script src="../js/controllers/filter.js"></script>
+    <script src="../js/controllers/forms.js"></script>
+    <script src="../js/controllers/about.js"></script>
+    <script src="../js/controllers/index.js"></script>
+    <script src="../js/controllers/doctors.js"></script>
+    <script src="../js/controllers/doctor-page.js"></script>
+    <script src="../js/controllers/technical.js"></script>
+    <script src="../js/controllers/education.js"></script>
+    <script src="../js/controllers/prices.js"></script>
+    <script src="../js/controllers/services.js"></script>
+    <script src="../js/controllers/sadko-truth.js"></script>
+    <script src="../js/controllers/branches.js"></script>
+    <!--script(src="http://use.typekit.net/zju2rse.js")-->
+    <!--script.
+    try {
+    	Typekit.load({
+    		active: function () {
+    			curstomScrolls.forEach(function (scroll) {
+    				scroll.refreshState();
+    			})
+    		},
+    		async: true
+    	});
+    } catch (e) {
+    }
+    -->
+  </body>
+</html>

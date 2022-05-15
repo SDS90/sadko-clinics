@@ -1,0 +1,72 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Доктор Язовцев
+block content
+
+	//Фиксированное меню
+	//div.fixed-menu
+		a(href="#doctorsBlock")
+			div 
+				span Специалисты
+		a(href="#studyBlock")
+			div 
+				span Как мы обучаем
+		a(href="#winnersBlock")
+			div 
+				span Победители соревнований
+		a(href="#teachersBlock")
+			div 
+				span Преподаватели
+		a(href="#articlesBlock")
+			div 
+				span Статьи и советы
+
+	//Блок с цитатой
+	div.contents.doctor-page
+
+		//Заголовок - имя врача
+		div.relative
+			h1 Язовцев Дмитрий Николаевич
+			a.all-doctors-link.blue-link.hover-link(href="#") Все врачи клиники
+		
+		include ../doctor-page/doctor-full
+
+		//Специализации доктора
+		h2 Специализации доктора
+		include ../doctor-page/doctor-special
+			
+		//Результаты
+		h2.resuls-header Результаты работы доктора
+		include ../modules/results
+
+	//Образование - вынесено отдельно, т.к. блок на всю ширину
+	div.brown-section.doctor-education-section
+		div.contents
+			include ../doctor-page/doctor-education
+
+	div.contents
+		//Советы
+		h2 Советы наших врачей
+		include ../modules/qa
+
+		//Статьи
+		h2 Полезные статьи
+		include ../modules/articles
+			
+		//Отзывы
+		div.header-wrapper
+			h2 Отзывы о докторе
+			//Кнопка с вызовом попапа
+			div.open-question-wrapper
+				a.btn.btn-reverse-colors.open-question-popup(href="#") Добавить отзыв
+				include ../modules/review-popup
+				
+		include ../modules/reviews-slider
+
+
+//Персональные скрипты для этой страницы
+//block pageJS
+	

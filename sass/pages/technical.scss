@@ -1,0 +1,49 @@
+//Техника и оборудование
+
+.technical-page,
+.technical-bottom-page{
+	h2{
+		margin-top: 15px;
+
+		&.equipment-header{
+			margin: 9px 0px 14px 0px;
+		}
+
+		&.methods-header{
+			margin: 32px 0px 16px 0px;
+		}
+	}
+}
+
+.technical-page{
+	padding-top: 54px;
+
+	>h1{
+		padding-right: 200px;
+		margin-bottom: 40px;
+	}
+
+	.equipment-gallery{
+		margin-bottom: 37px;
+	}
+}
+
+.technical-bottom-page{
+
+	.clinic-tile--descr{
+		max-width: 60%;
+	}
+
+	.clinic-tiles--list{
+		margin-bottom: 0px;
+	}
+
+	.clinic-tiles{
+		margin-bottom: 40px;
+	}
+
+	.more-articles{
+		margin-top: 0px;
+		margin-bottom: 20px;
+	}
+}

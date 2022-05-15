@@ -1,0 +1,82 @@
+//Фиксированное меню
+
+.fixed-menu{
+	position: fixed;
+    right: 0px;
+    top: 25%;
+    z-index: 900;
+	padding: 9px 9px 12px 9px;
+    background-color: #33beb7;
+    border-radius: 3px 0px 0px 3px;
+
+    &.special{
+        right: 70px;
+        z-index: 910;
+        padding: 0px;
+        background-color: transparent;
+        border-radius: 0px;
+
+        &:before{
+            content:"";
+            position: absolute;
+            top: -9px; bottom: -12px;
+            right: -9px; left: -9px;
+            background-color: #86b0bc;
+            border-radius: 3px 0px 0px 3px;
+            z-index: 900;
+        }
+    }
+
+    a{
+    	display: block;
+    	position: relative;
+        z-index: 900;
+    	width: 10px; height: 10px;
+    	margin-top: 20px;
+    	background-color: #FFF;
+    	border: 2px solid #fff !important;
+    	border-radius: 50%;
+
+    	&:first-child{
+    		margin-top: 0px;
+    	}
+
+    	&.active, &:hover{
+    		background-color: #86b0bc;
+    	}
+
+    	>div{
+    		position: absolute;
+    		top: -10px; right: 100%; 
+    		padding-right: 35px;
+			font-size: 18px;
+			color: #4f4f4f;
+			white-space: nowrap;
+
+			span{
+				border-bottom: 1px solid #c3c4bd;
+			}
+
+			&:hover span{
+				border-color: transparent;
+			}
+    	}
+    }
+
+    //Подложка
+    .background-block{
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        min-width: 188px;
+        position: absolute;
+        //left: -60px; 
+        right: -30px;
+        top: -31px; bottom: -31px;
+        z-index: 890;
+        padding: 0px 30px 0px 60px;
+        background-color: #f5f6ec;
+        box-shadow: 2px 2px 5px #d9d9d9;
+    }
+
+}

@@ -1,0 +1,360 @@
+//Сервис (список услуг)
+
+.service-section-wrapper{
+	position: relative;
+}
+
+.service-section{
+	position: relative;
+	margin-top: 42px;
+	margin-bottom: 40px;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+
+	.clinic-service-section{
+		padding-bottom: 0px;
+	}
+
+	.textblock,
+	.address-row{
+		position: relative;
+		z-index: 12;
+	}
+
+	.service-block{
+		width: 25%;
+    	padding-right: 30px;
+		position: relative;
+		z-index: 10;
+		margin-bottom: 25px;
+
+		a{
+			padding: 0px 1px;
+		}
+	}
+
+	&.zdorovenok-block,
+	&.dino-block,
+	&.neurology-block,
+	&.implant-block,
+	&.jam-block{
+		.service-bg{
+			right: 0px;
+		}
+	}
+
+	//Стоматология
+	&.dental-block{
+
+		.service-top-block{
+			border-bottom: 2px solid #8582bc;
+		}
+
+		.clinics-phone-wrapper{
+			background-color: #8582bc;
+			background-color: rgba(133,130,188,0.8);
+		}
+
+		.btn{
+			color: #8582bc;
+		}
+	}
+
+	//Поликлиника
+	&.clinic-block{
+
+		.service-top-block{
+			border-bottom: 2px solid #6cafda;
+		}
+
+		.clinics-phone-wrapper{
+			background-color: #6cafda;
+			background-color: rgba(108,175,218,0.8);
+		}
+
+		.btn{
+			color: #6cafda;
+		}
+	}
+
+	//Центр женского здоровья
+	&.women-block{
+
+		.service-top-block{
+			border-bottom: 2px solid #e296bf;
+		}
+
+		.clinics-phone-wrapper{
+			background-color: #e296bf;
+			background-color: rgba(226,150,191,0.8);
+		}
+
+		.btn{
+			color: #e296bf;
+		}
+	}
+
+	//Центр мужского здоровья
+	&.men-block{
+
+		.service-top-block{
+			border-bottom: 2px solid #546e7a;
+		}
+
+		.clinics-phone-wrapper{
+			background-color: #546e7a;
+			background-color: rgba(84,110,122,0.8);
+		}
+
+		.btn{
+			color: #546e7a;
+		}
+	}
+
+	//Детская поликлиника здоровёнок
+	&.zdorovenok-block{
+
+		.service-top-block{
+			border-bottom: 2px solid #edc158;
+		}
+
+		.clinics-phone-wrapper{
+			background-color: #edc158;
+			background-color: rgba(237,193,88,0.8);
+		}
+
+		.btn{
+			color: #edc158;
+		}
+	}
+
+	//Детская стоматология Динозубрик
+	&.dino-block{
+
+		.service-top-block{
+			border-bottom: 2px solid #6bbfbe;
+		}
+
+		.clinics-phone-wrapper{
+			background-color: #6bbfbe;
+			background-color: rgba(107,191,190,0.8);
+		}
+
+		.btn{
+			color: #6bbfbe;
+		}
+	}
+
+	//Центр неврологии
+	&.neurology-block{
+
+		.service-top-block{
+			border-bottom: 2px solid #92c37c;
+		}
+
+		.service-text{
+			padding-right: 250px;
+		}
+
+		.clinics-phone-wrapper{
+			background-color: #92c37c;
+			background-color: rgba(146,195,124,0.8);
+		}
+
+		.btn{
+			color: #92c37c;
+		}
+	}
+
+	//Центр имплантации
+	&.implant-block{
+
+		.service-top-block{
+			border-bottom: 2px solid #93cac4;
+		}
+
+		.clinics-phone-wrapper{
+			background-color: #93cac4;
+			background-color: rgba(147,202,196,0.8);
+		}
+
+		.btn{
+			color: #93cac4;
+		}
+	}
+
+	//Центр ортодонтии
+	&.jam-block{
+
+		.service-top-block{
+			border-bottom: 2px solid #d44f68;
+		}
+
+		.clinics-phone-wrapper{
+			background-color: #d44f68;
+			background-color: rgba(212,79,104,0.8);
+		}
+
+		.btn{
+			color: #d44f68;
+		}
+	}
+}
+
+.service-top-block{
+	margin-bottom: 31px;
+	border-bottom: 2px solid #4f4f4f;
+
+	h2, .phone{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	h2{
+		float: left;
+		max-width: 1000px;
+		margin: 0px 0px 13px 0px;
+	}
+
+	.phone{
+		float: right;
+		margin-top: 19px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+}
+
+.about-service{
+	position: relative;
+	margin-top: 25px;
+	padding-bottom: 72px;
+
+	.service-text{
+		width: 100%;
+		min-height: 528px;
+		padding: 37px 60px 43px 60px;
+		background-color: #f6f6f6;
+	}
+
+	.clinics-name{
+		font-size: 36px;
+		line-height: 36px;
+		margin-bottom: 18px;
+	}
+
+	.textblock{
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 20px;
+
+		p{
+			margin-bottom: 24px;
+		}
+	}
+
+	.address-row{
+		margin-bottom: 7px;
+	}
+
+	.service-bg{
+		position: absolute;
+		right: 25px; bottom: 0px;
+		z-index: 9;
+	}
+}
+
+//Телефон клиник
+.clinics-phone-wrapper{
+	position: absolute;
+	bottom: 0px; left: 0px;
+	z-index: 10;
+	width: 100%;
+	padding: 13px 25px 12px 25px;
+	background-color: #4f4f4f;
+	background-color: rgba(79,79,79,0.8);
+
+	.phone-block,
+	.btn{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.phone-block{
+		width: 900px;
+		float: left;
+
+		span, a{
+			line-height: 43px;
+			margin-right: 30px;
+			color: #fff;
+		}
+
+		a{
+			border-color: #fff;
+			border-color: rgba(255,255,255,0.5);
+		}
+	}
+
+	.btn{
+		float: right;
+		line-height: 46px;
+		box-shadow: none;
+		border: 1px solid #fff;
+		background-color: #FFF;
+		color: #4f4f4f;
+
+		&:hover{
+			color: #fff;
+			background-color: transparent;
+		}
+	}
+}
+
+
+//Блоки услуг
+.clinic-service-section{
+	padding: 0px 0px 30px 0px;
+	min-height: auto;
+
+	.service-header {
+	    font-size: 18px;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    margin-bottom: 11px;
+	}
+
+	.service-block{
+		display: inline-block;
+		vertical-align: top;
+		width: 25%;
+		padding-right: 30px;
+		margin-bottom: 23px;
+
+		ul a{
+			font-size: 16px;
+		}
+
+		a{
+			border-color: transparent;
+			&:hover{ 
+				border-color: #cacaca  !important;
+			}
+		}
+	}
+}
+
+.service-block {
+	ul{
+		margin-bottom: 0px;
+	}
+
+	li {
+	    display: block;
+	    list-style-type: none;
+	    margin-bottom: 3px;
+
+	    a{
+	    	line-height: normal;
+	    }
+	}
+}

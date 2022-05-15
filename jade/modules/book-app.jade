@@ -1,0 +1,415 @@
+//Форма записи на приём
+div#book-app-content.modal-form-wrapper.-dn-
+	div.modal-close ×
+	form.book-form.start-form
+		div.form-header Карточка записи на прием
+		p На прием будет записан пациент, чьи данные указаны в анкете ниже. Заполните пожалуйста все поля, иначе, мы не сможем вас узнать и записаться не получится.
+
+		<input type="hidden" name="sessid" id="sessid_2" value="" />
+		<input type="hidden" name="WEB_FORM_ID" value="" />
+
+		div.book-form--section
+			//Это не пустой блок - сюда выводится текст ошибки
+			div.error-text
+			div.book-form--row
+				label Имя*
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон*
+				input.book-form--row--content.phone-field(type='text')
+			//div.book-form--row
+				label E-mail
+				input.book-form--row--content.email-field(type='text')
+
+			<input name="" type="hidden" class="doctor-id" value="">
+			<input name="form_text_6" type="hidden" value="">
+			input(type="hidden" class="book-form-action" value="")
+
+		div.book-form--section
+			h2 Примечания
+			textarea
+
+		div.-justify-content-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+			button.btn.book-btn.submit-btn Записаться на прием
+
+	div.book-form.answer-form.-text-center-
+		div.big-header Спасибо!
+		p Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.
+		button.answer-btn.btn.book-btn Продолжить
+
+//Форма отзыва/вопроса
+div#question-app-content.modal-form-wrapper.-dn-
+	div.modal-close ×
+	form.book-form.question-form
+
+		//Подзаголовок
+		div.form-header Что вы думаете о нас?
+
+		textarea.textarea-scrollbar.scrollbar-outer.question-text
+
+		div.book-form--section
+			//Это не пустой блок - сюда выводится текст ошибки
+			div.error-text
+			div.book-form--row
+				label Имя
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон
+				input.book-form--row--content.phone-field(type='text')
+			div.book-form--row
+				label E-mail
+				input.book-form--row--content.email-field(type='text')
+
+		<input name="" type="hidden" class="question-id" value="">		
+		div.-text-center-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+			button.btn.book-btn.submit-btn Отправить
+
+	//Ответ - спасибо
+	div.question-answer-form.-text-center-
+		div.big-header Спасибо за вопрос!
+		p Все вопросы мы передаем специалистам. В течение 24 часов у врачей обычно находится время, чтобы ответить. Если ваш вопрос не терпит отлагательств, пожалуйста, позвоните!
+		button.answer-btn.btn.book-btn Продолжить
+
+//Форма записи по акции
+div#action-app-content.modal-form-wrapper.-dn-.action-form
+	div.modal-close ×
+	form.book-form.start-form.action-form
+		div.form-header 
+		div.textblock
+
+		div.action-form-section 
+
+			div.book-form--section
+				//Это не пустой блок - сюда выводится текст ошибки
+				div.error-text
+				div.book-form--row
+					label Имя
+					input.book-form--row--content.required-field(type='text')
+				div.book-form--row
+					label Телефон
+					input.book-form--row--content.phone-field(type='text')
+				div.book-form--row
+					label E-mail
+					input.book-form--row--content.email-field(type='text')
+
+				<input name="" type="hidden" class="action-id" value="">
+
+			div.-justify-content-
+				label.book-form--accept
+					input(type='checkbox', name='license', value='')
+					| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+				button.btn.book-btn.submit-btn Записаться на прием
+
+	div.book-form.answer-form.-text-center-
+		div.big-header Спасибо!
+		p Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.
+		button.answer-btn.btn.book-btn Продолжить
+
+//Форма записи на курс
+div#course-app-content.modal-form-wrapper.-dn-
+	div.modal-close ×
+	form.book-form.start-form.course-form
+		div.form-header Записаться на лекцию
+		div.textblock
+			p Время работы
+
+		div.book-form--section
+			//Это не пустой блок - сюда выводится текст ошибки
+			div.error-text
+			div.book-form--row
+				label Имя
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон
+				input.book-form--row--content.phone-field(type='text')
+			div.book-form--row
+				label E-mail
+				input.book-form--row--content.email-field(type='text')
+
+			<input name="" type="hidden" class="course-id" value="">
+
+		div.-justify-content-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+			button.btn.book-btn.submit-btn Отправить заявку
+
+	div.book-form.answer-form.-text-center-
+		div.big-header Ждём вас!
+		p Мы записали вас в группу. Позвоните пожалуйста по телефону <B>8 (831) 414-45-67</b>, если у вас изменятся планы.
+		button.answer-btn.btn.book-btn Продолжить
+
+//Форма отклика на вакансию
+div#vacancy-app-content.modal-form-wrapper.-dn-
+	div.modal-close ×
+	form.book-form.start-form.vacancy-form
+		div.form-header Откликнуться на вакансию
+
+		div.book-form--section
+			//Это не пустой блок - сюда выводится текст ошибки
+			div.error-text
+			div.book-form--row
+				label Имя
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон
+				input.book-form--row--content.phone-field(type='text')
+			div.book-form--row
+				label E-mail
+				input.book-form--row--content.email-field(type='email')
+
+		<input name="" type="hidden" class="vacancy-id" value="">
+
+		div.book-form--section
+			h2 Примечания
+			textarea
+
+			//Прикрепляем файл
+			div#resumeAddFileButton.file-button(data-text="Прикрепить файл резюме") Прикрепить файл резюме
+			input.file-input(type="file" id="resumeFileField" onchange="changeResumeFileField();")
+
+		div.-justify-content-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+			button.btn.book-btn.submit-btn Отправить заявку
+
+	div.book-form.answer-form.-text-center-
+		div.big-header Заявка принята!
+		p Мы рассмотрим вашу кандидатуру и перезвоним по указанному телефону в течение 5 рабочих дней
+		button.answer-btn.btn.book-btn Продолжить
+
+//Форма записи на услугу
+
+div#service-app-content.modal-form-wrapper.-dn-
+	div.modal-close ×
+	div.service-form-wrapper
+		//Стартовый блок (показываем при загрузке)
+		div.service-form-start-block
+			h3.service-header Стоимость
+			//Кнопки
+			div.service-cost-buttons
+				//Активная кнопка всегда выделена.Дата-атрибуты совпадают с классами списков
+				button.cost-button.clock(data-dl="clock-list" data-cost-type="Горящие часы")
+				button.cost-button.normal.active(data-dl="normal-list" data-cost-type="Визит к врачу")
+				button.cost-button.premium(data-dl="premium-list"  data-cost-type="Визит к ведущему специалисту")
+
+			//Список-содержание (горящие часы)
+			dl.cost-dl.clock-list
+
+			//Список-содержание (визит к врачу)
+			dl.cost-dl.normal-list
+
+			//Список-содержание (визит к ведущему врачу)
+			dl.cost-dl.premium-list
+
+			//Текстовый блок
+			div.textblock 
+			div.-justify-content-
+				a.btn.btn-reverse-colors.service-book Записаться на приём
+				a(href="#").btn-reverse-colors.btn.question-book Задать вопрос
+
+		//Форма записи
+		form.book-form.start-form
+			//Закрыть
+			div.closed Закрыть 
+			//Куда записываемся
+			div.form-header 
+			//Тип цены
+			div.cost-type 
+			p На прием будет записан пациент, чьи данные указаны в анкете ниже. Заполните пожалуйста все поля, иначе, мы не сможем вас узнать и записаться не получится.
+
+			div.book-form--section
+				//Это не пустой блок - сюда выводится текст ошибки
+				div.error-text
+				div.book-form--row
+					label Имя
+					input.book-form--row--content.required-field(type='text')
+				div.book-form--row
+					label Телефон
+					input.book-form--row--content.phone-field(type='text')
+				div.book-form--row
+					label E-mail
+					input.book-form--row--content.email-field(type='text')
+
+				<input name="" type="hidden" class="service-id" value="">
+
+			div.book-form--section.textarea-wrapper
+				h2 Примечания
+				textarea
+
+			
+			div.-text-center-
+				label.book-form--accept
+					input(type='checkbox', name='license', value='')
+					| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+				button.btn.book-btn.submit-btn Записаться на прием
+		//Ответ - спасибо
+		div.answer-form.-text-center-
+			div.big-header Спасибо!
+			p Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.
+			button.answer-btn.btn.book-btn Продолжить
+
+		//Вопрос
+		form.book-form.question-form
+			//Закрыть
+			div.closed Закрыть 
+			
+			//Подзаголовок
+			div.form-header Спросить совета
+
+			textarea.textarea-scrollbar.scrollbar-outer.question-text
+
+			div.book-form--section
+				//Это не пустой блок - сюда выводится текст ошибки
+				div.error-text
+				div.book-form--row
+					label Имя
+					input.book-form--row--content.required-field(type='text')
+				div.book-form--row
+					label Телефон
+					input.book-form--row--content.phone-field(type='text')
+				div.book-form--row
+					label E-mail
+					input.book-form--row--content.email-field(type='text')
+			
+			div.-text-center-
+				label.book-form--accept
+					input(type='checkbox', name='license', value='')
+					| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+				button.btn.book-btn.submit-btn Задать вопрос
+
+		//Ответ - спасибо
+		div.question-answer-form.-text-center-
+			div.big-header Спасибо за вопрос!
+			p Все вопросы мы передаем специалистам. В течение 24 часов у врачей обычно находится время, чтобы ответить. Если ваш вопрос не терпит отлагательств, пожалуйста, позвоните!
+			button.answer-btn.btn.book-btn Продолжить
+
+//Форма вопроса руководству
+div#manager-app-content.modal-form-wrapper.-dn-
+	div.modal-close ×
+	form.book-form.manager-form.start-form
+		div.manager-header У вас идея?
+		div.textblock 
+			p Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет
+
+		div.book-form--section
+			h2 Опишите идею
+			textarea.modal-textarea-scrollbar.scrollbar-outer.question-text
+
+		div.book-form--section
+			//Это не пустой блок - сюда выводится текст ошибки
+			div.error-text
+			div.book-form--row
+				label Ваше имя
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон
+				input.book-form--row--content.phone-field(type='text')
+
+			<input name="" type="hidden" class="manager-id" value="">
+
+		div.-text-center-.clear
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+
+		div.book-form--row
+			button.btn.book-btn.submit-btn Предложить идею
+
+	div.book-form.answer-form.manager-form
+		div.manager-header Волнительно, правда?
+		p Не переживайте, у нас очень хорошие руководители. Они обязательно разберутся, и сделают всё наилучшим образом.
+		button.answer-btn.btn.book-btn Отправить
+
+//Форма  оформления карты
+div#card-app-content.modal-form-wrapper.-dn-
+	div.modal-close ×
+	form.book-form.manager-form.start-form
+		div.manager-header Вам к нам!
+		div.textblock 
+			| у нас сейчас нет технической возможности и надобности электронного оформления карты пациенту. ему все равно придется идти в клинику и эту карту оформлять и забирать. можно убрать здесь форму, а вместо нее оставить это всплывающее окошко и текст с тем, что вам карту оформят при первом посещении блаблбалблабалаб текст напишем
+			
+
+		//div.book-form--section
+			//Это не пустой блок - сюда выводится текст ошибки
+			div.error-text
+			div.book-form--row
+				label Ваше имя
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон
+				input.book-form--row--content.phone-field(type='text')
+			div.book-form--row
+				label E-mail
+				input.book-form--row--content.email-field(type='text')
+
+			<input name="" type="hidden" class="card-id" value="">
+
+		//div.-text-center-.clear
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+
+		//div.book-form--row
+			button.btn.book-btn.submit-btn Оформить
+
+	//div.book-form.answer-form.manager-form
+		div.manager-header Волнительно, правда?
+		p Не переживайте, у нас очень хорошие руководители. Они обязательно разберутся, и сделают всё наилучшим образом.
+		button.answer-btn.btn.book-btn Отправить
+
+//Заявка для юр.лиц
+div#jur-app-content.modal-form-wrapper.-dn-
+	div.modal-close ×
+	form.book-form.start-form
+		div.form-header Карточка записи на прием
+		p На прием будет записан пациент, чьи данные указаны в анкете ниже. Заполните пожалуйста все поля, иначе, мы не сможем вас узнать и записаться не получится.
+
+		<input type="hidden" name="sessid" id="sessid_2" value="" />
+		<input type="hidden" name="WEB_FORM_ID" value="" />
+
+		div.book-form--section
+			//Это не пустой блок - сюда выводится текст ошибки
+			div.error-text
+			div.book-form--row
+				label Имя*
+				input.book-form--row--content.required-field(type='text')
+			div.book-form--row
+				label Телефон*
+				input.book-form--row--content.phone-field(type='text')
+			//div.book-form--row
+				label E-mail
+				input.book-form--row--content.email-field(type='text')
+
+			<input name="" type="hidden" class="doctor-id" value="">
+			<input name="form_text_6" type="hidden" value="">
+			input(type="hidden" class="book-form-action" value="")
+
+		div.book-form--section
+			h2 Примечания
+			textarea
+
+		div.-justify-content-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+			button.btn.book-btn.submit-btn Записаться на прием
+
+	div.book-form.answer-form.-text-center-
+		div.big-header Спасибо!
+		p Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.
+		button.answer-btn.btn.book-btn Продолжить
+
+//Блок ответа
+div#answer-app-content.modal-form-wrapper.-dn-
+	div.book-form.answer-form.-text-center-
+		div.big-header Заявка принята!
+		p Мы рассмотрим вашу кандидатуру и перезвоним по указанному телефону в течение 5 рабочих дней
+		button.answer-btn.btn.book-btn Продолжить

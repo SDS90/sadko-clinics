@@ -1,0 +1,231 @@
+@import 'base';
+@import "base-colors";
+@import "bourbon";
+
+/* -------------------------------------------------
+    Typography
+   ------------------------------------------------- */
+
+//  Base font
+//  ------------------------------------------------
+
+body {
+  color: $bColor;
+  font: #{$bFontSize}/#{$bLineHeightIndex} #{$bFontFamily};
+}
+
+sup {
+  font-size: 10px;
+  margin-left: 1px;
+}
+
+//  Links
+//  ------------------------------------------------
+
+a {
+  color: $colorBase;
+  text-decoration: none;
+  border-bottom: 1px solid $colorLinkBorder;
+
+  &.-link-white- {
+    color: #fff;
+    border-bottom-color: $colorLinkBorderWhite;
+    &.-link-wrap- {
+      span {
+        border-bottom-color: $colorLinkBorderWhite;
+      }
+    }
+  }
+
+  &.-link-turq- {
+    color: #33beb7;
+    border-color: #c1ebe9;
+  }
+
+  &.-reduced- {
+    display: inline-block;
+    line-height: .9;
+  }
+  
+  &.-text-link- {
+    color: $bColor;
+    border-bottom-color: rgba($bColor, .3);
+  }
+
+  &.-pseudo- {
+    border-bottom-style: dotted;
+
+    &.-link-wrap- {
+      span {
+        border-bottom-style: dotted;
+      }
+    }
+
+  }
+
+  &:hover {
+    border-color: transparent !important;
+
+    &.-link-wrap- {
+      span {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  &.-link-wrap- {
+    border-bottom: none;
+
+    span {
+      border-bottom: 1px solid $colorLinkBorder;
+    }
+
+  }
+
+  &.-no-b- {
+    border-bottom: none;
+  }
+}
+
+//  List
+//  ------------------------------------------------
+
+ul, ol {
+  margin: 0 0 #{$bLineHeight} 0;
+
+  ul, ol {
+    margin-bottom: 0;
+  }
+
+  li {
+    margin: 0 0 10px;
+  }
+
+  //  Styleless
+  //  -----------------------
+  &.-unstyled- {
+    margin: 0;
+
+    li {
+      list-style: none !important;
+    }
+  }
+}
+
+ul {
+  > li {
+    list-style: disc;
+
+    ul > li {
+      list-style: circle;
+
+      ul > li {
+        list-style: square;
+      }
+    }
+  }
+}
+
+ol {
+  > li {
+    list-style: decimal;
+  }
+
+}
+
+ul.accordion {
+  li {
+    list-style: none;
+  }
+
+  a {
+    font-size: 14px;
+    font-weight: bold;
+
+    &.active {
+      border-bottom-color: transparent;
+      color: $colorTurq;
+    }
+  }
+
+  .text-panel {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+}
+
+//  Paragprah & sections
+//  ------------------------------------------------
+
+p { margin: 0 0 10px; }
+
+
+
+//  Headers
+//  ------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+h1, h2 {
+  font-family: 'proxima-nova', $bFontFamily;
+}
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h1 {
+  font-family: 'proxima-nova', "Open Sans", sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 100;
+}
+h2 {
+  font-size: 48px;
+  font-weight: 100;
+  margin: 50px 0 25px;
+}
+.-h2- {
+  margin: 50px 0 25px;
+
+  h2 {
+    margin: 0;
+    display: inline-block;
+  }
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.header-inline {
+  margin-bottom: 16px;
+
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 22px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.header-inline--title {
+  font-family: $bFontFamily;
+  font-size: 36px;
+}
+
+[class*='col-'] {
+  > h3 {
+    margin-top: 0;
+  }
+}
+
+.page-header  {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 100;
+  margin: 0 0 22px;
+}

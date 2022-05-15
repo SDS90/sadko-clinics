@@ -1,0 +1,63 @@
+//Страница контактов
+
+/*.search-list--items .ui-scroll{
+	overflow: visible;
+}
+*/
+.search-list--items .clinic-map-info{
+	display: none;
+	position: absolute;
+	left: 0px;
+	top: -11px;
+	bottom: -11px;
+	z-index: 999;
+	box-shadow: none;
+
+	.btn{
+		height: 38px;
+		line-height: 36px;
+		border-radius: 16px;
+		padding: 0px 12px;
+		font-size: 16px;
+	}
+
+	.address-search .btn{
+		padding: 0px 21px;
+	}
+
+	.book-toggle{
+		margin-top: 21px;
+	}
+
+	.contacts-wrapper,
+	.times-wrapper{
+		margin-bottom: 15px;
+	}
+
+	.contacts-wrapper{
+		float: right;
+		padding-left: 50px;
+	}
+
+	.times-wrapper{
+		float: left;
+	}
+
+	.ui-scroll{
+		height: 261px;
+		margin-top: 18px;
+		margin-bottom: 13px;
+	}
+}
+
+/*
+.address-map--content{
+	.ui-scroll--bar-slider{
+		background-color: #0696a3;
+	}
+
+	.ui-scroll--bar-vertical{
+		background-color: #f2f2f2;
+	}
+}
+*/

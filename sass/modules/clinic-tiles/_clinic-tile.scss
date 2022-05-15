@@ -1,0 +1,316 @@
+@import "imports";
+@import "../../bourbon";
+
+/* -------------------------------------------------
+    Clinic tile
+   ------------------------------------------------- */
+
+$duration: .4s;
+$timingFunction: $ease-in-out-quad;
+
+.clinic-tile {
+  display: block;
+  vertical-align: top;
+  border-bottom: none;
+  background: $tileBg;
+  float: left;
+  position: relative;
+  padding: $tileVertPadding $tileHorPadding;
+  height: $tileBaseHeight;
+  width: $tileBaseWidth;
+  overflow: hidden;
+
+
+  &.-clinic-tile-main- {
+    @include linear-gradient(to right, #98b9c2, #94cac4);
+
+    width: $tileBaseWidth * 2;
+    padding: 32px 57px;
+
+    p {
+      font-size: 24px;
+      color: #fff;
+    }
+  }
+
+  .clinic-tile--adrs{
+    max-height: 120px;
+  }
+
+
+  @each $type in $tileTypesColors {
+    $index: nth($type, 1);
+    $color: nth($type, 2);
+
+    &.-clinic-tile-type-#{$index}- {
+      .clinic-tile--contacts {
+        background: rgba($color, .9);
+      }
+      
+      .clinic-tile--adrs{
+        &.scrolling:before {
+            top: 0px;
+            z-index: 50;
+            height: 20px;
+            background-image: -webkit-linear-gradient(bottom, transparent 0%, rgba($color, .9) 100%);
+            background-image: -o-linear-gradient(bottom, transparent 0%, rgba($color, .9) 100%);
+            background-image: -moz-linear-gradient(bottom, transparent 0%, rgba($color, .9) 100%);
+            background-image: -ms-linear-gradient(bottom, transparent 0%, rgba($color, .9) 100%);
+            background-image: linear-gradient(bottom, transparent 0%, rgba($color, .9) 100%);
+        }
+
+        &:after {
+            bottom: 0;
+            height: 20px;
+            background-image: -webkit-linear-gradient(top, transparent 0%, rgba($color, .9) 100%);
+            background-image: -o-linear-gradient(top, transparent 0%, rgba($color, .9) 100%);
+            background-image: -moz-linear-gradient(top, transparent 0%, rgba($color, .9) 100%);
+            background-image: -ms-linear-gradient(top, transparent 0%, rgba($color, .9) 100%);
+            background-image: linear-gradient(top, transparent 0%, rgba($color, .9) 100%);
+        }
+      }
+
+    }
+  }
+
+  &:hover {
+    .clinic-tile--contacts {
+      margin-top: 0;
+      @include transform(translateY(0));
+    }
+
+    .clinic-tile--phone,
+    .clinic-tile--adrs {
+      opacity: 1;
+      @include transform(translateY(0));
+    }
+
+    .clinic-tile--adrs {
+      @include transition(all $duration .15s $timingFunction);
+    }
+
+    .clinic-tile--descr {
+      opacity: 0;
+    }
+  }
+
+  &.-double-height- {
+    height: $tileBaseHeight * 2;
+
+    .clinic-tile--adrs{
+      max-height: 360px;
+    }
+  }
+  &.-double-width- {
+    width: $tileBaseWidth * 2;
+  }
+  &.-slim-width-{
+    width: $tileSlimWidth;
+  }
+  &.-middle-height-{
+    height: $tileMiddleHeight;
+    .clinic-tile--adrs{
+      max-height: 315px;
+    }
+  }
+}
+
+.clinic-tile-main-header {
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  font-size: 43px;
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.clinic-tile--bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.clinic-tile--descr,
+.clinic-tile .clinics-name,
+.clinic-tile .textblock
+ {
+  font-size: 16px;
+  max-width: 55%;
+  position: relative;
+  opacity: 1;
+
+  @include transition(opacity $duration $timingFunction);
+}
+
+.clinic-tile--title{
+  display: block;
+  @include verticalMiddle;
+  height: $tileBaseTitleHeight;
+
+  *{
+    display: inline-block;
+    line-height: normal;
+    max-width: 95%;
+  }
+}
+
+.clinic-tile--title,
+.clinic-tile--title>*{
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: none;
+  margin: 0px !important;
+}
+
+//  Contacts
+// -------------------------------------------------
+
+.clinic-tile--contacts {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: -$tileBaseTitleHeight;
+  height: 100%;
+  top: 0;
+  padding: 0 $tileHorPadding;
+
+  @include transform(translateY(100%));
+
+  @include transition(all $duration $timingFunction);
+}
+
+.clinic-tile--phone {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  //margin-top: -10px;
+
+  @include transform(translateY(30px));
+  opacity: 0;
+
+  @include transition(all $duration $timingFunction);
+}
+
+.clinic-tile--adrs {
+  margin: 0;
+  position: absolute;
+  bottom: 27px;
+
+  @include transform(translateY(30px));
+  opacity: 0;
+
+  @include transition(all $duration $timingFunction);
+
+  &.scroll-wrapper:after,&.scroll-wrapper:before{
+    content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      width: 100%;
+      z-index: 100;
+  }
+
+  li {
+    list-style: none;
+    margin: 0 0 5px;
+    color: #fff;
+    
+    span {
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      &:hover{
+        border-color: transparent;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+//  Gallery tile
+// -------------------------------------------------
+
+.clinic-tile-gallery {
+  @include linear-gradient(to right, #fff, #e4e4e4);
+  padding: 0;
+
+
+  .gallery {
+    height: 100%;
+  }
+
+  .gallery--item {
+    padding: $tileVertPadding $tileHorPadding;
+    width: 100%;
+    height: 100%;
+    border-bottom: none;
+  }
+}
+
+.clinic-tile-gallery--title {
+  color: #4ca2ad;
+  display: block;
+  font-size: 35px;
+  font-family: 'Proxima-Nova', $bFontFamily;
+  font-weight: 100;
+  line-height: 1.2;
+  margin: 4px 0 12px;
+
+  strong {
+    font-weight: 300;
+  }
+}
+
+.clinic-tile-gallery--text {
+  line-height: 1;
+}
+.clinic-tile-gallery--content {
+  width: 40%;
+  float: left;
+}
+
+.clinic-tile-gallery--img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+
+  @include transform(translateY(-50%));
+}
+
+//  Coming soon tile
+// -------------------------------------------------
+
+
+.clinic-tile-coming-soon {
+  background: url(../img/clinic-type-img/clinic-tile-coming-soon-bg.jpg) left top no-repeat;
+}
+
+.clinic-tile-coming-soon--title {
+  color: #fff;
+  display: block;
+  font-size: 24px;
+  font-family: 'Proxima-Nova', $bFontFamily;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding-right: 26px;
+}
+
+.clinic-tile-coming-soon--date {
+  position: absolute;
+  bottom: 20px;
+  right: $tileHorPadding;
+  left: $tileHorPadding;
+
+  @include align-items(center);
+
+  span {
+    color: #fff;
+    font-size: 14px;
+  }
+}

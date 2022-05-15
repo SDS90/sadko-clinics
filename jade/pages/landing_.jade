@@ -1,0 +1,529 @@
+extends ../layout-landing
+include ../mixins/quot
+
+
+block title
+	| Садко
+block content
+
+	//Стартовый блок
+	div.about-slider
+		//Один слайд
+		div.slide
+			//Фотография
+			div.slide-photo
+				img(src="#{srcPath}img/landing/bg-landing.jpg", style="left: 50%; margin-left: -960px; position: relative;" alt="")
+			//Контент
+			div.contents.landing-header-wrapper
+				//Заголовок
+				div.landing-header 
+					| Вызов врача
+					br
+					| на дом
+				div.landing-price
+					span#price(data-price="2500") 2 500
+					span.rouble a
+				div.landing-doctor-parameters
+					div
+						a(href="#" data-price="600")
+							<span class="add-service">вызов медсестры</span> (+600 <span class="rouble">a</span>)
+					div
+						a(href="#" data-price="800")
+							<span class="add-service">ЭКГ и кардиолог</span> (+800 <span class="rouble">a</span>)
+				div.time-wrapper
+					| 7 дней в неделю 
+					br
+					| с 8<sup>00</sup> до  20<sup>00</sup>
+
+				div.textblock
+					| Оплата вызова производится непосредственно доктору после приема (наличный расчет). Стоимость дополнительных услуг (инъекции, УЗИ, ЭКГ) можно уточнить по телефону.
+				a(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.").btn.book-toggle Вызвать врача
+				a(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.").btn.btn-white.book-toggle Купить годовой пакет
+
+
+	//Контент
+	div.contents.landing-page
+
+		h2 Служба вызова врача на дом это:
+
+		div.row-flex
+			div.col-4
+				div.home-doctor-about
+					img(src="#{srcPath}img/landing/about1.jpg", alt="")
+					div.textblock
+						h3 Все специалисты
+						| На выезде работают терапевт, кардиолог, невролог, гастроэнтеролог, эндокринолог, уролог, дерматолог, врач УЗ-диагностики и др. После беседы с вами администратор назначит на выезд требуемых специалистов.
+			div.col-4
+				div.home-doctor-about
+					img(src="#{srcPath}img/landing/about2.jpg", alt="")
+					div.textblock
+						h3 Лабораторная служба и инъекции
+						| Медсестра лабораторной службы сможет взять анализ или поставить укол. Биоматериал доставляется в лабораторию в специальных охлаждаемых контейнерах. 
+			div.col-4
+				div.home-doctor-about
+					img(src="#{srcPath}img/landing/about3.jpg", alt="")
+					div.textblock
+						h3 УЗИ и ЭКГ на дому
+						| Проведем исследования с помощью портативных аппаратов. Они специально разработаны для таких случаев и точность измерений не уступает стационарным.
+		
+		div.document-wrapper
+			div.row-flex
+				div.col-6
+					img(src="#{srcPath}img/landing/list.png", alt="")
+				div.col-6
+					div.stage-block.clear
+						//Номер
+						div.stage-num 1.
+						div.stage-text.textblock <span>(831) 4-120-777</span> — телефон для вызова врача.
+							br
+							| В разговоре с администратором укажите, что вам необходимо оформление больничного листа.
+					div.stage-block.clear
+						//Номер
+						div.stage-num 2.
+						div.stage-text.textblock Больничный лист оформляется по желанию пациента либо в день обращения ко врачу, либо в момент выписки.
+					div.stage-block.clear
+						//Номер
+						div.stage-num 3.
+						div.stage-text.textblock Оформить «задним числом» нельзя — это незаконно. В графе «дата» ставится дата заполнения листа. 
+							br
+							| <a href="#">ФЗ 173 ст.13</a>
+					div.stage-block.clear
+						//Номер
+						div.stage-num 4.
+						div.stage-text.textblock Больничный может быть выдан максимум на 15 дней. Продлить больничный лист может только врачебная комиссия и тоже не больше чем на 15 дней за один раз.
+
+		h2 Служба вызова врача на дом будет полезна, если:
+
+		div.row-flex
+			div.col-4
+				div.home-doctor-benefits
+					img(src="#{srcPath}img/landing/benefit1.jpg", alt="")
+					div.textblock Вы плохо себя чувствуете и для вас крайне нежелательны поездка в клинику, ожидание приема, контактирование с другими людьми. Например, у вас температура, повышенное или пониженное артериальное давление, слабость, головокружение, простуда, боль или другие недуги. Вам нужно, чтобы врач приехал сам.
+			div.col-4
+				div.home-doctor-benefits
+					img(src="#{srcPath}img/landing/benefit2.jpg", alt="")
+					div.textblock Заболел ваш ребенок . Часто поход в поликлинику — это стресс как для вас, так и для малыша. Всевозможные сборы и приготовления, моральная подготовка детей, контакт с инфицированными пациентами клиники — все это препятствия на пути к комфортному приему доктора. Вызов врача на дом решит эту проблему. 
+			div.col-4
+				div.home-doctor-benefits
+					img(src="#{srcPath}img/landing/benefit3.jpg", alt="")
+					div.textblock В Вашей семье есть пожилые люди, которым необходима особая забота. В том числе прием доктора или услуги мед. сестры в домашних условиях. Или вы бы хотели провести осмотр всей семьи не выходя из дома. 
+
+		//h2 Оборудование выездной бригады
+
+		//include ../modules/equipment-gallery
+
+		h2 Специалисты
+
+		//О поликлинике
+		div.about-doctors.textblock <b>Выбор и назначение врача на вызов осуществляет администратор исходя из занятости специалистов и формирования «плотного» графика выездов.</b> В службе вызова врачей на дом работает не весь штат специалистов «Садко», а определенные доктора, которые совмещают консультации в клинике и ведут домашние приемы. К Вам приедет первый освободившийся доктор из ближайшего филиала. 
+			br
+			| Заранее благодарим за понимание!
+		
+		//Строка на 4 блока обычных докторов
+		div.doctor-wrappers-visible
+			div.row-flex.doctors-wrapper
+				//Блок одного обычного доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Покровский Михаил Юрьевич
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									ul.doctor-special-list
+										li 
+											b Главный врач
+										li Стоматолог-ортопед
+
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+				//Блок одного обычных доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Иван Жмак
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									div.doctor-special-list-wrapper
+										ul.doctor-special-list
+											li 
+												b Главный врач
+											li Стоматолог-ортопед
+											li Акушер-терапевт, ведение беременности пони  
+										//Скрытый блок специальностей
+										ul.doctor-special-list.doctor-special-hidden-list
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											
+								a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+				//Блок одного обычных доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Покровский Михаил Юрьевич
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									ul.doctor-special-list
+										li 
+											b Главный врач
+										li Стоматолог-ортопед
+										li Стоматолог-терапевт
+										li Стоматолог-стоматолог
+
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+				//Блок одного обычного доктора
+				div.col-3
+					div.doctor-block.normal-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Константинопольский Константин Константинович
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									div.doctor-special-list-wrapper
+										ul.doctor-special-list
+											li 
+												b Главный врач
+											li Стоматолог-ортопед
+											li Акушер-терапевт, ведение беременности пони  
+										//Скрытый блок специальностей
+										ul.doctor-special-list.doctor-special-hidden-list
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+											li Стоматолог-ортопед
+											li Стоматолог-терапевт
+
+								a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									//div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Кнопка "Показать ещё" 
+		div.clinic-tiles--hide-toggle.more-doctors
+			a.-pseudo-.-link-wrap-.open-hidden-doctors(href='#')
+				span.spoiler-toggle Показать ещё
+
+		h2 Как мы помогаем
+
+		div.row-flex.study-stages-wrapper
+			//Левая колонка
+			div.col-6
+				//Пункт
+				div.stage-block.clear
+					//Номер
+					div.stage-num 1.
+					div.stage-text
+						//Заголовок
+						div.stage-header Осмотр
+						//Краткое описание
+						div.textblock посмотрим Вас и определим, что беспокоит, послушаем сердце и легкие
+
+				//Пункт
+				div.stage-block.clear
+					div.stage-num 2.
+					div.stage-text
+						div.stage-header Диагностика
+						div.textblock 
+							ul
+								li ЭКГ, УЗИ (нужно заранее обговорить необходимость исследования с администратором)
+								li Измерим артериальное давление
+								li Определим уровень глюкозы
+								li Проведем забор анализов
+								li Расшифруем результаты обследований, которые у вас есть
+				//Пункт
+				div.stage-block.clear
+					div.stage-num 3.
+					div.stage-text
+						div.stage-header Облегчение состояния
+						div.textblock
+							ul
+								li Окажем необходимую помощь
+								li Нормализуем артериальное давление
+								li Уменьшим боль
+								li Сделаем инъекции
+								li Проведем ингалляцию или другое физиотерапевтическое лечение, доступное в домашних условиях
+			//Правая колонка
+			div.col-6
+				//Пункт
+				div.stage-block.clear
+					div.stage-num 4.
+					div.stage-text
+						div.stage-header Назначения
+						div.textblock 
+							ul
+								li Выдадим подробное консультативное заключение с рекомендациями и назначениями
+								li Расскажем о методах профилактики 
+								li Направим на обследование
+
+				//Пункт
+				div.stage-block.clear
+					div.stage-num 5.
+					div.stage-text
+						div.stage-header Оформление документов
+						div.textblock 
+							ul
+								li Открытие или закрытие больничного листа
+								li Оформление справки в детский сад или школу
+
+				//Пункт
+				div.stage-block.clear
+					img(src="#{srcPath}img/landing/kolyaska.png", alt="")
+
+		div.full-width-block-wrapper
+			img(src="#{srcPath}img/landing/family.jpg", alt="")
+			div.full-width-block-inner
+				div.family-header Семейное предложение
+				div.family-about семья из трёх человек
+				div.textblock в любой район города, ежедневно, с 8<sup>00</sup> до 20<sup>00</sup>
+
+				div.landing-price
+					span 3 500
+					span.rouble a
+				a(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту." class="book-toggle").btn Вызвать врача
+
+		div.row-flex
+			div.col-6
+				div.landing-col-6.analyz
+					div.landing-col-header Анализы на дому
+					div.textblock Общий и биохимический анализ крови, анализ мочи, микробиологические исследования, внутримышечные, внутривенные, подкожные инъекции.
+					div.bottom-block
+						a(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.").btn.book-toggle Отправить запрос
+			div.col-6
+				div.landing-col-6.full-year
+					div.landing-col-header Годовые пакеты
+					div.textblock 
+						| Три или пять заранее оплаченных вызова врача, которые можно использовать в течение года.
+						br
+						| Экономия — 44% и 47% соответственно.
+					div.bottom-block
+						div.year-block-wrapper
+							div.textblock 3 вызова
+							div.landing-price
+								span 3 500
+								span.rouble a
+							a(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.").btn.book-toggle Купить
+						div.year-block-wrapper
+							div.textblock 5 вызовов
+							div.landing-price
+								span 3 500
+								span.rouble a
+							a(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.").btn.book-toggle Купить
+
+		div.textblock.-text-center-
+			| Если у вас остались вопросы, позвоните нам!
+			br
+			| <b>(831) 4-120-777</b>
+
+
+
+
+
+//Персональные скрипты для этой страницы
+block pageJS
+	script(src='#{srcPath}js/controllers/landing.js')
+	

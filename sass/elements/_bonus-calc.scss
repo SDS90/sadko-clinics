@@ -1,0 +1,36 @@
+/* -------------------------------------------------
+    Bonus calculator
+   ------------------------------------------------- */
+
+.bonus-calc {
+  margin: 20px 0 8px 0px;
+}
+
+.bonus-calc--title {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.bonus-calc--sum{
+  display: inline-block;
+  vertical-align: top;
+  width: 285px;
+}
+
+.bonus-calc--sum--value,
+.bonus-calc--sum--unit,
+.bonus-calc--percents {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.bonus-calc--note {
+  display: block;
+  margin-top: 16px;
+}
+
+.bonus-calc--slider {
+  margin: 12px 0 16px 0px;
+}

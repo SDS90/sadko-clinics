@@ -1,0 +1,62 @@
+//Шапка для внутренних страниц
+div.contents
+	//Верхняя часть шапки
+	div.header-top
+		//Логотип
+		a.header-logo(href='/')
+			img(src='#{srcPath}img/logo.png', alt='Логотип компании Садко')
+		//Режим работы
+		div.work-time-wrapper
+			span.work-time
+				| 8<sup>00</sup> - 20<sup>00</sup> Пн.- Сб.
+			span.work-time
+				| 9<sup>00</sup> - 18<sup>00</sup> Вс.
+		//Вход в личный кабинет
+		a.header-login(href='/')
+			i.ico-heart
+			span Войти в личный кабинет
+
+		//Здесь в data-атрибуте указывается заголовок, который будет показываться в форме записи на приём. Если заголовка нет - будет показан стандартный вариант, но лучше указать даже его.
+		a.smile-toggle.book-toggle(href='#' data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") 
+			i.ico-bell
+			span Записаться
+		//телефон
+		div.header-top--right
+			a.header-phone(href="#") +7 (831) 421-01-01
+
+//Меню навигации
+div.nav-wrapper
+	div.nav-block
+		nav.nav-main
+			//Так выделяется (класс .active) активный пункт (открытая страница)
+			div.nav-main--item.normal
+				a(href='#') 
+					span Вся правда о САДКО
+			//Этот пункт имеет всплывающий миниатюрный блок (только заголовки)
+			div.nav-main--item.-has-inner-.-has-inner-small
+				a(href='#') 
+					span Пациентам
+				include ../modules/main-navigation-inner-item-patients
+			//Этот пункт имеет стандартный всплывающий блок. Кроме того, вместо ссылки тут может быть span
+			div.nav-main--item.-has-inner-.active
+				span
+					span Услуги и клиники
+				include ../modules/main-navigation-inner-item
+			//Этот пункт имеет стандартный всплывающий блок
+			div.nav-main--item.-has-inner-
+				a(href='#') 
+					span Технологи и инновации
+				include ../modules/main-navigation-inner-item-small
+			//А этот пункт вообще не имеет всплывающих блоков - он просто ссылка
+			div.nav-main--item.normal
+				a(href='#') 
+					span Образование и развитие
+			div.nav-main--item.normal
+				a(href='#') 
+					span Врачи и команда
+			div.nav-main--item.normal
+				a(href='#') 
+					span Цены и акции
+			div.nav-main--item.normal
+				a(href='#') 
+					span Контакты

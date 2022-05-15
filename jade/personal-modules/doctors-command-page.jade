@@ -1,0 +1,2726 @@
+include ../mixins/smile
+
+//Блок специалистов
+//Фильтр врачей
+div.filter-wrapper.clear
+		//Сам фильтр
+		div.page-filter.clear
+			span.filter-name Выберите врача:
+			//Список
+			span.filter-block-wrapper
+				span.filter-open-button По фамилии
+				//Список фамилий
+				div.filter-block
+					div.closed Закрыть
+					div.filter-list-wrapper.column-list
+						div.filter-list
+							div.row-flex
+								div.col-3
+									div.letter A
+									ul
+										li
+											a(href="#") Агафонова Г.В.
+										li
+											a(href="#") Александров А.Ю.
+										li
+											a(href="#") Андронова И.А.
+										li
+											a(href="#") Антипова А.В.
+										li
+											a(href="#") Антонова Ю.В.
+										li
+											a(href="#") Артемьева С.В.
+										li
+											a(href="#") Аскерова Г.К.
+								div.col-3
+									div.letter Б
+									ul
+										li
+											a(href="#") Бабинцева М.Г.
+										li
+											a(href="#") Багдасарян А.А.
+										li
+											a(href="#") Багдасарян Р.А.
+										li
+											a(href="#") Бакланов М.В.
+										li
+											a(href="#") Барышева Г.Н.
+										li
+											a(href="#") Бахметьев О.А.
+										li
+											a(href="#") Белоусова Е.Ю.
+										li
+											a(href="#") Беляков С.А.
+										li
+											a(href="#") Бердникова Т.А.
+										li
+											a(href="#") Березина Е.Б.
+										li
+											a(href="#") Благодатина Л.В.
+										li
+											a(href="#") Богданович О.В.
+										li
+											a(href="#") Бойкова Р.А.
+										li
+											a(href="#") Боровкова Ю.Ю.
+										li
+											a(href="#") Бортникова Е.В.
+										li
+											a(href="#") Брикман А.Э.
+										li
+											a(href="#") Бугрова О.М.
+										li
+											a(href="#") Бунакова Н.Н.
+										li
+											a(href="#") Буяло Е.В.
+										li
+											a(href="#") Буянова М.Н.
+								div.col-3
+									div.letter В
+									ul
+										li
+											a(href="#") Ванцинова Е.В.
+										li
+											a(href="#") Ващанов С.В.
+										li
+											a(href="#") Веселов Д.В.
+										li
+											a(href="#") Владимирова В.Г.
+										li
+											a(href="#") Вопилов Ю.Л.
+										li
+											a(href="#") Воронина А.И.
+								div.col-3
+									div.letter Г
+									ul
+										li
+											a(href="#") Гаврилова Е.П.
+										li
+											a(href="#") Гадалов А.П.
+										li
+											a(href="#") Гадалова Н.И.
+										li
+											a(href="#") Газаров А.А.
+										li
+											a(href="#") Гайдученко О.А.
+										li
+											a(href="#") Галкина К.И.
+										li
+											a(href="#") Гаранина Е.В.
+										li
+											a(href="#") Гвалия М.М.
+										li
+											a(href="#") Гимранов Р.Ю.
+										li
+											a(href="#") Голованова Т.П.
+										li
+											a(href="#") Горбатова Л.И.
+										li
+											a(href="#") Горбачев А.В.
+			span.filter-block-wrapper
+				span.filter-open-button По специальности
+				//Список тем
+				div.filter-block
+					div.closed Закрыть
+					//Список в одну колонку
+					div.filter-list-wrapper
+						div.filter-list
+							ul
+								li
+									a(href="#") Стоматология
+								li
+									a(href="#") Гастроэнтерология
+								li
+									a(href="#") Женское здоровье
+								li
+									a(href="#") Мужское здоровье
+								li
+									a(href="#") Педиатрия
+								li
+									a(href="#") Работа поликлиники
+								li
+									a(href="#") Наши достижения
+			//Список
+			span.filter-block-wrapper
+				span.filter-open-button Территориально
+				//Список фамилий
+				div.filter-block
+					div.closed Закрыть
+					div.filter-list-wrapper
+						div.filter-list
+							ul
+								li
+									a(href="#") Автозаводский район
+								li
+									a(href="#") Сормовский район
+								li
+									a(href="#") Канавинский район
+								li
+									a(href="#") Советский район
+								li
+									a(href="#") Ленинский район
+								li
+									a(href="#") Московский район
+								li
+									a(href="#") Приокский район
+			//Список
+			span.filter-block-wrapper
+				span.filter-open-button По месту работы
+				//Список фамилий
+				div.filter-block
+					div.closed Закрыть
+					div.filter-list-wrapper
+						div.filter-list
+							ul
+								li
+									a(href="#") Автозаводский район
+								li
+									a(href="#") Сормовский район
+								li
+									a(href="#") Канавинский район
+								li
+									a(href="#") Советский район
+								li
+									a(href="#") Ленинский район
+								li
+									a(href="#") Московский район
+								li
+									a(href="#") Приокский район
+			//Ссылка						
+			span.filter-block-wrapper
+				a(href="#").reset-filter Отменить фильтрацию
+			a(href="#").filter-button.top-filter ТОП
+
+//Эти блоки показываем
+div.doctor-wrappers-visible
+
+	//Строка на 4 блока докторов из Топа
+	div.row-flex.doctors-wrapper
+		//Блок одного Топ доктора
+		div.col-3
+			div.doctor-block.top-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-doctor-id="122" data-book-answer-title="Спасибо!_" data-submitted="false" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#"  data-doctor-id="122" data-submitted="false" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.textblock 
+									b Последователь экспертов:
+									br
+									i C. Coachman (Бразилия), D. Dietschi (Швейцария)
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Блок одного Топ доктора
+		div.col-3
+			div.doctor-block.top-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#"  data-doctor-id="123" data-submitted="false" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Иван Жмак
+							//Кнопки (скрыты по умолчанию)
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#"  data-doctor-id="123" data-submitted="false" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Акушер-терапевт, ведение беременности пони  
+							//Скрытый блок специальностей
+							ul.doctor-special-list.doctor-special-hidden-list
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.textblock 
+									b Последователь экспертов:
+									br
+									i C. Coachman (Бразилия), D. Dietschi (Швейцария), C. Coachman (Бразилия), D. Dietschi (Швейцария), C. Coachman (Бразилия), D. Dietschi (Швейцария), C. Coachman (Бразилия), D. Dietschi (Швейцария)
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного Топ доктора
+		div.col-3
+			div.doctor-block.top-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#"  data-doctor-id="124" data-submitted="false" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#"  data-doctor-id="124" data-submitted="false" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-стоматолог
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.textblock 
+									b Последователь экспертов:
+									br
+									i C. Coachman (Бразилия), D. Dietschi (Швейцария)
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного Топ доктора
+		div.col-3
+			div.doctor-block.top-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-doctor-id="125" data-submitted="true" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Константинопольский Константин Константинович
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-doctor-id="125" data-submitted="true" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-стоматолог
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.textblock 
+									b Последователь экспертов:
+									br
+									i C. Coachman (Бразилия), D. Dietschi (Швейцария)
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+	//Строка на 4 блока докторов из Топа
+	div.row-flex.doctors-wrapper
+		//Блок одного Топ доктора
+		div.col-3
+			div.doctor-block.top-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.textblock 
+									b Последователь экспертов:
+									br
+									i C. Coachman (Бразилия), D. Dietschi (Швейцария)
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Блок одного Топ доктора
+		div.col-3
+			div.doctor-block.top-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Иван Жмак
+							//Кнопки (скрыты по умолчанию)
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Акушер-терапевт, ведение беременности пони  
+							//Скрытый блок специальностей
+							ul.doctor-special-list.doctor-special-hidden-list
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.textblock 
+									b Последователь экспертов:
+									br
+									i C. Coachman (Бразилия), D. Dietschi (Швейцария), C. Coachman (Бразилия), D. Dietschi (Швейцария), C. Coachman (Бразилия), D. Dietschi (Швейцария), C. Coachman (Бразилия), D. Dietschi (Швейцария)
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного Топ доктора
+		div.col-3
+			div.doctor-block.top-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-стоматолог
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.textblock 
+									b Последователь экспертов:
+									br
+									i C. Coachman (Бразилия), D. Dietschi (Швейцария)
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного Топ доктора
+		div.col-3
+			div.doctor-block.top-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Константинопольский Константин Константинович
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-стоматолог
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.textblock 
+									b Последователь экспертов:
+									br
+									i C. Coachman (Бразилия), D. Dietschi (Швейцария)
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+	//Строка на 2 блока докторов (обычный и топ)
+	//div.row-flex.doctors-wrapper
+		//Блок одного Топ доктора
+		div.col-6
+			div.doctor-block.double-doctor-block.top-doctor-block.clear
+				//Обёртка фото
+				div.doctor-photo-wrapper
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+				//Блок с описанием
+				div.about-doctor-wrapper.about-doctor
+					//Обёртка для скролла
+					div.doctor-scroll-wrapper
+						//Имя
+						div.doctor-name
+							a(href="#") Константинопольский Константин Константинович
+
+						//Список специализаций
+						ul.doctor-special-list
+							li 
+								b Главный врач
+							li Стоматолог-ортопед
+							li Стоматолог-терапевт
+
+						
+					//Этот блок прижат к низу
+					div.bottom-block
+						//Эксперты
+						div.doctor-experts-wrapper
+							div.textblock 
+								b Последователь экспертов:
+								br
+								i C. Coachman (Бразилия), D. Dietschi (Швейцария)
+							div.flags
+								img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+						//Стаж работы
+						div.work-stage.textblock 
+							| <b>Стаж работы:</b>
+							br
+							| <i>15 лет</i>
+						//Приз
+						div.show-prize
+							div.-dn-
+								p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+								p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Блок одного Обычного доктора
+		div.col-6
+			div.doctor-block.double-doctor-block.normal-doctor-block.clear
+				//Обёртка фото
+				div.doctor-photo-wrapper
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+				//Блок с описанием
+				div.about-doctor-wrapper.about-doctor
+					//Обёртка для скролла
+					div.doctor-scroll-wrapper
+						//Имя
+						div.doctor-name
+							a(href="#") Константинопольский Константин Константинович
+
+						//Список специализаций
+						ul.doctor-special-list
+							li 
+								b Главный врач
+							li Стоматолог-ортопед
+							li Стоматолог-терапевт
+							li Стоматолог-стоматолог
+							li Стоматолог-ортопед
+							li Стоматолог-терапевт
+							li Стоматолог-стоматолог
+							li Стоматолог-ортопед
+							li Стоматолог-терапевт
+							li Стоматолог-стоматолог
+						
+					//Этот блок прижат к низу
+					div.bottom-block
+						//Эксперты
+						div.doctor-experts-wrapper
+							div.flags
+								img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+						//Стаж работы
+						div.work-stage.textblock 
+							| <b>Стаж работы:</b>
+							br
+							| <i>15 лет</i>
+
+	//Последняя строка на 2 блока Топ доктора
+	div.row-flex.doctors-wrapper
+		div.col-6
+			div.row-flex
+				//Блок доктора
+				div.col-6
+					div.doctor-block.top-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Константинопольский Константин Константинович
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+
+									//Список специализаций
+									ul.doctor-special-list
+										li 
+											b Главный врач
+										li Стоматолог-ортопед
+										li Стоматолог-терапевт
+										li Стоматолог-стоматолог
+
+									//Этот блок прижат к низу
+									div.bottom-block
+										//Эксперты
+										div.doctor-experts-wrapper
+											div.textblock 
+												b Последователь экспертов:
+												br
+												i C. Coachman (Бразилия), D. Dietschi (Швейцария)
+											div.flags
+												img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+												img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+												img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+												img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+												img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+												img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+												img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+												img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+												img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+										//Стаж работы
+										div.work-stage.textblock 
+											| <b>Стаж работы:</b>
+											br
+											| <i>15 лет</i>
+										//Приз
+										div.show-prize
+											div.-dn-
+												p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+												p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+				//Блок доктора
+				div.col-6
+					div.doctor-block.top-doctor-block
+						a(href="#")
+							img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+						//Блок с описанием
+						div.about-doctor-wrapper
+							//Кнопки
+							div.button-wrapper
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//О докторе
+							div.about-doctor
+								//Обёртка для скролла
+								div.doctor-scroll-wrapper
+									//Имя
+									div.doctor-name
+										a(href="#") Константинопольский Константин Константинович
+									//Кнопки
+									div.button-wrapper.-dn-
+										a.button.open-video(href='http://vimeo.com/9532951')
+											div.button-block.video
+												i.icon
+										a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+											div.button-block.book
+												i.icon
+												span.book-text Записаться
+									//Список специализаций
+									ul.doctor-special-list
+										li 
+											b Главный врач
+										li Стоматолог-ортопед
+										li Стоматолог-терапевт
+										li Стоматолог-стоматолог
+								//Этот блок прижат к низу
+								div.bottom-block
+									//Эксперты
+									div.doctor-experts-wrapper
+										div.textblock 
+											b Последователь экспертов:
+											br
+											i C. Coachman (Бразилия), D. Dietschi (Швейцария)
+										div.flags
+											img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+											img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									//Стаж работы
+									div.work-stage.textblock 
+										| <b>Стаж работы:</b>
+										br
+										| <i>15 лет</i>
+									//Приз
+									div.show-prize
+										div.-dn-
+											p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+											p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок-ссылка на информацию о рейтинге
+		div.col-6
+			a.doctors-rating.smile-toggle#doctors-rating(href="#", data-smile='#doctors-smile')
+				div.rating-header Как специалист попадает в этот рейтинг?
+				div.textblock-wrapper 
+					svg.smile-svg(width='42px', height='33px', version='1.1', xmlns='http://www.w3.org/2000/svg')
+						path.smile-path(d='M0 10 Q 43 10 86 10', stroke='#fff', stroke-width='2px', fill='transparent', id="doctors-smile")
+					div.textblock Приоткроем завесу тайны и расскажем что происходит внутри коллектива врачей. Как появляются лидеры и почему они лидеры.
+			a.doctors-rating.smile-toggle#doctors-rating(href="#", data-smile='#doctors-smile-1')
+				div.rating-header Как специалист попадает в этот рейтинг?
+				div.textblock-wrapper 
+					svg.smile-svg(width='42px', height='33px', version='1.1', xmlns='http://www.w3.org/2000/svg')
+						path.smile-path(d='M0 10 Q 43 10 86 10', stroke='#fff', stroke-width='2px', fill='transparent', id="doctors-smile-1")
+					div.textblock Приоткроем завесу тайны и расскажем что происходит внутри коллектива врачей. Как появляются лидеры и почему они лидеры.
+
+	//Строка на 4 блока обычных докторов
+	div.row-flex.doctors-wrapper
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Иван Жмак
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-стоматолог
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Константинопольский Константин Константинович
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+	//Строка на 4 блока обычных докторов
+	div.row-flex.doctors-wrapper
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Иван Жмак
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-стоматолог
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Константинопольский Константин Константинович
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+//Эти блоки по умолчанию скрыты
+div.doctor-wrappers-hidden.-dn-
+	//Строка на 4 блока обычных докторов
+	div.row-flex.doctors-wrapper
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Иван Жмак
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-стоматолог
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Константинопольский Константин Константинович
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+	//Строка на 4 блока обычных докторов
+	div.row-flex.doctors-wrapper
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Иван Жмак
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-стоматолог
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Константинопольский Константин Константинович
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+//Эти блоки по умолчанию скрыты
+div.doctor-wrappers-hidden.-dn-
+	//Строка на 4 блока обычных докторов
+	div.row-flex.doctors-wrapper
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Иван Жмак
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-стоматолог
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Константинопольский Константин Константинович
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+	//Строка на 4 блока обычных докторов
+	div.row-flex.doctors-wrapper
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Покровскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Покровскому.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Иван Жмак')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Иван Жмак
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычных доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Покровский Михаил Юрьевич')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Буяло" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Буяло.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Покровский Михаил Юрьевич
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							ul.doctor-special-list
+								li 
+									b Главный врач
+								li Стоматолог-ортопед
+								li Стоматолог-терапевт
+								li Стоматолог-стоматолог
+
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+		//Блок одного обычного доктора
+		div.col-3
+			div.doctor-block.normal-doctor-block
+				a(href="#")
+					img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+
+				//Блок с описанием
+				div.about-doctor-wrapper
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+					//О докторе
+					div.about-doctor
+						//Обёртка для скролла
+						div.doctor-scroll-wrapper
+							//Имя
+							div.doctor-name
+								a(href="#") Константинопольский Константин Константинович
+							//Кнопки
+							div.button-wrapper.-dn-
+								a.button.open-video(href='http://vimeo.com/9532951')
+									div.button-block.video
+										i.icon
+								a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Ивану" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Ивану.") 
+									div.button-block.book
+										i.icon
+										span.book-text Записаться
+							//Список специализаций
+							div.doctor-special-list-wrapper
+								ul.doctor-special-list
+									li 
+										b Главный врач
+									li Стоматолог-ортопед
+									li Акушер-терапевт, ведение беременности пони  
+								//Скрытый блок специальностей
+								ul.doctor-special-list.doctor-special-hidden-list
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+									li Стоматолог-ортопед
+									li Стоматолог-терапевт
+
+						a.more-doctor-special.blue-link(href="#" data-opened-text="Свернуть") Другие специализации
+						//Этот блок прижат к низу
+						div.bottom-block
+							//Эксперты
+							div.doctor-experts-wrapper
+								div.flags
+									img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+									img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+							//Стаж работы
+							div.work-stage.textblock 
+								| <b>Стаж работы:</b>
+								br
+								| <i>15 лет</i>
+							//Приз
+							//div.show-prize
+								div.-dn-
+									p Победитель XI всероссийского чемпионата стоматологического мастерства по дентальной имплантологии
+									p Победитель XIX международного конкурса среди практикующих стоматологов-имплантологов, г.Мюнхен
+
+//Кнопка "Показать ещё" - здесь по нажатию просто открываем скрытых врачей
+div.clinic-tiles--hide-toggle.more-doctors
+	a.-pseudo-.-link-wrap-.open-hidden-doctors(href='#')
+		span.spoiler-toggle Показать ещё 16 врачей

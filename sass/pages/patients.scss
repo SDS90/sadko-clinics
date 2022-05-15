@@ -1,0 +1,62 @@
+//Страница пациентам
+
+.patients-page{
+	.more-doctor-reviews{
+		margin-bottom: 0px;
+	}
+}
+
+.patients-firts-block{
+	.left-column,
+	.nalog{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.left-column{
+		float: left;
+		width: 670px;
+	}
+
+	.nalog{
+		float: right;
+		width: 420px;
+
+		@include blueLinks;
+
+		.text-panel--section{
+			padding-right: 50px;
+		}
+	}
+}
+
+.-mb-none{
+	margin-bottom: 0px;
+}
+
+.oms-section{
+	margin-bottom: 25px;
+}
+
+.oms-services{
+	.textblock{
+		@include blueLinks;
+	}
+}
+
+.oms-dms{
+	margin-top: -40px;
+	.text-panel--section{
+		margin-bottom: 5px;
+		padding-bottom: 10px;
+		position: relative;
+		&:after{
+			content:"";
+			position: absolute;
+			left: 0px; bottom: 0px;
+			width: 21px;
+			height: 2px;
+			background-color: #4f4f4f;
+		}
+	}	
+}

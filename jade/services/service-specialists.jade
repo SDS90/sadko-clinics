@@ -1,0 +1,116 @@
+//Специалисты - 2 колонки
+
+div.doctor-wrappers-visible
+	div.row-flex.doctors-wrapper
+		//Блок одного доктора
+		div.col-6
+			div.doctor-block.double-doctor-block.normal-doctor-block.clear
+				//Обёртка фото
+				div.doctor-photo-wrapper
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+				//Блок с описанием
+				div.about-doctor-wrapper.about-doctor
+					//Обёртка для скролла
+					div.doctor-scroll-wrapper
+						//Имя
+						div.doctor-name
+							a(href="#") Константинопольский Константин Константинович
+
+						//Список специализаций
+						ul.doctor-special-list
+							li 
+								b Главный врач
+							li Стоматолог-ортопед
+							li Стоматолог-терапевт
+
+						
+					//Этот блок прижат к низу
+					div.bottom-block
+						//Эксперты
+						div.doctor-experts-wrapper
+							div.textblock 
+								b Последователь экспертов:
+								br
+								i C. Coachman (Бразилия), D. Dietschi (Швейцария)
+							div.flags
+								img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+						//Стаж работы
+						div.work-stage.textblock 
+							| <b>Стаж работы:</b>
+							br
+							| <i>15 лет</i>
+
+		//Блок одного доктора
+		div.col-6
+			div.doctor-block.double-doctor-block.normal-doctor-block.clear
+				//Обёртка фото
+				div.doctor-photo-wrapper
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+						a.button.book-toggle(href="#" data-book-info="Записаться на приём к доктору Константинопольскому" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к доктору Константинопольскому.") 
+							div.button-block.book
+								i.icon
+								span.book-text Записаться
+				//Блок с описанием
+				div.about-doctor-wrapper.about-doctor
+					//Обёртка для скролла
+					div.doctor-scroll-wrapper
+						//Имя
+						div.doctor-name
+							a(href="#") Константинопольский Константин Константинович
+
+						//Список специализаций
+						ul.doctor-special-list
+							li 
+								b Главный врач
+							li Стоматолог-ортопед
+							li Стоматолог-терапевт
+							li Стоматолог-стоматолог
+							li Стоматолог-ортопед
+							li Стоматолог-терапевт
+							li Стоматолог-стоматолог
+							li Стоматолог-ортопед
+							li Стоматолог-терапевт
+							li Стоматолог-стоматолог
+						
+					//Этот блок прижат к низу
+					div.bottom-block
+						//Эксперты
+						div.doctor-experts-wrapper
+							div.flags
+								img.show-text(src='#{srcPath}img/icons/jamaica.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/romania.png'  data-text="")
+								img.show-text(src='#{srcPath}img/icons/croatia.png'  data-text="")
+						//Стаж работы
+						div.work-stage.textblock 
+							| <b>Стаж работы:</b>
+							br
+							| <i>15 лет</i>
+
+//Кнопка "Показать ещё" - здесь по нажатию просто открываем скрытых врачей
+div.clinic-tiles--hide-toggle.more-doctors
+	a.-pseudo-.-link-wrap-.open-hidden-doctors(href='#')
+		span.spoiler-toggle Показать ещё 10 врачей

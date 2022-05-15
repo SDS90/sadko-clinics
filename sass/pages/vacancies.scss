@@ -1,0 +1,146 @@
+
+
+//Вакансии
+
+.vacancies-page{
+	padding-top: 49px;
+
+	.quot{
+		margin-bottom: 61px;
+	}
+
+	h1{
+		padding-right: 200px;
+		font-family: 'proxima-nova', "Open Sans", sans-serif;
+		font-size: 60px;
+		line-height: 60px;
+		color: #4f4f4f;
+		font-weight: 100;
+		margin-bottom: 28px;
+	}
+
+	.all-link{
+		position: absolute;
+		right: 0px; top: 7px;
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	h2 {
+	    margin-top: 0px;
+	    margin-bottom: 25px;
+	}
+
+	.news-column{
+
+		h3{
+			font-size: 36px;
+			line-height: 36px;
+			margin-top: 10px;
+			margin-bottom: 23px;
+		}
+	}
+
+	.company-news-block{
+		width: 100%;
+		margin-bottom: 37px; 
+	}
+
+	.doctor-more-link{
+		margin-top: 0px;
+		margin-bottom: 30px;
+	}
+
+	.more-vacancies{
+		margin-top: -30px;
+		margin-bottom: 48px;
+	}
+}
+
+//Блок вакансии
+.vacancy-block{
+	position: relative;
+	padding-top: 17px;
+	margin-bottom: 57px;
+
+	.about-vacancy-block{
+
+	}
+
+	.conditions{
+		padding-top: 18px;
+
+		.textblock{
+			margin-left: -16px;
+			margin-right: -16px;
+			background-color: #f5f6ec;
+			padding: 21px 140px 22px 22px;
+			h3:first-child{
+				margin-top: 0px;
+			}
+			h3, h4, h5, h6, .h3, .h4, .h5, .h6{
+				margin-bottom: 8px;
+			}
+			h3{
+				margin-bottom: 15px;
+			}
+
+			li{
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	.vacancy-date{
+		position: absolute;
+		left: 0px;
+		top: 3px;
+		font-size: 14px;
+		font-style: italic;
+
+		&.closed-vacancy{
+			font-weight: bold;
+			font-style: normal;
+		}
+	}
+
+	.textblock{
+		font-size: 16px;
+		line-height: 22px;
+
+		@include blueLinks;
+
+		h3, h4, h5, h6, .h3, .h4, .h5, .h6{
+			margin: 8px 0px 2px 0px;
+			font-size: 24px;
+			line-height: 24px;
+			font-weight: normal;
+		}
+
+		p{
+			margin-bottom: 14px;
+		}
+
+		ul>li{
+			line-height: 18px;
+		}
+	}
+
+	.vacancy-button{
+		margin-top: 29px;
+	}
+
+	.vacancy-name{
+		font-size: 30px;
+		line-height: 36px;
+		margin-bottom: 5px;
+	}
+
+	.about-vacancy{
+		font-size: 18px;
+		.money{
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+}

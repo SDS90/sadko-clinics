@@ -1,0 +1,60 @@
+//Глобальные скрипты, которые загружаются на всех страницах
+script(src='#{srcPath}js/libs/libs.js')
+
+
+script(src="https://code.jquery.com/ui/1.8.23/jquery-ui.min.js")
+script(src="https://f.vimeocdn.com/js/froogaloop2.min.js")
+script(src='https://maps.googleapis.com/maps/api/js?')
+
+script(src='#{srcPath}fancybox/jquery.fancybox.js')
+script(src='#{srcPath}fancybox/jquery.fancybox-media.js')
+script(src='#{srcPath}js/plugins/owl.carousel.min.js')
+script(src='#{srcPath}js/plugins/ui-check-radio.js')
+script(src="#{srcPath}js/plugins/jquery.scrollbar.min.js")
+script(src="#{srcPath}js/plugins/jquery.mousewheel.min.js")
+script(src='#{srcPath}js/plugins/spoiler.js')
+script(src="#{srcPath}js/plugins/ion.rangeSlider.js")
+
+script(src='#{srcPath}js/modules/mainNavigation.js')
+script(src='#{srcPath}js/modules/smileControl.js')
+
+script(src='#{srcPath}js/utils.js')
+
+script(src='#{srcPath}js/components/gradientAnimation.js')
+script(src='#{srcPath}js/components/learnMap.js')
+script(src='#{srcPath}js/components/bonus-calc.js')
+
+script(src='#{srcPath}js/controllers/global.js')
+script(src='#{srcPath}js/controllers/filter.js')
+script(src='#{srcPath}js/controllers/forms.js')
+
+script(src='#{srcPath}js/controllers/about.js')
+
+
+script(src='#{srcPath}js/controllers/index.js')
+script(src='#{srcPath}js/controllers/doctors.js')
+script(src='#{srcPath}js/controllers/doctor-page.js')
+script(src='#{srcPath}js/controllers/technical.js')
+
+script(src='#{srcPath}js/controllers/education.js')
+
+script(src='#{srcPath}js/controllers/prices.js')
+script(src='#{srcPath}js/controllers/services.js')
+script(src='#{srcPath}js/controllers/sadko-truth.js')
+script(src='#{srcPath}js/controllers/branches.js')
+
+
+
+//script(src="http://use.typekit.net/zju2rse.js")
+//script.
+	try {
+		Typekit.load({
+			active: function () {
+				curstomScrolls.forEach(function (scroll) {
+					scroll.refreshState();
+				})
+			},
+			async: true
+		});
+	} catch (e) {
+	}

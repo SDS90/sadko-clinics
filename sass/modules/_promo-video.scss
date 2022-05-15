@@ -1,0 +1,30 @@
+/* -------------------------------------------------
+    Promo video
+   ------------------------------------------------- */
+
+.promo-video {
+  iframe {
+    display: block;
+  }
+}
+
+.promo-video--content {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.promo-video--content--bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.promo-video--channel {
+  display: inline-block;
+  margin-left: 48px;
+
+  img {
+    display: inline-block;
+    vertical-align: -9px;
+  }
+}

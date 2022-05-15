@@ -1,0 +1,58 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Список врачей
+block content
+
+	//Фиксированное меню
+	div.fixed-menu
+		a(href="#doctorsBlock")
+			div 
+				span Специалисты
+		a(href="#studyBlock")
+			div 
+				span Как мы обучаем
+		a(href="#winnersBlock")
+			div 
+				span Победители соревнований
+		a(href="#teachersBlock")
+			div 
+				span Преподаватели
+		a(href="#articlesBlock")
+			div 
+				span Статьи и советы
+
+	//Блок с цитатой
+	div.command-quote-wrapper
+		div.contents
+			h1#doctorsBlock Врачи и команда
+			//Цитата
+			div.quot.row-flex.-quot-no-border-
+				div.col-10
+					div.quot--text За 16 лет мы создали не только отличную клинику для пациентов, но и очень привлекательное место для работы врачей. С Вами будут работать лучшие специалисты в своей области
+	div.contents.command-page
+
+		h2 Мы гордимся каждым специалистом
+		include ../personal-modules/doctors-command-page
+
+		h2#studyBlock Как мы обучаем новых специалистов
+		include ../command-page/study
+			
+		h2#learnMapBlock.map-header Карта обучения специалистов
+		include ../modules/learn-map
+
+		h2#winnersBlock.winner-header Награды и победы
+		include ../personal-modules/winners
+		
+		h2#teachersBlock Преподаватели учебного центра
+		include ../personal-modules/teachers
+		
+		h2#articlesBlock Статьи и советы наших врачей
+		include ../modules/articles
+			
+
+
+//Персональные скрипты для этой страницы
+//block pageJS

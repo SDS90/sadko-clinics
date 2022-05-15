@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		title Садко -&nbsp;
+			block title
+		include controls/head
+	body
+		div.wrapper
+			header#topHeader.header-inner
+				include includes/header-inner
+			main.content.inner-page
+				block content					
+			include includes/footer
+		include modules/book-app
+		include controls/scripts
+		block pageJS

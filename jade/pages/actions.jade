@@ -1,0 +1,209 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Акции
+block content
+
+
+	//Контент
+	div.contents.actions-page
+
+
+		h1 Акции клиники
+	
+		//Цитата
+		div.quot.row-flex.-quot-no-border-
+			div.col-10
+				div.quot--text Мы хотим, чтобы вы всегда были в курсе наших самых актуальных акций и предложений. Если вы ревностно следите за своим здоровьем, а как известно это стоит денег, это раздел будет вам очень полезен, так как сэкономит и финансы и ваше время. 
+
+		h2 Постоянные программы
+
+		//Акции
+		include ../modules/actions
+
+		//Кнопка "Загрузить ещё" - загрузка вероятно должна реализовываться при помощи аякс-запросов
+		div.clinic-tiles--hide-toggle.more-articles
+			a.-pseudo-.-link-wrap-(href='#')
+				span.spoiler-toggle Загрузить ещё
+
+		div.row-flex.actions-page-wrapper
+			//Колонка акций
+			div.col-9
+				h2 Список акций
+
+				//Фильтр акций
+				div.filter-wrapper.clear
+					//Сам фильтр
+					div.page-filter
+						span.filter-name Показаны акции:
+						span.filter-block-wrapper
+							span.filter-open-button во всех филиалах
+							//Список тем
+							div.filter-block
+								div.closed Закрыть
+								//Список в одну колонку
+								div.filter-list-wrapper
+									div.filter-list
+										ul
+											li
+												a(href="#") Стоматология
+											li
+												a(href="#") Гастроэнтерология
+											li
+												a(href="#") Женское здоровье
+											li
+												a(href="#") Мужское здоровье
+											li
+												a(href="#") Педиатрия
+											li
+												a(href="#") Работа поликлиники
+											li
+												a(href="#") Наши достижения
+						span.filter-block-wrapper
+							input#actions-checkbox(type='checkbox', name='actions-filter', value='')
+							label(for="actions-checkbox") Только действующие
+
+
+				//Баннер
+				a(href="#").action-full-banner
+					//Тут такая табличка. В принципе, вместо неё можно вставить и картинку, или что-нибудь ещё.
+					div.action-table-wrapper
+						div.action-table
+							div.discount - 40%
+							div.about На горящие часы при записи в стоматологию
+							div.button-wrapper.clear
+								span.btn.btn-white.action-toggle(href="#"  data-book-info="Консультация стоматолога со скидкой 25%" data-book-about="&lt;p&gt; &lt;b&gt;Только до 15 октября 2015 года&lt;/b&gt; получите скидку 25% на терапевтические услуги во взрослой стоматологии «Садко» или детской стоматологии «Здоровёнок» на ул. Новая, 51.&lt;/p&gt; &lt;p&gt; Приглашаем Вас посетить обновленный стоматологический комплекс «САДКО» в самом сердце Нижнего Новгорода — на площади Горького! Стоматология на площади Горького традиционно собрала лучшие инновационные наработки и многолетний опыт экспертов сети клиник «САДКО», которые по праву признаны ведущими специалистами региона.&lt;/p&gt;" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться
+			
+				//Блок акции
+				a(href="#").action-full-block.clear
+					//Название акции и прочее
+					div.action-name-wrapper
+						div.action-header Терапевтические услуги в стоматологии и детской стоматологии со скидкой
+						//Тут может быть текст, а может и не быть
+						div.textblock 
+						div.action-dates 1-5 котября
+						div.tags-wrapper
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул.Новая, 54,
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул.Бекетова, 13,
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул. Широкая, 34
+					//Цена и прочее
+					div.action-price-wrapper
+						div.action-price - 25%
+						div.action-price-descr терапия в стоматологии
+						div.action-finish акция завершена
+					//Всплывающй блок (скрыт по умолчанию)
+					div.hover-block
+						span.btn.action-toggle(href="#"  data-book-info="Консультация стоматолога со скидкой 25%" data-book-about="&lt;p&gt; &lt;b&gt;Только до 15 октября 2015 года&lt;/b&gt; получите скидку 25% на терапевтические услуги во взрослой стоматологии «Садко» или детской стоматологии «Здоровёнок» на ул. Новая, 51.&lt;/p&gt; &lt;p&gt; Приглашаем Вас посетить обновленный стоматологический комплекс «САДКО» в самом сердце Нижнего Новгорода — на площади Горького! Стоматология на площади Горького традиционно собрала лучшие инновационные наработки и многолетний опыт экспертов сети клиник «САДКО», которые по праву признаны ведущими специалистами региона.&lt;/p&gt;" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться
+
+				//Блок акции
+				a(href="#").action-full-block.clear
+					//Название акции и прочее
+					div.action-name-wrapper
+						div.action-header Имплантация под ключ
+						//Тут может быть текст, а может и не быть
+						div.textblock 
+						div.action-dates весь октябрь
+						div.tags-wrapper
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул.Новая, 54,
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул.Бекетова, 13,
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул. Широкая, 34
+					//Цена и прочее
+					div.action-price-wrapper
+						div.action-price 34 000 <span class="rouble">a</span>
+						div.action-price-descr экономия до 20 000 <span class="rouble">a</span>
+						div.action-finish акция завершена
+					//Всплывающй блок (скрыт по умолчанию)
+					div.hover-block
+						span.btn.action-toggle(href="#"  data-book-info="Консультация стоматолога со скидкой 25%" data-book-about="&lt;p&gt; &lt;b&gt;Только до 15 октября 2015 года&lt;/b&gt; получите скидку 25% на терапевтические услуги во взрослой стоматологии «Садко» или детской стоматологии «Здоровёнок» на ул. Новая, 51.&lt;/p&gt; &lt;p&gt; Приглашаем Вас посетить обновленный стоматологический комплекс «САДКО» в самом сердце Нижнего Новгорода — на площади Горького! Стоматология на площади Горького традиционно собрала лучшие инновационные наработки и многолетний опыт экспертов сети клиник «САДКО», которые по праву признаны ведущими специалистами региона.&lt;/p&gt;" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться
+
+				//Блок акции
+				a(href="#").action-full-block.clear
+					//Название акции и прочее
+					div.action-name-wrapper
+						div.action-header Фотоконкурс в Динозубрике
+						//Вот здесь например текст есть
+						div.textblock В последний зимний месяц Динозубрик не упустил шанс выйти на лед! На стадионах «Динамо» и «Труд» все желающие с удовольствием фотографировались с Дино и стали участниками нашего конкурса!
+						div.action-dates 1-5 котября
+						div.tags-wrapper
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул.Новая, 54,
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул.Бекетова, 13,
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул. Широкая, 34
+					//Цена и прочее
+					div.action-price-wrapper
+						div.action-price бесплатно
+						div.action-price-descr призы и подарки за победу в конкурсе
+						div.action-finish акция завершена
+					//Всплывающй блок (скрыт по умолчанию)
+					div.hover-block
+						span.btn.action-toggle(href="#"  data-book-info="Консультация стоматолога со скидкой 25%" data-book-about="&lt;p&gt; &lt;b&gt;Только до 15 октября 2015 года&lt;/b&gt; получите скидку 25% на терапевтические услуги во взрослой стоматологии «Садко» или детской стоматологии «Здоровёнок» на ул. Новая, 51.&lt;/p&gt; &lt;p&gt; Приглашаем Вас посетить обновленный стоматологический комплекс «САДКО» в самом сердце Нижнего Новгорода — на площади Горького! Стоматология на площади Горького традиционно собрала лучшие инновационные наработки и многолетний опыт экспертов сети клиник «САДКО», которые по праву признаны ведущими специалистами региона.&lt;/p&gt;" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться
+
+				//Блок акции
+				a(href="#").action-full-block.clear
+					//Название акции и прочее
+					div.action-name-wrapper
+						div.action-header Запиши маму на маммографию
+						//А здесь текста опять нет
+						div.textblock 
+						div.action-dates 2 марта - бессрочно
+						div.tags-wrapper
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул.Новая, 54,
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул.Бекетова, 13,
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул. Широкая, 34
+					//Цена и прочее
+					div.action-price-wrapper
+						div.action-price 1500 <span class="rouble">a</span>
+						div.action-price-descr для женщин старше 60 лет
+						div.action-finish акция завершена
+					//Всплывающй блок (скрыт по умолчанию)
+					div.hover-block
+						span.btn.action-toggle(href="#"  data-book-info="Консультация стоматолога со скидкой 25%" data-book-about="&lt;p&gt; &lt;b&gt;Только до 15 октября 2015 года&lt;/b&gt; получите скидку 25% на терапевтические услуги во взрослой стоматологии «Садко» или детской стоматологии «Здоровёнок» на ул. Новая, 51.&lt;/p&gt; &lt;p&gt; Приглашаем Вас посетить обновленный стоматологический комплекс «САДКО» в самом сердце Нижнего Новгорода — на площади Горького! Стоматология на площади Горького традиционно собрала лучшие инновационные наработки и многолетний опыт экспертов сети клиник «САДКО», которые по праву признаны ведущими специалистами региона.&lt;/p&gt;" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться
+
+				//Блок акции - эта акция завершена и отмечена специальным классом
+				a(href="#").action-full-block.action-finish-block.clear
+					//Название акции и прочее
+					div.action-name-wrapper
+						div.action-header Акционные купоны в Центре ортодонтии «ДЖЕМ» продолжают действовать
+						div.textblock 
+							ul
+								li пройти бесплатную консультацию врача-ортодонта для детей и взрослых;
+								li получить скидку в размере 9520 руб. при постановке керамической или сапфировой брекет-системы (на один зубной ряд);
+								li провести детям диагностику перед планированием ортодонтического лечения за 50% стоимости процедур.
+						div.action-dates 2 марта - бессрочно
+						div.tags-wrapper
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул.Новая, 54,
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул.Бекетова, 13,
+							span(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул. Широкая, 34
+					//Цена и прочее
+					div.action-price-wrapper
+						div.action-price купоны
+						div.action-price-descr на брекет систему и скидки
+						div.action-finish акция завершена
+					//Всплывающй блок (скрыт по умолчанию)
+					div.hover-block
+						span.btn.action-toggle(href="#"  data-book-info="Консультация стоматолога со скидкой 25%" data-book-about="&lt;p&gt; &lt;b&gt;Только до 15 октября 2015 года&lt;/b&gt; получите скидку 25% на терапевтические услуги во взрослой стоматологии «Садко» или детской стоматологии «Здоровёнок» на ул. Новая, 51.&lt;/p&gt; &lt;p&gt; Приглашаем Вас посетить обновленный стоматологический комплекс «САДКО» в самом сердце Нижнего Новгорода — на площади Горького! Стоматология на площади Горького традиционно собрала лучшие инновационные наработки и многолетний опыт экспертов сети клиник «САДКО», которые по праву признаны ведущими специалистами региона.&lt;/p&gt;" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться
+
+				//Кнопка "Загрузить ещё" - загрузка вероятно должна реализовываться при помощи аякс-запросов
+				div.clinic-tiles--hide-toggle.more-articles
+					a.-pseudo-.-link-wrap-(href='#')
+						span.spoiler-toggle Загрузить ещё
+				
+
+			//Колонка новостей
+			div.col-3.news-column-wrapper
+				div.-text-right-
+					div.subscribe-wrapper
+						a(href="#").btn.subscribe-button Подписаться на рассылку
+						form.subscribe-form.hidden.clear
+							input.textfield(type="text" placeholder="Введите e-mail" data-error-text="Это не e-mail")
+							input.submit-btn(type="submit" value="Подписаться")
+
+				include ../modules/news-column
+		
+
+
+
+
+//Персональные скрипты для этой страницы
+//block pageJS

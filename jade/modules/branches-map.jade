@@ -1,0 +1,1030 @@
+//Карта филиалов
+div.branches-map-wrapper
+	div.branches-map#branchesMap
+	//Список филиалов
+	div.about-branches
+
+		//Список филиалов
+		
+		div.branches-list-wrapper#branchesList(data-marker="#{srcPath}img/icons/marker.png" data-active-marker="#{srcPath}img/icons/active-marker.png")
+
+				div.branches-type
+					h3 
+						a(href="#") Стоматология
+			
+				ul.branches-list
+					//Блок филиала
+					li(itemscope itemtype="http://schema.org/Organization")
+						//Обёртка данных о филиале
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Бекетова, 13
+								div.textblock Оборудована уникальным томографом Siemens Siemens
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+
+						//Блок с подробностями
+						div.clinic-map-info.-dn-(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#" itemprop="name") Стоматология <br> на Бекетова
+								div.clear
+									div.contacts-wrapper(data-latitude="56.292604" data-longitude="44.008743" data-address="ул. Бекетова, 13" data-address-id="beketova13")
+										div.contacts-block
+											p Телефон:
+											p
+												b(itemprop="telephone") +7 (831) 3-120-120
+											span.-dn-(itemprop="faxNumber") 198216
+											span.-dn-(itemprop="email") sadko@mail.ru
+										div.contacts-block
+											p Адрес:
+											span.-dn-(itemprop="postalCode") 198216
+											span.-dn-(itemprop="addressLocality") Нижний Новгород
+											p
+												b(itemprop="streetAddress") ул. Бекетова, 13
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+
+					//Блок филиала
+					li
+						//Обёртка данных о филиале
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Белинского, 71/1
+								div.textblock Здесь работает наш лучший стоматолог
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Стоматология <br> на Белинского
+								div.clear
+									div.contacts-wrapper(data-latitude="56.317916" data-longitude="44.022899" data-address="ул. Белинского, 71/1" data-address-id="belinskogo71")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Белинского, 71/1
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										//div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+					//Блок филиала
+					li
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Новая, 51
+								div.textblock Здесь самые красивые администраторы
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Стоматология <br> на Новой улице
+								div.clear
+									div.contacts-wrapper(data-latitude="56.314439" data-longitude="43.989437" data-address="ул. Новая, 51" data-address-id="novaya51")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Новая, 51
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										//div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+					//Блок филиала
+					li
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name Сормовское шоссе, 20
+								div.textblock Большая детская зона и почти нет очередей
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Стоматология <br> на Сормовском шоссе
+								div.clear
+									div.contacts-wrapper(data-latitude="56.320101" data-longitude="43.926675" data-address="Сормовское шоссе, 20" data-address-id="sormovskoye20")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Сормовское шоссе, 20
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										//div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+					//Блок филиала
+					li
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Варварская, 8/22
+								div.textblock Большая детская зона и почти нет очередей
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Стоматология <br> на Варварке
+								div.clear
+									div.contacts-wrapper(data-latitude="56.324867" data-longitude="44.009406" data-address="ул. Варварская, 8/22" data-address-id="varvarskaya8")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Варварская, 8/22
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										//div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+
+				div.branches-type
+					h3 
+						a(href="#") Поликлиника
+
+					div.main-phone (831) 4-120-120
+
+				ul.branches-list
+					//Блок филиала
+					li
+						//Обёртка данных о филиале
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Бекетова, 13
+								div.textblock Оборудована уникальным томографом Siemens Siemens
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Поликлиника <br> на Бекетова
+								div.clear
+									div.contacts-wrapper(data-latitude="56.292604" data-longitude="44.008743" data-address="ул. Бекетова, 13" data-address-id="beketova13")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Бекетова, 13
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+
+					//Блок филиала
+					li
+						//Обёртка данных о филиале
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Белинского, 71/1
+								div.textblock Здесь работает наш лучший стоматолог
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Поликлиника <br> на Белинского
+								div.clear
+									div.contacts-wrapper(data-latitude="56.317916" data-longitude="44.022899" data-address="ул. Белинского, 71/1" data-address-id="belinskogo71")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Белинского, 71/1
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										//div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+					//Блок филиала
+					li
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Новая, 51
+								div.textblock Здесь самые красивые администраторы
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Поликлиника <br> на Новой улице
+								div.clear
+									div.contacts-wrapper(data-latitude="56.314439" data-longitude="43.989437" data-address="ул. Новая, 51" data-address-id="novaya51")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Новая, 51
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										//div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+					//Блок филиала
+					li
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name Сормовское шоссе, 20
+								div.textblock Большая детская зона и почти нет очередей
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Поликлиника <br> на Сормовском шоссе
+								div.clear
+									div.contacts-wrapper(data-latitude="56.320101" data-longitude="43.926675" data-address="Сормовское шоссе, 20" data-address-id="sormovskoye20")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Сормовское шоссе, 20
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										//div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+					//Блок филиала
+					li
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Варварская, 8/22
+								div.textblock Большая детская зона и почти нет очередей
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Поликлиника <br> на Варварке
+								div.clear
+									div.contacts-wrapper(data-latitude="56.324867" data-longitude="44.009406" data-address="ул. Варварская, 8/22" data-address-id="varvarskaya8")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Варварская, 8/22
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										//div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+
+				div.branches-type
+					h3 
+						a(href="#") Женская консультация
+
+					div.main-phone (831) 4-120-120
+
+				ul.branches-list
+					//Блок филиала
+					li
+						//Обёртка данных о филиале
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Бекетова, 13
+								div.textblock Оборудована уникальным томографом Siemens Siemens
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Поликлиника <br> на Бекетова
+								div.clear
+									div.contacts-wrapper(data-latitude="56.292604" data-longitude="44.008743" data-address="ул. Бекетова, 13" data-address-id="beketova13")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Бекетова, 13
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+
+					//Блок филиала
+					li
+						//Обёртка данных о филиале
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Белинского, 71/1
+								div.textblock Здесь работает наш лучший стоматолог
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Поликлиника <br> на Белинского
+								div.clear
+									div.contacts-wrapper(data-latitude="56.317916" data-longitude="44.022899" data-address="ул. Белинского, 71/1" data-address-id="belinskogo71")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Белинского, 71/1
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										//div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+					//Блок филиала
+					li
+						div.about-address.clear
+							//О филиале
+							div.about-branch
+								div.branch-name ул. Новая, 51
+								div.textblock Здесь самые красивые администраторы
+							//Фотография
+							img.branch-photo(src='#{srcPath}img/content/branch.jpg')
+
+						//Блок с подробностями
+						div.clinic-map-info.-dn-
+							div.closed ×
+							div.white-block
+								div.clinic-name 
+									a(href="#") Поликлиника <br> на Новой улице
+								div.clear
+									div.contacts-wrapper(data-latitude="56.314439" data-longitude="43.989437" data-address="ул. Новая, 51" data-address-id="novaya51")
+										div.contacts-block
+											p Телефон:
+											p
+												b +7 (831) 3-120-120
+										div.contacts-block
+											p Адрес:
+											p
+												b ул. Новая, 51
+									div.times-wrapper
+										p Режим работы:
+										p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+										p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+								div.textblock Как добраться?
+
+								//Поиск адреса
+								form.clear.address-search
+									input.textfield(type="text" placeholder="Введите ваш адрес")
+									input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+							//Акции
+							div.brown-block
+								div.actions-scroll
+									div.actions-block-wrapper
+										h3 
+											a(href="#") Акции
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Консультации и диагностика
+											br
+											a(href="#") Бесплатно
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Лазерная стоматология - новый формат лечения зубов.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+
+										// Одна акция. Небольшой текст и ссылка
+										//div.textblock
+											| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+											br
+											a(href="#") Скидка 25%
+							
+							div.white-block
+								div.clear
+									//Ссылка
+									a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+									//Ссылка
+									a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+

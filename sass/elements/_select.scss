@@ -1,0 +1,102 @@
+/* -------------------------------------------------
+    Custom select
+   ------------------------------------------------- */
+
+$paddingHor: 10px;
+$icoWidth: 31px;
+
+
+.select--toggle {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: inline-block;
+  background: #fff;
+  height: 32px;
+  position: relative;
+  padding-left: $paddingHor;
+  padding-right: $icoWidth + $paddingHor;
+  text-align: left;
+  outline: none;
+
+  &.active {
+    .select--ico {
+      &:after {
+        @include transform(translate(-50%, -50%) rotate(180deg));
+      }
+    }
+  }
+
+}
+
+.select--ico {
+  display: inline-block;
+  border-left: 1px solid #ccc;
+  border-radius: 2px 0 0 2px;
+  width: 31px;
+  height: 100%;
+  vertical-align: middle;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &:after {
+    background-image: url(../img/icons.png);
+    @extend .ico-toggle-down;
+
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transition: all .2s $ease-out-quad;
+
+    @include transform(translate(-50%, -50%));
+  }
+}
+
+.select--caption {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  line-height: 28px;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  outline: none;
+}
+
+.select--container {
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 7px 10px -4px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  position: absolute;
+  margin-top: 8px;
+  z-index: -1;
+  visibility: hidden;
+  overflow: auto;
+
+  opacity: 0;
+  @include transition(margin .2s, opacity .2s);
+
+  // Active status
+  &.active {
+    margin-top: 0;
+    z-index: 100;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.select--item {
+  display: block;
+  padding: 4px $paddingHor;
+  border: none;
+
+  &:hover, &.-selected- {
+    background: #4CA2AD;
+    color: #fff;
+  }
+}

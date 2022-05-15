@@ -1,0 +1,34 @@
+/* -------------------------------------------------
+    Address map
+   ------------------------------------------------- */
+
+$padding: 0px;
+
+.address-map {
+  margin-bottom: $sectionMargin;
+
+  .search-list {
+    position: absolute;
+    left: $padding;
+    top: $padding;
+    bottom: $padding;
+  }
+
+  .ui-scroll--bar-vertical {
+    right: 5px;
+  }
+}
+
+.address-map--map {
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+}
+
+.address-map--content {
+  width: 100%;
+  //height: 737px;
+  height: 684px;
+  padding-left: 400px;
+  position: relative;
+}

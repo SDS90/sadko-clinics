@@ -1,0 +1,85 @@
+
+//Образование доктора
+
+.doctor-education-section{
+	padding: 0px;
+}
+
+.doctor-education{
+	width: 100%;
+	margin: 46px 0px 29px 0px;
+	padding: 33px 0px 28px 0px;
+	background-color: #f4f5ef;
+
+	h2{
+		margin-top: 0px;
+		margin-bottom: 12px;
+	}
+
+	.education-columns{
+		width: 100%;
+	}
+
+	.basic-education,
+	.doctor-education-years
+	{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.basic-education{
+		width: 420px;
+		float: right;
+		padding: 40px 50px 60px 50px;
+		background-color: #FFF;
+
+		h3{
+			font-size: 36px;
+			line-height: 36px;
+			margin-top: 0px;
+			margin-bottom: 18px;
+		}
+	}
+
+	.basic-education .textblock{
+		font-size: 18px;
+		line-height: 24px;
+
+		p{
+			margin-bottom: 24px;
+		}
+	}
+
+	.doctor-education-years{
+		float: left;
+		width: 568px;
+	}
+
+	.basic-education,
+	.doctor-year-block .textblock{
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.doctor-year-block{
+		margin-bottom: 41px;
+
+		.year{
+			font-size: 14px;
+			line-height: 24px;
+			color: #4f4f4f;
+			font-weight: bold;
+			border-bottom: 1px solid #d0d1ca;
+			margin-bottom: 10px;
+		}
+
+		.flag-image{
+			margin: 10px 10px 0px 0px;
+		}
+	}
+
+	.more-education{
+		font-size: 16px;
+		border-style: dashed;
+	}
+}

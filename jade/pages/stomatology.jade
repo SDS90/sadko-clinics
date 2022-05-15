@@ -1,0 +1,133 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Сеть стоматологических клиник
+block content
+
+	//Фиксированное меню
+	div.fixed-menu
+		a(href="#startBlock")
+			div 
+				span Обращение
+		a(href="#benefitsBlock")
+			div 
+				span Преимущество
+		a(href="#equipmentBlock")
+			div 
+				span Оборудование
+		a(href="#servicesBlock")
+			div 
+				span Услуги
+		a(href="#actionsBlock")
+			div 
+				span Акции
+		a(href="#officesBlock")
+			div 
+				span Филиалы
+		a(href="#educationBlock")
+			div 
+				span Обучение врачей
+		a(href="#articlesBlock")
+			div 
+				span Статьи и советы
+		a(href="#videoBlock")
+			div 
+				span Видео
+		a(href="#reviewsBlock")
+			div 
+				span Отзывы
+
+	//Блок с цитатой
+	div.start-quote-wrapper
+		div.contents
+			h1#startBlock Сеть стоматологических клиник
+			//Цитата
+			div.quot.row-flex.-quot-no-border-
+				div.col-10
+					div.quot--text Стоматология «САДКО» - это сеть из 7 клиник. У каждой из них свои особенности, но все они служат одной цели  -  сделать лечение зубов комфортным и доступным.
+
+	//Контент
+	div.contents.about-page.stomatology-page
+
+		//Преимущества
+		h2#benefitsBlock Почему мы уверены в результате
+		include ../modules/stomatology-benefits
+
+		//Оборудование
+		h2#equipmentBlock Только лучшее оборудование
+		include ../modules/equipment-gallery
+
+	//Отделения - вынесено отдельно, т.к. блок на всю ширину
+	div.brown-section.offices-service-block
+		div.contents
+
+			//Отделения
+			div.relative.offices-header
+				h2#servicesBlock Стоматологические услуги
+				div.file-link-wrapper.all-link
+					a(href="#").file-link.pdf-link.hover-link
+						i.icon
+						div.file-name
+							span Стоимость услуг
+
+			include ../modules/service	
+
+	//Контент
+	div.contents.about-page
+
+		//Акции
+		h2#actionsBlock Действующие акции
+		include ../mixins/smile
+
+		div.discount-grid-wrapper
+			.row-flex.row-extra-padding.discount-grid
+				include ../modules/discount-grid-vertical
+			//Все акции
+			a.more-link.-link-wrap-(href='#') <span>Все акции клиники</span> &rarr;
+
+		//Филиалы
+		h2#officesBlock Сеть филиалов
+		include ../modules/branches-map
+		
+		h2 Специализированные клиники
+
+		include ../mixins/clinic-tile
+		div.clinic-tiles
+			//Блоки центра
+			div.clinic-tiles--list.semi-spoiler#clinic-tiles
+				+clinic-tile(17, 'ЦЕНТР ортодонтии «Джем»', 'Клиника полного цикла. Все этапы ортодонтического лечения')(class='-middle-height- -slim-width-')
+				+clinic-tile(18, 'детская стоматология «динозубрик»', 'Первая в Нижнем Новгороде специализированная детская стоматология')(class='-middle-height- -slim-width-')
+				+clinic-tile(19, 'детская клиника и стоматология  «здоровенок»', 'Хорошие эмоции, веселый смех — источники жизненной энергии и силы')(class='-middle-height- -slim-width-')
+				+clinic-tile(20, 'Центр имплантации', 'От простых операций до проведения эксклюзивных процедур любой сложности')(class='-middle-height- -slim-width-')
+		
+		h2#educationBlock Карта обучения специалистов
+		include ../modules/learn-map
+
+		h2 Вопрос-ответ
+		include ../modules/qa
+
+		h2#articlesBlock Полезные статьи
+		include ../modules/articles
+
+		h2#videoBlock Наше видео
+		include ../modules/promo-video
+
+		h3 Видеогалерея
+		include ../modules/video-carousel
+
+		//Отзывы
+		div.header-wrapper
+			h2#reviewsBlock Отзывы о «САДКО»
+			//Кнопка с вызовом попапа
+			div.open-question-wrapper
+				a.btn.btn-reverse-colors.open-question-popup(href="#") Добавить отзыв
+				include ../modules/review-popup	
+
+		include ../modules/reviews-slider
+
+
+
+//Персональные скрипты для этой страницы
+//block pageJS

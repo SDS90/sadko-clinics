@@ -1,0 +1,246 @@
+extends ../layout-inner
+include ../mixins/quot
+include ../mixins/smile
+
+
+block title
+	| Стоматология на Варварской
+block content
+
+	//Фиксированное меню
+	div.fixed-menu
+		a(href="#clinicBlock")
+			div 
+				span Обращение
+		a(href="#videoBlock")
+			div 
+				span Видео и фото
+		a(href="#contactsBlock")
+			div 
+				span Контактная информация
+		a(href="#managementBlock")
+			div 
+				span Руководство
+		a(href="#tekhnologiesBlock")
+			div 
+				span Топ технологий
+		a(href="#servicesBlock")
+			div 
+				span Услуги
+		a(href="#doctorsBlock")
+			div 
+				span Врачи
+		a(href="#actionsBlock")
+			div 
+				span Акции
+		a(href="#reviewsBlock")
+			div 
+				span Отзывы
+
+	//Стартовый слайдер
+	div.about-slider#clinicBlock
+		//Один слайд
+		div.slide
+			//Фотография
+			div.slide-photo
+				img(src="#{srcPath}img/bg/FY2T1210.jpg", width="2500", height="1667", alt="")
+			//Контент
+			div.contents
+				//Заголовок
+				div.about-header Стоматология на Варварской
+				div.slide-text 
+					| Мы работаем в интересах
+					br 
+					| вашего здоровья
+		//Один слайд
+		div.slide
+			//Фотография
+			div.slide-photo
+				img(src="#{srcPath}img/bg/entertainment-snow.jpg", width="2560", height="1600", alt="")
+			//Контент
+			div.contents
+				//Заголовок
+				div.about-header Стоматология на Варварской
+				div.slide-text 
+					| Мы работаем в интересах
+					br 
+					| вашего здоровья
+
+	//Контент
+	div.contents.about-page
+
+		//О поликлинике
+		div.about-clinic.textblock Семейная стоматология САДКО — это стоматологическая клиника для всей вашей семьи. Пока Ваш малыш проходит лечение в ДИНОЗУБРИКЕ, Вы можете посетить взрослое отделение клиники. Это клиника оснащенная самым современным оборудованием, позволяющим проводить высококачественное лечение зубов и выполнять сложное хирургическое вмешательство: удаление зубов, имплантацию зубов, протезирование зубов. Это уютная обстановка и внимательный персонал, дипломированные специалисты (что подтверждают наши многочисленные дипломы и сертификаты) с индивидуальным подходом к каждому пациенту, возможность получить консультацию и качественную помощь практически при любой стоматологической проблеме.
+
+		//Видео и фото
+		h2#videoBlock Наше видео
+		include ../modules/promo-video
+
+		h3 Фотогалерея
+
+		//Фотогалерея
+		div.photo-slider
+			//Одно фото с подписью
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Доброжелательные врачи
+			//Одно фото с подписью
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/doctor-gallery.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Профессиональное оборудование
+			//Одно фото с подписью
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Современные методы лечения
+			//Одно фото с подписью
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/doctor-gallery.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Комфортная обстановка
+			//Одно фото с подписью
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Доброжелательные врачи
+
+		//Филиалы
+		h2#contactsBlock Контактная информация
+
+		//Карта филиалов
+		div.branches-map-wrapper
+			div.branches-map#branchesMap
+			//Список филиалов
+			div.about-branches
+
+				//Список филиалов
+				
+				div.branches-list-wrapper#branchesList(data-marker="#{srcPath}img/icons/marker.png" data-active-marker="#{srcPath}img/icons/active-marker.png")
+					
+						ul.branches-list
+
+							//Блок филиала
+							li
+								//Блок с подробностями
+								div.clinic-map-info
+									div.white-block
+										div.clinic-name Стоматология <br> на Варварке
+										div.clear
+											div.contacts-wrapper.opened(data-latitude="56.324867" data-longitude="44.009406" data-address="ул. Варварская, 8/22")
+												div.contacts-block
+													p Телефон:
+													p
+														b +7 (831) 3-120-120
+												div.contacts-block
+													p Адрес:
+													p
+														b ул. Варварская, 8/22
+											div.times-wrapper
+												p Режим работы:
+												p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+												p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+										div.textblock Как добраться?
+
+										//Поиск адреса
+										form.clear.address-search
+											input.textfield(type="text" placeholder="Введите ваш адрес")
+											input.btn.btn-reverse-colors(type="submit" value="Показать")
+
+									//Акции
+									div.brown-block
+										div.actions-scroll
+											div.actions-block-wrapper
+												h3 
+													a(href="#") Акции
+
+												// Одна акция. Небольшой текст и ссылка
+												div.textblock
+													| Консультации и диагностика
+													br
+													a(href="#") Бесплатно
+
+												// Одна акция. Небольшой текст и ссылка
+												div.textblock
+													| Лазерная стоматология - новый формат лечения зубов.
+													br
+													a(href="#") Скидка 25%
+
+												// Одна акция. Небольшой текст и ссылка
+												div.textblock
+													| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+													br
+													a(href="#") Скидка 25%
+
+												// Одна акция. Небольшой текст и ссылка
+												div.textblock
+													| Совершенство арт-стоматологии - люминиры и виниры без обточки.
+													br
+													a(href="#") Скидка 25%
+									
+									div.white-block
+										div.clear
+											//Ссылка
+											a.btn.btn-reverse-colors.book-toggle(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") Записаться на приём
+
+											//Ссылка
+											a.btn.btn-reverse-colors.question-toggle(href="#") Оставить отзыв
+
+		//Руководство филиала
+		h2#managementBlock Руководство филиала
+		include ../personal-modules/managers
+
+		//Технологии
+		h2.techno-header#tekhnologiesBlock Топ технологий
+
+		include ../modules/technologies-clinic-page
+
+
+	//Отделения - вынесено отдельно, т.к. блок на всю ширину
+	div.brown-section.offices-service-block
+		div.contents
+
+			//Отделения
+			div.relative.offices-header
+				h2#servicesBlock Стоматологические услуги
+				div.file-link-wrapper.all-link
+					a(href="#").file-link.pdf-link.hover-link
+						i.icon
+						div.file-name
+							span Стоимость услуг
+
+			include ../modules/service
+
+	//Контент
+	div.contents.about-page
+
+		//Специалисты
+		h2#doctorsBlock Специалисты
+		include ../personal-modules/doctors-clinic-page
+
+		//Акции
+		h2.actions-header#actionsBlock Действующие акции
+
+		.row-flex.row-extra-padding.discount-grid
+			include ../modules/discount-grid-vertical
+
+		a.more-link.-link-wrap-.more-actions(href='#') <span>Все акции клиники</span> &rarr;
+
+
+		//Отзывы
+		div.header-wrapper
+			h2#reviewsBlock Отзывы о стоматологии «САДКО»
+			//Кнопка с вызовом попапа
+			div.open-question-wrapper
+				a.btn.btn-reverse-colors.open-question-popup(href="#") Добавить отзыв
+				include ../modules/review-popup
+
+		include ../modules/reviews-slider
+
+
+
+//Персональные скрипты для этой страницы
+//block pageJS
+

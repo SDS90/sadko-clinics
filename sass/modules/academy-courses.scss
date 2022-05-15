@@ -1,0 +1,102 @@
+
+//Курсы академии
+
+.academy-courses{
+	display: table;
+	width: 100%;
+	margin-top: 23px;
+	margin-bottom: 53px;
+
+	.course-column{
+		display: table-cell;
+		vertical-align: top;
+		width: 50%;
+		height: 378px;
+	}
+
+	.course-image{
+		display: block;
+		width: 100%;
+	}
+}
+
+.academy-course-block{
+	position: relative;
+	background-color: #d44f68;
+	color: #fff;
+	padding: 29px 100px 20px 26px;
+
+	//Цвета
+	&.-red-{
+		background-color: #d44f68;
+	}
+
+	&.-violet-{
+		background-color: #9870ad;
+	}
+	&.-blue-{
+		background-color: #698cc8;
+	}
+
+	.course-header{
+		font-size: 30px;
+		line-height: 30px;
+		margin-bottom: 15px;
+	}
+
+	.about-course-block{
+		position: absolute;
+		left: 26px; right: 100px;
+		bottom: 29px;
+	}
+
+	.block-header{
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: bold;
+		padding-bottom: 3px;
+	}
+
+	.textblock{
+		color: #fff;
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 25px;
+	}
+
+	.course-info{
+		margin-top: 3px;
+		display: table;
+		width: 100%;
+
+		>div{
+			display: table-cell;
+			vertical-align: top;
+			font-size: 18px;
+			line-height: 24px;
+		}
+		.address{
+			width: 65%;
+			line-height: 18px;
+		}
+		.phone{
+			width: 35%;
+		}
+	}
+}
+
+.about-course-block{
+
+	color: #fff;
+
+	a{
+		color: #fff;
+		border-color: #fff;
+		border-color: rgba(255,255,255,0.5);
+
+		&:hover{
+			border-color: transparent;
+		}
+	}
+}
+

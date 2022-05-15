@@ -1,0 +1,35 @@
+mixin search-list-item(title, phone, adrses, external)
+	.search-list-item
+		.search-list-item--header
+			a(href='#')= title
+			if external
+				span.ico-external
+		span.search-list-item--phone= phone
+		ul.-unstyled-
+			each adrs in adrses
+				li
+					a(href='#')= adrs
+					//Блок с адресом
+					div.clinic-map-info(data-latitude="56.324701" data-longitude="44.008735" data-address="ул. Варварвская, 8/22", data-marker="#{srcPath}img/icons/marker.png")
+						div.clinic-name Стоматология на Варварской
+						div.clear
+							div.contacts-wrapper
+								div.contacts-block
+									p Адрес:
+									p
+										b ул. Варварвская, 8/22 
+								div.contacts-block
+									p Телефон:
+									p
+										b +7 (831) 3-120-120
+							div.times-wrapper
+								p Режим работы:
+								p 8<sup>00</sup> - 20<sup>00</sup> Пн.-Сб.
+								p 9<sup>00</sup> - 18<sup>00</sup> Вс.
+
+						div.textblock Как добраться?
+
+						//Поиск адреса
+						form.clear.address-search
+							input.textfield(type="text" placeholder="Введите ваш адрес")
+							input.btn.btn-reverse-colors(type="submit" value="Показать")

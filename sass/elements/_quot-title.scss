@@ -1,0 +1,17 @@
+/* -------------------------------------------------
+    Quot title
+   ------------------------------------------------- */
+
+.quot-title {
+  min-width: $bLayoutMinWidth;
+  background-color: #f5f6ec;
+  padding: 45px 0 50px 0;
+
+  h1{
+    font-family: 'proxima-nova', "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    color: #4f4f4f;
+    margin-bottom: 35px;
+  }
+}

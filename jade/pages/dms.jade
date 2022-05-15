@@ -1,0 +1,405 @@
+extends ../layout-inner
+include ../mixins/quot
+
+
+block title
+	| Добровольное медицинское страхование
+block content
+
+
+	//Блок с цитатой
+	div.start-quote-wrapper
+		div.contents
+			h1 Добровольное медицинское страхование
+			//Цитата
+			div.quot.row-flex.-quot-no-border-
+				div.col-10
+					div.quot--text Выбирая клинику «САДКО» в рамках ДМС-программ, вы пользуетесь абсолютно теми же услугами с тем же качеством и сервисом, которые получают наши пациенты, оплачивая процедуры самостоятельно
+	
+	//Страница ДМС
+	div.contents.dms-page
+
+		div.dms-benefits
+
+			h2 Преимущества выбора
+			div.row-flex
+				//Описание преимуществ
+				div.col-9
+					div.textblock.about-benefits
+						p ДМС, позволяет получить медицинские услуги сверх программ обязательного медицинского страхования, гарантированного государством. Страхователем могут выступать дееспособные физические лица без существенных проблем со здоровьем (инвалидность, серьезные хронические болезни), а также юридические лица, которые страхуют сотрудников своей организации. Как показывает опыт работы, в России в большинстве случаев страхователем выступают организации.
+
+						p Основное преимущество в том, что вы лично (либо ваш работодатель) принимаете участие в формировании необходимой вам страховой программы, определяете виды и объем услуг, выбираете медицинские учреждения, в которых вы хотели бы обслуживаться и лечиться.
+
+					div.row-flex
+						div.col-6
+							div.textblock.dms-program
+								h3 Стандартная страховая программа
+								ul
+									li Амбулаторно-поликлиническое обследование (консультации специалистов, лабораторная диагностика, инструментальные исследования, физиотерапевтическое лечение).
+									li Стационарная помощь (госпитализация по плановым и/или экстренным показаниям).
+									li Стоматологическое лечение (консультации, рентгендиагностика, хирургическое лечение, терапевтическое лечение).
+						div.col-6
+							div.textblock.full-program
+								h3 Расширенная программа
+								ul
+									li Амбулаторно-поликлиническое обследование (консультации специалистов, лабораторная диагностика, инструментальные исследования, физиотерапевтическое лечение).
+									li Помощь на дому.
+									li Стационарная помощь (госпитализация по плановым и/или экстренным показаниям).
+					//Ссылка на все услуги
+					a.more-link.-link-wrap-(href='#') <span>Все услуги клиники</span> &rarr;
+
+				//Список страховых
+				div.col-3.dms-companies-wrapper
+					h3 Страховые
+					div.textblock компании, с которыми заключены договоры на ДМС
+
+					table
+						tr
+							td.image
+								img(src="#{srcPath}img/dms/renessans.jpg" alt="")
+							td.phone 8 800 555 78 90
+						tr
+							td.image
+								img(src="#{srcPath}img/dms/alfa.jpg" alt="")
+							td.phone 8 800 000 23 12
+						tr
+							td.image
+								img(src="#{srcPath}img/dms/rgs.jpg" alt="")
+							td.phone 8 800 456 32 78
+						tr
+							td.image
+								img(src="#{srcPath}img/dms/igs.jpg" alt="")
+							td.phone 8 800 333 22 10
+
+					a(href="#").btn Полный список страховых
+
+			h3.dms-conditions-header Условия обслуживания
+
+			div.row-flex
+				div.col-9
+					//Вкладки
+					div.dms-tabs
+						a(href="#patients").dms-tab.tab-link Пациентам
+						a(href="#organizations").dms-tab.tab-link.active Организациям
+
+					//Условия (для организаций)
+					div(data-tab="#organizations").dms-conditions-block.dms-organizations.tab-block
+
+						div.row-flex
+							//Список
+							div.col-4.textblock
+
+								h3 Формы работы:
+
+								ul.workforms
+									li программы прикреплений
+									li рисковые договора;
+									li депозитные договора;
+									li годовые программы медицинского обслуживания;
+									li патронаж новорожденных;
+									li программы CHECK-UP диагностики;
+									li программы ведения беременности.
+
+
+							div.col-8.textblock
+
+								h3 Льготы для работодателей: 
+
+								//Таблица на две колонки
+								table
+									tr
+										td.special 
+											ul
+												li страховые взносы не облагаются НДФЛ;
+										td.links
+											a(href="#") 213 · 3 НК
+									tr
+										td.special 
+											ul
+												li страховые выплаты не облагаются НДФЛ;
+										td.links
+											a(href="#") 213 · 1 · 3 НК
+									tr
+										td.special 
+											ul
+												li страховые взносы не предусматривают обязательных отчислений в Пенсионный Фонд РФ, ФСС, ФОРМ, ТФОМС;
+										td.links
+											a(href="#") 9 · 1 · 5 ФЗ-212 «О страховых взносах»
+									tr
+										td.special 
+											ul
+												li страховые взносы не облагаются НДС;
+										td.links
+											a(href="#") 149 · 3 · 7 НК
+									tr
+										td.special 
+											ul
+												li страховые выплаты не облагаются НДС;
+										td.links
+											a(href="#") 149 · 3  · 7 НК
+									tr
+										td.special 
+											ul
+												li страховые взносы относятся на затраты (себестоимость) предприятия.
+										td.links
+											a(href="#") 255 · 16НК
+							
+						//Кнопка по центру
+						div.-text-center-
+							a(href="#").btn Оставить заявку
+						
+					//Условия (для пациентов)
+					div(data-tab="#patients").dms-conditions-block.dms-patients.tab-block
+
+						div.row-flex
+							//Список
+							div.col-8.textblock
+
+								h3 Что делать, если Вы приобрели полис ДМС, но в списке предлагаемых мед. учреждений Вы не видите клинику «САДКО»? 
+
+								p Обратитесь к Вашему координатору в страховую компанию и попросите внести сеть клиник «САДКО» в перечень ЛПУ
+
+								h3 Что делать, если Вы не нашли свою фирму в списке страховых компаний, с которыми работает сеть клиник «САДКО»?
+
+								p Опять же, обратитесь к Вашему координатору в страховую компанию и попросите направить проект договора в отдел РСК сети клиник «САДКО»
+
+
+							div.col-4.textblock
+
+								h3 Формы работы:
+
+								ul
+									li безналичные договора;
+									li годовые программы медицинского обслуживания;
+									li патронаж новорожденных;
+									li программы ведения беременности.
+
+								
+							
+						//Кнопка по центру
+						div.-text-center-
+							a(href="#").btn.book-toggle Записаться на приём
+
+
+				div.col-3
+
+					//Контакты (для организаций)
+					div(data-tab="#organizations").dms-contacts.tab-block
+						div.textblock
+							h3 Отдел по работе со страховыми компаниями
+							p
+								| 8 (831) 439-94-96, доб. 1101
+								br
+								a(href="#") sadko.dms@gmail.com
+							p
+								span Руководитель отдела РСК — 
+								br
+								| Догадина Ольга Николаевна
+							h3 Режим работы
+							p 8
+								sup 00
+								| —20
+								sup 00 
+								| Пн.-Сб.
+								br 
+								| 9
+								sup 00
+								| —18
+								sup 00 
+								| Вс.
+						//Документы
+						div.dms-docs
+							span.docs-header Документы
+							//a(href="#").btn.-small- Все документы
+
+							//Ссылка на pdf файл
+							div.file-link-wrapper.all-link
+								a(href="#").file-link.pdf-link.hover-link
+									div.icon-wrapper
+										i.icon
+									div.file-name
+										span Список страховых
+											br
+											| компаний с реквизитами
+
+							//Ссылка на doc файл
+							div.file-link-wrapper.all-link
+								a(href="#").file-link.doc-link.hover-link
+									div.icon-wrapper
+										i.icon
+									div.file-name
+										span Типовой договор на оказание 
+											br
+											| услуг по программе ДМС
+
+							//Ссылка на pdf файл
+							div.file-link-wrapper.all-link
+								a(href="#").file-link.pdf-link.hover-link
+									div.icon-wrapper
+										i.icon
+									div.file-name
+										span Типовой договор на VIP
+											br
+											| обслуживание
+
+					//Контакты (для пациентов)
+					div(data-tab="#patients").dms-contacts.tab-block
+
+						div.textblock
+							h3 Контактный центр
+							p
+								| 8 (831) 439-94-96
+								br
+								| 8 (831) 440-90-90
+								br
+								| 8 (831) 460-30-30
+
+							h3 Режим работы
+							p 8
+								sup 00
+								| —20
+								sup 00 
+								| Пн.-Сб.
+								br 
+								| 9
+								sup 00
+								| —18
+								sup 00 
+								| Вс.
+						//Документы
+						div.dms-docs
+							span.docs-header Документы
+
+							//Ссылка на pdf файл
+							div.file-link-wrapper.all-link
+								a(href="#").file-link.pdf-link.hover-link
+									div.icon-wrapper
+										i.icon
+									div.file-name
+										span Список страховых
+											br
+											| компаний с реквизитами
+
+							//Ссылка на doc файл
+							div.file-link-wrapper.all-link
+								a(href="#").file-link.doc-link.hover-link
+									div.icon-wrapper
+										i.icon
+									div.file-name
+										span Типовой договор на оказание 
+											br
+											| услуг по программе ДМС
+
+							//Ссылка на pdf файл
+							div.file-link-wrapper.all-link
+								a(href="#").file-link.pdf-link.hover-link
+									div.icon-wrapper
+										i.icon
+									div.file-name
+										span Типовой договор на VIP
+											br
+											| обслуживание
+
+		h2 7 причин выбрать «САДКО» для ДМС
+
+		div.row-flex
+			//Левая колонка
+			div.col-6
+				//Пункт
+				div.stage-block.clear
+					//Номер
+					div.stage-num 1.
+					div.stage-text
+						//Заголовок
+						div.stage-header Территориальный охват всех частей города
+						//Краткое описание
+						div.textblock 4 поликлинических комплекса «САДКО», 7 стоматологических клиник, детская специализированная клиника и стоматология «Здоровёнок» расположены так, что мы находимся совсем близко ко всем жителям Нижнего Новгорода!
+				//Пункт
+				div.stage-block.clear
+					div.stage-num 2.
+					div.stage-text
+						div.stage-header Наличие отдела по работе со страховыми компаниями
+						div.textblock Отдел гарантирует отлаженную работу и оперативное решение всех возникающий вопросов, в том числе электронный обмен документами
+				//Пункт
+				div.stage-block.clear
+					div.stage-num 3.
+					div.stage-text
+						div.stage-header Единый центр записи
+						div.textblock Мы ценим Ваше время, поэтому в сети клиник «САДКО» работает единый поликлинический и стоматологический call-центр, доступны он-лайн запись на прием и заказ обратного звонка через сайт 
+							a(href="#") www.sadkomed.ru
+			//Правая колонка
+			div.col-6
+				//Пункт
+				div.stage-block.clear
+					div.stage-num 4.
+					div.stage-text
+						div.stage-header Полный комплекс медицинских услуг по всем направлениям
+						div.textblock Работа ведется в соответствии с мировыми стандартами качества. Наши доктора используют самое современное европейское оборудование
+				//Пункт
+				div.stage-block.clear
+					div.stage-num 5.
+					div.stage-text
+						div.stage-header Собственная клинико-диагностическая и бактериологическая лаборатория
+						div.textblock У нас широкая сеть лабораторий во всех районах города, поэтому есть возможностью исследований в режиме «экспресс»
+				//Пункт
+				div.stage-block.clear
+					div.stage-num 6.
+					div.stage-text
+						div.stage-header Индивидуальное сопровождение VIP-пациентов
+						div.textblock За пациентом закрепляется персональный менеджер
+				//Пункт
+				div.stage-block.clear
+					div.stage-num 6.
+					div.stage-text
+						div.stage-header Комфортный график работы
+
+		h3.photo-gallery-header Фотогалерея
+			
+		div.photo-slider
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Доброжелательные врачи
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/doctor-gallery.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Профессиональное оборудование
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Современные методы лечения
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/doctor-gallery.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Комфортная обстановка
+			div.photo-block.link-block
+				a.image-link(href="#{srcPath}img/doctor-gallery/1.jpg")
+					img(src="#{srcPath}img/doctor-gallery/doctor-gallery.jpg" alt="")
+				div.textblock Комфортная обстановка
+
+		//Блок о сотрудничестве
+		div.dms-cooperation-block
+			h2 Приглашаем к сотрудничеству страховые компании
+			div.row-flex
+				//Сотрудничество
+				div.col-7
+					div.textblock Выбирая «САДКО», Вы приобретаете надежного партнера, работающего на рынке медицинских услуг региона уже 17 лет, возможность подобрать индивидуальные условия для Ваших клиентов, высококачественное обследование на самом современном оборудовании, абсолютно точные лабораторные исследования и лечение в рамках одной клиники для детей и взрослых.
+					a(href="#"  data-doctor-id="122" data-submitted="false" data-book-info="Заявка на заключение договора" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор.").btn.jur-toggle Оставить заявку на заключение договора
+
+
+				//Адрес
+				div.col-5.textblock
+					p
+						b Оформляем  договоры по адресу:
+					p Нижний Новгород, ул. Бекетова, 13, 5 этаж, кабинет 408 тел.: 8 (831) 439 94 36
+					p
+						a(href="#") Схема проезда
+
+
+			
+
+
+//Персональные скрипты для этой страницы
+//block pageJS
+	//script(src='#{srcPath}js/plugins/ui-select.js')
+

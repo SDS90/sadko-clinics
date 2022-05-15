@@ -1,0 +1,80 @@
+
+//Новости компании
+.company-news-block,
+.news-block-full{
+	margin-bottom: 25px;
+
+	&.no-picture{
+		.textblock{
+			line-height: 18px;
+
+			p{
+				margin-bottom: 17px;
+			}
+		}
+	}
+
+	.news-img{
+		display: block;
+		width: 100%;
+		margin-bottom: 9px;
+	}
+
+	.news-date{
+		font-size: 14px;
+		line-height: 24px;
+		font-style: italic;
+		margin-bottom: 3px;
+	}
+
+	.news-header{
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: bold;
+		color: #4f4f4f;
+	}
+	a.news-header{
+		border-color: #cacaca;
+	}
+
+	.textblock{
+		margin: 7px 0px 10px 0px;
+		font-size: 16px;
+		line-height: 22px;
+
+		@include blueLinks;
+	}
+
+	.more-link{
+		font-size: 16px;
+		line-height: 16px;
+		position: relative;
+		&:after {
+		    content: "";
+		    position: absolute;
+		    top: 9px;
+		    right: -20px;
+		    width: 15px;
+		    height: 5px;
+		    background-image: url(../img/icons.png);
+		    background-position: -136px -43px;
+		    background-repeat: no-repeat;
+		}
+	}
+}
+
+//Новость на всю ширину
+.news-block-full{
+	padding-top: 16px;
+	margin-bottom: 46px;
+
+	.news-date{
+		font-style: normal;
+	}
+
+	.news-header{
+		font-weight: normal;
+		font-size: 43px;
+		line-height: 43px;
+	}
+}

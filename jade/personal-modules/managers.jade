@@ -1,0 +1,63 @@
+//Строка на 2 блока докторов (обычный и топ)
+.doctor-wrappers-visible
+	div.row-flex.doctors-wrapper
+		//Блок одного Топ доктора
+		div.col-6
+			div.doctor-block.double-manager-block.clear
+				//Обёртка фото
+				div.doctor-photo-wrapper
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+				//Блок с описанием
+				div.about-doctor-wrapper.about-doctor
+					//Обёртка для скролла
+					div.doctor-scroll-wrapper
+						//Имя
+						div.doctor-name
+							a(href="#") Рацюк Марина Михайловна
+
+						//Список специализаций
+						ul.doctor-special-list
+							li Главный врач
+								br
+								| Лечебно-диагностического центра «САДКО»
+
+						
+					//Этот блок прижат к низу
+					div.bottom-block
+						a(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Не переживайте, у нас очень хорошие руководители. Они обязательно разберутся, и сделают всё наилучшим образом.").btn.manager-toggle Написать руководству
+
+		//Блок одного Обычного доктора
+		div.col-6
+			div.doctor-block.double-manager-block.clear
+				//Обёртка фото
+				div.doctor-photo-wrapper
+					a(href="#")
+						img.doctor-photo(src='#{srcPath}img/doctor-photos/doctor1.jpg', alt='Константинопольский Константин Константинович')
+					//Кнопки
+					div.button-wrapper
+						a.button.open-video(href='http://vimeo.com/9532951')
+							div.button-block.video
+								i.icon
+				//Блок с описанием
+				div.about-doctor-wrapper.about-doctor
+					//Обёртка для скролла
+					div.doctor-scroll-wrapper
+						//Имя
+						div.doctor-name
+							a(href="#") Тандырова Гаянэ Кавказовна
+
+						//Список специализаций
+						ul.doctor-special-list
+							li Управляющий филиалом
+								br
+								| Лечебно-диагностического центра «САДКО»
+						
+					//Этот блок прижат к низу
+					div.bottom-block
+						a(href="#" data-modal-header="У вас есть вопрос?"  data-modal-subheader="Задайте свой вопрос" data-modal-text="Это здорово! Мы очень хотим развиваться и прислушиваемся к любым предложениям. Если идея окажется стоящей, приглашу вас на ужин за мой счет" data-modal-button="Задать вопрос" data-modal-answer="Не переживайте, у нас очень хорошие руководители. Они обязательно разберутся, и сделают всё наилучшим образом.").btn.manager-toggle Написать руководству

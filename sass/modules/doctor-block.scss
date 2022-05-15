@@ -1,0 +1,817 @@
+//Блок врача или руководителя (общее)
+
+.doctors-wrapper{
+	margin-left: -12px;
+	margin-right: -12px;
+	>[class*='col-']{
+		padding: 0px 12px;
+	}
+}
+
+.doctor-block{
+	position: relative;
+	border: 2px solid #f4f5ef;
+	border: 2px solid rgba(244,245,239,0.8);
+	margin-bottom: 24px;
+	color: #4f4f4f;
+	overflow: hidden;
+
+	>a{
+		border: none;
+	}
+
+	.doctor-photo{
+		display: block;
+		width: 100%;
+	}
+
+	.about-doctor-wrapper{
+		position: absolute;
+		bottom: 0px;
+		left: 0px; right: 0px;
+	}
+
+	.about-doctor{
+		position: relative;
+		padding: 0px 20px 95px 20px;
+		background-color: #FFF;
+		background-color: rgba(255,255,255,0.8);
+
+		@include transition(background-color .3s $ease-in-out-quad);
+
+		&.opened .doctor-scroll-wrapper{
+			overflow: hidden;
+		}
+
+		.work-stage{
+			position: absolute;
+			bottom: 0px; left: 0px;
+			max-width: 185px;
+			font-size: 16px;
+
+			b{
+				line-height: 24px;
+			}
+		}
+
+		.bottom-block{
+			position: absolute;
+			bottom: 25px; left: 20px; right: 20px;
+			padding-bottom: 55px;
+		}
+
+		.button-wrapper{
+			padding: 11px 0px 11px 0px;
+		}
+	}
+
+	.button-wrapper{
+		padding: 0px 5px 11px 20px;
+	}
+
+	.button{
+		display: inline-block;
+		vertical-align: top;
+		min-width: 51px;
+		height: 51px;
+		border: none;
+		border-radius: 20px;
+		padding: 1px;
+		background-color: #FFF;
+		margin-right: 4px;
+		
+		.button-block{
+			min-width: 49px;
+			height: 100%;
+			border: 1px solid #33beb7;
+			border-radius: 20px;
+			line-height: 47px;
+			font-size: 18px;
+			color: #33beb7;
+			overflow: hidden;
+			white-space: nowrap;
+
+			&.video .icon{
+				background-image: url(../img/icons.png);
+				background-position: 0px -16px;
+				background-repeat: no-repeat;
+			}
+
+			&.book .icon{
+				background-image: url(../img/icons.png);
+				background-position: -49px -16px;
+				background-repeat: no-repeat;
+			}
+		}
+
+		.icon{
+			display: inline-block;
+			vertical-align: top;
+			width: 49px;
+			height: 47px;
+		}
+
+		.book-text{
+			display: none;
+			height: 47px !important;
+			margin-right: 22px;
+		}
+	}
+
+	.show-prize{
+		position: absolute;
+		right: 0px; bottom: 0px;
+		width: 20px;
+		height: 35px;
+		background-image: url(../img/icons.png);
+		background-repeat: no-repeat;
+		background-position: -307px -90px;
+		cursor: pointer;
+	}
+
+	.more-doctor-special{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 16px;
+		line-height: 24px;
+		border-style: dashed;
+	}
+
+	.doctor-experts-wrapper{
+		i{
+			line-height: 22px;
+		}
+
+		.textblock{
+			margin-bottom: 15px;
+		}
+
+		.flags {
+			img{
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 7px;
+				height: 18px;
+			}
+		}
+	}
+}
+
+.doctor-block,
+.doctor-signature{
+
+	.doctor-name{
+		padding-top: 16px;
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	.doctor-scroll-wrapper{
+		max-height: 92%;
+		overflow: visible;
+	}
+
+	.doctor-special-list{
+		margin: 6px 0px 0px 0px;
+
+		@include blueLinks;
+
+		&.doctor-special-hidden-list{
+			display: none;
+			margin: 0px 0px 15px 0px;
+		}
+
+		li{
+			display: block;
+			font-size: 16px;
+			line-height: 24px;
+			margin: 0px;
+		}
+	}
+}
+
+.doctor-block {
+	.doctor-scroll-wrapper.overflow-list,
+	.double-doctor-block .about-doctor-wrapper.scroll-wrapper,
+	&.teacher-small-block .doctor-scroll-wrapper{
+		&:after,&:before{
+			content: '';
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    pointer-events: none;
+		    width: 100%;
+		    z-index: 100;
+		}
+
+		&:before {
+		    top: 0px;
+		    z-index: 50;
+		    height: 30px;
+		    background-image: -webkit-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: -o-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: -moz-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: -ms-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: linear-gradient(bottom, transparent 0%, #fff 100%);
+		}
+
+		&:after {
+		    bottom: 0;
+		    height: 30px;
+		    background-image: -webkit-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: -o-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: -moz-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: -ms-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: linear-gradient(top, transparent 0%, #fff 100%);
+		}
+	}
+}
+
+.doctor-block.top-doctor-block,
+.doctor-block.teacher-block{
+
+	.doctor-scroll-wrapper{
+
+		&:before {
+		    background-image: -webkit-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+		    background-image: -o-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+		    background-image: -moz-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+		    background-image: -ms-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+		    background-image: linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+		}
+
+		&:after {
+		    background-image: -webkit-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+		    background-image: -o-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+		    background-image: -moz-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+		    background-image: -ms-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+		    background-image: linear-gradient(top, transparent 0%, #f5f6ec 100%);
+		}
+	}
+}
+/*
+.doctor-block.teacher-small-block {
+	.doctor-scroll-wrapper{
+
+		&:before{
+			display: none;
+		}
+
+		&.scrolling:before {
+			display: block;
+		    background-image: -webkit-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+		    background-image: -o-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+		    background-image: -moz-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+		    background-image: -ms-linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+		    background-image: linear-gradient(bottom, transparent 0%, #f5f6ec 100%);
+		}
+
+		&:after {
+		    background-image: -webkit-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+		    background-image: -o-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+		    background-image: -moz-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+		    background-image: -ms-linear-gradient(top, transparent 0%, #f5f6ec 100%);
+		    background-image: linear-gradient(top, transparent 0%, #f5f6ec 100%);
+		}
+	}
+}
+*/
+.doctor-block.winner-block,
+.doctor-block.teacher-block,
+.doctor-block.double-doctor-block{
+
+	.more-doctor-special{
+		margin: 5px 20px 0px 20px;
+	}
+
+	.scroll-element.scroll-y{
+		position: absolute;
+	    right: 0px;
+	    top: 0px;
+	    bottom: 0px;
+	    width: 8px;
+	    z-index: 900;
+
+	    div{
+	    	position: absolute;
+			display: block;
+		    height: 100%;
+		    top: 0;
+		    left: 0px;
+		    width: 100%;
+	    	overflow: hidden;
+	    }
+
+	    .scroll-element_outer{
+	    	left: 0px;
+    		width: 8px;
+	    }
+
+	    .scroll-element_track{
+	    	background-color: transparent;
+	    }
+	    .scroll-bar {
+	    	min-height: 10px;
+		    background-color: #33beb7;
+		}
+	}
+}
+
+.doctor-block.normal-doctor-block,
+.doctor-block.winner-block{
+
+	.doctor-scroll-wrapper{
+
+		&:before {
+		    background-image: -webkit-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: -o-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: -moz-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: -ms-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: linear-gradient(bottom, transparent 0%, #fff 100%);
+		}
+
+		&:after {
+		    background-image: -webkit-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: -o-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: -moz-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: -ms-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: linear-gradient(top, transparent 0%, #fff 100%);
+		}
+	}
+}
+
+//Топ врачи
+.doctor-block.top-doctor-block{
+	height: 768px;
+
+	&:hover{
+		.about-doctor{
+			background-color: #f4f5ef;
+		}
+	}
+
+	.about-doctor{
+		min-height: 366px;
+		&.opened{
+			background-color: #f4f5ef;
+		}
+	}
+}
+
+//Обычный врач
+.doctor-block.normal-doctor-block{
+	height: 625px;
+
+	.about-doctor{
+		min-height: 223px;
+		background-color: #fff;
+		&.opened{
+			background-color: #fff;
+		}
+	}
+}
+
+//Молодой врач
+/*
+.doctor-block.young-doctor-block{
+	height: 408px;
+
+	.about-doctor{
+		min-height: 154px;
+		background-color: #fff;
+		padding-bottom: 25px !important;
+		&.opened{
+			background-color: #fff;
+		}
+	}
+}
+*/
+//Победитель
+.doctor-block.winner-block{
+	height: 768px;
+
+	.about-doctor{
+		min-height: 366px;
+		background-color: #FFF;
+		text-align: center;
+		padding: 0px 0px 20px 0px !important;
+
+		.button-wrapper{
+			padding-top: 25px;
+		}
+	}
+
+	.doctor-name{
+		padding-top: 25px;
+		padding-bottom: 35px;
+	}
+
+	.doctor-scroll-wrapper{
+		padding: 0px 20px;
+
+		&:before {
+		    background-image: -webkit-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: -o-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: -moz-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: -ms-linear-gradient(bottom, transparent 0%, #fff 100%);
+		    background-image: linear-gradient(bottom, transparent 0%, #fff 100%);
+		}
+
+		&:after {
+		    background-image: -webkit-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: -o-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: -moz-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: -ms-linear-gradient(top, transparent 0%, #fff 100%);
+		    background-image: linear-gradient(top, transparent 0%, #fff 100%);
+		}
+	}
+
+
+	.winner-nomination-block{
+		padding: 22px 0px 20px 0px;
+		width: 100%;
+		border-top: 1px solid #d4d4d4;
+	}
+
+	.winner-nomination{
+		position: relative;
+		z-index: 10;
+		display: inline-block;
+		padding: 0px 27px;
+		margin-bottom: 12px;
+		font-family: 'PT Serif', serif;
+		font-weight: bold;
+		font-size: 18px;
+		text-transform: uppercase;
+		letter-spacing: 0px;
+		background-color: #FFF;
+
+		&:after,
+		&:before{
+			content: "";
+			position: absolute;
+			top: 50%; margin-top: -3px;
+			width: 7px; height: 7px;
+			background-image: url(../img/icons.png);
+			background-repeat: no-repeat;
+			background-position: -87px 0px;
+		}
+
+		&:before{
+			left: 10px;
+		}
+
+		&:after{
+			right: 10px;
+		}
+	}
+}
+
+//Преподаватель
+.doctor-block.teacher-block{
+	height: 625px;
+	border: none;
+	border-bottom: 22px solid #f4f5ef;
+	padding-bottom: 2px;
+
+	.about-doctor-wrapper{
+		left: 2px; right: 2px;
+		bottom: 2px;
+	}
+
+	.doctor-name{
+		padding-bottom: 30px;
+	}
+
+	.about-doctor{
+		min-height: 223px;
+		background-color: #f4f5ef;
+		padding: 0px 0px 32px 0px !important;
+
+		.button-wrapper{
+			padding-top: 32px;
+			padding-bottom: 0px;
+		}
+
+		&.opened{
+			z-index: 10;
+
+			&:before{
+				content:"";
+				position: absolute;
+				top: 0px; bottom: -2px;
+				left: -2px; right: -2px;
+				background-color: #f4f5ef;
+				z-index: -1;
+			}
+		}
+	}
+
+	.doctor-scroll-wrapper{
+		padding: 0px 20px;
+	}
+
+	.teacher-info{
+		padding-left: 17px;
+		margin-bottom: 18px;
+
+		li{
+			margin-top: 18px;
+
+			&:first-child{
+				margin-top: 0px;
+			}
+		}
+	}
+
+	.textblock a {
+	    color: #4f4f4f;
+	    border-color: #cacaca;
+	}
+}
+
+//Маленький вариант блока учителя
+/*.doctor-block.teacher-small-block{
+	height: 396px;
+	overflow: hidden;
+	border: none;
+
+	&.opened{
+		.top-button{
+			background-position: -305px -205px;
+		}
+	}
+
+	.about-doctor-wrapper{
+		left: 0px; right: 0px;
+		height: 100%;
+		bottom: -300px;
+	}
+
+	.doctor-name{
+		position: relative;
+		padding: 13px 20px 24px 20px;
+	}
+
+	.top-button{
+		display: block;
+		position: absolute;
+		top: 11px; right: 12px;
+		width: 23px;
+		height: 23px;
+		background-image: url(../img/icons.png);
+		background-repeat: no-repeat;
+		background-position: -280px -205px;
+		cursor: pointer;
+	}
+
+	.about-doctor{
+		height: 100%;
+		background-color: #f4f5ef;
+		padding: 0px 0px 32px 0px !important;
+
+		.button-wrapper{
+			padding-top: 32px;
+			padding-bottom: 0px;
+		}
+
+		&.opened{
+			z-index: 10;
+
+			&:before{
+				content:"";
+				position: absolute;
+				top: 0px; bottom: -2px;
+				left: -2px; right: -2px;
+				background-color: #f4f5ef;
+				z-index: -1;
+			}
+		}
+	}
+
+	.doctor-scroll-wrapper{
+		padding: 0px 20px;
+	}
+
+	.teacher-info{
+		padding-bottom: 18px;
+
+		li{
+			list-style-type: none;
+			margin-top: 5px;
+
+			&:first-child{
+				margin-top: 0px;
+			}
+		}
+	}
+}
+*/
+
+//Два врача на странице
+.doctor-block.double-doctor-block{
+	height: 406px;
+
+	.doctor-photo-wrapper,
+	.about-doctor-wrapper{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		height: 100%;
+	}
+
+	.doctor-photo-wrapper{
+		width: 271px;
+		float: left;
+	}
+
+	.button-wrapper{
+		position: absolute;
+		bottom: 0px; left: 0px;
+	}
+
+	.bottom-block{
+		padding-bottom: 75px;
+	}
+
+	.work-stage{
+		margin-bottom: 20px;
+	}
+
+	.about-doctor-wrapper{
+		width: 293px;
+		overflow: hidden;
+		float: right;
+		padding: 0px 20px 0px 20px;
+	}
+
+	.bottom-block{
+		position: relative;
+		top: auto; bottom: auto;
+		left: auto;
+		right: auto;
+	}
+	
+	.show-prize{
+		bottom: 25px;
+		right: 20px;
+	}
+
+	.doctor-experts-wrapper{
+		margin-top: 15px;
+	}
+}
+
+//Два руководителя
+.doctor-block.double-manager-block{
+	height: 406px;
+
+	.doctor-photo-wrapper,
+	.about-doctor-wrapper{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		height: 100%;
+	}
+
+	.doctor-photo-wrapper{
+		width: 271px;
+		float: left;
+	}
+
+	.button-wrapper{
+		position: absolute;
+		bottom: 0px; left: 0px;
+	}
+
+	.bottom-block{
+		padding-bottom: 0px;
+		.btn{
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	.work-stage{
+		margin-bottom: 20px;
+	}
+
+	.about-doctor-wrapper{
+		width: 293px;
+		overflow: hidden;
+		float: right;
+		padding: 0px 20px 0px 21px;
+		background-color: #f4f5ef;
+	}
+
+}
+
+//Врач-руководитель
+.doctor-block.doctor-manager{
+	height: 456px;
+	.about-doctor{
+		background-color: #f4f5ef;
+		padding-bottom: 25px;
+	}
+	.doctor-special-list{
+		margin-bottom: 12px;
+	}
+	.btn{
+		width: 100%;
+		text-align: center;
+	}
+}
+
+//Общий Врач-руководитель
+.doctor-block.full-manager{
+	border: none;
+
+	.about-doctor{
+		padding-bottom: 24px;
+		background-color: #f4f5ef;
+	}
+
+	.doctor-name{
+		padding-top: 18px;
+		padding-bottom: 17px;
+		border-bottom: 1px solid #d4d4d4;
+	}
+
+	.doctor-special-list{
+		margin-top: 11px;
+		margin-bottom: 14px;
+	}
+
+	.btn{
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+//Подпись под отзывом
+.doctor-signature{
+	min-height: 183px;
+	border: 2px solid #f5f6ec;
+
+	&.manager{
+		border: none;
+		background-color: #f5f6ec;
+	}
+
+	.doctor-block{
+		display: inline-block;
+		border: none;
+		width: 122px;
+		margin-bottom: 0px;
+		float: left;
+	}
+
+	.about-doctor{
+		max-height: 183px;
+		padding: 0px 16px 16px 145px;
+	}
+
+	.scroll-wrapper > .scroll-content{
+		padding-left: 23px;
+
+		.doctor-special-list{
+			margin-bottom: 16px;
+		}
+	}
+
+	.scroll-element.scroll-y {
+	    position: absolute;
+	    right: 0;
+	    top: 0px;
+	    bottom: 0px;
+	    width: 10px;
+	    z-index: 900;
+	     div {
+		    position: absolute;
+		    display: block;
+		    height: 100%;
+		    top: 0;
+		    left: 0px;
+		    width: 100%;
+		    overflow: hidden;
+		}
+
+		.scroll-element_outer {
+		    left: 0px;
+		    width: 10px;
+		}
+
+		.scroll-element_track {
+		    background-color: #f4f5ef;
+		    width: 10px;
+		}
+
+		 .scroll-bar {
+		    background-color: #33beb7;
+		    left: 1px;
+    		right: 1px;
+		    min-height: 10px;
+		    border-radius: 0px;
+		}
+	}
+}

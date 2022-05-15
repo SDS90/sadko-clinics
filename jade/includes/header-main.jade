@@ -1,0 +1,56 @@
+include ../mixins/smile
+
+//Стандартная шапка - для главной страницы
+header.header
+	//Блок с матовым стеклом
+	//div.header-bg(id='headerBg')
+	//Блок с видео. Видео загружается в трёх форматах + картинка - на случай, если этот элемент не поддерживается
+	div.video-section
+		//Видео (mp4, webm,ogv)
+		div.video-wrapper
+			video(id='headerVideo' poster="#{srcPath}video/sadko-hd.jpg" preload loop)
+				source(src="#{srcPath}video/sadko-hd.mp4" type="video/mp4")
+				source(src="#{srcPath}video/sadko-hd.webm" type="video/webm")
+				source(src="#{srcPath}video/sadko-hd.ogv" type="video/ogg")
+				//object(type="application/x-shockwave-flash" data="#{srcPath}video/flashfox.swf" width="1920" height="1080" style="position:relative;")
+					param(name="movie" value="#{srcPath}video/flashfox.swf")
+					param(name="allowFullScreen" value="true")
+					param(name="flashVars" value="autoplay=false&amp;controls=false&amp;fullScreenEnabled=false&amp;posterOnEnd=true&amp;loop=true&amp;poster=#{srcPath}video/first_screen_5.jpg&amp;src=first_screen_5.m4v")
+					embed(src="#{srcPath}video/flashfox.swf" width="1920" height="1080" style="position:relative;" flashVars="autoplay=false&amp;controls=false&amp;fullScreenEnabled=false&amp;posterOnEnd=true&amp;loop=true&amp;poster=#{srcPath}video/first_screen_5.jpg&amp;src=first_screen_5.m4v" allowFullScreen="true" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_en")
+					img(alt="first_screen_5" src="#{srcPath}video/first_screen_5.jpg" style="position:absolute;left:0;" width="100%" title="Video playback is not supported by your browser")
+
+	div.contents
+		//Верхняя часть шапки
+		div.header-top
+			//Логотип
+			a.header-logo(href='/')
+				img(src='#{srcPath}img/logo.png', alt='Логотип компании Садко')
+			//Режим работы
+			div.work-time-wrapper
+				span.work-time
+					| 8<sup>00</sup> - 20<sup>00</sup> Пн.- Сб.
+				span.work-time
+					| 9<sup>00</sup> - 18<sup>00</sup> Вс.
+			//Вход в личный кабинет
+			a.header-login(href='/')
+				i.ico-heart
+				span Войти в личный кабинет
+
+			//Здесь в data-атрибуте указывается заголовок, который будет показываться в форме записи на приём. Если заголовка нет - будет показан стандартный вариант, но лучше указать даже его.
+			a.smile-toggle.book-toggle(href='#' data-smile="#smile" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") 
+				i.ico-bell
+				span Записаться
+			//телефон
+			div.header-top--right
+				a.header-phone(href="#") +7 (831) 421-01-01
+		//Надпись по центру главной
+		div.header-title(id='headerTitle')
+			h1.smile-toggle(data-smile='#smile')
+				| Мы
+				span.header-title--dash
+					//Тут анимация с улыбкой
+					+smile('smile')
+				| Садко
+				span.header-title--note Сеть медицинских клиник, которым доверяют
+	//Навигация на главной странице
+	include ../modules/main-navigation

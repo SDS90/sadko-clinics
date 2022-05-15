@@ -1,0 +1,20 @@
+mixin bonus-calc(params)
+	.bonus-calc(id=attributes.id)
+		.row-flex
+			div(class='col-#{params.l}')
+				.bonus-calc--sum
+					span.bonus-calc--title Сумма
+					span.bonus-calc--sum--value#calcSum= params.start
+					span.bonus-calc--sum--unit.rouble  a
+					.bonus-calc--slider#bonusCalcBlock(data-start-sum="29999")
+						input#range(type="text")
+			div(class='col-#{params.r}')
+				span.bonus-calc--title Размер бонуса
+				span.bonus-calc--percents
+					span#bonusPercent 
+					| %
+		strong.bonus-calc--note 1 бонус = 1 рубль
+
+
+
+

@@ -1,0 +1,200 @@
+/* -------------------------------------------------
+    Doctors gallery
+   ------------------------------------------------- */
+
+$itemHeight: 651px;
+$duration: .5s;
+$timingFunction: $ease-in-out-quad;
+
+.doc-gallery-wrap {
+  margin-bottom: 25px;
+}
+
+.doc-gallery-nav {
+  //height: $itemHeight;
+
+  .flickity-prev-next-button {
+    background: none;
+    top: 50%;
+    z-index: 3;
+    color: #e1e1e1;
+
+    &.next {
+      right: -46px;
+    }
+
+    &.previous {
+      left: -46px;
+    }
+
+    .arrow{
+      fill: #33beb7
+    }
+    
+    &:hover .arrow{
+      //fill: #0696a3;
+    }
+  }
+}
+
+.doc-gallery--item {
+  position: relative;
+  height: $itemHeight;
+  width: 100%;
+  padding: 1px 0;
+
+  .video-wrapper,
+  .video-frame
+  {
+      width: 100%;
+      height: 651px;
+
+      iframe{
+        width: 100%;
+        height: 851px;
+        margin-top: -100px;
+      }
+
+      .video-button {
+        width: 127px;
+        height: 127px;
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        margin: -63px 0px 0px -63px;
+        background-image: url(../img/icons.png);
+        background-repeat: no-repeat;
+        background-position: -252px -232px;
+
+        &.playing{
+          visibility: hidden;
+        }
+    }
+  }
+
+  .all-doctors-link,
+  .doctor-info{
+    position: absolute;
+    z-index: 90;
+    left: 66px;
+    color: #fff;
+  }
+
+  .all-doctors-link{
+    bottom: 48px;
+    border-color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .doctor-info{
+    top: 65px;
+    width: 450px;
+
+    .doctor-name{
+      font-family: 'proxima-nova', "Open Sans", sans-serif;
+      font-size: 48px;
+      line-height: 60px;
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .doctor-skills,.textblock{
+      font-size: 18px;
+      line-height: 24px;
+      margin: 17px 0px 0px 0px;
+      color: #fff;
+    }
+
+    .flags{
+      margin-top: 20px;
+    }
+
+    .flags img{
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 7px;
+    }
+
+    li{
+      list-style-type: none;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+//  Nav
+// -------------------------------------------------
+
+.doc-gallery-nav {
+  @include clearfix;
+  position: relative;
+
+  .doc-tile {
+    cursor: pointer;
+    float: left;
+  }
+}
+
+.full-doctor-block .video-wrapper .doc-gallery--item--listen {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    z-index: 10;
+    top: auto;
+    opacity: 1;
+    color: #fff;
+    margin-left: 0px;
+    padding-left: 56px;
+    font-size: 14px;
+    line-height: 1.1;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    &:hover .doc-gallery--item--listen--ico:after{
+      width: 39px;
+      height: 39px;
+    }
+}
+
+.doc-gallery--item--listen--ico {
+    background: #0696a3;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    &:after{
+      content: '';
+      border-radius: 50%;
+      border: 1px solid #fff;
+      width: 36px;
+      height: 36px;
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      transition: all 0.3s;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .ico-play {
+        margin-left: 2px;
+    }
+}

@@ -1,0 +1,302 @@
+@import "../../bourbon";
+@import "../../base";
+
+/* -------------------------------------------------
+    Navigation
+   ------------------------------------------------- */
+
+$height: 90px;
+$duration: .3s;
+$timingFunction: $ease-in-out-quad;
+
+.nav-wrapper{
+  width: 100%;
+  background-color: #33beb7;
+}
+
+.nav-main {
+  @include display(flex);
+  @include justify-content(space-between);
+  @include align-items(center);
+
+  width: $bLayoutWidth;
+  height: $height;
+  margin-left: -$bLayoutWidth/2;
+  position: absolute;
+  padding: 0 8px;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+}
+
+.nav-main--item {
+  height: 100%;
+  float: left \9;
+  margin-right: 32px \9;
+  padding-top: 8px;
+
+  &:last-child {
+    margin-right: 0 \9;
+  }
+
+  &.normal >a,
+  &.normal >span{
+    border-radius: 16px;
+  }
+
+  > a,
+  > span {
+    display: inline-block;
+    height: 34px;
+    line-height: 32px;
+    color: #fff;
+    border: none;
+    padding: 0 16px;
+    font-size: 18px;
+    
+    @include transition(all $duration $timingFunction);
+
+    >span{
+      display: inline-block;
+      height: 45px;
+    }
+  }
+
+  &.active{
+    background-color: #3c9c97;
+
+    &.normal:hover{
+      >a, >span{
+        background-color: #3c9c97;
+        color: #fff;
+      }
+    }
+  }
+
+  &.-has-inner- {
+
+    .nav-main--inner {
+      margin-top: -6px;
+    }
+
+    &.hover {
+      > a,
+      >span {
+        background: #fff;
+        color: $colorTurqLight;
+      }
+
+      .nav-main--inner {
+        left: $bLayoutPadding;
+        opacity: 1;
+
+        @include transition(opacity $duration $timingFunction, left 0s);
+
+        .custom-scroll-wrap {
+          opacity: 1;
+          @include transform(translateY(0));
+
+          @include transition(all $duration .1s $timingFunction);
+        }
+      }
+    }
+
+    &.-has-inner-small{
+      position: relative;
+
+      &.hover .nav-main--inner{
+        left: 0px;
+      }
+    }
+  }
+
+  &.normal{
+
+    &:hover{
+      >a,
+      >span{
+        border-radius: 16px;
+        background: #fff;
+        color: $colorTurqLight;
+      }
+    }
+  }
+
+}
+
+//  Inner items
+// -------------------------------------------------
+
+.nav-main--inner {
+  border-radius: 16px;
+  position: absolute;
+  background: #fff;
+  left: -1000000px;
+  bottom: 100%;
+  margin-bottom: -23px;
+  max-height: 564px;
+  width: 100%;
+  padding: 24px 10px 20px 30px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 1250;
+
+  margin-bottom: 0 \9;
+
+  @include transition(opacity $duration $timingFunction, left 0s $duration);
+
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 70px;
+    background-image: -webkit-linear-gradient(top, transparent 0%, #fff 100%);
+    background-image: -o-linear-gradient(top, transparent 0%, #fff 100%);
+    background-image: -moz-linear-gradient(top, transparent 0%, #fff 100%);
+    background-image: -ms-linear-gradient(top, transparent 0%, #fff 100%);
+    background-image: linear-gradient(top, transparent 0%, #fff 100%);
+    border-radius: 0px 0px 16px 16px;
+  }
+
+  &.-inner-small{
+    width: 400px;
+    margin-bottom: 0px;
+    border-radius: 16px 16px 16px 0px;
+    padding: 24px 10px 20px 10px;
+
+    &:after{
+      display: none;
+    }
+
+    .scroll-element.scroll-y{
+      display: none;
+    }
+  }
+
+  .custom-scroll-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    @include transform(translateY(20px));
+
+    @include transition(all $duration 0s $timingFunction);
+  }
+
+  .scroll-wrapper > .scroll-content{
+    padding: 24px 10px 20px 30px;
+  }
+
+  .scroll-element.scroll-y{
+    position: absolute;
+      right: 0;
+      top: 24px;
+      bottom: 20px;
+      width: 12px;
+      z-index: 900;
+
+      div{
+        position: absolute;
+      display: block;
+        height: 100%;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .scroll-element_outer{
+        left: 0px;
+        width: 12px;
+      }
+
+      .scroll-element_track{
+      background-color: transparent;
+      width: 12px;
+    }
+
+    .scroll-bar{
+      background-color: #33beb7;
+      width: 5px;
+      left: 0px;
+      min-height: 10px;
+      border-radius: 3px;
+    }
+  }
+
+  .nav-main--inner--content{
+    margin-bottom: 70px;
+    margin-left: -5px;
+    margin-right: -5px;
+
+    .col-3{
+      width: 24%;
+      padding: 0px 5px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.nav-main--inner-group {
+  margin: 0 0 12px;
+
+  li {
+    list-style: none;
+    line-height: 1.1;
+  }
+  a {
+    color: #787878;
+    font-size: 14px;
+    border-bottom-color: transparent;
+
+    &:hover {
+      color: #6d8d95;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+    }
+  }
+}
+
+.nav-main--inner-title {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  > a {
+    color: #4f4f4f;
+    font-size: 22px;
+    line-height: 24px;
+    border-bottom-color: #cacaca;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+.nav-main--inner-title--note {
+  display: block;
+
+  a {
+    color: #9aa5a8;
+    font-size: 14px;
+    border-bottom-color: lighten(#9aa5a8, 30);
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/* -------------------------------------------------
+    Contacts info
+   ------------------------------------------------- */
+
+.contacts-info {
+  margin-bottom: $sectionMargin;
+
+  .col-3 {
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 36px;
+  }
+}
+
+.contacts-info--link {
+  position: absolute;
+  bottom: 0;
+}

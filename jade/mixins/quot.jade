@@ -1,0 +1,7 @@
+mixin quot(text, author, authorPos, leftCol, rightCol)
+	div.quot.row-flex
+		div(class='col-#{leftCol}')
+			div.quot--text= text
+		div.quot--author(class='col-#{rightCol}')
+			a(href='#').-text-link-= author
+			span.quot--author--position !{authorPos}

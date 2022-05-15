@@ -1,0 +1,188 @@
+extends ../layout-inner
+
+include ../mixins/news-item
+
+block title
+	| Новости
+block content
+	.contents.news-page
+
+		h1.page-header Наши новости
+
+		//Новости- фильтр
+		div.row-flex
+			div.col-9.filter-wrapper.clear
+				//Сам фильтр
+				div.page-filter
+					span.filter-name Подобрать новость:
+					span.filter-block-wrapper
+						span.filter-open-button По теме
+						//Список тем
+						div.filter-block
+							div.closed Закрыть
+							//Список в одну колонку
+							div.filter-list-wrapper
+								div.filter-list
+									ul
+										li
+											a(href="#") Новости клиники
+										li
+											a(href="#") Наши врачи
+										li
+											a(href="#") В России
+										li
+											a(href="#") За рубежом
+										li
+											a(href="#") Наши достижения
+			//Блок с формой подписки
+			div.col-3
+				div.subscribe-wrapper
+					a(href="#").btn.subscribe-button Подписаться на рассылку
+					form.subscribe-form.hidden.clear
+						input.textfield(type="text" placeholder="Введите e-mail" data-error-text="Это не e-mail")
+						input.submit-btn(type="submit" value="Подписаться")
+
+
+
+
+		//Блок новости на всю ширину
+		div.news-block-full.-text-center-
+			//Дата
+			div.news-date 19 октября 2015 года
+			//Заголовок
+			div.news-header Открытие первой стоматологии «САДКО» в нижней части города
+			//Текст новости
+			div.textblock Первая стоматология «САДКО» в нижней части города. Основанная на лучших стоматологических стандартах и 15 летних наработках ведущих стоматологов — профессионалов «Центра развития стоматологии». Записаться на прием можно на новом <a href="#">сайте</a>.
+	
+		//Колонки
+		.row-flex
+			.col-3
+				//Блок новости
+				div.company-news-block
+					//Дата
+					div.news-date 17 октября 2015 года
+					//Картинка новости
+					img(src='#{srcPath}img/content/news.jpg' alt="").news-img
+					
+					//Название + ссылка
+					a(href="#").news-header.hover-link Открытие лаборатории «САДКО» на ул.Белинского
+					//Краткая аннотация
+					div.textblock Полный комплекс анализов любого профиля теперь в новой лаборатории «САДКО» на 
+						a(href="#") ул. Белинского, 71/1 
+						br
+						i В честь открытия скидка — 25%
+					//Теги
+					div.tags-wrapper
+						a(href="#") обучение, 
+						a(href="#") Макларен
+			.col-3
+				//Блок новости
+				div.company-news-block
+					//Дата
+					div.news-date 15 октября 2015 года
+					//Название + ссылка
+					a(href="#").news-header.hover-link «Зеленая» томография на ул. Новая
+					//Краткая аннотация
+					div.textblock Цифровые дентальные томографы являются уникальным диагностическими инструментами нового поколения с огромным потенциалом использования в разных областях медицины.
+					//Теги
+					div.tags-wrapper
+						a(href="#") обучение, 
+						a(href="#") Макларен
+			.col-3
+				//Блок новости
+				div.company-news-block
+					//Дата
+					div.news-date 3 октября 2015 года
+					//Картинка новости
+					img(src='#{srcPath}img/content/news.jpg' alt="").news-img
+					//Название + ссылка
+					a(href="#").news-header.hover-link Итоги комплексного эстетического курса Эдварда Макларена в Нижнем Новгороде
+					//Краткая аннотация
+					div.textblock 26-28 июня 2015 г. состоялось уникальное событие для нижегородской стоматологии — первый в истории частный визит мирового эксперта эстетической стоматологии Эдварда Макларена. 
+					//Теги
+					div.tags-wrapper
+						a(href="#") обучение, 
+						a(href="#") Макларен
+			.col-3
+				div.company-news-block
+					//Дата
+					div.news-date 3 октября 2015 года
+					//Картинка новости
+					img(src='#{srcPath}img/content/news.jpg' alt="").news-img
+					//Название + ссылка
+					a(href="#").news-header.hover-link Итоги комплексного эстетического курса Эдварда Макларена в Нижнем Новгороде
+					//Краткая аннотация
+					div.textblock 26-28 июня 2015 г. состоялось уникальное событие для нижегородской стоматологии — первый в истории частный визит мирового эксперта эстетической стоматологии Эдварда Макларена. 
+					//Теги
+					div.tags-wrapper
+						a(href="#") обучение, 
+						a(href="#") Макларен
+		.row-flex
+			.col-3
+				//Блок новости
+				div.company-news-block
+					//Дата
+					div.news-date 17 октября 2015 года
+					//Картинка новости
+					img(src='#{srcPath}img/content/news.jpg' alt="").news-img
+					//Название + ссылка
+					a(href="#").news-header.hover-link Открытие лаборатории «САДКО» на ул.Белинского
+					//Краткая аннотация
+					div.textblock Полный комплекс анализов любого профиля теперь в новой лаборатории «САДКО» на 
+						a(href="#") ул. Белинского, 71/1 
+						br
+						i В честь открытия скидка — 25%
+					//Теги
+					div.tags-wrapper
+						a(href="#") обучение, 
+						a(href="#") Макларен
+			.col-3
+				//Блок новости
+				div.company-news-block
+					//Дата
+					div.news-date 15 октября 2015 года
+					//Название + ссылка
+					a(href="#").news-header.hover-link «Зеленая» томография на ул. Новая
+					//Краткая аннотация
+					div.textblock Цифровые дентальные томографы являются уникальным диагностическими инструментами нового поколения с огромным потенциалом использования в разных областях медицины.
+					//Теги
+					div.tags-wrapper
+						a(href="#") обучение, 
+						a(href="#") Макларен
+			.col-3
+				//Блок новости
+				div.company-news-block
+					//Дата
+					div.news-date 3 октября 2015 года
+					//Картинка новости
+					img(src='#{srcPath}img/content/news.jpg' alt="").news-img
+					//Название + ссылка
+					a(href="#").news-header.hover-link Итоги комплексного эстетического курса Эдварда Макларена в Нижнем Новгороде
+					//Краткая аннотация
+					div.textblock 26-28 июня 2015 г. состоялось уникальное событие для нижегородской стоматологии — первый в истории частный визит мирового эксперта эстетической стоматологии Эдварда Макларена. 
+					//Теги
+					div.tags-wrapper
+						a(href="#") обучение, 
+						a(href="#") Макларен
+			.col-3
+				div.company-news-block
+					//Дата
+					div.news-date 3 октября 2015 года
+					//Картинка новости
+					img(src='#{srcPath}img/content/news.jpg' alt="").news-img
+					//Название + ссылка
+					a(href="#").news-header.hover-link Итоги комплексного эстетического курса Эдварда Макларена в Нижнем Новгороде
+					//Краткая аннотация
+					div.textblock 26-28 июня 2015 г. состоялось уникальное событие для нижегородской стоматологии — первый в истории частный визит мирового эксперта эстетической стоматологии Эдварда Макларена. 
+					//Теги
+					div.tags-wrapper
+						a(href="#") обучение, 
+						a(href="#") Макларен
+		div.spoiler-wave-wrap
+			a.-pseudo-.-link-wrap-(href='#')
+				span.spoiler-toggle Загрузить ещё новости
+
+		include ../modules/actions
+
+		div.-text-right-
+			a.more-link.-link-wrap-(href='#') <span>Все акции клиники</span> &rarr;

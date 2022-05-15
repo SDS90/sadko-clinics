@@ -1,0 +1,118 @@
+//Вся правда о Садко
+
+.sadko-page{
+	padding-top: 5px;
+
+	h2{
+		margin-top: 40px;
+		margin-bottom: 10px;
+	}
+
+	.row-flex>[class*='col-']{
+		position: relative;
+
+		.num-wrapper{
+			position: absolute;
+			bottom: 10px; left: 0px;
+
+			span{
+				display: inline-block;
+				vertical-align: bottom;
+			}
+			.num{
+				font-size: 113px;
+				line-height: 113px;
+				font-weight: bold;
+				color: #33beb7;
+			}
+
+			.text{
+				font-size: 16px;
+				line-height: 18px;
+				max-width: 130px;
+				margin: 0px 0px 15px 10px;
+			}
+		}
+	}
+
+	.textblock{
+		font-size: 18px;
+		line-height: 24px;
+		padding-bottom: 18px;
+
+		@include blueLinks;
+
+		&.col-6{
+			margin-bottom: 30px;
+		}
+
+		&.small-text{
+			font-size: 16px;
+			line-height: 22px;
+
+			h3, .h3{font-size: 24px; line-height: 24px;}
+		}
+
+		h3,.h3{
+			margin-top: 13px;
+		}
+
+		p{
+			margin-bottom: 25px;
+		}
+
+		figcaption{
+			margin-top: 10px;
+		}
+
+		.row-flex{
+			margin-bottom: 22px;
+		}
+	}
+
+	.promo-video{
+		margin-top: 18px;
+	}
+
+	.header-wrapper{
+		margin-top: 30px;
+	}
+
+	.info-photo-wrapper{
+		min-height: 600px;
+		margin-bottom: 55px;
+	}
+}
+
+//Фотография с информацией
+.info-photo-wrapper{
+	position: relative;
+
+	.bg-photo{
+		display: block;
+		width: 100%;
+	}
+
+	.statistic{
+		position: absolute;
+	}
+
+	.statistic-numbers{
+		bottom: 0px;
+		left: 56px; right: 56px;
+		opacity: 0.0;
+	}
+
+	.statistic-info{
+		bottom: 52px;
+		font-size: 16px;
+		line-height: 22px;
+		color: #fff;
+	}
+
+	.statistic-shadow{
+		bottom: 22px;
+		left: 56px; right: 56px;
+		opacity: 0.0;
+	}
+}

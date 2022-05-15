@@ -1,0 +1,38 @@
+
+//Doctor page
+
+.doctor-page{
+	padding-top: 66px;
+
+	h1{
+		padding-right: 200px;
+		margin-bottom: 18px;
+	}
+
+	.all-doctors-link{
+		position: absolute;
+		right: 0px; top: 7px;
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	>h2{
+		margin-top: 40px;
+		margin-bottom: 18px;
+
+		&.resuls-header,
+		&.advices-header{
+			margin-top: 10px;
+		}
+	}
+
+	.more-articles{
+		margin-top: -18px;
+    	margin-bottom: 0px;
+	}
+
+	//Статьи доктора
+	.doctor-articles{
+		margin-bottom: 40px;
+	}
+}

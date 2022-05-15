@@ -1,0 +1,47 @@
+//Статьи (страница)
+
+.articles-page{
+	padding-top: 33px;
+	position: relative;
+
+	h1{
+		padding-right: 200px;
+		margin-bottom: 12px;
+	}
+
+	.delivery-link{
+		position: absolute;
+		right: 26px; top: 27px;
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.more-articles{
+		margin-top: -18px;
+		margin-bottom: 30px;
+	}
+
+	.articles-wrapper{
+		margin-top: 17px;
+	}
+
+	.row-flex{
+		margin-left: -12px;
+		margin-right: -12px;
+	}
+
+	[class*='col-'] {
+	    padding: 0px 12px;
+	}
+}
+
+/*
+//Видео-баннер
+.video-banner{
+	margin-top: 42px;
+	h3{
+		font-size: 23px;
+		margin-bottom: 8px;
+	}
+}
+*/

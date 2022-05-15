@@ -1,0 +1,61 @@
+extends ../layout-inner
+
+include ../mixins/quot-title
+include ../mixins/fixed-menu
+
+block title
+	| Контакты
+block content
+	+fixed-menu([
+		{id:'intro',title: 'Обращение'},
+		{id:'addresses',title: 'Адреса и телефоны клиник'},
+		{id:'info',title: 'Служебная информация'},
+		{id:'feedback',title: 'Обратная связь'}
+	])
+
+	//Блок с цитатой
+	div.start-quote-wrapper
+		div.contents
+			h1#intro Контактная информация
+			//Цитата
+			div.quot.row-flex.-quot-no-border-
+				div.col-10
+					div.quot--text Мы постоянно меняемся, следуя вышим пожеланиям и сайт не всегда успевает за нашими дейстфиями. Поэтому, если не можете найти нужную информацию, не стесняйтесь задавать вопросы консультантам горячей линии - они обязательно помогут.
+
+	.contents
+
+		h2#addresses Сеть филиалов
+		include ../modules/branches-map
+
+		.contacts-info
+			h2#info Служебная информация
+			.row-flex
+				.col-3
+					h3 Отдел рекламы и PR
+					p Предложение о размещении рекламы в ваших изданиях, запросы на интервью с руководством, реклама услуг.
+					a(href='#').-link-turq-.contacts-info--link media@sadkomed.ru
+				.col-3
+					h3 Отдел кадров
+					p Мы всегда готовы предоставить работу хорошим специалистам. Заполните <a href='#' class='-link-turq-'>анкету</a> и присылайте письмо
+					a(href='#').-link-turq-.contacts-info--link hr@sadkomed.ru
+				.col-3
+					h3 Учебный центр
+					p +7 (831) 4-122-413
+					p Вопросы по обучению, выдаче дипломов, расписанию занятий, оплате курсов.
+					a(href='#').-link-turq-.contacts-info--link clinical@mail.ru
+				.col-3
+					h3 Партнерство
+					p Пишите на адрес, указанный ниже, если вы производите качественные медицинские материалы, бахилы, перчатки, шприцы и т.д.
+					a(href='#').-link-turq-.contacts-info--link partner@sadkomed.ru
+		.contacts-feedback
+			h3#feedback Обратная связь
+			.row-flex
+				.col-6
+					include ../modules/feedback-form
+				.col-6.contacts-feedback--notes
+					p Если не знаете куда писать или у вас нестандартный вопрос — напишите его в эту форму. Ваш вопрос попадет в отдел рекламы и PR к администратору сайта. Он знает что делать.
+					p Не забудьте оставить свой телефон или электронную почту. Мы будем знать куда принести ответ.
+					p <a href='#' class='-link-turq-'>Нажмите</a>, если не получили ответ в течение недели.
+
+
+//block pageJS

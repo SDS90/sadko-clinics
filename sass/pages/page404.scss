@@ -1,0 +1,58 @@
+//Страница 404
+
+.page-404-wrapper{
+	width: 100%;
+	min-width: $bLayoutMinWidth;
+    height: 100%;
+
+    .page-404{
+    	width: 868px;
+    	height: 100%;
+    	margin: 0px auto;
+    	display: table;
+
+    	>div{
+    		display: table-cell;
+    		vertical-align: middle;
+    		position: relative;
+    		width: 100%;
+    		height: 100%;
+    		padding: 10px 0px 110px 0px;
+    	}
+
+    	h1{
+    		margin-bottom: 30px;
+    	}
+
+    	.bottom-info{
+    		position: absolute;
+    		bottom: 80px; left: 0px;
+    		font-size: 16px;
+    		font-style: italic;
+    	}
+    }
+
+    .header-logo{
+    	display: inline-block;
+    	vertical-align: top;
+    	margin-bottom: 60px;
+    }
+
+    .textblock{
+    	font-size: 18px;
+    	line-height: 24px;
+    	margin-bottom: 70px;
+    }
+
+    form{
+    	margin-bottom: 50px;
+    }
+
+    .footer-nav a{
+    	border-bottom: 1px solid #4f4f4f;
+
+    	&:hover{
+    		border-color: transparent;
+    	}
+    }
+}

@@ -1,0 +1,145 @@
+//Блок с видео
+
+.video-wrapper{
+	position: relative;
+	background-color: #FFF;
+
+	video{
+		background-color: #FFF;
+		min-width: 100%;
+		min-height: 100%;
+	}
+
+	.video-frame{
+		overflow: hidden;
+	}
+
+	.video-overblock{
+		position: absolute;
+		width: 100%; height: 100%;
+		left: 0px; top: 0px;
+		z-index: 5;
+		background-color: transparent;
+	}
+
+	.video-button{
+		position: absolute;
+		bottom: 24px; left: 24px;
+		top: auto;
+		z-index: 10;
+		opacity: 1;
+		margin-left: 0px;
+		padding-top: 3px;
+		cursor: pointer;
+
+		.pause-video{
+			display: none;
+		}
+		.start-video{
+			display: inline;
+		}
+
+		&.playing {
+			.pause-video{
+				display: inline;
+			}
+			.start-video{
+				display: none;
+			}
+			.ico-play{
+				background-image: none;
+				position: relative;
+
+				&:after,
+				&:before{
+					content:"";
+					position: absolute;
+					top: 50%;
+					margin-top: -7px;
+					width: 3px; height: 14px;
+					background-color: #FFF;
+				}	
+
+				&:after{
+					left: 1px;
+				}
+
+				&:before{
+					left: 6px;
+				}
+			}
+		}
+	}
+}
+
+//Секция с видео
+.video-section{
+	width: 100%;
+	height: 839px;
+	position: relative;
+	overflow: hidden;
+
+	.contents{
+		position: absolute;
+		top: 0px; left: 50%;
+		margin-left: -600px;
+	}
+
+	.video-header{
+		position: absolute;
+		left: 20px; top: 40px;
+		font-family: 'proxima-nova', "Open Sans", sans-serif;
+		letter-spacing: 1px;
+    	font-weight: 100;
+   		font-size: 60px;
+    	color: #fff;
+    	z-index: 100;
+	}
+
+	.video-wrapper{
+		width: 100%;
+		height: 100%;
+
+		.video-button{
+			width: 127px; height: 127px;
+			left: 50%; top: 50%;
+			bottom: auto;
+			margin: -63px 0px 0px -63px;
+			background-image: url(../img/icons.png);
+			background-repeat: no-repeat;
+			background-position: -252px -232px;
+
+			&.playing{
+				opacity: 0;
+			}
+		}
+	}
+
+	.video-frame{
+		width: 100%;
+		height: 839px;
+	}
+
+	iframe{
+		position: absolute;
+		left: 50%; top: 0px;
+		width: 1920px;
+		height: 1039px;
+		margin: -100px 0px 0px -960px;
+	}
+
+	.video-overblock{
+		//background-color: #FFF;
+		//background-repeat: no-repeat;
+    	//background-position: center center;
+
+    	background-color: transparent;
+    	background-image: none !important;
+
+    	&.play-video{
+    		background-color: transparent;
+    		background-image: none !important;
+    	}
+	}
+
+}

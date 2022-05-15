@@ -1,0 +1,79 @@
+//Ссылка на файл
+
+.file-link{
+	display: table;
+	text-decoration: none;
+	border-bottom: none;
+
+	&:hover{
+		.file-name span{
+			border-color: transparent !important;
+		}
+	}
+
+	.icon-wrapper{
+		width: 28px;
+
+		.icon{
+			display: block;
+			width: 28px;
+			height: 36px;
+		}
+	}
+
+	.icon {
+	    width: 28px;
+	    height: 36px;
+	    background-image: url(../img/icons.png);
+	    background-position: -137px 0px;
+	    background-repeat: no-repeat;
+	}
+
+
+	&.pdf-link{
+		.icon,
+		.icon-wrapper{
+			width: 45px;
+			height: 43px;
+    		background-position: -336px -46px;
+		}
+    }
+
+    &.big-pdf-link{
+    	.icon,
+		.icon-wrapper{
+			background-position: 0 -138px;
+		    width: 72px;
+		    height: 73px;
+		}
+
+		.file-name{
+			padding-left: 23px;
+		}
+    }
+
+    &.doc-link{
+		.icon,
+		.icon-wrapper{
+			width: 42px;
+			height: 41px;
+    		background-position: -336px 0px;
+		}
+    }
+
+
+	.file-name {
+	    font-size: 18px;
+	    padding-left: 13px;
+
+	    span{
+	    	border-bottom: 1px solid #c3c4bd;
+	    }
+	}
+}
+
+.file-link>.icon, .file-name,
+.icon-wrapper{
+	display: table-cell;
+    vertical-align: middle;
+}

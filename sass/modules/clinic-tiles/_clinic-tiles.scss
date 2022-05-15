@@ -1,0 +1,74 @@
+/* -------------------------------------------------
+    Clinic tiles list
+   ------------------------------------------------- */
+
+.clinic-tiles {
+  //margin: $marginMid -#{$bLayoutPadding} $sectionMargin;
+  overflow: hidden;
+}
+
+.clinic-tiles-wall {
+  margin-bottom: 65px;
+
+  .clinic-tile {
+    background-image: radial-gradient(circle farthest-corner at right, #fff, rgba(255, 255, 255, 0));
+    height: 254px;
+    width: 100%;
+    float: none;
+
+    .clinic-tile--contacts {
+      margin-top: -72px;
+      padding: 0px 20px;
+    }
+
+    .clinic-tile--title {
+      height: 72px;
+    }
+
+    .clinic-tile--bg{
+      bottom: auto;
+    }
+
+    &:hover {
+      .clinic-tile--contacts {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+//  Hidden tiles
+// -------------------------------------------------
+
+.clinic-tiles--hidden {
+  opacity: 0;
+
+
+  @include transform(translateY(32px));
+  @include transition(all .4s $ease-in-out-quad);
+
+  .active & {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+
+  .-clinic-tile-type-10-, .-clinic-tile-type-11-, .-clinic-tile-type-12-{
+    margin-top: -25px;
+  }
+}
+
+//  Hide toggle
+// -------------------------------------------------
+
+.clinic-tiles--hide-toggle {
+  background: url(../img/wave-part.png) left center repeat-x;
+  text-align: center;
+
+  a {
+    background: #fff;
+    padding: 0 30px;
+    span {
+      display: inline-block;
+    }
+  }
+}

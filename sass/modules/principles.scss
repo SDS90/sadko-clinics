@@ -1,0 +1,53 @@
+
+//Блок принципа
+.rules-wrapper{
+	margin-bottom: 5px;
+
+	.row-flex{
+		padding-top: 11px;
+		padding-bottom: 34px;
+		margin-left: -12px;
+		margin-right: -12px;
+	}
+	>[class*='col-']{
+		padding: 0px 12px;
+	}
+}
+.rules-block{
+
+	.rules-header{
+		display: table;
+		width: 100%;
+		margin-bottom: 11px;
+
+		.rules-icon,
+		.rules-name{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.rules-icon{
+		width: 66px;
+
+		img{
+			display: block;
+			margin: 0px auto;
+			max-width: 100%;
+		}
+	}
+
+	.rules-name{
+		width: 200px;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: bold;
+		padding: 0px 20px 0px 0px;
+	}
+
+	.textblock{
+		font-size: 16px;
+		line-height: 22px;
+		color: #787878;
+	}
+}

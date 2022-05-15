@@ -1,0 +1,45 @@
+/* -------------------------------------------------
+    Search
+   ------------------------------------------------- */
+
+.search {
+  margin-top: 44px;
+  &.-bordered- {
+    .search--input {
+      border: 2px solid #5eafb9;
+    }
+  }
+}
+
+.search--input {
+  position: relative;
+  height: 50px;
+
+  input[type='text'] {
+    border: 1px solid #a2a2a2;
+    background: #fff;
+    padding: 0 60px 0 20px;
+    height: 100%;
+    width: 100%;
+  }
+
+  [class*='ico'] {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background-color: #FFF;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    @include transform(translateY(-50%));
+  }
+}
+
+.search--notes {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.search--filters {
+  margin-top: 22px;
+}

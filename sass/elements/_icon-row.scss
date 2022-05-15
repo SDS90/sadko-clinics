@@ -1,0 +1,13 @@
+/* -------------------------------------------------
+    Icon row
+   ------------------------------------------------- */
+
+.icon-row {
+  [class*='ico-'] {
+    margin-right: 22px;
+    @include flex(0 0 auto);
+  }
+
+  @include display(flex);
+  @include align-items(center);
+}

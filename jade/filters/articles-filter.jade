@@ -1,0 +1,151 @@
+//Блок фильтра
+div.row-flex
+	div.col-9.filter-wrapper.clear
+		//Сам фильтр
+		div.page-filter
+			span.filter-name Подобрать статью:
+			span.filter-block-wrapper
+				span.filter-open-button По теме
+				//Список тем
+				div.filter-block
+					div.closed Закрыть
+					//Список в одну колонку
+					div.filter-list-wrapper
+						div.filter-list
+							ul
+								li
+									a(href="#") Стоматология
+								li
+									a(href="#") Гастроэнтерология
+								li
+									a(href="#") Женское здоровье
+								li
+									a(href="#") Мужское здоровье
+								li
+									a(href="#") Педиатрия
+								li
+									a(href="#") Работа поликлиники
+								li
+									a(href="#") Наши достижения
+			//Список
+			span.filter-block-wrapper
+				span.filter-open-button По филиалу
+				//Список фамилий
+				div.filter-block
+					div.closed Закрыть
+					div.filter-list-wrapper.column-list
+						div.filter-list
+							div.row-flex
+								div.col-3
+									div.letter A
+									ul
+										li
+											a(href="#") Агафонова Г.В.
+										li
+											a(href="#") Александров А.Ю.
+										li
+											a(href="#") Андронова И.А.
+										li
+											a(href="#") Антипова А.В.
+										li
+											a(href="#") Антонова Ю.В.
+										li
+											a(href="#") Артемьева С.В.
+										li
+											a(href="#") Аскерова Г.К.
+								div.col-3
+									div.letter Б
+									ul
+										li
+											a(href="#") Бабинцева М.Г.
+										li
+											a(href="#") Багдасарян А.А.
+										li
+											a(href="#") Багдасарян Р.А.
+										li
+											a(href="#") Бакланов М.В.
+										li
+											a(href="#") Барышева Г.Н.
+										li
+											a(href="#") Бахметьев О.А.
+										li
+											a(href="#") Белоусова Е.Ю.
+										li
+											a(href="#") Беляков С.А.
+										li
+											a(href="#") Бердникова Т.А.
+										li
+											a(href="#") Березина Е.Б.
+										li
+											a(href="#") Благодатина Л.В.
+										li
+											a(href="#") Богданович О.В.
+										li
+											a(href="#") Бойкова Р.А.
+										li
+											a(href="#") Боровкова Ю.Ю.
+										li
+											a(href="#") Бортникова Е.В.
+										li
+											a(href="#") Брикман А.Э.
+										li
+											a(href="#") Бугрова О.М.
+										li
+											a(href="#") Бунакова Н.Н.
+										li
+											a(href="#") Буяло Е.В.
+										li
+											a(href="#") Буянова М.Н.
+								div.col-3
+									div.letter В
+									ul
+										li
+											a(href="#") Ванцинова Е.В.
+										li
+											a(href="#") Ващанов С.В.
+										li
+											a(href="#") Веселов Д.В.
+										li
+											a(href="#") Владимирова В.Г.
+										li
+											a(href="#") Вопилов Ю.Л.
+										li
+											a(href="#") Воронина А.И.
+								div.col-3
+									div.letter Г
+									ul
+										li
+											a(href="#") Гаврилова Е.П.
+										li
+											a(href="#") Гадалов А.П.
+										li
+											a(href="#") Гадалова Н.И.
+										li
+											a(href="#") Газаров А.А.
+										li
+											a(href="#") Гайдученко О.А.
+										li
+											a(href="#") Галкина К.И.
+										li
+											a(href="#") Гаранина Е.В.
+										li
+											a(href="#") Гвалия М.М.
+										li
+											a(href="#") Гимранов Р.Ю.
+										li
+											a(href="#") Голованова Т.П.
+										li
+											a(href="#") Горбатова Л.И.
+										li
+											a(href="#") Горбачев А.В.
+			a(href="#").filter-button.top-filter ТОП 9
+		a(href="#").delete-filter Сбросить фильтры
+
+	div.col-3
+		//Блок с формой подписки
+		div.subscribe-wrapper
+			a(href="#").btn.subscribe-button Подписаться на рассылку
+			form.subscribe-form.hidden.clear
+				input.textfield(type="text" placeholder="Введите e-mail" data-error-text="Это не e-mail")
+				input.submit-btn(type="submit" value="Подписаться")
+

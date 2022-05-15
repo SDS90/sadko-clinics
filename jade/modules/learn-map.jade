@@ -1,0 +1,20 @@
+div.panel.learn-map
+	div.learn-map--wrapper
+		//Блок карты
+		div.learn-map--map#learn-map(data-marker="#{srcPath}img/icons/marker.png" data-active-marker="#{srcPath}img/icons/active-marker.png")
+		div.map-info#learnMapInfo()
+	div.learn-map--filter.clear
+		div.learn-map--filter--doc#learmCheckFilter
+			label
+				input.check-radio(type='radio', name='check-filter', value='stomatologist')
+				span Стоматологи
+			label
+				input.check-radio(type='radio', name='check-filter', value='specialist')
+				span Специалисты поликлиники
+		a.learn-map--delete-filter(href="#") Сбросить все фильтры
+
+		div.learn-map--filter--my-doc
+			form.search-list--input#learnSearchDoctor
+				input(type='text', placeholder='Найти своего врача')
+				.search-list--input--controls
+					button.ico-search-wide

@@ -1,0 +1,120 @@
+extends ../layout-inner
+
+include ../mixins/quot-title
+include ../mixins/fixed-menu
+include ../mixins/bonus-calc
+
+block title
+	| Пациентам
+block content
+	+fixed-menu([
+		{id: 'intro', title: 'Обращение'},
+		{id: 'docs', title: 'Документы'},
+		{id: 'oms', title: 'ОМС, ДМС'},
+		{id: 'qa', title: 'Вопросы и ответы'},
+		{id: 'reviews', title: 'Отзывы'},
+		{id: 'video', title: 'Наше видео'},
+		{id: 'articles', title: 'Полезные статьи'}
+	])
+	//Блок с цитатой
+	div.start-quote-wrapper
+		div.contents
+			h1#intro Пациентам
+			//Цитата
+			div.quot.row-flex.-quot-no-border-
+				div.col-10
+					div.quot--text Дорогие пациенты, мы создали этот сайт специально для вас. В данном разделе собрано все то, что, по нашему мнению, вам пригодится в первую очередь.
+	//Страница пациентам
+	.contents.patients-page
+		h2#docs Первый раз в &laquoСАДКО&raquo;?
+		//Первый блок
+		.patients-firts-block.clear.-mb-section-
+			//Левая колонка
+			.left-column
+				p При первом посещении клиники администратор оформит договор на оказание медицинских услуг. Вам необходимо будет ознакомиться с этим договором , а также заполнить анкету о вашем здоровье или здоровье вашего ребенка. Вы можете заполнить это анкету перед походом в клинику для того, чтобы свести к минимуму процедуру оформления документов непосредственно перед приемом.
+				.row-flex.-separated-
+					.col-5
+						a(href="#").file-link.big-pdf-link.hover-link
+							div.icon-wrapper
+								i.icon
+							div.file-name
+								span Доверенность на ребёнка при посещении стоматологии
+					.col-5
+						a(href="#").file-link.big-pdf-link.hover-link
+							div.icon-wrapper
+								i.icon
+							div.file-name
+								span Доверенность на ребенка 
+				.row-flex.-separated-
+					.col-5
+						a(href="#").file-link.big-pdf-link.hover-link
+							div.icon-wrapper
+								i.icon
+							div.file-name
+								span Анкета о вашем ребенке
+					.col-5
+						a(href="#").file-link.big-pdf-link.hover-link
+							div.icon-wrapper
+								i.icon
+							div.file-name
+								span Согласие на доставку анализов по e-mail
+				p
+					strong Быстрая запись на прием
+				p Самая короткая и быстрая форма записи на прием — это прямой звонок администратору клиники. Вы можете позвонить на единый номер клиники 421-01-01 и администратор переведет вас на необходимый филиал.
+				p Вы можете оформить запись на прием с помощью нашего онлайн-консультанта или специальной формы запроса.
+				a(href="#" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.").btn.book-toggle Записаться на приём
+			//Колонка - налог
+			.nalog
+				.text-panel.-no-m-
+					span.text-panel--title Справки для налоговой
+					.text-panel--section Вы можете оформить справку об оплате медицинских услуг в клинике "Садко" для предоставления в налоговые органы для получения социального налогового вычета. Срок готовности справки — 5 рабочих дней
+					.text-panel.-bg-white-.-bordered-.-extended-padding-.text-panel--section
+						p
+							strong Как оформить заявление:
+						ul
+							li С помощью администратора клиники по телефону: 8 (831) 4120-777;
+							li Скачать бланк <a href='#'>«Заявление в налоговую»</a>, заполнить его и отправить по электронной почте <a href='#'>sadko_nalog@mail.ru</a>
+					.text-panel--section
+						p
+							strong Справки оформляются по адресу:
+						p г. Н. Новгород, ул. Бекетова, <br>13 Центр женского здоровья «САДКО»
+					.text-panel--section
+						p
+							i Граффик работы специалиста
+						p
+							|09<sup>00</sup> &mdash; 20<sup>00</sup> Пн.-Пт. <br/>
+							|Сб. и Вс. - выходной
+					.text-panel--section.-mb-none Вы можете забрать справку в удобном для вас филиале
+
+		include ../modules/actions
+
+		//Карта клиента
+		article.-mb-section-
+			h2 Карта клиента
+			include ../modules/client-card
+
+		article.-mb-section-
+			h2#oms Страховые программы
+			include ../modules/insurance-programs
+		article.-mb-section-
+			h2#qa Вопрос-ответ
+			include ../modules/qa
+
+		arcticle.-mb-section-
+			h2#reviews Отзывы
+			include ../modules/doctor-hello
+
+			include ../modules/reviews-slider
+
+		article.-mb-section-
+			h2#video Наше видео
+			include ../modules/promo-video
+			h3 Видеогалерея
+			include ../modules/video-carousel
+		arcticle.-mb-section-
+			h2#articles Полезные статьи
+			include ../modules/articles
+
+
+//Персональные скрипты для этой страницы
+//block pageJS

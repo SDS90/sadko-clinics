@@ -1,0 +1,55 @@
+include ../mixins/smile
+
+//Стандартная шапка - для главной страницы
+header.header
+	//Блок с матовым стеклом
+	//div.header-bg(id='headerBg')
+	//Блок с видео. Видео загружается в трёх форматах + картинка - на случай, если этот элемент не поддерживается
+	div.video-section
+		//Видео
+		//div.video-wrapper
+			div.video-overblock
+			div.video-frame
+				//Параметр loop - закольцевать проигрывание
+				<iframe src="https://player.vimeo.com/video/150026679?color=ffffff&title=0&byline=0&portrait=0&badge=0&loop=1&autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		//Блок с видео. Видео загружается в трёх форматах + картинка - на случай, если этот элемент не поддерживается
+		div.video-wrapper
+			video(id='headerVideo' preload loop)
+				source(src="#{srcPath}video/Sadko7_low.mp4")
+				source(src='#{srcPath}video/Sadko7_low.webm', type='video/webm; codecs="vp8, vorbis"')
+				source(src='#{srcPath}video/Sadko7_low.ogv' type='video/ogg; codecs="theora, vorbis"')
+	div.contents
+		//Верхняя часть шапки
+		div.header-top
+			//Логотип
+			a.header-logo(href='/')
+				img(src='#{srcPath}img/logo.png', alt='Логотип компании Садко')
+			//Режим работы
+			div.work-time-wrapper
+				span.work-time
+					| 8<sup>00</sup> - 20<sup>00</sup> Пн.- Сб.
+				span.work-time
+					| 9<sup>00</sup> - 18<sup>00</sup> Вс.
+			//Вход в личный кабинет
+			a.header-login(href='/')
+				i.ico-heart
+				span Войти в личный кабинет
+
+			//Здесь в data-атрибуте указывается заголовок, который будет показываться в форме записи на приём. Если заголовка нет - будет показан стандартный вариант, но лучше указать даже его.
+			a.smile-toggle.book-toggle(href='#' data-smile="#smile" data-book-info="Карточка записи на приём" data-book-answer="Ваша заявка принята. С вами свяжется наш администратор, назначит время приема и запишет к подходящему специалисту.") 
+				i.ico-bell
+				span Записаться
+			//телефон
+			div.header-top--right
+				a.header-phone(href="#") +7 (831) 421-01-01
+		//Надпись по центру главной
+		div.header-title(id='headerTitle')
+			h1.smile-toggle(data-smile='#smile')
+				| Мы
+				span.header-title--dash
+					//Тут анимация с улыбкой
+					+smile('smile')
+				| Садко
+				span.header-title--note Сеть медицинский клиник, которым доверяют
+	//Навигация на главной странице
+	include ../modules/main-navigation

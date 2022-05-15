@@ -1,0 +1,42 @@
+//Попап с вопросом, стрелка вниз
+div.question-popup.bottom-popup
+
+	//Форма
+	form.book-form 
+		div.closed-popup Закрыть
+		//Заголовок
+		div.popup-header Расскажите ваше мнение
+		
+		//Текстовое поле
+		textarea.textarea-scrollbar.scrollbar-outer.question-text 
+
+		//Это не пустой блок - сюда выводится текст ошибки
+		div.error-text
+
+		div.row-flex
+			div.col-7
+				div.book-form--row
+					label Имя
+					input.book-form--row--content(type='text')
+			div.col-5
+				div.book-form--row
+					label Возраст
+					input.book-form--row--content.ages-input(type='text')
+		div.row-flex
+			div.col-7
+				div.book-form--row
+					label E-mail
+					input.book-form--row--content.email-field(type='text')
+		//Отправка
+		div.-justify-content-
+			label.book-form--accept
+				input(type='checkbox', name='license', value='')
+				| Я принимаю <a href='#' class="-link-turq- -reduced-">условия</a> обработки моих данных
+			button.btn.submit-btn Опубликовать
+
+	//Спасибо
+	div.thanks-block
+		div.thanks-header Спасибо за ваше мнение!
+		div.textblock Ваш отзыв появится на сайте в течение 24 часов. Мы публикуем абсолютно все отзывы наших пациентов. Если отзыв не был опубликован или все пошло вообще не так — напишите письмо напрямую руководителю отдела маркетинга на почту 
+			a(href="#") jenni@mail.ru
+		a.btn.closed-popup Закрыть

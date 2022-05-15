@@ -1,0 +1,45 @@
+mixin clinic-tile(type, title, descr, subtype)
+	-var image = 'clinic-type-img-' + type + '.png';
+	if subtype
+		-image = 'clinic-type-img-' + type + '-' + subtype + '.png';
+	a.clinic-tile(href="#" class='-clinic-tile-type-#{type}-#{attributes.class ? " " + attributes.class : ""}')
+		img.clinic-tile--bg(src='#{srcPath}img/clinic-type-img/#{image}' alt="")
+		if descr
+			p.clinic-tile--descr !{descr}
+		div.clinic-tile--contacts
+			div.clinic-tile--title
+				h2= title
+			span.clinic-tile--phone +7 (831) 4-120-777
+			ul.clinic-tile--adrs
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/") ул. Бекетова, 13
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  ул. Родионова, 199
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  пр. Ленина, 67/1
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  Сормовское шоссе, 20
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  ул. Бекетова, 13
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  ул. Родионова, 199
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  пр. Ленина, 67/1
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  Сормовское шоссе, 20
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  ул. Бекетова, 13
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  ул. Родионова, 199
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  пр. Ленина, 67/1
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  Сормовское шоссе, 20
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  ул. Бекетова, 13
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  ул. Родионова, 199
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  пр. Ленина, 67/1
+				li
+					span.-link-white-(onclick="RedirectToPage('http://sadkomed2016.ru/'); return false;" title="http://sadkomed2016.ru/")  Сормовское шоссе, 20

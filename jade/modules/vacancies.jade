@@ -1,0 +1,162 @@
+//Фильтр вакансий
+div.filter-wrapper.clear
+		//Сам фильтр
+		div.page-filter.clear
+			span.filter-name Показаны вакансии:
+			//Список
+			span.filter-block-wrapper
+				span.filter-open-button из всех филиалов
+				//Список тем
+				div.filter-block
+					div.closed Закрыть
+					//Список в одну колонку
+					div.filter-list-wrapper
+						div.filter-list
+							ul
+								li
+									a(href="#") Автозаводский район
+								li
+									a(href="#") Сормовский район
+								li
+									a(href="#") Канавинский район
+								li
+									a(href="#") Советский район
+								li
+									a(href="#") Ленинский район
+								li
+									a(href="#") Московский район
+								li
+									a(href="#") Приокский район
+								
+			//Список
+			span.filter-block-wrapper
+				span.filter-open-button все должности
+				//Список фамилий
+				div.filter-block
+					div.closed Закрыть
+					div.filter-list-wrapper
+						div.filter-list
+							ul
+								li
+									a(href="#") Стоматология
+								li
+									a(href="#") Гастроэнтерология
+								li
+									a(href="#") Женское здоровье
+								li
+									a(href="#") Мужское здоровье
+								li
+									a(href="#") Педиатрия
+								li
+									a(href="#") Работа поликлиники
+								li
+									a(href="#") Наши достижения
+
+		a(href="#").delete-filter Показать все вакансии
+
+
+//Блок одной вакансии
+div.vacancy-block
+	//Дата
+	div.vacancy-date добавлено 30.08.2015
+	//Название
+	div.vacancy-name Медицинская сестра процедурного каб-та
+	div.row-flex
+		div.col-6.about-vacancy-block
+			//График, зп
+			div.about-vacancy
+				span.money 25 000 
+					//Знак рубля
+					span.rouble a
+				|, сменный график
+			//Описании вакансии
+			div.textblock
+				h3 Ждём от кандидата
+				p Средне-специальное медицинское образование, хорошие навыки постановки инъекций‚ капельниц‚ забора крови, 
+					b опыт работы с детьми обязателен
+				h3 Обязанности
+				p Постановка инъекций‚ капельниц‚ забор крови
+
+			//Кнопка
+			a(href="#" data-book-info="Откликнуться на вакансию «Медицинская сестра процедурного кабинета»"  data-book-answer="Мы рассмотрим вашу кандидатуру и перезвоним по указанному телефону в течение 5 рабочих дней" data-submitted="false" data-vacancy-id="1").btn.vacancy-button.vacancy-toggle Откликнуться на вакансию
+		div.col-6.conditions
+			//Условия работы
+			div.textblock
+				h3 Условия
+				ul
+					li Оплачиваемая стажировка.
+					li Работа в Нижней части города‚  
+						a(href="#") филиал на ул. Школьной
+					li Оформление по ТК РФ‚ соц. пакет.
+
+//Блок одной вакансии
+div.vacancy-block
+	//Дата
+	div.vacancy-date добавлено 5 ноября 2015
+	//Кратко о вакансии
+	div.about-vacancy-block
+		//Название
+		div.vacancy-name Стоматолог-ортопед
+		//График, зп
+		div.about-vacancy
+			span.money 40 000 
+				//Знак рубля
+				span.rouble a
+			|, сменный график
+	div.row-flex
+		div.col-6
+			//Описании вакансии
+			div.textblock
+				h3 Ждём от кандидата
+				p Высшее образование, наличие сертификата, опыт работы не менее 3 лет
+				h3 Обязанности
+				p Ортопедический прием, ведение медицинской документации
+
+			//Кнопка
+			a(href="#" data-book-info="Откликнуться на вакансию «Стоматолог-ортопед»"  data-book-answer="Мы рассмотрим вашу кандидатуру и перезвоним по указанному телефону в течение 5 рабочих дней" data-submitted="false" data-vacancy-id="2").btn.vacancy-button.vacancy-toggle Откликнуться на вакансию
+		div.col-6.conditions
+			//Условия работы
+			div.textblock
+				h3 Условия
+				ul
+					li Оформление согласно законодательству РФ
+					li Отпускные‚ больничные и прочие выплаты 
+					li Работа в верхней части города
+
+//Блок одной вакансии
+div.vacancy-block
+	//Дата
+	div.vacancy-date.closed-vacancy Вакансия закрыта, сотрудник найден
+	//Кратко о вакансии
+	div.about-vacancy-block
+		//Название
+		div.vacancy-name Дермато-венеролог
+		//График, зп
+		div.about-vacancy
+			span.money 40 000 
+				//Знак рубля
+				span.rouble a
+			|, сменный график
+	div.row-flex
+		div.col-6
+			//Описании вакансии
+			div.textblock
+				h3 Ждём от кандидата
+				p Высшее образование, наличие сертификата, опыт работы не менее 3 лет
+				h3 Обязанности
+				p Ортопедический прием, ведение медицинской документации
+		div.col-6.conditions
+			//Условия работы
+			div.textblock
+				h3 Условия
+				ul
+					li Оформление согласно законодательству РФ
+					li Отпускные‚ больничные и прочие выплаты 
+					li Работа в верхней части города
+	//Кнопка тут не нужна, вакансия закрыта
+	//a(href="#"  data-submitted="false" data-vacancy-id="1").btn.vacancy-button Откликнуться на вакансию
+
+//Кнопка "Загрузить ещё" - загрузка вероятно должна реализовываться при помощи аякс-запросов
+div.clinic-tiles--hide-toggle.more-vacancies
+	a.-pseudo-.-link-wrap-(href='#')
+		span.spoiler-toggle Загрузить ещё вакансии

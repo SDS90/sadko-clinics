@@ -1,0 +1,61 @@
+doctype html
+html
+	head
+		title Садко - 404
+			block title
+		include ../controls/head
+	body
+		div.page-404-wrapper
+			div.page-404
+				div
+					a.header-logo(href='/')
+						img(src='#{srcPath}img/logo.png', alt='Логотип компании Садко')
+
+					h1 Страница не найдена
+
+					div.textblock
+						p Очень жаль, но такой страницы нет на нашем сайте. Скорее всего, это связано с тем, что в 2015 году мы переделали сайт и переписали многие страницы. Иногда бывает опечатка в адресе, проверьте на всякий случай.
+
+						p Чтобы продолжить, воспользуйтесь, пожалуйста, поиском или пройдите по одной из ссылок ниже. 
+							br
+							| Спасибо, что интересуетесь нами!
+
+					//Поиск по сайту
+					form.reviews-search-form.clear
+						input.search-textfield(type="text" placeholder="Поиск по сайту")
+						input.search-button(type="submit" value="")
+
+					div.row-flex
+						div.col-3
+							ul.footer-nav
+								li
+									a(href='#') Вся правда о САДКО
+								li
+									a(href='#') Пациентам
+								li
+									a(href="#") Услуги и клиники
+								li
+									a(href='#') Технологии и инновации
+						div.col-3
+							ul.footer-nav
+								li
+									a(href='#') Образование и развитие
+								li
+									a(href='#') Врачи и команда
+								li
+									a(href='#') Цены и акции
+								li
+									a(href="#") Контакты
+
+					div.bottom-info «САДКО» — сеть медицинских клиник в Нижнем Новгороде
+		include ../controls/scripts
+		block pageJS
+
+
+//block title
+	| 404
+//block content
+	
+	
+	
+	
